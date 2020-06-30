@@ -1,0 +1,7 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.huiyuan_pic image{width: 50rpx;height: 50rpx;}
+.jt image{width: 22rpx;height: 22rpx;}
+.dui_icon image{width: 30rpx;height: 30rpx;}
+.jine{font-size: 50rpx !important;font-weight: 500 !important;}

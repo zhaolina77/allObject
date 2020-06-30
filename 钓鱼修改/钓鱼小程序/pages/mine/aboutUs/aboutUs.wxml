@@ -1,0 +1,35 @@
+<view class="aui-row" style="padding: 120rpx;">
+    <view class="aui-text-center">
+        <image style="width:140rpx;height:140rpx;border-radius: 10px" src="/image/logo.png"></image>
+        <view class="aui-padded-t-5 aui-font-size-13">陕西省钓协</view>
+    </view>
+</view>
+<view class="aui-list aui-padded-l-15 aui-padded-r-15">
+    
+    
+    <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0" >
+        <view class="aui-list-item-inner aui-padded-r-0" bindtap="call">
+            <view class="aui-list-item-title aui-font-size-14">联系我们</view>
+            <view class="aui-list-item-right">
+                <text class="aui-font-size-14 aui-text-gray aui-padded-r-5">{{hotline}}</text>
+                <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0" bindtap="xieyi">
+        <view class="aui-list-item-inner aui-padded-r-0">
+            <view class="aui-list-item-title aui-font-size-14">用户协议</view>
+            <view class="aui-list-item-right">
+                <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0"  bindtap="zc">
+        <view class="aui-list-item-inner aui-padded-r-0">
+            <view class="aui-list-item-title aui-font-size-14">隐私政策</view>
+            <view class="aui-list-item-right">
+                <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+            </view>
+        </view>
+    </view>
+</view>

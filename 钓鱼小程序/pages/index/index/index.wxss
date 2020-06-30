@@ -1,0 +1,73 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.mine-bar image {
+    width: 40rpx;
+    vertical-align: middle;
+}
+
+.index .aui-title {
+    right: 80rpx !important;
+    display: flex;
+    align-items: center;
+    left: 80rpx !important;
+}
+
+.serch {
+    border-radius: 10rpx;
+    width: 100%;
+    line-height: 60rpx !important;
+}
+
+.aui-col-5 image {
+    width: 48rpx;
+    margin: auto;
+}
+
+.aui-list-item-right {
+    display: flex;
+    align-items: center;
+}
+
+.aui-col-xs-6 {
+    width: 48.5%;
+    margin-right: 3%;
+}
+
+.aui-col-xs-6:nth-of-type(2n) {
+    margin-right: 0;
+}
+
+.aui-col-xs-6 .pic {
+    height: 220rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.aui-col-xs-6 .pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aui-col-xs-6 .aui-ellipsis-2 {
+    height: 84rpx;
+    line-height: 42rpx;
+}
+
+.dtpic {
+    height: 270rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.dtpic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.void video{
+  width: 100%;
+  height: 100%
+}

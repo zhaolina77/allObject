@@ -1,0 +1,109 @@
+<view class="aui-padded-15 aui-padded-b-0  fabiao">
+    <view class="aui-font-size-13 aui-margin-b-15 aui-bg-grayc  aui-margin-r-10 out {{level==0?'active':''}}" bindtap="change" data-idx="0">
+        全部<text class="aui-font-size-10 ">（{{evalua_num.evaluate_total_size}}）</text>
+    </view> 
+    <view class="aui-font-size-13 aui-margin-b-15 aui-bg-grayc aui-margin-r-10 out {{level==1?'active':''}}" bindtap="change" data-idx="1">
+        好评<text class="aui-font-size-10 ">（{{evalua_num.evaluate_one_total_size}}）</text>
+    </view>
+    <view class="aui-font-size-13 aui-margin-b-15 aui-bg-grayc aui-margin-r-10 out {{level==2?'active':''}}" bindtap="change" data-idx="2">
+        中评<text class="aui-font-size-10 ">（{{evalua_num.evaluate_two_total_size}}）</text>
+    </view>
+    <view class="aui-font-size-13 aui-margin-b-15 aui-bg-grayc aui-margin-r-10 out {{level==3?'active':''}}" bindtap="change" data-idx="3">
+        差评<text class="aui-font-size-10 ">（{{evalua_num.evaluate_three_total_size}}）</text>
+    </view>
+    <view class="aui-font-size-13 aui-margin-b-15 aui-bg-grayc aui-margin-r-10 out {{level==4?'active':''}}" bindtap="change" data-idx="4">
+        有图<text class="aui-font-size-10">（{{evalua_num.evaluate_four_total_size}}）</text>
+    </view>
+</view>
+
+<view class="pingjia-list" wx:if="{{list.length>0}}">
+    <view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 " wx:for="{{list}}" wx:key="lis">
+        <!--个人信息-->
+        <view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-title">
+                    <view class="head-pic">
+                        <image src="{{item.head_portrait}}"  class="aui-img-round" mode="aspectFill"></image>
+                    </view>
+                    <view class="aui-padded-l-10">
+                        <view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{item.nick_name}}</view>
+                       <view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level<1}}">
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:elif="{{item.level>=1&&item.level<2}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=2&&item.level<3}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=3&&item.level<4}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=4&&item.level<5}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level==5}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+                    </view>
+                </view>
+                <view class="aui-list-item-right aui-font-size-12 aui-text-grayer">{{item.create_time}}</view>
+            </view>
+        </view>
+
+        <view class="inner">
+            <!--发布内容-->
+            <view class="aui-padded-b-15">
+                <view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+                    {{item.content}}
+                ​​​</view>
+                <!--图片滑动-->
+                <view class="slide aui-margin-t-15">
+                    <scroll-view scroll-x enable-flex="true" style="height:150rpx">
+                        <view class="slide-pic" wx:for="{{item.pic}}" wx:key="pic" wx:for-item="voo">
+                            <image src="{{voo}}" mode="aspectFill" data-list="{{item.pic}}" data-src="{{voo}}"  bindtap='imgYu'></image>
+                        </view>
+                        
+                    </scroll-view>
+                </view>
+
+
+            </view>
+        </view>
+    </view>
+</view>
+<view class="nodata" wx:else>
+<image src="/image/nodata.png"></image>
+</view>
+
+

@@ -1,0 +1,34 @@
+<view class="aui-list aui-media-list">
+  <view class="aui-list-item li" wx:for="{{list}}" wx:key="lis" bindtap="tiaozhuan" data-id="{{item.dynamic_id}}">
+    <view class="aui-media-list-item-inner aui-padded-t-15">
+      <view class="aui-list-item-media aui-padded-t-0 aui-padded-r-10">
+        <view class="pic">
+          <image src="{{item.head_portrait}}"></image>
+        </view>
+      </view>
+      <view class="down aui-border-b">
+        <view class="inner aui-padded-b-15 aui-padded-r-15">
+          <view class="" style="width: 70%;">
+            <view class="aui-font-size-14">{{item.nick_name}}
+              <span class="aui-text-gray"> {{item.title}}</span>
+            </view>
+            <view class="aui-font-size-15 aui-padded-t-5" wx:if="{{item.type==4||item.type==6}}">
+              <image class="zan" src="/image/zan-on.png" mode="widthFix"></image>
+            </view>
+            <view class="aui-text-gray aui-font-size-13 aui-margin-t-5">{{item.create_time}}</view>
+          </view>
+          <view class="aui-list-item-right" wx:if="{{item.thumb!=''}}">
+            <view class="dt-pic">
+              <image src="{{item.thumb}}" mode="aspectFill"></image>
+            </view>
+          </view>
+        </view>
+        <view class="aui-bg-grayer aui-text-gray aui-padded-10 aui-font-size-13 aui-margin-b-15 aui-margin-r-15" wx:if="{{item.eva_content!=null}}">我的评价:{{item.eva_content}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view  style="margin-top: 150px;" wx:if="{{list.length==0}}"> 
+  <image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>

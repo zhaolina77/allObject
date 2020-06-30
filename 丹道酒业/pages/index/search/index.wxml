@@ -1,0 +1,18 @@
+<!--pages/index/index/index.wxml-->
+<view class="search">
+<image src="/images/searchicon.png" style="width:18px;height:15px;position:relative;top:3px;"></image>
+<input type="text" placeholder="搜索你想要找的商品" class="input" confirm-type="search" bindconfirm="tosearch"></input>
+</view>
+
+<view>
+<view class="pwrap">
+  <view class="plist" bindtap="todetails" data-id="{{voo.id}}" wx:for="{{goodsList}}" wx:for-item="voo">
+    <view class="imgwrap"><image src="{{voo.thumb}}"></image></view>
+    <text class="name aui-font-size-15">{{voo.name}}</text>
+    <text class="price">￥{{voo.market_price}}</text>
+  </view>
+
+</view>
+</view>
+
+

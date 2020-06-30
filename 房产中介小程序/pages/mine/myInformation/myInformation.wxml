@@ -1,0 +1,22 @@
+<view wx:if="{{list.length>0}}">
+	<view class="item" wx:for="{{list}}" wx:key="list">
+		<view class="aui-font-size-12 aui-padded-15   aui-text-center">{{item.date}}</view>
+		<view class="aui-padded-l-15  aui-padded-r-15">
+			<view class="aui-bg-white bg-radius aui-padded-15">
+				<view>{{item.title}}</view>
+				<view class="aui-font-size-14 aui-text-gray aui-margin-t-10 ">
+					<text>{{item.content}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+
+
+<!-- 无数据 -->
+<view class="nodata " wx:else>
+	<image src="/image/nodata.png"></image>
+
+</view>

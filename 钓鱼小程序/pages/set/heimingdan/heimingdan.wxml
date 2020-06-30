@@ -1,0 +1,36 @@
+<view class="aui-content" id="app">
+	<view class="user">
+		<view class="aui-list">
+			<view class="aui-list-item aui-padded-t-15 aui-padded-b-15 " wx:for="{{list}}" wx:key="lis">
+				<view class="aui-list-item-inner">
+					<view class="aui-list-item-title">
+						<view class="user-pic">
+							<image src="{{item.head_portrait}}"></image>
+						</view>
+						<view class="aui-padded-l-15" style="width: 70%;">
+							<view class="aui-font-size-15 aui-padded-t-5 fweight-5">{{item.nick_name}}</view>
+							<view class="aui-text-light-gray aui-font-size-13 aui-margin-t-5 aui-ellipsis-1">{{item.remark}}</view>
+						</view>
+					</view>
+					<view class="">
+						<view class="aui-btn aui-btn-danger" bindtap="jiechu" data-index="{{index}}" data-id="{{item.account_id}}">解除</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<!-- <view class="nodata aui-text-center">
+					<img src="../../image/nodata.png" wx:if="totalRow==0&&is_load==1"/>
+					<img src="../../image/nopage.png"	wx:elif="is_load==2"/>
+					<img src="../../image/nonet.png"	wx:elif="is_load==3"/>
+			</view>
+			<view class="aui-col-xs-12 aui-text-center" id="bot"  wx:if="list.length>10">
+					 <span class="aui-font-size-12 aui-text-gray">正在加载</span>
+					 <img src="../../image/uploading.gif" style="width:0.7rem;height:0.7rem;vertical-align:middle"/>
+
+			</view> -->
+</view>
+<view   style="margin-top: 150px;" wx:if="{{list.length==0}}"> 
+  <image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>

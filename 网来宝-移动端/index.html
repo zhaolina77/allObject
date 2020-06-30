@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<!--<meta name="Keywords" content="网校系统,在线教育,在线教育平台,在线教育系统,搭建网校,网上教育平台,网络教育平台,线上教学平台,网校平台,在线辅导平台,网校搭建,教育云平台,远程教学软件,创建网校,MOOC系统,教育云,在线授课平台,网校运营,网校saas服务,教育信息化,专属网校,课程录制,课件制作,录课服务,教育云,在线考试,在线题库,在线直播,在线录播" />
+    <meta name="Description" content="良师在线教育平台系统涵盖网校系统、直播/录播、考试题库、教育云等功能，帮助教育机构、教师以及企业学校快速搭建网上授课平台，迅速开展网络教学，提供在线教育一站式教育方案。 " />-->
+		<script src="https://hm.baidu.com/hm.js?922ff22739c78095d404afe96f7135d6"></script>
+		<link rel="stylesheet" href="https://static.ls365.com/css/icomoon.min.css" />
+		<!--<link rel="icon" type="image/x-icon" href="/img/favicon.ico">-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/index.css">
+		<title>网来宝</title>
+		<style>
+			.adult-education-alert {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 666;
+			}
+			
+			.adult-education-alert div {
+				position: relative;
+				width: 599px;
+				height: 384px;
+				margin: 0 auto;
+			}
+			
+			.adult-education-alert .close-alert {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 50px;
+				height: 50px;
+			}
+			
+			.adult-education-alert .cjedu-link {
+				position: absolute;
+				left: 371px;
+				top: 266px;
+				width: 112px;
+				height: 36px;
+			}
+			
+			.adult-education-alert .gzedu-link {
+				position: absolute;
+				width: 112px;
+				height: 36px;
+				left: 335px;
+				top: 164px;
+			}
+			
+			@media screen and (max-width:600px) {
+				.adult-education-alert div {
+					width: 90vw;
+					height: 57.67vw;
+				}
+				.adult-education-alert div img {
+					width: 100%;
+				}
+				.adult-education-alert .cjedu-link,
+				.adult-education-alert .gzedu-link {
+					width: 16.83vw;
+					height: 5.41vw;
+				}
+				.adult-education-alert .cjedu-link {
+					left: 50vw;
+					top: 24.5vw;
+				}
+				.adult-education-alert .gzedu-link {
+					left: 56vw;
+					top: 40vw;
+				}
+			}
+			
+			.zxzb_pic {
+				/*width: 12vw !important;*/
+				height: 10vw !important;
+				margin-left: 12vw !important;
+			}
+		</style>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?d5acb8162b269bbbdb3b03717e8c592f";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+	</head>
+
+	<body>
+		<header class="navbar" style="height: 12vw;">
+			<a>
+				<img style="height: 10vw;margin-top: 1vw;" src="img/1.png">
+				<i class="icon-menu" id="menuNav" style="color: #ff6620;margin-top: 1vw;"></i>
+			</a>
+		</header>
+		<!--导航-->
+		<div class="leftSide">
+			<div class="leftSide-div">
+				<a class="icon-menu" id="closeNav"></a>
+			</div>
+			<ul>
+				<li class="daohang dh_active">
+					<a href="##"  >首页</a>
+				</li>
+				<li class="daohang">
+					<a href="html/chanpin.html#menuNav" >产品方案</a>
+				</li>
+				<li class="daohang">
+					<a href="html/jishu.html" >技术功能</a>
+				</li>
+				<li class="daohang">
+					<a href="html/shichang.html" >市场前景</a>
+				</li>
+				<li class="daohang">
+					<a href="html/fuwu.html" >服务案例</a>
+				</li>
+				<li class="daohang">
+					<a href="html/aboutus.html" >关于我们</a>
+				</li>
+			</ul>
+		</div>
+		<div class="leftSideCover"></div>
+		<div class="header header1">
+			<div class="contentHolder">
+				<a class="header-logo"><img class="scrollImg" src="img/1.png"><img class="scroll" src="/img/logo1.PNG"></a>
+				<!--<ul class="header-con">
+					<li class="cur" >
+						<a href="##"><em></em>首页</a>
+					</li>
+					<li>
+						<a href="/service.html"><em></em>产品方案</a>
+					</li>
+					<li>
+						<a href="/service.html"><em></em>技术功能</a>
+					</li>
+					<li>
+						<a href="/service.html"><em></em>市场前景</a>
+					</li>
+					<li>
+						<a href="/index.html#cooperation"><em></em>服务案例</a>
+					</li>
+					<li>
+						<a href="/about.html"><em></em>关于我们</a>
+					</li>
+					<li>
+						<a><i class="icon-phone_in_talk"></i><span>400-060-1365</span></a>
+					</li>
+				</ul>-->
+			</div>
+		</div>
+		<div class="mianContent">
+			<div class="banner">
+				<canvas style="width:100%;height:100%;position: absolute;left: 0;top: 0;z-index: 5;" id="banner-1-cover"></canvas>
+				<ul>
+					<li>
+						<img src="img/aboutus_banner1.jpg">
+						<div class="contentHolder">
+							<div class="banner-title banner-li-1">
+								<h2>快速高效搭建网校，开通即可在线教学</h2>
+								<p>PC网站+微信端+APP端+小程序站四站合一</p>
+								<p>
+
+									<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075">立即咨询</a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="img/aboutus_banner2.jpg">
+						<div class="contentHolder">
+							<div class="banner-title banner-li-1">
+								<h2>网来宝，专业的在线教育技术的服务商</h2>
+								<p>PC网站+微信端+APP端+小程序站四站合一</p>
+								<p>
+
+									<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075">立即咨询</a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="img/aboutus_banner3.jpg">
+						<div class="contentHolder">
+							<div class="banner-title banner-li-1">
+								<h2>12年积累经验，五年技术沉淀,打造全面专业的网校平台</h2>
+								<!--<h2></h2>-->
+								<p>专业、高效、值得信赖</p>
+								<p>
+
+									<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075">立即咨询</a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="cur">
+						<img src="img/aboutus_banner1.jpg">
+						<div class="contentHolder">
+
+							<div class="banner-title banner-li-4">
+								<h2>快速高效搭建网校，开通即可在线教学</h2>
+								<p>PC网站+微信端+APP端+小程序站四站合一</p>
+								<p>
+
+									<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075">立即咨询</a>
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--没有技术团队也能拥有自己的网校平台-->
+			<div class="skill">
+				<div class="contentHolder">
+					<div class="skill-title">
+						<h4>没有技术团队也能拥有自己的在线教育平台</h4>
+						<p>网来宝帮您打破所有技术壁垒，提供在线教育一站式解决方案</p>
+					</div>
+					<div class="skill-item">
+						<div class="skill-item-div">
+							<div>
+								<span class="save">个性化定制</span>
+								<p class="span">根据用户体验需求，定制与更新系统</p>
+							</div>
+							<div>
+								<span class="save">平台终身免费升级</span>
+								<p class="span">用户体验和系统功能每周迭代更新，专业团队24小时全方位服务</p>
+								<!--<p class="span">一步服务到位</p>-->
+							</div>
+							<div>
+								<span class="save">节省硬件投入</span>
+								<p class="span">服务器、机柜、机房、空间等等一步服务到位</p>
+							</div>
+							<div>
+								<span class="save">节省研发时间</span>
+								<p class="span">即可布局，迅速推向市场</p>
+								<!--<p class="span">专业团队24小时全方位服务</p>-->
+							</div>
+							<div>
+								<span class="save">节省研发费用</span>
+								<p class="span">节省人员资金投入，减少研发团队的各项开支</p>
+								<!--<p class="span">的各项开支</p>-->
+							</div>
+							<img src="img/bushu_pic2.png">
+						</div>
+					</div>
+					<div class="skill-con">
+						<div class="skill-con-top">
+							<img src="img/bullon.png">
+							<!--<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075"><i
+                                class="icon-message-typing"></i>
+                        </a>-->
+						</div>
+						<div class="skill-con-btn">
+							<ul>
+								<li><span>◆</span>
+									<a>
+										<p>个性化定制</p>
+										<p>根据用户体验需求，定制与更新系统</p>
+									</a>
+								</li>
+								<li><span>◆</span>
+									<a>
+										<p>平台终身免费升级</p>
+										<p>用户体验和系统功能每周迭代更新，专业团队24小时全方位服务</p>
+									</a>
+								</li>
+								<li><span>◆</span>
+									<a>
+										<p>节省硬件投入</p>
+										<p>服务器，机柜、机房、空间等等一步服务到位</p>
+									</a>
+								</li>
+								<li><span>◆</span>
+									<a>
+										<p>节省研发时间</p>
+										<p>即可布局，迅速推向市场</p>
+									</a>
+								</li>
+								<li><span>◆</span>
+									<a>
+										<p>节省研发费用</p>
+										<p>节省人员资金投入，减少研发团队的各项开支</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="skill-p">
+
+						<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075">立即咨询</a>
+					</p>
+				</div>
+			</div>
+			<!--全部功能-->
+			<div class="allCont">
+				<div class="contentHolder">
+					<div class="allCont-title">
+						<h4>教育机构专属的在线教育解决方案</h4>
+						<p>致力于为个人、教培机构、企业、学校提供互联网+教育一站式解决方案及技术落地服务</p>
+					</div>
+					<div class="allCont-item">
+						<ul>
+							<li>
+								<img class="zxzb_pic" src="img/chanpin_fa_ico1.png" />
+								<a>
+									<p>在线云直播</p>
+									<p>在线实时直播，师生真实的互动交流</p>
+								</a>
+							</li>
+							<ul>
+								<li>
+									<img class="zxzb_pic" src="img/chanpin_fa_ico2.png" />
+									<a>
+										<p>免费试听</p>
+										<p>提供线上免费体验试听课程的功能</p>
+									</a>
+								</li>
+
+							</ul>
+							<ul>
+								<li>
+									<img class="zxzb_pic" src="img/chanpin_fa_ico3.png" />
+									<a>
+										<p>移动端学习</p>
+										<p>随时随地学习，突破空间和时间的控制</p>
+									</a>
+								</li>
+
+							</ul>
+							<ul>
+								<li>
+									<img class="zxzb_pic" src="img/chanpin_fa_ico4.png" />
+									<a>
+										<p>在线题库</p>
+										<p>丰富的百万题库，学习任您选择</p>
+									</a>
+								</li>
+
+							</ul>
+							<ul>
+								<li>
+									<img class="zxzb_pic" src="img/chanpin_fa_ico5.png" />
+									<a>
+										<p>云存储技术</p>
+										<p>在线视频教学，方便老师和学生</p>
+									</a>
+								</li>
+
+							</ul>
+							<ul>
+								<li>
+									<img class="zxzb_pic" src="img/chanpin_fa_ico6.png" />
+									<a>
+										<p>师资管理</p>
+										<p>强大的师资力量，让您的学习事半功倍</p>
+									</a>
+								</li>
+
+							</ul>
+							<ul>
+								<li>
+									<img class="zxzb_pic" src="img/chanpin_fa_ico7.png" />
+									<a>
+										<p>视频教学</p>
+										<p>在线视频教学，方便老师和学生</p>
+									</a>
+								</li>
+
+							</ul>
+							<ul>
+								<li>
+									<img class="zxzb_pic" src="img/chanpin_fa_ico8.png" />
+									<a>
+										<p>在线问答</p>
+										<p>任何学习疑问，都可以在线直接问答</p>
+									</a>
+								</li>
+
+							</ul>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--解说图-->
+			<!--<div class="commentary">
+            <img src="img/bg_pic2.png">
+            <div class="commentary-title">
+                <div class="contentHolder">
+                    <ul>
+                        <li>
+                            <a>
+                                <p><span class="big animateNum" id="num-1" data-to="5" data-speed="1500">12</span><em>年</em></p>
+                                <p>专注技术开发</p>
+                            </a>
+                            <span class="line"></span>
+                        </li>
+                        <li>
+                            <a>
+                                <p><span class="big animateNum" id="num-2" data-to="20" data-speed="1500">100</span><em>人</em></p>
+                                <p>专注技术团队</p>
+                            </a>
+                            <span class="line"></span>
+                        </li>
+                        <li>
+                            <a>
+                                <p><span class="big animateNum" id="num-3" data-to="100" data-speed="1500">100</span><em>次</em></p>
+                                <p>产品功能迭代</p>
+                            </a>
+                            <span class="line"></span>
+                        </li>
+                        <li>
+                            <a>
+                                <p><span class="big animateNum" id="num-4" data-to="150" data-speed="1500">1000</span><em>家</em></p>
+                                <p>培训机构用户需求调研</p>
+                            </a>
+                            <span class="line"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+			<!---多种模式切换-->
+			<div class="pattern" style="margin-top: -15vw;">
+				<div class="contentHolder">
+					<div class="pattern-title">
+						<h4>多终端自由切换，让学员任意选择学习方式</h4>
+						<p>跨平台设计，包括PC网校、APP、微信端、手机端等多种终端平台设备，满足不同学员的学习需求</p>
+					</div>
+					<div class="pattern-item">
+						<div class="pattern-item-right">
+							<img src="img/jishu_zb_pic2.png">
+						</div>
+						<div class="pattern-item-left">
+							<ul>
+								<li>
+									<a><i class="icon-tv"></i>
+										<p>
+											<span>PC网校</span>
+											<span>直接网页版打开，强大的功能+极强的稳定性</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a><i>APP</i>
+										<p><span>APP网校</span><span>课程营销、在线授课费用支付全部搞定</span></p>
+									</a>
+								</li>
+								<li>
+									<a><i class="icon-mobile22"></i>
+										<p><span>手机端网校</span><span>课程营销、在线授课费用支付全部搞定</span></p>
+									</a>
+								</li>
+								<li>
+									<a><i class="icon-weixin"></i>
+										<p><span>微信端网校</span><span>绑定企业微信公众号，学员随时随地学习</span></p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="pattern-p">
+
+						<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075">立即咨询</a>
+					</p>
+				</div>
+			</div>
+			<!--适应不同的解决方案-->
+			<div class="solve">
+				<div class="contentHolder">
+					<div class="solve-title">
+						<h4>适应不同教育环境的解决方案</h4>
+						<p>致力于为个人、教培机构、企业、学校提供一站式“互联网+教育”服务</p>
+						<ul class="solve-ul">
+							<li class="cur" data-index="0">
+								<a>中小学</a>
+							</li>
+							<li data-index="1">
+								<a>高等院校</a>
+							</li>
+							<li data-index="2">
+								<a>培训机构</a>
+							</li>
+							<li data-index="3">
+								<a>政府企业</a>
+							</li>
+						</ul>
+					</div>
+					<div class="solve-banner">
+						<ul>
+							<li class="cur" data-list="0"><img src="img/jishu_3dflow_pic1.png" /></li>
+							<li class="left" data-list="2"><img src="img/jishu_3dflow_pic2.png" /></li>
+							<li class="right" data-list="1"><img src="img/jishu_3dflow_pic3.png" /></li>
+							<li class="behind" data-list="3"><img src="img/jishu_3dflow_pic4.png" /></li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+			<!--强大的技术团队，为您提供贴心服务--->
+			<div class="service">
+				<div class="contentHolder">
+					<div class="service-title">
+						<h4>网来宝领先、安全、稳定的技术实力，可定制功能也可私有云部署</h4>
+						<p>个性化的定制服务，为您打造属于自己的专属网校</p>
+					</div>
+					<div class="service-item">
+						<div class="service-item-left">
+							<ul>
+								<li>
+									<p>
+										<span>课程录制</span>
+										<em>优质课程录制服务</em>
+									</p>
+									<p><i class="icon-desktop_windows"></i></p>
+								</li>
+								<li>
+									<p>
+										<span>快速部署</span>
+										<em>零基础投入，快速部署，高效运营</em>
+									</p>
+									<p><i class="icon-timeline"></i></p>
+								</li>
+								<li>
+									<p>
+										<span>学员引流</span>
+										<em>挖掘流量变现渠道</em>
+									</p>
+									<p><i class="icon-verified_user"></i></p>
+								</li>
+							</ul>
+						</div>
+						<div class="service-item-con">
+							<div class="service-item-con-div"></div>
+							<div class="service-item-con-div1"></div>
+							<p>
+								<i class="icon-users"></i><span>强大的技术团队</span>
+							</p>
+						</div>
+						<div class="service-item-right">
+							<ul>
+								<li>
+									<p>
+										<span>专项服务</span>
+										<em>24小时全程在线客服</em>
+									</p>
+									<p><i class="icon-class"></i></p>
+								</li>
+								<li>
+									<p>
+										<span>私有定制</span>
+										<em>竭力为您打造专享网校</em>
+									</p>
+									<p><i class="icon-free_breakfast"></i></p>
+								</li>
+								<li>
+									<p>
+										<span>安全稳定</span>
+										<em>大数据安全预警，IP访问监控，安全无短板</em>
+									</p>
+									<p><i class="icon-touch_app"></i></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a name="cooperation"></a>
+					<p class="service-p">
+
+						<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075">立即咨询</a>
+					</p>
+				</div>
+			</div>
+
+			<!--合作案例-->
+			<div class="cooperation">
+				<div class="contentHolder">
+					<h2>合作案例</h2>
+					<ul>
+						<li>
+							<a><img src="/img/link1.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link2.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link3.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link4.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link5.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link6.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link7.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link8.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link9.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link10.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link11.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link12.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link13.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link14.png"></a>
+						</li>
+						<li>
+							<a><img src="/img/link15.png"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--快速 搭建 专属 网校-->
+			<div class="buildSchool">
+				<img src="img/bg_pic2.png">
+				<div class="contentHolder">
+					<p class="buildSchool-title">一分钟搭建自己的在线网校，你还在等什么？</p>
+					<!-- <div>
+                    <input type="text" placeholder="请输入您的姓名" disabled="disabled"><input type="text" placeholder="请输入您的号码" disabled="disabled">
+                </div> -->
+					<p>
+						<a class="linkBtn" href="#">立即咨询</a>
+						<!-- <a class="linkBtn" href="#">确认提交</a> -->
+					</p>
+				</div>
+			</div>
+
+			<div class="footer" style="height: 5rem;">
+				<div class="contentHolder">
+					<div class="footer-right">
+						<img src="/img/ft_contact.jpg">
+					</div>
+					<div class="footer-left">
+						<ul>
+							<li>
+								<a href="/index.html">首页</a>
+							</li>
+							<li>
+								<a href="/system.html">网校系统</a>
+							</li>
+							<li>
+								<a href="/service.html">录课服务</a>
+							</li>
+							<li>
+								<a href="/index.html#cooperation">合作案例</a>
+							</li>
+							<li>
+								<a href="/about.html">关于我们</a>
+							</li>
+						</ul>
+						<p><span>鄂公网安备42011102001009号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+						<script type="text/javascript" src="http://wljg.scjgj.wuhan.gov.cn/whwjww/VieidServlet?webId=cec4ce76fe34efff4775fb30d56d79e2&width=26&heigth=26"></script>
+						<a class="gs" href="http://wljg.scjgj.wuhan.gov.cn/whwjww/indexquery/indexqueryAction!dizview.dhtml?chr_id=cec4ce76fe34efff4775fb30d56d79e2&bus_ent_id=420000000009056707&bus_ent_chr_id=3e8d92c5c917490496f0b9f5a65da234" target="_blank">工商网监</a>
+						<p class="footer-left-div">
+							<span>Copyright ©2000-2020 www.Ls365.com 鄂ICP备15010455号 </span>
+							<!--<img src="/img/renzheng.PNG" /><img src="/img/wenhua.PNG" />-->
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--右侧导航栏-->
+		<div class="right-float">
+			<div class="right-float-div">
+				<a class="right_icon_school" href="javascript:void(0)"></a>
+				<div class=control_a_school>
+					<a class="linkBtn">专属网校</a>
+				</div>
+				<a class="right_icon_phone"></a>
+				<div class="control_a_phone">电话 400-060-1365
+				</div>
+				<a class="right_icon_mes" href="javascript:void(0);"></a>
+				<div class="control_a_mes">
+					<a href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075" target="_blank">立即咨询</a>
+				</div>
+				<a class="right_icon_code"></a>
+				<div class="control_a_code">
+					<img src="/img/wcode.jpg">
+				</div>
+				<a class="right_icon_top"></a>
+			</div>
+		</div>
+
+		<!---左侧导航栏-->
+		<div class="left-float">
+			<div class="left-float-div">
+				<ul class="lfd-ul">
+					<li>
+						<a class="linkBtn" href="#">网校试用</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://p.qiao.baidu.com/cps/chat?siteId=11464933&userId=23721075">立即咨询</a>
+					</li>
+					<li>
+						<a class="linkBtn" href="#">专属网校</a>
+					</li>
+					<li>
+						<a href="https://demo.ls365.com/">演示站</a>
+					</li>
+				</ul>
+				<ul class="left-ico">
+					<li>
+						<a><i>1</i></a>
+					</li>
+					<li>
+						<a><i>1</i></a>
+					</li>
+					<li>
+						<a><i>1</i></a>
+					</li>
+					<li>
+						<a><i>1</i></a>
+					</li>
+				</ul>
+				<!-- <p class="shrink"><i class="icon-chevron-right"></i></p> -->
+			</div>
+		</div>
+		
+
+	</body>
+
+</html>
+<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ls365.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>

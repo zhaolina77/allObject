@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "垃圾回收",
+  "navigationBarBackgroundColor": "#4AE3E0",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#4AE3E0"
+ 
+}

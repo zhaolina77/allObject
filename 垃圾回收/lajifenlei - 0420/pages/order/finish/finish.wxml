@@ -1,0 +1,30 @@
+<form bindsubmit="submitCode">
+  <view style="margin-bottom:140rpx">
+    <view class="aui-padded-l-15 aui-padded-r-15 aui-bg-white">
+      <view class="bg-radius aui-padded-15  aui-padded-t-0">
+        <view class=" ">
+          <view class="aui-margin-t-15 aui-padded-b-15 aui-border-b flex" wx:for="{{fl_list}}" wx:key="list" data-id="{{item.id}}"  data-index="{{index}}">
+          <!-- bindtap="choose" -->
+            <view class="aui-padded-l-15 aui-padded-r-15">
+              <view class="fl_pic">
+                <image src="{{item.cover_image}}"></image>
+              </view>
+              <view class="aui-font-size-13 aui-margin-t-5 aui-text-center">{{item.name}}</view>
+            </view>
+            <view class="flex aui-padded-l-15 aui-margin-l-15">
+              <text>共计：</text>
+              <input  name="{{item.names}}" style="border: 1rpx solid #eee !important;width:100rpx !important;height: 40rpx;padding:10rpx" type="number" data-index="{{index}}"  data-id="{{item.id}}"></input>
+              <text class="aui-padded-l-15">元</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="btn_box aui-bg-white aui-padded-15">
+    <!-- <view class="btn" bindtap="tijiao">提交</view> -->
+    <button  formType="submit" class="btn">完成</button>
+  </view>
+</form>

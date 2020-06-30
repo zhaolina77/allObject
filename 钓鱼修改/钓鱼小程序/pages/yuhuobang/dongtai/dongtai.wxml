@@ -1,0 +1,131 @@
+<view class="aui-content mine-content-footer" wx:if="{{status==1}}">
+	<view class="aui-border-bgB aui-padded-15 aui-padded-t-5">
+		<view class="aui-list aui-media-list">
+			<view class="aui-list-item aui-padded-l-0 aui-padded-r-0">
+				<view class="aui-media-list-item-inner">
+					<view class="aui-list-item-media">
+						<view class="pic">
+							<image src="{{dongtaiList.head_portrait}}"></image>
+						</view>
+					</view>
+					<view class="aui-list-item-inner aui-padded-r-0" style="display: flex !important;">
+						<view class="" bindtap="tiaozhuan" data-id="{{dongtaiList.account_id}}">
+							<view class="aui-list-item-text">
+								<view class="aui-list-item-title aui-font-size-15">{{dongtaiList.nick_name}}</view>
+							</view>
+							<view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-5">{{dongtaiList.create_time}}</view>
+						</view>
+						<view wx:if="{{dongtaiList.is_self==0}}">
+							<view class="aui-btn aui-btn-theme aui-font-size-12" style="width:3rem !important;" bindtap="care" data-id="{{dongtaiList.account_id}}" wx:if="{{dongtaiList.is_friends==0}}">关注</view>
+							<view class="aui-btn aui-btn-theme aui-btn-outlined" bindtap="care" style="width:5rem !important;" data-id="{{dongtaiList.account_id}}" wx:else>已关注</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="aui-list-item aui-padded-l-0  guanzhu-list">
+				<view class="aui-list-item-text aui-text-black aui-margin-t-10 aui-margin-b-10">{{dongtaiList.content}}</view>
+				<!--发布图片-->
+				<view class="aui-row">
+					<block wx:if="{{dongtaiList.type==1}}">
+						<view class="aui-col-xs-4" wx:for="{{dongtaiList.pic}}" wx:key="pic">
+							<image src="{{item}}" bindtap="imgYu" data-list="{{dongtaiList.pic}}" data-src="{{item}}"></image>
+						</view>
+					</block>
+					<block class="" wx:else>
+						<video src="{{dongtaiList.url}}" style="width:100%;" object-fit="fill" poster="{{dongtaiList.vedio_thumb}}"></video>
+					</block>
+				</view>
+
+				<!-- <view class="aui-list-item-text aui-text-grayer aui-font-size-10">{{dongtaiList.angling_site_name}}</view> -->
+
+				<view class=" aui-padded-r-10 box">
+					<view class="aui-list-item-text aui-text-grayer aui-font-size-10">{{dongtaiList.angling_site_name}}</view>
+					<view class="aui-searchbar-cancel aui-text-grayer aui-font-size-10" tapmod>
+						<image src="/image/jubao1.png" mode="widthFix" bindtap="jubao" data-id="{{dongtaiList.id}}"></image>
+						<image src="/image/lahei1.png" mode="widthFix" style="margin-left:30rpx" bindtap="lahei" data-id="{{dongtaiList.account_id}}"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="">
+		<view class="aui-padded-t-15 aui-padded-l-15 aui-padded-b-5 aui-font-size-16">评价
+			<text class="aui-text-gray aui-font-size-12">({{dongtaiList.commentnum_num}}条)</text>
+		</view>
+		<view class="pingjia-list">
+			<view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 " wx:for="{{replayList}}" wx:key="replayList">
+				<!--个人信息-->
+				<view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+					<view class="aui-list-item-inner aui-padded-r-0">
+						<view class="aui-list-item-title" bindtap="person" data-id="{{item.account_id}}">
+							<view class="head-pic">
+								<image src="{{item.head_portrait}}" class="aui-img-round"></image>
+							</view>
+							<view class="aui-padded-l-10">
+								<view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{item.nick_name}}</view>
+								<view class="aui-list-item-text aui-text-gray aui-font-size-12 aui-padded-t-5">
+								</view>
+							</view>
+						</view>
+						<view class="aui-list-item-right aui-font-size-12 aui-text-gray" bindtap="zan" data-index="{{index}}" data-id="{{item.id}}">
+							<image src="/image/zan.png" mode="widthFix" style="width:30rpx;vertical-align: middle;" wx:if="{{item.is_likes==0}}"></image>
+							<image src="/image/zan-on.png" mode="widthFix" style="width:30rpx;vertical-align: middle;" wx:else></image>
+							<text style="vertical-align: middle;">{{item.like_num}}</text>
+
+						</view>
+					</view>
+				</view>
+
+				<view class="inner">
+					<!--发布内容-->
+					<view class="aui-padded-b-15">
+						<view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+							{{item.content}} ​​​
+						</view>
+
+						<!--<view class="show aui-font-size-14">全文</view>-->
+
+						<!--商家回复-->
+						<view class="aui-margin-r-15 aui-bg-grayer bg-radius aui-padded-10 aui-margin-t-15 aui-font-size-13 aui-text-gray sjhf">
+							<view class="aui-margin-b-10" wx:for="{{item.reply_list}}" wx:key="reply_list">
+								<text class="aui-text-black fweight-5">{{item.nick_name}}：</text> {{item.content}}
+							</view>
+							<text class="aui-font-size-12 aui-text-theme" bindtap="allReplay" data-id="{{item.id}}" wx:if="{{item.reply_list.length>0}}">查看全部回复</text>
+							<text class="aui-font-size-12 aui-text-theme" bindtap="allReplay" data-id="{{item.id}}" wx:else>回复</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+<view class="aui-bar aui-bar-tab aui-padded-15 clearfix footer-bar" id="footer">
+	<view class="xie-pl">
+		<view class="aui-searchbar aui-bg-white" id="search">
+			<view class="aui-searchbar-input aui-border-radius aui-bg-grayer aui-margin-l-0" tapmode>
+				<input type="text" placeholder="写下你的评论吧" id="search-input" bindfocus="shuru" bindblur="del" bindinput="content" value="{{content}}" />
+			</view>
+			<view class="aui-searchbar-cancel aui-padded-l-10 aui-padded-r-10 fabu" tapmod wx:if="{{foc==1}}" bindtap="fabu">
+				发布
+			</view>
+			<view class="aui-padded-l-10 aui-padded-r-10 box" wx:else>
+				<view class="aui-searchbar-cancel aui-padded-l-10 aui-padded-r-10" tapmod bindtap="like">
+					<image src="/image/zan1.png" mode="widthFix" wx:if="{{dongtaiList.is_like==0}}"></image>
+					<image src="/image/zan-on.png" mode="widthFix" wx:else></image>
+					<text class="aui-font-size-10" style="position: relative;top: -7px;">{{dongtaiList.like_num}}</text>
+				</view>
+				<view class="aui-searchbar-cancel aui-padded-l-10 aui-padded-r-10" tapmod bindtap="coll">
+					<image src="/image/sc1.png" mode="widthFix" wx:if="{{dongtaiList.is_coll==0}}"></image>
+					<image src="/image/sc-on.png" mode="widthFix" wx:else></image>
+					<text class="aui-font-size-10" style="position: relative;top: -7px;">{{dongtaiList.coll_num}}</text>
+				</view>
+
+
+			</view>
+
+
+		</view>
+	</view>
+</view>

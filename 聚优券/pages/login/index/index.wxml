@@ -1,0 +1,26 @@
+<view class="aui-padded-15">
+	<view class="logo">
+		<image src="/iamge/logo.png" mode="aspectFill"></image>
+	</view>
+	<view class="aui-padded-t-15">
+		<view class="aui-padded-15 flex aui-border-b">
+			<view class="ico">
+				<image src="/image/person.png"></image>
+			</view>
+			<view class="aui-padded-l-15">
+				<input type="text" placeholder="请输入拓展员登录名" placeholder-class="pholder" bindinput="phone"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex aui-border-b">
+			<view class="ico">
+				<image src="/image/mima.png"></image>
+			</view>
+			<view class="aui-padded-l-15">
+				<input type="password" placeholder="请输入登录密码" placeholder-class="pholder" bindinput="password"></input>
+			</view>
+		</view>
+		<view class="aui-padded-t-15">
+			<view class="aui-btn aui-btn-theme aui-margin-t-15" bindtap="login">登录</view>
+		</view>
+	</view>
+</view>

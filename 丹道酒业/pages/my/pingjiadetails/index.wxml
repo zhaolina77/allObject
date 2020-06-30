@@ -1,0 +1,47 @@
+<!--pages/my/addpingjia/index.wxml-->
+<view class="flex flex1 aui-margin-t-15 aui-bg-white aui-padded-15" style="margin-top:2rpx;">
+    <image class="pimg" src="{{thumb}}"></image>
+    <view class="aui-margin-l-15 flex1">
+      <view class="aui-font-size-15 aui-text-blacker">{{goods_name}}</view>
+      <view class="aui-font-size-11 aui-text-grayer">{{spec_name}}</view>
+      <view class="aui-font-size-16 aui-text-black aui-margin-t-15">￥{{goods_price}}</view>
+    </view>
+    <view class="aui-font-size-11 aui-text-grayer">X{{goods_num}}</view> 
+  </view>
+<view class=" aui-margin-t-15">
+    <view class="aui-bg-white bg-radius aui-text-center pingfen flex aui-padded-15">
+        <text class="aui-font-size-16 aui-margin-l-5">综合评价{{evaluate.level_name}}</text>
+        <view class="aui-row" style="display: inline-block;">
+             <view class="aui-col-5 {{evaluate.level>=1? 'on': ''}}"  bindtap="changeColor1" data-idx="1">
+                <image src="{{evaluate.level>=1? '/images/star-on.png': '/images/star.png'}}"  mode="widthFix"></image>
+            </view>
+            <view class="aui-col-5 {{evaluate.level>=2? 'on': ''}}"  bindtap="changeColor1" data-idx="2">
+                <image src="{{evaluate.level>=2? '/images/star-on.png': '/images/star.png'}}" mode="widthFix"></image>
+            </view>
+            <view class="aui-col-5 {{evaluate.level>=3? 'on': ''}}"  bindtap="changeColor1" data-idx="3">
+                <image src="{{evaluate.level>=3? '/images/star-on.png': '/images/star.png'}}" mode="widthFix"></image>
+            </view>
+            <view class="aui-col-5 {{evaluate.level>=4? 'on': ''}}"  bindtap="changeColor1" data-idx="4">
+                <image src="{{evaluate.level>=4? '/images/star-on.png': '/images/star.png'}}" mode="widthFix"></image>
+            </view>
+            <view class="aui-col-5 {{evaluate.level>=5? 'on': ''}}"  bindtap="changeColor1" data-idx="5">
+                <image src="{{evaluate.level>=5? '/images/star-on.png': '/images/star.png'}}" mode="widthFix"></image>
+            </view>
+        </view>
+
+    </view>
+    
+    <view class="aui-margin-t-15 bg-radius aui-bg-white aui-padded-15">
+        <view class="aui-font-size-15">{{evaluate.content}}</view>
+        <view class="aui-row">
+            <block wx:for="{{evaluate.pic}}" wx:if="{{evaluate.pic}}" wx:key="{{index}}"> 
+            <view class="pic aui-pull-left  aui-margin-t-15">
+                <image src="{{item}}" mode="aspectFill"></image>
+            </view>
+            </block>
+           
+        </view>
+    </view>
+
+
+</view>

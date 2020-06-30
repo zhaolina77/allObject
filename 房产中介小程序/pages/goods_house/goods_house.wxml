@@ -1,0 +1,33 @@
+<view class="aui-bar aui-bar-nav aui-bar-light aui-bg-white mine-bar">
+	<view class="aui-title">
+		<view class="aui-padded-l-15 aui-padded-r-15 aui-bg-grayer serch aui-text-left">
+			<image mode="widthFix" src="/image/sousuo.png" style=" float: left;width:24rpx;margin-top:24rpx;margin-right: 6px;"></image>
+			<input placeholder="请输入小区名称..." type="text" value="{{name}}" bindinput="shop_search_function" confirm-type='search' bindconfirm='search'></input>
+		</view>
+	</view>
+</view>
+
+<view class=" shouye_list aui-padded-15 aui-padded-t-0">
+  <view class=" ">
+    <block wx:for="{{list}}" wx:key="{{idx}}" wx:for-item="item">
+      <view class="flex item_box aui-margin-b-10 aui-padded-t-10" catchtap="detail" data-id="{{item.houseId}}" data-type="2">
+        <view class="item bg-radius">
+          <image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+        </view>
+        <view class="aui-margin-l-10  right ">
+          <view class="aui-font-size-15 aui-ellipsis-1 ">{{item.houseName}}</view>
+          <view class="flex aui-margin-t-10">
+            <image class="address" src="/image/address.png"></image>
+            <view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 " style="width:92%">{{item.address}}</view>
+          </view>
+          <view class="flex aui-margin-t-10" style="justify-content: flex-start;">
+            <view class="aui-text-theme weui-label aui-font-size-15">
+              <text class="ft_5">{{item.price}}</text>
+            </view>
+            <view class="aui-text-gray weui-label aui-font-size-10 aui-margin-l-10">{{item.area}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,106 @@
+<view class="aui-list aui-media-list info">
+    <view class="aui-list-item">
+        <view class="aui-media-list-item-inner ">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-text">
+                    <view class="">
+                        <text class="fweight-5 aui-text-black aui-font-size-16">冷暖自知</text>
+                    </view>
+                </view>
+                <view class="aui-list-item-text aui-text-orange aui-font-size-12 aui-padded-t-10">
+                    普通会员
+                </view>
+            </view>
+            <view class="aui-list-item-media">
+                <view class="head-pic">
+                    <image src="/image/lizi.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<view class="aui-list aui-media-list aui-border-bgT aui-border-bgB aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-padded-t-15 aui-padded-b-15 fweight-5 aui-font-size-15 aui-border-b">认证类型</view>
+    <view class="aui-list-item aui-border-b aui-padded-l-0">
+        <view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-media">
+                <image class="vip" src="/image/renzheng1.png" mode="widthFix"></image>
+            </view>
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                    <view class="">
+                        <view class="aui-text-black aui-font-size-15">
+                            个人认证
+                        </view>
+                        <view class="aui-text-gray aui-font-size-12 aui-padded-t-5">
+                            可发布大渔榜、参加钓鱼赛事
+                        </view>
+                    </view>
+                    <view class="aui-btn aui-btn-theme aui-font-size-12">去认证</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list-item aui-border-b aui-padded-l-0">
+        <view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-media">
+                <image class="vip" src="/image/renzheng2.png" mode="widthFix"></image>
+            </view>
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                    <view class="">
+                        <view class="aui-text-black aui-font-size-15">
+                            协会认证
+                        </view>
+                        <view class="aui-text-gray aui-font-size-12 aui-padded-t-5">
+                            可发布比赛、活动公告等信息
+                        </view>
+                    </view>
+                    <view class="aui-btn aui-btn-theme aui-font-size-12">去认证</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list-item aui-border-b aui-padded-l-0">
+        <view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-media">
+                <image class="vip" src="/image/renzheng3.png" mode="widthFix"></image>
+            </view>
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                    <view class="">
+                        <view class="aui-text-black aui-font-size-15">
+                            钓场认证
+                        </view>
+                        <view class="aui-text-gray aui-font-size-12 aui-padded-t-5">
+                            可发布钓场信息
+                        </view>
+                    </view>
+                    <view class="aui-btn aui-btn-theme aui-font-size-12">去认证</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list-item  aui-padded-l-0">
+        <view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-media">
+                <image class="vip" src="/image/renzheng4.png" mode="widthFix"></image>
+            </view>
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                    <view class="">
+                        <view class="aui-text-black aui-font-size-15">
+                            商家认证
+                        </view>
+                        <view class="aui-text-gray aui-font-size-12 aui-padded-t-5">
+                            可发布管理自己的商品
+                        </view>
+                    </view>
+                    <view class="aui-btn aui-btn-theme aui-font-size-12">去认证</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

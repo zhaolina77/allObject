@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/aboutUs.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/zhizhusi.css">
+</head>
+
+<body>
+    <!-- 网站顶部 -->
+    <div style="width: 100%;height: 40px;background-color: #ff731b;">
+        <div class="head_box flex">
+            <div>
+                欢迎来到网来宝在线教育平台
+            </div>
+            <div class="flex">
+                <img class="phone" src="../images/phone.png" alt="">
+                <p>029-87978755</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- 导航部分 -->
+    <div class="ttop">
+        <div class="top_box flex">
+            <div class="flex">
+                <img width="60px" height="60px" style="margin-top: -12px;" src="../images/logo1.png" alt="">
+                <img style="margin-left: 20px;" src="../images/1.png" alt="">
+                <span class="txt2 ">在线教育技术服务提供商</span>
+            </div>
+            <ul class="navs flex">
+                <li class="daohang ">
+                    <a href="../index.html">首页</a>
+                </li>
+                <li class="daohang ">
+                    <a href="product.html">产品|方案</a>
+                </li>
+                <li class="daohang ">
+                    <a href="technology.html">技术|功能</a>
+                </li>
+                <li class="daohang ">
+                    <a href="market.html">市场|前景</a>
+                </li>
+                <li class="daohang ">
+                    <a href="service.html">服务|案例</a>
+                </li>
+                <li class="daohang dh_active">
+                    <a href="aboutUs.html">关于我们</a>
+                </li>
+                <li class="daohang ">
+                    <a href="##">在线购买</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- banner -->
+    <canvas id="canvas"></canvas>
+    <!-- <div class="zixun text-white font-size-26 text-center">立即咨询</div> -->
+    <div class="banner">
+        <div id="slider" class="mui-slider">
+
+            <div class="mui-slider-group mui-slider-loop">
+                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate banner_x">
+
+                    <div class="banner_txt_box text-center">
+                        <p class="text—center font-size-60 text-orang font-w">12年积累经验，五年技术沉淀</p>
+                        <p class="text—center font-size-60 text-orang font-w">打造全面专业的网校平台</p>
+                        <div class="font-size-24 text-white" style="margin-top: 40px;">
+                            专业、高效、值得信赖
+                        </div>
+                        <p class="zx text-white font-size-26">立即咨询</p>
+                    </div>
+                    <a href="#">
+                        <img src="../images/aboutus_banner3.jpg">
+                    </a>
+                </div>
+                <!-- 第一张 -->
+                <div class="mui-slider-item banner_x">
+                    <div class="banner_txt_box text-center">
+                        <p class="text—center font-size-60 text-orang font-w">快速高效搭建网校，开通即可在线教学</p>
+                        <div class="font-size-24 text-white" style="margin-top: 40px;">
+                            PC网站+微信端+APP端+小程序站四站合一
+                        </div>
+                        <p class="zx text-white font-size-26">立即咨询</p>
+                    </div>
+                    <a href="#">
+                        <img src="../images/aboutus_banner1.jpg">
+                    </a>
+                </div>
+                <!-- 第二张 -->
+                <div class="mui-slider-item banner_x">
+                    <div class="banner_txt_box text-center">
+                        <p class="text—center font-size-60 text-orang font-w">网来宝，专业的在线教育技术的服务商</p>
+                        <div class="font-size-24 text-white" style="margin-top: 40px;">
+                            PC网站+微信端+APP端+小程序站四站合一
+                        </div>
+                        <p class="zx text-white font-size-26">立即咨询</p>
+                    </div>
+                    <a href="#">
+                        <img src="../images/aboutus_banner2.jpg">
+                    </a>
+                </div>
+                <!-- 第三张 -->
+                <div class="mui-slider-item banner_x">
+                    <div class="banner_txt_box text-center">
+                        <p class="text—center font-size-60 text-orang font-w">12年积累经验，五年技术沉淀</p>
+                        <p class="text—center font-size-60 text-orang font-w">打造全面专业的网校平台</p>
+                        <div class="font-size-24 text-white" style="margin-top: 40px;">
+                            专业、高效、值得信赖
+                        </div>
+                        <p class="zx text-white font-size-26">立即咨询</p>
+                    </div>
+                    <a href="#">
+                        <img src="../images/aboutus_banner3.jpg">
+                    </a>
+                </div>
+                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate banner_x">
+                    <div class="banner_txt_box text-center">
+                        <p class="text—center font-size-60 text-orang font-w">快速高效搭建网校，开通即可在线教学</p>
+                        <div class="font-size-24 text-white" style="margin-top: 40px;">
+                            PC网站+微信端+APP端+小程序站四站合一
+                        </div>
+                        <p class="zx text-white font-size-26">立即咨询</p>
+                    </div>
+                    <a href="#">
+                        <img src="../images/aboutus_banner1.jpg">
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div> -->
+        </div>
+
+    </div>
+
+    <!-- ABOUT US -->
+    <div class="aboutus bg-grayer" style="margin-top: -10px;">
+        <div class="title text-black font-size-28 text-center border-b font-w">ABOUT US
+            <div class="aboutus_xian"></div>
+        </div>
+        <div class="title1 text-black font-size-26 text-center font-w">关于我们</div>
+        <div class="flex content_box" style="align-items: flex-start;">
+            <div class="aboutus_left border-r">
+                <div class="aboutus_item font-size-14 aboutus_item_active">
+                    <p class="text-black txt1" style="float: right;margin-right: 0;">introduction</p>
+                    <p class="text-grayer txt2" style="float: right;margin-top: 10px;">公司介绍</p>
+                    <div class="aboutus_item_xian"></div>
+                    <div class="dian d1 dian_active">
+                        <div class="dian1">
+                            <div class="dian2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutus_item aboutus_item1 font-size-14">
+                    <p class="text-black txt1" style="float: right;">iCulture</p>
+                    <p class="text-grayer txt2" style="float: right;margin-top: 10px;">企业文化</p>
+                    <div class="aboutus_item_xian"></div>
+                    <div class="dian d2 ">
+                        <div class="dian1">
+                            <div class="dian2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutus_item aboutus_item2  font-size-14">
+                    <p class="text-black txt1" style="float: right;">Honorary</p>
+                    <p class="text-grayer txt2" style="float: right;margin-top: 10px;">荣誉资质</p>
+                    <div class="aboutus_item_xian"></div>
+                    <div class="dian d3 ">
+                        <div class="dian1">
+                            <div class="dian2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutus_item aboutus_item3 font-size-14">
+                    <p class="text-black txt1" style="float: right;">contact</p>
+                    <p class="text-grayer txt2" style="float: right;margin-top: 10px;">联系我们</p>
+                    <div class="aboutus_item_xian"></div>
+                    <div class="dian d4 ">
+                        <div class="dian1">
+                            <div class="dian2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutus_right">
+                <div class="right_content text-black">
+                    <div class="flex">
+                        <div class="about_txt">
+                            <p class="txt font-size-22 font-w">——关于网来宝</p>
+                            <p class="txt">在线教育整体解决方案技术提供服务商</p>
+                            <p class="txt">网来宝，隶属于网来网去集团旗下品牌，是一家专注在线教育产品研究、开发以及在线教育解决方案一站式服务的高科技企业。</p>
+                            <p class="txt">公司经过多年的潜心研究与开发，构建了以全模式教育云学习系统平台，并形成了独具特色的“教育信息化一站式整体解决方案”。为广大师生提供贯穿“招、教、学、考、练、测、评”的智能化、一站式在线教育技术支撑服务。 公司为教育企业及个人提供一站式线上教育平台解决方案。从“用户引入，用户沉淀，用户转化，用户留存，用户裂变”5个方面，帮助教学机构打造在线教育线上运营新模式！
+                            </p>
+                            <p class="txt">我们的目标：立足在线教育领域，成为科技+教育解决方案先行者!</p>
+                            <p class="txt">我们的宗旨：做一家通过技术创新推动社会进步的企业！</p>
+                            <p class="txt">我们的技术不断推陈出新，我们的思想不断层层跃进，我们的服务质量持续攀升。客户提出的问题， 我们售后与技术携手解决。客户合理的技术需求，我们及时响应完成。</p>
+                            <p class="txt">这就是我们网来宝人的一贯信念：铸就我们的品牌、全力升级我们的服务质量！</p>
+                        </div>
+                        <!-- <div class="about_image">
+                            <img src="../images/aboutus3_pic1.jpg" alt="">
+                        </div> -->
+
+                    </div>
+                    <div class="flex aboutus_pic">
+                        <div class="pic1"><img class="about_img" src="../images/aboutus3_pic1.jpg" alt=""></div>
+                        <div class="pic1"><img class="about_img" src="../images/aboutus3_pic2.jpg" alt=""></div>
+                        <div class="pic1"><img class="about_img" src="../images/aboutus3_pic3.jpg" alt=""></div>
+                    </div>
+
+                </div>
+                <div class="right_content text-black " style="height:850px">
+                    <div>
+                        <p class="txt font-size-22" style="font-weight: bold;">——关于文化</p>
+                        <p class="txt ">科技让教育更美好</p>
+                        <p class="txt ">我们注重专业探索，摒弃虚浮夸张。 在更深远的认知中。</p>
+                        <p class="txt ">不断修正服务导向，完善产品与服务。</p>
+                        <p class="txt ">帮助传统教育企业转型到在线教育，快速进入互联网、人工智能和大数据的时代。</p>
+                        <p class="txt ">基于创造性的思想与先进的技术，创新和运营高客户价值的产品与服务，帮助客户实现发展目标，进而推动商业和社会进步。</p>
+                    </div>
+                    <div style="width: 100%;">
+                        <p class="txt font-size-22" style="font-weight: bold;">——关于网来宝人</p>
+                        <div class="about_people flex" style="flex-wrap: wrap;justify-content: flex-start;">
+                            <div class="peo peo1">
+                                <p class="txt " style="margin-top: 20px;">
+                                    <span class="font-size-20 font-w">&Star;&nbsp;&nbsp;专业</span><span style="margin-left: 10px;">(Professional)</span>
+                                </p>
+                                <p class="txt">有技术懂业务</p>
+                                <p class="txt">不断让自己更专业</p>
+                            </div>
+                            <div class="peo peo2">
+                                <p class="txt " style="margin-top: 20px;">
+                                    <span class="font-size-20 font-w">&Star;&nbsp;&nbsp;责任</span><span style="margin-left: 10px;">(Ownership)</span>
+                                </p>
+                                <p class="txt">把工作当成生活</p>
+                                <p class="txt">享受其中</p>
+                            </div>
+                            <div class="peo peo3">
+                                <p class="txt " style="margin-top: 20px;">
+                                    <span class="font-size-20 font-w">&Star;&nbsp;&nbsp;服务</span><span style="margin-left: 10px;">(Service)</span>
+                                </p>
+                                <p class="txt">以服务赢得口碑</p>
+                                <p class="txt">以服务赢得信任</p>
+                            </div>
+                            <div class="peo peo4">
+                                <p class="txt " style="margin-top: 20px;">
+                                    <span class="font-size-20 font-w">&Star;&nbsp;&nbsp;执行力</span><span style="margin-left: 10px;">(Execution)</span>
+                                </p>
+                                <p class="txt">遇问题直接沟通</p>
+                                <p class="txt">有结论后坚决执行</p>
+                            </div>
+                            <div class="peo peo4">
+                                <p class="txt " style="margin-top: 20px;">
+                                    <span class="font-size-20 font-w">&Star;&nbsp;&nbsp;结果</span><span style="margin-left: 10px;">(Result)</span>
+                                </p>
+                                <p class="txt">创造客户价值为目标</p>
+                                <p class="txt">以结果为依据</p>
+                            </div>
+                            <div class="peo_dian "></div>
+                            <div class="peo_dian peo_dian2"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="right_content text-black ">
+                    <img width="100%" height="687px" src="../images/rongyu.png" alt="">
+                </div>
+                <div class="right_content text-black ">
+                    <div class="flex" style="width: 100%;height: 510px;margin-top:0px;">
+                        <div class="ditu">
+                        </div>
+                        <div class="house">
+                            <img src="../images/house.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="lx font-size-20 " style="align-items: flex-start;margin-top: 40px;">
+                        <div class="lx_left ">
+                            <span class="font-w">售前/售后咨询：</span>
+                            <span>029-85796221</span>
+                            <span style="margin-left:20px;">68883880</span>
+                            <span style="margin-left:20px;">18629362795（微信同号）</span>
+                        </div>
+                        <div class="lx_right" style="margin-top: 40px;">
+                            <span class="font-w" style="padding-left: 45px;">公司地址：</span>
+
+                            <span>西安市高新区唐延路13号禾盛京广场中心C座 </span>
+                            <span style="margin-top: 20px;margin-left:20px;">北京市海淀区中关村软件园中区C座</span>
+                            <p style="margin-top: 20px;margin-left:150px;">郑州市高新区863软件园1号楼座</p>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- 为什么选择网来宝 -->
+    <div class="select " style="width: 100%;overflow: hidden;">
+        <div class="online jiaoxue" style="margin:0 auto;" style="width:100%;">
+            <div class="title back_img">
+                <div class="title_shang">
+                    <div class="txt1 font-w text-white" style="width: 1000px;margin: 0 auto;" data-scroll-reveal="enter left 500px 1.2s after 0.3s">
+                        <p>我们能解除各种壁垒，为您省去时间和资本投入</p>
+                        <p>快速提供在线教育一站式解决方案！</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="box_content jiaoxue_box select_content " style="height: 200px;top: -90px;">
+                <div class="select_shiyong content_box ">
+                    <div class="select_shiyong_title text-center text-white font-size-28" style="margin:30px 0 ;">请输入姓名、手机号，申请7天免费试用</div>
+                    <div class="flex">
+                        <input class="txt1" size=28 type="text" placeholder="您的称呼">
+                        <input class="txt1 txt2" type="text" placeholder="联系方式">
+                        <div class="select_shiyong_btn1">申请免费开通网校</div>
+                        <div class="select_shiyong_btn1 select_shiyong_btn2">咨询详情</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 页面底部 -->
+    <div class="footer">
+        <div class="foot_box">
+            <div class="flex foot_part1">
+                <div class="foot_part1_one">
+                    <img src="../images/foot4_ico1.png" alt="">
+                    <p class="foot_part1_txt font-size-20">24小时在线客服</p>
+                </div>
+                <div class="foot_part1_one">
+                    <img src="../images/foot4_ico2.png" alt="">
+                    <p class="foot_part1_txt font-size-20">丰富的API接口及SDK</p>
+                </div>
+                <div class="foot_part1_one">
+                    <img src="../images/foot4_ico3.png" alt="">
+                    <p class="foot_part1_txt font-size-20">着眼服务跨国的业务网络</p>
+                </div>
+                <div class="foot_part1_one">
+                    <img src="../images/foot4_ico4.png" alt="">
+                    <p class="foot_part1_txt font-size-20">1对1专业的客服经理</p>
+                </div>
+            </div>
+            <div class="flex foot_part1 foot_part2" style="align-items: flex-start;">
+                <div class="flex foot_part2_one">
+                    <ul class="foot_part2_li">
+                        <li class="foot_part2_li1">产品</li>
+                        <li class="foot_part2_li1 foot_part2_li2">直播互动课堂</li>
+                        <li class="foot_part2_li1 foot_part2_li2">微课（录播课）</li>
+                        <li class="foot_part2_li1 foot_part2_li2">在线答疑</li>
+                        <li class="foot_part2_li1 foot_part2_li2">在线作业批改</li>
+                        <li class="foot_part2_li1 foot_part2_li2">线上商城</li>
+                        <li class="foot_part2_li1 foot_part2_li2">教研备课</li>
+                        <li class="foot_part2_li1 foot_part2_li2">IM消息</li>
+                    </ul>
+                    <ul class="foot_part2_li" style="margin-left: 80px;">
+                        <li class="foot_part2_li1">应用场景</li>
+                        <li class="foot_part2_li1 foot_part2_li2">K12</li>
+                        <li class="foot_part2_li1 foot_part2_li2">高校</li>
+                        <li class="foot_part2_li1 foot_part2_li2">职业教育</li>
+                        <li class="foot_part2_li1 foot_part2_li2">语言留言</li>
+                        <li class="foot_part2_li1 foot_part2_li2">证书培训</li>
+                        <li class="foot_part2_li1 foot_part2_li2">艺术培训</li>
+                        <li class="foot_part2_li1 foot_part2_li2">企业培训</li>
+                    </ul>
+                </div>
+                <div class="foot_part2_one " style="padding-left: 50px;">
+                    <ul class="foot_part2_li txt">
+                        <li class="foot_part2_li1">客服热线
+                            <span class="font-size-14 text-grayer">(09:00-22:00)</span>
+                        </li>
+                        <li class="foot_part2_li1">400-889-889</li>
+                        <li class="foot_part2_li1" style="margin-top: 30px;">市场合作</li>
+                        <li class="foot_part2_li1">28398474@163.com</li>
+                    </ul>
+                </div>
+                <div class="foot_part2_one" style="padding-left: 50px;border: none;">
+                    <ul class="foot_part2_li">
+                        <li class="foot_part2_li1">产品</li>
+                    </ul>
+                    <div class="flex foot_part3_txt" style="margin-top: 20px;">
+                        <div>
+                            <img src="../images/erweima.png" alt="">
+                            <p>微信公众号</p>
+                        </div>
+                        <div>
+                            <img src="../images/erweima.png" alt="">
+                            <p>微信客服</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- 回到顶部 -->
+        <div class="back_top">
+            <img src="../images/back_top1.png" alt="">
+        </div>
+
+
+</body>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/scrollReveal.js"></script>
+<script src="../js/mui.min.js"></script>
+
+<script>
+    // banner
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    var slider = mui("#slider");
+    slider.slider({
+        interval: 2000
+    });
+    window.scrollReveal = new scrollReveal({
+        reset: true
+    });
+
+
+
+    $('.aboutus_item').mouseenter(function() {
+        var x = $(this).index();
+        console.log(x)
+        $(this).addClass('aboutus_item_active').siblings().removeClass('aboutus_item_active')
+        $('.right_content').eq(x).show().siblings().hide()
+
+    })
+
+    // 回到页面顶部
+    $('.back_top').click(function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    })
+
+
+    // 蜘蛛丝效果
+    console.clear();
+    /* Play with these values! */
+    const PARTICLE_COUNT = 100;
+    const SAFE_DISTANCE = 130;
+    const INFECTED_DISTANCE = 15;
+    const INFECTION_RATE = 0.25;
+    const RECOVERY_TIME = 14000;
+    const STAY_AT_HOME = 0.1;
+
+    /* ---------------------------------- */
+
+    let particles = [];
+
+    const STATUSES = {
+        HEALTHY: "HEALTHY",
+        INFECTED: "INFECTED",
+        RECOVERED: "RECOVERED"
+    };
+
+    const elBody = document.body;
+    const elCanvas = document.querySelector("#canvas");
+    const ctx = elCanvas.getContext("2d");
+
+    let width, height;
+
+    function resize() {
+        width = elCanvas.width = elBody.clientWidth;
+        height = elCanvas.height = elBody.clientHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    /* ---------------------------------- */
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.radius = 2;
+            // var numone = parseInt(Math.random() * (255 + 1), 10);
+            // var numtwo = parseInt(Math.random() * (255 + 1), 10);
+            // var numthree = parseInt(Math.random() * (255 + 1), 10);
+            // this.color = "rgb(" + numone + "," + numtwo + "," + numthree + ")";
+            this.color = "white"
+            this.speed = Math.random() < STAY_AT_HOME ? 0 : 1;
+            this.directionAngle = Math.floor(Math.random() * 360);
+            this.vector = {
+                x: Math.cos(this.directionAngle) * this.speed,
+                y: Math.sin(this.directionAngle) * this.speed
+            };
+            this.status = STATUSES.HEALTHY;
+
+            if (Math.random() < INFECTION_RATE) {
+                this.infect();
+            }
+        }
+        infect() {
+            if (
+                this.status === STATUSES.INFECTED ||
+                this.status === STATUSES.RECOVERED
+            ) {
+                return;
+            }
+            this.color = "white"
+            this.status = STATUSES.INFECTED;
+
+            setTimeout(() => {
+                this.recover();
+            }, RECOVERY_TIME);
+        }
+        recover() {
+            this.status = STATUSES.RECOVERED;
+            this.color = "white"
+
+        }
+        draw(drawCtx) {
+            drawCtx.beginPath();
+            drawCtx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            drawCtx.closePath();
+            drawCtx.fillStyle = this.color;
+            drawCtx.fill();
+        }
+        update() {
+            this.checkBoundaries();
+            this.x += this.vector.x;
+            this.y += this.vector.y;
+        }
+        checkBoundaries() {
+            if (this.x > width || this.x < 0) {
+                this.vector.x *= -1;
+                /* Ensure the dots are pushed inside */
+                this.x = Math.max(0, Math.min(width, this.x));
+            }
+            if (this.y > height || this.y < 0) {
+                this.vector.y *= -1;
+                /* Ensure the dots are pushed inside */
+                this.y = Math.max(0, Math.min(height, this.y));
+            }
+        }
+    }
+
+    /* ---------------------------------- */
+
+    function distance(x1, y1, x2, y2) {
+        var dx = x1 - x2;
+        var dy = y1 - y2;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    function linkParticles(particle, otherParticles, drawCtx) {
+        for (const p of otherParticles) {
+            const d = distance(particle.x, particle.y, p.x, p.y);
+
+            if (d > SAFE_DISTANCE) {
+                continue;
+            }
+
+            // Infect other particle!
+            if (particle.status === STATUSES.INFECTED && d < INFECTED_DISTANCE) {
+                p.infect();
+            }
+
+            const opacity = 0.8 - (d / SAFE_DISTANCE) * 0.8;
+            drawCtx.lineWidth = 0.5;
+            drawCtx.strokeStyle = particle.color; //rgba(255,255,255,${opacity})`;
+            drawCtx.globalAlpha = opacity;
+            drawCtx.beginPath();
+            drawCtx.moveTo(particle.x, particle.y);
+            drawCtx.lineTo(p.x, p.y);
+            drawCtx.closePath();
+            drawCtx.stroke();
+            drawCtx.globalAlpha = 1;
+        }
+    }
+
+    /* ---------------------------------- */
+
+    function render() {
+        try {
+            requestAnimationFrame(render);
+
+            ctx.clearRect(0, 0, width, height);
+
+            particles.forEach(particle => {
+                particle.update();
+                if (particle.status === STATUSES.INFECTED) {
+                    linkParticles(particle, particles, ctx);
+                }
+                particle.draw(ctx);
+            });
+        } catch (e) {
+            throw e;
+        }
+    }
+
+    render();
+
+    /* ---------------------------------- */
+
+    function reset() {
+        particles = [];
+        for (var i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push(new Particle());
+        }
+    }
+    reset();
+    window.onload = function() {
+        setInterval(() => {
+            reset();
+        }, 30000);
+    }
+
+    document.addEventListener("click", reset);
+</script>
+
+</html>

@@ -1,0 +1,17 @@
+<view class="aui-padded-15">
+	<view class="aui-bg-white bg-radius aui-padded-15 flex aui-margin-b-15" wx:for="{{list}}" wx:key="lis" bindtap="detail" data-status="{{item.status}}" data-count="{{item.count}}">
+		<view class="flex">
+			<view class="dot  {{item.count>0?'active':''}}" ></view>
+			<view class="aui-font-size-15 aui-padded-l-10">{{item.name}}</view>
+		</view>
+		<view class="flex">
+			<view class="aui-text-theme aui-font-size-12" wx:if="{{item.count>0}}">{{item.count}}</view>
+			<view class="jt aui-margin-l-10">
+				<image src="/image/jt_right.png"></image>
+			</view>
+		</view>
+	</view>
+  
+
+
+</view>

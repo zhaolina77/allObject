@@ -1,0 +1,29 @@
+<view class="aui-content">
+  <view class="aui-list">
+    <view class="aui-list-item aui-border-bgB">
+      <view class="aui-list-item-inner aui-padded-t-15 aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 aui-text-black">头像</view>
+        <view class="aui-list-item-right">
+          <image src="/image/header.png" style="width: 3rem;height: 3rem;object-fit: cover;border-radius: 50%;vertical-align: middle;"/>
+          <image src="/image/right.png" style="width: 0.7rem;height: 0.7rem;"/>
+        </view>
+      </view>
+    </view>
+    <view class="aui-list-item">
+      <view class="aui-list-item-inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 aui-text-black">昵称</view>
+        <view class="aui-list-item-right aui-text-gray aui-font-size-16">杜北
+          <image src="/image/edit.png" style="width:0.7rem;height:0.7rem"/>
+        </view>
+      </view>
+    </view>
+    <view class="aui-list-item">
+      <view class="aui-list-item-inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 aui-text-black">出生年月</view>
+        <view class="aui-list-item-right aui-text-gray aui-font-size-16">2011-12-24
+            <image src="/image/right.png" style="width:0.7rem;height:0.7rem"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.pay {
+    width:48rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+.aui-btn-brown {
+    box-shadow: 0px 10px 20px 0px rgba(210, 180, 130, 0.3);
+}

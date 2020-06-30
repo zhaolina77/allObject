@@ -1,0 +1,63 @@
+<view class="aui-padded-15 mine-content-footer">
+  <textarea class="aui-font-size-15" show-confirm-bar="{{false}}" value="{{content}}" placeholder="向钓友分享你的渔获心得吧" bindinput="content"></textarea>
+  <!-- 图片 -->
+  <view class=" clearfix aui-margin-b-15 box" wx:if="{{type==1}}">
+    <view class="pic_box pic" wx:for="{{img}}" wx:if="{{img.length>0}}" wx:key="ff">
+      <image class="tu" src="{{item}}" mode="aspectFill"></image>
+      <image class="close" src="/image/close1.png" bindtap="del" data-index="{{index}}" mode="widthFix"></image>
+    </view>
+    <view class="pic_box" bindtap="select_pic">
+      <image class="tu" src="/image/add-pic.png" bindtap='changeAvatar' mode="widthFix" wx:if="{{img.length<3}}"></image>
+    </view>
+  </view>
+  <!-- 视频 -->
+  <view class=" clearfix aui-margin-b-15 box" wx:else>
+    <view class="pic_box sp_box" wx:if="{{video_url!=''}}">
+      <video src="{{video_url}}" class="sp" mode="aspectFill" ></video>
+      <image class="close" src="/image/close1.png" bindtap="del_video" data-index="{{index}}" mode="widthFix"></image>
+    </view>
+    <view class="pic_box" bindtap="select_pic">
+      <image class="tu" src="/image/add-pic.png" bindtap='chooseVideo' mode="widthFix" wx:if="{{video_url==''}}"></image>
+    </view>
+  </view>
+  <view class="aui-list aui-border-t">
+    <view class="aui-list-item aui-padded-l-0 aui-border-b">
+      <view class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 fweight-5">渔获类型</view>
+        <!-- <view class="aui-list-item-right">
+          <text class="aui-font-size-13 aui-text-gray aui-ellipsis-1">选择你的渔获类型</text>
+        </view> -->
+        <picker bindchange="bindPickerChange_yh" value="{{index1}}" range="{{array}}">
+          <view class="picker aui-font-size-13 aui-text-gray aui-ellipsis-1">
+            {{array[index1]?array[index1]:'选择渔获类型'}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="aui-list-item aui-padded-l-0 aui-border-b">
+      <view class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 fweight-5">位置</view>
+        <view class="aui-list-item-right">
+          <text class="aui-font-size-13 aui-text-gray aui-ellipsis-1">{{now_address}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="aui-list-item aui-padded-l-0 aui-border-b" bindtap="angling_site_id">
+      <view class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 fweight-5">钓场</view>
+        <!-- <view class="aui-list-item-right">
+          <text class="aui-font-size-13 aui-text-gray aui-ellipsis-1">选择你的钓场</text>
+        </view> -->
+        <picker bindchange="bindPickerChange_dc" value="{{index2}}" range="{{diaochang}}">
+          <view class="picker aui-font-size-13 aui-text-gray aui-ellipsis-1">
+            {{diaochang[index2]?diaochang[index2]:'选择你的钓场'}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="aui-bar aui-bar-tab aui-padded-15 clearfix footer-bar" id="footer" bindtap="fabu">
+  <view class="aui-btn aui-btn-block aui-btn-theme">发布</view>
+</view>

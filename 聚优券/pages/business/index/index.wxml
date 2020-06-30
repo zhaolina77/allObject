@@ -1,0 +1,84 @@
+<view class="aui-padded-15 aui-padded-t-5 ">
+	<view class="banner">
+		<swiper interval="2000" indicator-dots duration="500" circular="true" autoplay indicator-color="#999" indicator-active-color="#009B4D">
+			<swiper-item wx:for="{{list}}" wx:key="lis">
+				<image src="{{item.thumb}}" mode="aspectFill"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+</view>
+
+<view class="aui-padded-15">
+	<view class="aui-padded-15 flex aui-bg-white bg-radius" bindtap="jinjian">
+		<view class="flex">
+			<view class="icon">
+				<image src="/image/add.png"></image>
+			</view>
+			<view class="aui aui-padded-l-15 aui-font-size-15">商户进件</view>
+		</view>
+		<view class="jt">
+			<image src="/image/jt_right.png"></image>
+		</view>
+	</view>
+	<view class="aui-padded-15 flex aui-bg-white bg-radius aui-margin-t-15" bindtap="guanli">
+		<view class="flex">
+			<view class="icon">
+				<image src="/image/guanli.png"></image>
+			</view>
+			<view class="aui aui-padded-l-15 aui-font-size-15">进件管理</view>
+		</view>
+		<view class="jt">
+			<image src="/image/jt_right.png"></image>
+		</view>
+	</view>
+	<view class="aui-margin-t-15 " wx:if="{{type==1}}">
+		<view class="aui-btn " bindtap="exit">退出登录</view>
+
+	</view>
+</view>
+
+
+
+<view class="mengceng aui-padded-15" wx:if="{{show==1}}">
+	<view class="aui-padded-15" style="margin-top:120rpx">
+		<view class="aui-padded-l-15 aui-padded-r-15 aui-bg-white bg-radius box aui-padded-15">
+			<view class="aui-border-b aui-padded-b-15 aui-text-center aui-margin-b-15">进件前，请准备好以下资料</view>
+			<view class="flex aui-padded-b-15 list">
+				<view class="aui-text-theme">1.</view>
+				<view class="aui-padded-l-5">
+					<view class="aui-font-size-14">电子邮箱</view>
+					<view class="aui-font-size-12 aui-text-grayer aui-margin-t-5">商户实名认证邮箱，如网易邮箱、Q邮箱</view>
+				</view>
+			</view>
+			<view class="flex aui-padded-b-15 list">
+				<view class="aui-text-theme">2.</view>
+				<view class="aui-padded-l-5">
+					<view class="aui-font-size-14">法人/经营者身份证照片</view>
+					<view class="aui-font-size-12 aui-text-grayer aui-margin-t-5">身份证正反面</view>
+				</view>
+			</view>
+			<view class="flex aui-padded-b-15 list">
+				<view class="aui-text-theme">3.</view>
+				<view class="aui-padded-l-5">
+					<view class="aui-font-size-14">店铺照片</view>
+					<view class="aui-font-size-12 aui-text-grayer aui-margin-t-5">包含门头照、内景和外景照</view>
+				</view>
+			</view>
+			<view class="flex aui-padded-b-15 list">
+				<view class="aui-text-theme">4.</view>
+				<view class="aui-padded-l-5">
+					<view class="aui-font-size-14">经营者银行卡信息</view>
+					<view class="aui-font-size-12 aui-text-grayer aui-margin-t-5">卡号、开户行、开户地址、支行信息</view>
+				</view>
+			</view>
+			<view class="aui-padded-t-15">
+				<view class="aui-btn aui-btn-theme " bindtap="start">准备完毕，开始进件</view>
+			</view>
+		</view>
+		<view class="close" bindtap="close">
+			<image src="/image/close.png"></image>
+		</view>
+	</view>
+
+
+</view>

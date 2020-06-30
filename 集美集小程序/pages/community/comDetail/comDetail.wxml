@@ -1,0 +1,115 @@
+<view class="top mine_guanzhu flex aui-padded-15">
+	<view class="flex">
+		<view class="head_pic">
+			<image src="{{data.head_portrait}}"></image>
+		</view>
+		<view class="aui-padded-l-10 aui-text-grayer">
+			<view class="aui-font-size-15 ">{{data.nick_name}}</view>
+			<view class=" aui-font-size-11 aui-margin-t-5">{{data.create_time}}</view>
+		</view>
+	</view>
+
+	<view class="aui-btn aui-btn-theme gz aui-font-size-12" wx:if="{{data.attentionstag==0}}" bindtap="guanzhu" data-id="{{data.member_id}}">关注</view>
+	<view class="aui-btn aui-btn-outlined gz aui-font-size-12 wgz" wx:else bindtap="guanzhu" data-id="{{data.member_id}}">已关注</view>
+</view>
+
+<!-- 详情内容 -->
+<view class="" style="margin-bottom:120rpx">
+	<view class="shop-pic" wx:if="{{data.type==1}}">
+		<swiper interval="2000" indicator-dots duration="500" autoplay circular indicator-color="#ccc" indicator-active-color="#ff4805" style="height: 720rpx;">
+			<swiper-item wx:for="{{data.pics}}" wx:key="lis">
+				<image src="{{item}}" mode="aspectFill"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="shipin" wx:else>
+		<video src="{{data.video_url}}"  controls="true"  loop="true" poster="{{data.pics}}" object-fit="cover" ></video>
+
+	</view>
+	<view class="aui-padded-15 aui-font-size-14">
+		<view>{{data.content}}</view>
+	</view>
+
+	<!-- 评价 -->
+	<view class="aui-border-bgT">
+		<view class="aui-padded-t-15 aui-padded-l-15 aui-padded-b-5 aui-font-size-16">评价<text class="aui-text-grayer aui-font-size-12" >({{totalRow}}条)</text></view>
+		<block wx:if="{{totalRow>0}}">
+			<view class="pingjia-list" wx:for="{{commentList}}" wx:key="commentList">
+				<view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 ">
+					<!--个人信息-->
+					<view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+						<view class="aui-list-item-inner aui-padded-r-0">
+							<view class="aui-list-item-title">
+								<view class="head-pic">
+									<image src="{{item.head_portrait}}" mode="aspectFill" class="aui-img-round"></image>
+								</view>
+								<view class="aui-padded-l-10">
+									<view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{item.nick_name}}</view>
+								</view>
+							</view>
+						</view>
+					</view>
+
+					<view class="inner">
+						<!--发布内容-->
+						<view class="aui-padded-b-15">
+							<view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+								{{item.content}}
+								​​​</view>
+							<view class="aui-font-size-11 aui-margin-t-10">
+								<text class="aui-text-grayer">{{item.create_time}} . </text><text class="aui-text-black" bindtap="reply" data-id="{{item.id}}">回复他</text>
+							</view>
+
+							<!-- <view class="show aui-font-size-14">全文</view> -->
+
+							<!--商家回复-->
+							<view class="aui-margin-t-10 aui-margin-r-15 aui-bg-grayer bg-radius aui-padded-10 aui-font-size-13 aui-text-gray sjhf" wx:if="{{item.replylist.length>0}}">
+								<view wx:for="{{item.replylist}}" wx:key="replylist" wx:for-item="voo">
+									<text class="aui-text-black fweight-5">{{voo.nick_name}}：</text>
+									{{voo.content}}
+								</view>
+								<view class="show aui-font-size-14" wx:if="{{item.replycount>2}}" bindtap="reply" data-id="{{item.id}}">查看全部{{item.replycount}}条回复</view>
+
+							</view>
+
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+		<block wx:else>
+			<view class="aui-padded-15 aui-font-size-14">暂无评论~</view>
+		</block>
+
+
+
+	</view>
+
+
+
+</view>
+<!-- <view class="pinglun_foot aui-padded-15 aui-bg-white flex">
+	<view class="foot_left flex aui-padded-l-15 ">
+		<view class="foot_ico">
+			<image src="/image/bi.png"></image>
+		</view>
+		<input type="text" placeholder="写下你的评论吧" placeholder-class="phcolor" placeholder-style="font-size:26rpx;text-indent:20rpx"></input>
+	</view>
+	<view class="zan aui-margin-l-15">
+		
+		<image src="/image/zan-on.png" wx:if="{{data.liketag==1}}"></image>
+		<image src="/image/zan.png" wx:else></image>
+		<view class="zan_txt aui-text-gray aui-font-size-10">{{data.likescount}}</view>
+	</view>
+
+</view> -->
+<view class="pinglun_foot aui-padded-15 aui-bg-white flex" wx:if="{{token!=''}}">
+	<view class="foot_left flex aui-padded-l-15 ">
+		<view class="foot_ico aui-margin-r-10">
+			<image src="/image/bi.png"></image>
+		</view>
+		<input type="text" placeholder="写下你的评论吧" placeholder-class="phcolor" placeholder-style="font-size:26rpx;text-indent:20rpx" bindinput="content" value="{{content}}"></input>
+	</view>
+	<view class="fabu aui-text-theme aui-padded-l-15" bindtap="fabu">发布</view>
+
+</view>

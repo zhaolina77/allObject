@@ -1,0 +1,418 @@
+/* 优势 */
+
+.youshi_left,
+.youshi_right {
+    width: 278px;
+    height: 550px;
+}
+
+.youshi .youshi_left_txt1 {
+    width: 100%;
+    height: 128px;
+    margin-top: 50px;
+}
+
+.youshi .youshi_left_txt2 {
+    margin-top: 220px;
+}
+
+.youshi_middle {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    position: relative;
+    border: 1px dashed #dddddd;
+}
+
+.youshi_middle1 {
+    width: 154px;
+    height: 156px;
+    position: absolute;
+    top: 24px;
+    left: -28px;
+}
+
+.youshi_middle1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.youshi_middle2 {
+    left: 422px;
+}
+
+.youshi_middle3 {
+    top: 340px;
+}
+
+.youshi_middle4 {
+    top: 340px;
+    left: 422px;
+}
+
+.bullon {
+    width: 202px;
+    height: 202px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -101px;
+    margin-left: -101px;
+}
+
+.bullon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 用户突破3亿  */
+
+.user .online .net_left {
+    width: 434px;
+}
+
+.user .online .net_left .net_title {
+    margin-left: 0;
+}
+
+.user .online .net_right {
+    width: 630px;
+    height: 584px;
+    position: relative;
+}
+
+.circle {
+    background-color: #ff731b;
+    border-radius: 50%;
+    position: absolute;
+    padding: 10px;
+}
+
+.xian {
+    width: 2px;
+    border-left: 2px dashed lightgray;
+    position: absolute;
+}
+
+.xian1 {
+    height: 74px;
+    left: 50%;
+    top: 50%;
+    margin-top: -156px;
+}
+
+.xian2 {
+    margin-top: 84px;
+    height: 122px;
+}
+
+.xian3 {
+    height: 200px;
+    left: 155px;
+    top: 100px;
+    transform: rotate(-60deg);
+}
+
+.xian4 {
+    left: 146px;
+    top: 263px;
+    transform: rotate(-110deg);
+}
+
+.xian5 {
+    height: 200px;
+    right: 148px;
+    top: 116px;
+    transform: rotate(-120deg);
+}
+
+.xian6 {
+    right: 155px;
+    top: 286px;
+    transform: rotate(-60deg);
+}
+
+.circle_1 {
+    width: 166px;
+    height: 166px;
+    left: 50%;
+    top: 50%;
+    margin-left: -83px;
+    margin-top: -83px;
+}
+
+.circle_2 {
+    width: 136px;
+    height: 136px;
+    background-color: #1C198B;
+    left: 50%;
+    top: 0;
+    margin-left: -68px;
+    margin-top: 0;
+}
+
+.circle_3 {
+    width: 85px;
+    height: 85px;
+    left: 50%;
+    /* top: 538px; */
+    bottom: 0;
+    margin-left: -42px;
+}
+
+.circle_4 {
+    width: 94px;
+    height: 94px;
+    left: 50px;
+    top: 108px;
+}
+
+.circle_5 {
+    width: 144px;
+    height: 144px;
+    left: 0;
+    top: 300px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.circle_6 {
+    width: 144px;
+    height: 144px;
+    right: 0;
+    top: 108px;
+}
+
+.circle_7 {
+    width: 114px;
+    height: 114px;
+    right: 50px;
+    top: 350px;
+    background-color: #1C198B;
+}
+
+
+/* 中国在线教育市场规模 */
+
+.guimo .guimo_pic {
+    margin-top: 50px;
+}
+
+.guimo .guimo_pic .guimo_item {
+    width: 383px;
+    height: 360px;
+}
+
+.guimo .guimo_pic .guimo_item img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 问题 */
+
+.question .question_item {
+    height: 44px;
+    margin-top: 20px;
+}
+
+.question .question_left .question_item .question_txt1 {
+    color: #ff731b;
+    font-family: Bodoni-BoldItalic-DTC;
+}
+
+.question .question_left .question_txt2 {
+    width: 412px;
+    padding-left: 20px;
+}
+
+.question .question_left .question_item .question_btn {
+    width: 108px;
+    height: 42px;
+    line-height: 42px;
+    background: linear-gradient(#ff9858, #ff8e47, #ff6200);
+    border-radius: 21px;
+}
+
+.question .question_left .question_item_active .question_txt1 {
+    color: #586ccd;
+}
+
+.question .question_left .question_item_active .question_btn {
+    background: linear-gradient(#8ea2e7, #5569cb);
+}
+
+
+/* 适应不同教育环境的解决方案 */
+
+.jjfa .jiaoxue .title {
+    height: 460px;
+}
+
+.jjfa .jiaoxue_box {
+    height: 800px;
+    top: -200px;
+    box-shadow: none;
+    background-color: transparent;
+    overflow: hidden;
+    /* background-color: #fff; */
+}
+
+.jjfa_bg {
+    width: 100%;
+    height: 620px;
+    position: relative;
+}
+
+.jjfa .jiaoxue_content {
+    width: 1200px;
+    height: 800px;
+    position: absolute;
+    top: -50px;
+}
+
+.jiaoxue .title_shang {
+    background-image: url(../images/bg_pic2.png);
+}
+
+.jjfa_bg .btn_box {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -380px;
+    z-index: 2;
+}
+
+.jiaoxue_content .swiper-container1 {
+    padding: 30px 0;
+    width: 1000px;
+    height: 600px;
+}
+
+.jiaoxue_content .swiper-container1 .swiper-slide {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    border-bottom: 1px solid #555;
+    -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0px, rgba(0, 0, 0, 0) 20px);
+}
+
+.jiaoxue_content .swiper-container1 .swiper-slide a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+
+.jiaoxue_content .swiper-container1 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.navs_txt1 {
+    width: 167px;
+    height: 72px;
+    opacity: .5;
+}
+
+.net_txt1 {
+    line-height: 72px;
+}
+
+.jjfa_active {
+    color: #ff731b;
+}
+
+.net_txt1 {
+    width: 167px;
+    height: 70px;
+    position: relative;
+    border-radius: 7px;
+    opacity: .7;
+    font-size: 30px;
+}
+
+.net_txt11 {
+    font-size: 0;
+}
+
+.jjfa_active {
+    opacity: 1;
+    background-color: #fff;
+}
+
+.jjfa_active .net_txt11 {
+    position: absolute;
+    color: #fff;
+    font-size: 45px;
+    top: 36px;
+    left: 70px;
+}
+
+.swip_disnone {
+    display: none;
+}
+
+.swip_active {
+    display: block;
+}
+
+
+/* 轮播图 */
+
+.banner_x {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+.banner_x img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner_txt_box {
+    width: 1200px;
+    height: 400px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 196px;
+    left: 50%;
+    margin-left: -600px;
+    z-index: 888;
+}
+
+.banner_x .border_ri {
+    border-right: 1px solid white;
+}
+
+.banner_x .zx {
+    width: 220px;
+    height: 60px;
+    background-color: rgba(255, 98, 0, .5);
+    line-height: 60px;
+    border: 1px solid #ff6200;
+    /* border-radius: 30px; */
+    margin: 0 auto;
+}
+
+.banner_x .zx:hover {
+    background-color: #ff6200;
+}
+
+.banner_left {
+    width: 1200px;
+    height: 500px;
+}
+
+.banner_left .zhichi {
+    width: 1200px;
+    text-align: left;
+    margin-top: 20px;
+}

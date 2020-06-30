@@ -1,0 +1,169 @@
+/* pages/index/products/index.wxss */
+@import "../../../wxParse/wxParse.wxss";
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+page {
+
+  background: #f5f5f5;
+}
+.banner {
+  width: 100vw;
+  height:100vw
+}
+.banner image,swiper {
+   width: 100vw;
+  height:100vw
+}
+.price {
+  color: #ff2c2c;
+  font-size: 48rpx;
+  
+}
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.titles {
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+.toright {
+  width:13rpx;
+  height:22rpx
+}
+.touxiang {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+}
+.pjimg {
+  width: 200rpx;
+  height:200rpx;
+  border-radius: 6rpx;
+}
+.pjimgwrap {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+.aui-line {
+  width: 100%;
+  height: 2rpx;
+  background: #eee;
+}
+.border {
+  padding: 0 60rpx;
+  border: 1px solid #e0e0e0;
+  border-radius: 45px;
+  display: inline-block;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.detailimg {
+  width: 100%;
+  float: left;
+}
+.deline {
+  height: 2rpx;
+  background: #ddd;
+}
+.fiexheight {
+
+  width:100%;
+  background: #fff;
+  height: 100rpx;
+  color: #fff;
+  display: block;
+}
+.fixed {
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  background: #fff;
+  height: 100rpx;
+  border-top: 1rpx solid #eee;
+}
+.fixed image {
+
+    width: 40rpx;
+    height:40rpx;
+}
+.tobuy {
+  background: linear-gradient(to right,#ffa243,#ff502e);
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.bline {
+  height: 100rpx;
+  width: 2rpx;
+  background: #eee;
+}
+button {
+  padding: 0 !important;
+  height: unset !important;
+  background: none;
+  border: 1px solid rgba(0,0,0,0) !important;
+
+}
+button:after {
+  background: none;
+  border: 1px solid rgba(0,0,0,0) !important;
+}
+.server {
+  
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  position: relative;
+}
+.server .flex,.spec .flex {
+  align-items: flex-start;
+  margin-top: 60rpx;
+}
+.server image,.spec image {
+
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.ok {
+  line-height: 80rpx;
+  background: #ff6433;
+  text-align: center;
+  color: #fff;
+  margin-top: 60rpx;
+}
+.close {
+  position: absolute;
+  right: 15rpx;
+  top:30rpx;
+}
+.spec .specimg {
+  width: 150rpx;
+  height: 150rpx;
+}
+.specitems {
+  background: #ccc;
+}
+.specitem,.specitems {
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+ 
+  border-radius: 8rpx;
+  padding: 10rpx 40rpx;
+  margin-right: 10rpx;
+}
+.specitem {
+ background: #ff6433;
+}
+.spec .jian {
+
+    width: 47rpx;
+    height: 47rpx;
+}
+.spec input {
+  width: 50rpx;
+}
+.new_people{height: 40rpx;line-height: 40rpx;background-color: #E45432;padding: 0 20rpx;border-radius: 20rpx;}
+.watch image{width: 24rpx;height: 24rpx;}

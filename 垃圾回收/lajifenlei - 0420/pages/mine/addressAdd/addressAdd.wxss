@@ -1,0 +1,8 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+page{background-color: #ffffff !important;}
+.jt_right{width:30rpx;height: 35rpx;}
+.jt_right image{width: 100%;height: 100%;}
+.pick{width: 90%;}

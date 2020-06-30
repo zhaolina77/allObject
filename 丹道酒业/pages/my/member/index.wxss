@@ -1,0 +1,59 @@
+/* pages/my/member/index.wxss */
+/* pages/club/index/index.wxss */
+@import "../../../wxParse/wxParse.wxss";
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+page {
+  background: #f5f5f5;
+}
+.imgwrap {
+
+  padding: 30rpx;
+  height: 400rpx;
+}
+.imgwrap image {
+
+  width: 100%;
+  height:100%;
+
+}
+.warp{
+  position: absolute;
+width: 100%;
+top: 100rpx;
+
+}
+.tx {
+   width: 236rpx;
+   height: 195rpx;
+   margin: 0 auto;
+
+}
+.mytx {
+
+  width: 152rpx;
+  height: 152rpx;
+  border-radius: 100%;
+}
+.tag {
+  font-size: 26rpx;
+  color: #875e26;
+  margin-top: -48rpx;
+
+
+}
+.text {
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 2;
+  margin-top: 30rpx;
+}
+.btn {
+  font-size: 30rpx;
+  color: #875e26;
+  background: linear-gradient(to right,#deb87f,#eed4a4,#e0b97e);
+  line-height: 80rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}

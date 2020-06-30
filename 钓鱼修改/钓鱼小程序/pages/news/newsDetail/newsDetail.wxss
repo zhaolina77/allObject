@@ -1,0 +1,12 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+.footer{
+  width: 100%;
+   position: fixed;
+  bottom: 0;
+  background-color: white;
+  padding:30rpx;
+}
+

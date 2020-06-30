@@ -1,0 +1,99 @@
+<view class="aui-bar aui-bar-nav aui-bar-light aui-bg-white mine-bar">
+	<view class="aui-title">
+		<view class="aui-padded-l-15 aui-padded-r-15 aui-bg-grayer serch aui-text-left">
+			<image mode="widthFix" src="/image/sousuo.png" style=" float: left;width:24rpx;margin-top:24rpx;margin-right: 6px;"></image>
+			<input placeholder="请输入小区或商圈名称" type="text" value="{{name}}" bindinput="shop_search_function" confirm-type='search' bindconfirm='search'></input>
+		</view>
+	</view>
+</view>
+<view class="aui-padded-15 aui-padded-t-5 aui-bg-white ">
+	<view class=" flex classfy aui-padded-r-15">
+		<view class="flex cl_active" bindtap="changTwo" data-idx="2">
+			<view class="moren aui-padded-r-5">价格</view>
+			<view class="jt_d" wx:if="{{orderStatus==2}}">
+				<image src="/image/ud.png"></image>
+			</view>
+			<view class="jt_d" wx:elif="{{orderStatus==1}}">
+				<image src="/image/du.png"></image>
+			</view>
+			<view class="jt_d" wx:else>
+				<image src="/image/ud_gray.png"></image>
+			</view>
+		</view>
+		<view class="flex aui-margin-l-15" bindtap="changTwos" wx:if="{{hx_type==1}}">
+			<view class="moren aui-padded-r-5">户型</view>
+			<view class="jt_d1" wx:if="{{open_type==1}}">
+				<image src="/image/down.png"></image>
+			</view>
+			<view class="jt_d1" wx:else>
+				<image src="/image/up.png"></image>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="shouye_list" wx:if="{{status!=1}}">
+	<view class="aui-padded-l-15 aui-padded-r-15 aui-font-size-13" wx:for="{{list}}" wx:key="idx" wx:for-item="item">
+		<view class="flex item_box aui-padded-t-10 aui-margin-b-10" catchtap="detail" data-id="{{item.houseId}}" data-type="1">
+			<view class="item bg-radius">
+				<image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+			</view>
+			<view class="aui-margin-l-10  right ">
+				<view class="aui-font-size-15  ">{{item.houseName}}</view>
+				<view class=" aui-margin-t-5">
+					<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 weui-label" style="width:92%"><sup></sup>{{item.info}}</view>
+				</view>
+        <view class="flex label_box aui-margin-t-5 aui-font-size-12">
+            <text class="aui-bg-red aui-text-red label aui-margin-r-10 aui-margin-b-5" wx:for="{{item.tag}}" wx:key="{{idxs}}" wx:for-item="v">{{v}}</text>
+				</view>
+				<view class="flex aui-margin-t-5" style="justify-content: flex-start;">
+					<view class="aui-text-theme aui-font-size-13"><text class="ft_5"></text>{{item.price}}</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>
+<view class="shouye_list aui-padded-l-15 aui-padded-r-15" wx:else>
+		<view class=" ">
+			<block wx:for="{{list}}" wx:key="idx" wx:for-item="item">
+        <view class="flex item_box aui-margin-b-10 aui-padded-t-10" catchtap="detail" data-id="{{item.houseId}}" data-type="2">
+          <view class="item bg-radius">
+            <image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+          </view>
+          <view class="aui-margin-l-10  right ">
+            <view class="aui-font-size-15 aui-ellipsis-1 ">{{item.houseName}}</view>
+            <view class="flex aui-margin-t-10">
+              <image class="address" src="/image/address.png"></image>
+              <view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 " style="width:92%">{{item.address}}</view>
+            </view>
+            <view class="flex aui-margin-t-10" style="justify-content: flex-start;">
+              <view class="aui-text-theme weui-label aui-font-size-15"><text class="ft_5">{{item.price}}</text></view>
+              <view class="aui-text-gray weui-label aui-font-size-10 aui-margin-l-10">{{item.area}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+		</view>
+	</view>
+
+
+
+
+<!-- 页面弹框 -->
+<view class="up  " wx:if="{{show==1}}">
+	<view class="box aui-text-center aui-bg-white">
+		<view class="aui-row aui-font-size-15" style="width:100%">
+      <block wx:for="{{type_list}}" wx:key="{{index}}">
+        <view class="aui-col-xs-4 aui-text-center {{typeId==item.id?'active':''}}" bindtap="change_class" data-id="{{item.id}}">{{item.name}}</view>
+      </block>
+		</view>
+
+		<view class="aui-row aui-margin-t-15">
+			
+			<view class="aui-col-xs-6 aui-text-center" bindtap="rec">重置</view>
+			<view class="aui-col-xs-6 aui-text-center act" bindtap="init">确定</view>
+
+		</view>
+	</view>
+</view>

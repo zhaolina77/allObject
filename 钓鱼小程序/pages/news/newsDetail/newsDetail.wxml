@@ -1,0 +1,10 @@
+<view class="aui-padded-15" >
+
+ <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<view class="footer" bindtap="canhui">
+  <view class="aui-btn aui-btn-theme aui-btn-block aui-font-size-15 canhui"   >立即参会</view>
+
+</view>
+
+<import src="../../../wxParse/wxParse.wxml" />

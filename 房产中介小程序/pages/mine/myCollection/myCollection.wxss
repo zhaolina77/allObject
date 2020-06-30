@@ -1,0 +1,34 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.top{width: 100%;position: fixed;top: 0;}
+.txt{color: #999;position: relative;}
+.active{color: #ffd12d !important;}
+.active::before{content:'';position: absolute;bottom: -10rpx; height:4rpx;width: 30rpx;background-color:#ffd12d;left: 50%;margin-left: -15rpx;}
+
+
+scroll-view{
+  white-space:normal;
+}
+.order-item {
+position: relative;
+}
+.remove{  
+width: 160rpx;  
+height: 100%;  
+background-color: #FF3333 ; 
+color: white; 
+position: absolute;  
+top: 0;  
+right: -160rpx;  
+display: flex;  
+justify-content: center;  
+align-items: center;  
+} 
+
+.shop-pic{width: 214rpx;height: 162rpx;border-radius: 10rpx;}
+.shop-pic image{width:100%;height:100%;}
+.right{width: 70%;}
+
+.shouye_list .item{width: 30% !important;}
+.shouye_list .right{width: 70% !important;}

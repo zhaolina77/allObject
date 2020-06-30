@@ -1,0 +1,99 @@
+<view class=" mine-content-footer" style="margin-bottom:120rpx">
+	<view class="aui-bg-grayer aui-padded-15">
+		<view class="aui-font-size-18 fweight-5">{{order.pay_name}}</view>
+		<view class="aui-font-size-13 aui-text-gray aui-padded-t-10">订单已支付</view>
+	</view>
+	<view class="aui-padded-15 aui-bg-white">
+		<view class="aui-font-size-16 fweight-5 aui-padded-b-15">收货地址</view>
+		<view class="aui-text-gray aui-font-size-14">{{order.name}} {{order.mobile}}</view>
+		<view class="aui-text-gray aui-font-size-14 aui-padded-t-5">{{order.address_info}}</view>
+	</view>
+	<view class=" aui-border-bgT aui-padded-15 aui-bg-white" wx:if="{{order.states==3 || order.states==2}}">
+		<view class="flex tuan_box">
+			<view class="tuan aui-text-theme aui-font-size-14">{{goods_list[0].spell_group}}人团</view>
+			<view class=" flex aui-padded-l-10">
+				<view class="head_pic" wx:for="{{goods_list[0].bookinglist}}" wx:key="goods_list" wx:for-item="voo">
+					<image src="{{voo.head_portrait}}" mode="aspectFill"></image>
+				</view>
+
+			</view>
+			<view class="aui-text-theme aui-font-size-15 aui-padded-l-15">还差{{goods_list[0].surplus_num}}人成团</view>
+			<view class="aui-text-grayer aui-font-size-12 aui-padded-l-15">剩余时间：{{day}}:{{hou}}:{{min}}:{{sec}}</view>
+		</view>
+		<view class=" aui-text-center aui-padded-t-15">
+			<button class="aui-btn aui-btn-outlined cantuan aui-font-size-12" open-type="share">邀请好友参团
+				<!-- <view class="aui-btn aui-btn-outlined cantuan aui-font-size-12">邀请好友参团</view> -->
+			</button>
+
+		</view>
+
+
+
+	</view>
+
+
+
+	<view class="aui-list aui-media-list aui-padded-l-15 aui-padded-r-15 aui-border-bgT">
+		<view class="aui-list-item  aui-padded-l-0 aui-padded-t-5 aui-padded-b-5 aui-border-b">
+			<view class="aui-media-list-item-inner" wx:for="{{goods_list}}" wx:key="li">
+				<view class="aui-list-item-media">
+					<image src="{{item.thumb}}" mode="aspectFill"></image>
+				</view>
+				<view class="aui-list-item-inner aui-padded-r-0">
+					<view class="aui-list-item-text">
+						<view class="aui-text-black aui-font-size-14 aui-ellipsis-1">{{item.goods_name}}</view>
+					</view>
+					<view class="flex">
+						<view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-10">
+							<text wx:if="{{item.spec_id!=0}}">规格: {{item.spec_name}}</text>
+
+						</view>
+						<!-- <view class="aui-list-item-text aui-font-size-12  aui-padded-t-10">
+							<text class="aui-text-theme " wx:if="{{order.refund_status==-1}}" bindtap="tuikuan" data-id="{{item.id}}">申请退款</text>
+							<text class="aui-text-theme " wx:else>退款中</text>
+						</view> -->
+					</view>
+					<view class="aui-list-item-text aui-padded-t-10">
+						<view class="aui-list-item-title aui-font-size-10 aui-text-orange">
+							￥<text class="aui-text-orange aui-padded-r-5 aui-font-size-18">{{item.pay_price}} </text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-t-15">
+			<view class="aui-font-size-15 aui-text-black aui-padded-b-15">
+				实付金额
+				<text class="aui-pull-right fweight-5 aui-text-orange">￥{{order.pay_price}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="aui-border-bgT aui-padded-15 aui-padded-t-5 aui-font-size-14 aui-text-gray aui-bg-white">
+		<view class="aui-padded-t-10">订单编号：{{order.order_sn}}</view>
+		<view class="aui-padded-t-10">下单时间：{{order.create_time}}</view>
+		<view class="aui-padded-t-10">支付方式：微信</view>
+		<view class="aui-padded-t-10">支付时间：{{order.pay_time}}</view>
+	</view>
+
+
+</view>
+
+
+<view class="aui-bar aui-bar-tab aui-border-t " id="footer" style="display: flex;align-items: center;justify-content: flex-end;">
+	<view class="aui-text-right aui-padded-r-10">
+
+		<button open-type="contact" bindcontact="handleContact" class="order-aui-btn aui-btn aui-btn-outlined aui-font-size-12  aui-btn-gray">联系客服</button>
+		<view class="aui-btn aui-btn-theme aui-font-size-12" style="width:160rpx" wx:if="{{order.refund_status==-1}}">
+			<text data-refund="1"  bindtap="tuikuan" data-id="{{order.id}}" >申请退款</text>
+		</view>
+		<view class="aui-btn aui-btn-theme aui-font-size-12" style="width:160rpx" wx:elif="{{order.refund_status==0}}">
+			<text data-refund="1"  bindtap="jump_tuikuan" data-id="{{order.id}}"  data-refund_status="{{order.refund_status}}">退款中</text>
+		</view>
+		<view class="aui-btn aui-btn-theme aui-font-size-12" style="width:160rpx" wx:elif="{{order.refund_status==1}}">
+			<text data-refund="1"  bindtap="jump_tuikuan" data-id="{{order.id}}"  data-refund_status="{{order.refund_status}}">退款失败</text>
+		</view>
+		<view class="aui-btn aui-btn-theme aui-font-size-12" style="width:160rpx" wx:else>
+			<text data-refund="1"  bindtap="jump_tuikuan" data-id="{{order.id}}"  data-refund_status="{{order.refund_status}}">退款成功</text>
+		</view>
+	</view>
+</view>

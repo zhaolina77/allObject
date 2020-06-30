@@ -1,0 +1,108 @@
+<view class="aui-padded-15 aui-padded-t-5">
+    <view class="banner" >
+        <swiper  interval="2000" indicator-dots duration="500" autoplay indicator-color="rgba(204, 204, 204,1)" indicator-active-color="#1765FF">
+            <swiper-item wx:for="{{bList}}" wx:key="bList">
+                <image src="{{item.pic}}" mode="aspectFill"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
+
+<view class="aui-tab public-tab  aui-border-b" id="tab">
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 1?'aui-active':''}}  " bindtap="changeTwo" data-index="1">
+        综合
+    </view>
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 2?'aui-active':''}}  " bindtap="changeTwo" data-index="2">
+    
+        最新
+    </view>
+     <view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 3?'aui-active':''}}"  bindtap="select" data-index="3" > 
+  
+        筛选 <image class="td aui-margin-l-5" src="/image/sx.png" mode="widthFix" style="width:30rpx"></image>
+    </view>
+</view>
+
+
+<view class="diaochang-list">
+    <view class="aui-list aui-media-list aui-padded-l-0 aui-padded-t-5" >
+      <block wx:for="{{list}}" wx:for-item="v" wx:key="this">
+        <view class="aui-list-item aui-padded-t-5" bindtap="detail" data-id="{{v.id}}">
+            <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-media">
+                    <view class="shop-pic">
+                        <image src="{{v.thumb}}" ></image>
+                    </view>
+                </view>
+                <view class="aui-list-item-inner aui-padded-r-0 aui-padded-r-15 aui-padded-b-15 aui-border-b">
+                    <view class="aui-list-item-text">
+                        <view class="aui-list-item-title">
+                            <view class="aui-font-size-16 fweight-5">{{v.name}}</view>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-5">
+                        <view class="aui-list-item-title aui-font-size-12">
+                            <block wx:for="{{v.type_name_list}}" wx:for-item="vs" wx:key="index">
+                              <text class="aui-label aui-label-info">{{vs}}</text>
+                            </block>
+                        </view>
+                        <view class="aui-list-item-right aui-font-size-12 aui-text-gray">{{v.distance}}</view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-5">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-gray">{{v.fish}}</view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-5">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-orange">收费：{{v.price}}元/{{v.charging_standard_name}}</view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-5">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-gray aui-ellipsis-2">介绍：2{{v.content}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+       </block>
+    </view>
+</view>
+
+
+<view class="pop-out " wx:if="{{xianshi}}">
+    <view class='aui-content  aui-bg-white animated slideInDown pop' >
+        
+        <view class="aui-list aui-media-list aui-padded-t-10" >
+            <view class="aui-padded-l-15" style="padding-bottom: 4rem;">
+                <view class="sel">
+                    <view class='aui-list-item aui-padded-l-0'>
+                        <view class='aui-list-item-inner aui-padded-r-0'>
+                            <view class='aui-list-item-text aui-text-gray aui-padded-b-5 aui-font-size-14'>钓场类型</view>
+                            <view class='aui-list-item-text aui-margin-t-10 '>
+                                <text class="aui-font-size-12 spec {{item.is_del ==1?'aui-active':''}}" wx:for="{{angling_list}}" wx:key="an" bindtap="angling" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='aui-list-item aui-padded-l-0'>
+                        <view class='aui-list-item-inner aui-padded-r-0'>
+                            <view class='aui-list-item-text aui-text-gray aui-padded-b-5 aui-font-size-14'>收费标准</view>
+                            <view class='aui-list-item-text aui-margin-t-10'>
+                                <text class="aui-font-size-12 spec {{charging_id == item.id?'aui-active':''}}" wx:for="{{charging_list}}" wx:key="ch" bindtap="charging" data-id="{{item.id}}">{{item.name}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        
+        <view class="aui-bar aui-bar-tab aui-padded-15" id="footer">
+            <view class="aui-row">
+                <view class="aui-col-xs-6 aui-padded-r-5">
+                    <view class="aui-btn-block aui-btn aui-btn-theme aui-btn-outlined aui-text-theme aui-font-size-14" bindtap="reset">
+                        重置
+                    </view>
+                </view>
+                <view class="aui-col-xs-6 aui-padded-l-5">
+                    <view class="aui-btn-block aui-btn aui-btn-theme aui-font-size-14" bindtap="shaixuan">
+                        筛选
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

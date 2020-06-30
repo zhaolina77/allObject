@@ -1,0 +1,158 @@
+<view>
+	<view class="aui-padded-15 aui-bg-white">
+		<view class="top">
+			<image src="/image/step_1.png"></image>
+		</view>
+		<view class="flex aui-margin-t-5">
+			<text class="aui-text-theme">主体信息</text>
+			<text>商户信息</text>
+			<text>行业规则</text>
+			<text>收款账户</text>
+		</view>
+	</view>
+	<view class="aui-margin-t-10 aui-padded-15 aui-bg-white flex aui-font-size-14">
+		<view class="aui-font-size-14">主体类型</view>
+		<view>
+			<radio-group class="radio-group" bindchange="radioChange">
+				<radio checked="{{mainType==1?true:false}}" value="1">个体户</radio>
+				<radio class="aui-margin-l-10" checked="{{mainType==2?true:false}}" value="2">企业</radio>
+			</radio-group>
+		</view>
+	</view>
+
+	<view class="aui-padded-15 aui-padded-t-10 aui-padded-b-10">
+		<view class="fw-bold">营业执照</view>
+		<view class="aui-text-grayer aui-font-size-12 aui-margin-t-5">请上传【营业执照】，需年检章齐全，当年注册除外</view>
+	</view>
+	<view class="aui-bg-white">
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">营业执照</view>
+			<view class="add_pic" bindtap="changeAvataryy" data-idx1="1" wx:if="{{businessLicense!=''}}">
+				<image src="{{businessLicense}}" mode="aspectFill"></image>
+			</view>
+			<view class="add_pic" bindtap="changeAvataryy" data-idx1="1" wx:else>
+				<image src="/image/add_pic.png"></image>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">统一社会信用代码</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="统一社会信用代码" bindinput="socialCreditCode" value="{{socialCreditCode}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">商户名称</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" bindinput="merchantName" value="{{merchantName}}" placeholder="请输入商户名称"></input>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-15 aui-padded-t-10 aui-padded-b-10">
+		<view class="fw-bold">经营者证件</view>
+	</view>
+	<view class="aui-bg-white">
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">证件类型</view>
+			<view class="flex">
+				<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+					<view class="picker">
+						{{readConver}}
+					</view>
+				</picker>
+				<view class="jt aui-margin-l-5">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+			<!-- <view class="aui-font-size-14">身份证</view> -->
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">身份证正面照片</view>
+			<view class="add_pic" bindtap="changeAvatarz" data-idx1="2" wx:if="{{identityCardFront!=''}}">
+				<image src="{{identityCardFront}}" mode="aspectFill"></image>
+			</view>
+			<view class="add_pic" bindtap="changeAvatarz" data-idx1="2" wx:else>
+				<image src="/image/add_pic.png"></image>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">身份证反面照片</view>
+			<view class="add_pic" bindtap="changeAvatarf" data-idx1="3" wx:if="{{identityCardSide!=''}}">
+				<image src="{{identityCardSide}}" mode="aspectFill"></image>
+			</view>
+			<view class="add_pic" bindtap="changeAvatarf" data-idx1="3" wx:else>
+				<image src="/image/add_pic.png"></image>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">证件人姓名</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入证件人姓名" bindinput="papersName" value="{{papersName}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">证件号码</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入证件号码" bindinput="papersNumber" value="{{papersNumber}}"></input>
+			</view>
+		</view>
+		<view class=" aui-padded-15 aui-bg-white flex aui-font-size-14">
+			<view class="aui-font-size-14">证件有效期</view>
+			<view>
+				<radio-group class="radio-group" bindchange="radioChange1">
+					<radio checked="{{papersValidity==1?true:false}}" value="1">定期</radio>
+					<radio class="aui-margin-l-10" checked="{{papersValidity==2?true:false}}" value="2">长期</radio>
+				</radio-group>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">证件生效日期</view>
+			<view class="flex">
+				<view class="section">
+					<picker mode="date" value="{{date}}" start="1900-09-01" end="2100-09-01" bindchange="bindDateChange">
+						<view class="picker">
+							{{papersEffectiveDate==''?'请选择日期':papersEffectiveDate}}
+						</view>
+					</picker>
+				</view>
+				<view class="jt aui-margin-l-5">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+
+		</view>
+		<view class="aui-padded-15 flex" wx:if="{{papersValidity==1}}">
+			<view class="aui-font-size-14">证件失效日期</view>
+			<view class="flex">
+				<view class="section">
+					<picker mode="date" value="{{date}}" start="1900-09-01" end="2100-09-01" bindchange="bindDateChange1">
+						<view class="picker">
+							{{papersExpiryDate==''?'请选择日期':papersExpiryDate}}
+						</view>
+					</picker>
+				</view>
+				<view class="jt aui-margin-l-5">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+
+		</view>
+		<view class=" aui-padded-15 aui-bg-white flex aui-font-size-14">
+			<view class="aui-font-size-14">是否为受益人</view>
+			<view>
+				<radio-group class="radio-group" bindchange="radioChange2">
+					<radio checked="{{beneficiaryOrNot==1?true:false}}" value="1">是</radio>
+					<radio class="aui-margin-l-10" checked="{{beneficiaryOrNot==2?true:false}}" value="2">否</radio>
+				</radio-group>
+			</view>
+		</view>
+	</view>
+
+	<view class="flex aui-padded-15" wx:if="{{status==-1||status==0||status==4}}">
+		<view class="aui-btn next" bindtap="next">保存草稿</view>
+		<view class="aui-btn aui-btn-theme next" bindtap="next">下一步</view>
+	</view>
+	<view class="flex aui-padded-15" wx:else>
+		<view class="aui-btn aui-btn-theme next" style="width:100%" bindtap="next1">下一页</view>
+	</view>
+	
+</view>

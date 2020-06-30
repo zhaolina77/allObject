@@ -1,0 +1,87 @@
+<view class="out">
+	<scroll-view scroll-y="{{isScroll}}">
+		<checkbox-group class="radio-group" bindchange="radioChange">
+			<block wx:key="item" wx:for="{{data}}" wx:for-index="tindex">
+				<view class="aui-list aui-media-list">
+					<view class="aui-pull-left aui-text-theme aui-margin-r-5 aui-margin-t-15 aui-margin-l-5 aui-font-size-14" bindtap="shopall" data-idx="{{tindex}}" data-shop_id="{{item.shop_id}}">
+						<checkbox color="#1765FF" name="text" checked="{{item.state==1}}" />
+					</view>
+					<view class="aui-padded-t-15 aui-padded-b-15 aui-font-size-14 aui-border-b aui-margin-l-10 aui-margin-r-10">
+						{{item.shop_name}}
+						<image src="/image/jt-right.png" mode="widthFix" style="width:25rpx;vertical-align: middle;"></image>
+						<!-- <text class="aui-pull-right aui-text-theme aui-font-size-16">清空</text> -->
+					</view>
+					<block wx:for-item="voo" wx:for="{{item.cart}}" wx:key="items">
+
+
+						<view data-index='{{index}}' data-tindex='{{tindex}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{voo.right}}rpx">
+							<view class="aui-list-item aui-pad ded-l-15">
+
+								<view class="aui-media-list-item-inner  aui-padded-r-15">
+									<view class="aui-pull-left aui-margin-r-5 aui-font-size-15" catchtap="selectBox" data-tindex="{{tindex}}" data-index="{{index}}">
+										<checkbox color="#1765FF" name="text" checked="{{voo.is_select==1?true:false}}" />
+									</view>
+									<view class="aui-list-item-media">
+										<view class="shop-pic">
+											<image src="{{voo.thumb}}" mode="aspectFill"></image>
+										</view>
+									</view>
+									<view class="aui-list-item-inner aui-padded-r-0">
+										<view class="aui-list-item-text">
+											<view class="aui-text-black aui-font-size-14 aui-ellipsis-1">{{voo.name}}</view>
+										</view>
+										<view class="aui-list-item-text">
+											<view class="">
+												<view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-10" style="width:260rpx;">规格:{{voo.model_name}}</view>
+												<view class="aui-list-item-text aui-font-size-10 aui-text-danger aui-padded-t-5">
+													<view>￥<text class="aui-text-danger aui-padded-r-5 aui-font-size-18">{{voo.market_price}} </text>
+													</view>
+												</view>
+											</view>
+											<view class='shuliang' style="border-radius: 1rem;margin-top: 0.75rem;">
+												<view bindtap="cut" data-idx="{{index}}" data-cart_id="{{voo.cart_id}}">
+													<image src='/image/mius.png' mode="widthFix" style='width:1.25rem;vertical-align:middle;'></image>
+												</view>
+												<view class="num">
+													<input class='aui-text-center ' placeholder="00" disabled="disabled" readonly="readonly" value="{{voo.goods_num}}"></input>
+												</view>
+												<view bindtap="add" data-idx="{{index}}" data-cart_id="{{voo.cart_id}}">
+													<image src='/image/add.png' mode="widthFix" style='width:1.25rem;vertical-align:middle;'></image>
+												</view>
+											</view>
+										</view>
+									</view>
+								</view>
+							</view>
+							<view class="remove" bindtap="delItem" data-cart_id="{{voo.cart_id}}">删除 </view>
+						</view>
+
+
+					</block>
+					<view class="aui-padded-t-15 aui-padded-b-15 aui-text-right aui-font-size-14 aui-border-t aui-margin-l-10 aui-margin-r-10">
+						小计:￥{{item.shop_total_price}}
+					</view>
+				</view>
+			</block>
+		</checkbox-group>
+	</scroll-view>
+</view>
+
+
+<view class="aui-bar aui-bar-tab aui-padded-l-15 aui-padded-r-15 aui-border-t aui-padded-t-5 aui-padded-b-5 footer" id="footer">
+	<radio-group class="radio-group" bindchange="radioChange" bindtap="checkAll">
+		<view class="aui-pull-left aui-text-theme aui-margin-r-5 aui-font-size-14">
+			<radio color="#1765FF" name="text" checked="{{state==1?true:false}}" /> 全选
+		</view>
+	</radio-group>
+	<view style="display: flex;align-items: center;">
+		<view class="aui-padded-r-10 aui-font-size-15 aui-text-gray">
+			合计：<text class="aui-font-size-10 aui-text-danger">￥<text class="aui-font-size-18">{{totalPrice}}</text></text>
+		</view>
+		<view class="aui-btn aui-btn-theme" bindtap="sub" wx:if="{{totalPrice>0}}">立即结算</view>
+		<view class="aui-btn aui-btn-theme" wx:else style="background-color: #999 !important;color: #fff !important;">立即结算</view>
+	</view>
+</view>
+<view style="margin-top: 150px;" wx:if="{{data.length==0}}">
+	<image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>

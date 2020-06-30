@@ -1,0 +1,14 @@
+/* pages/invitFirend/invitFirend.wxss */
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+image{ width: 100%;}
+.code{ position: relative;margin-top: -200rpx;z-index: 10000;}
+.btn{ position: relative;height: 100rpx;width: 100%;line-height: 100rpx;}
+.btn image{ height: 100rpx;position: absolute;left: 0;}
+.btn button{ position: relative;z-index: 2000;}
+.ewm{ display: flex;justify-content: space-around;position: absolute;top: 160rpx;width: 100%;padding: 0 60rpx;}
+.ewm image{ width:260rpx;height: 260rpx;}
+.title{ position: absolute;width: 100%;text-align: center;font-size: 40rpx;color: #fff;top: -10rpx;}
+.title text{ color: #fdf602;font-size: 72rpx;}
+#aui-header{background-color: rgba(0,0,0,0) !important;position: fixed;top: 0;left: 0;width: 100%;}
+.back{ width: 40rpx;height: 40rpx;}

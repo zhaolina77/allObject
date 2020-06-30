@@ -1,0 +1,79 @@
+<view class="aui-content mine-content-footer">
+  <view class="aui-border-bgB">
+    <view class="pingjia-list">
+      <view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 ">
+        <view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+          <view class="aui-list-item-inner aui-padded-r-0">
+            <view class="aui-list-item-title">
+              <view class="head-pic">
+                <image src="{{list.head_portrait}}" class="aui-img-round"></image>
+              </view>
+              <view class="aui-padded-l-10">
+                <view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{list.nick_name}}</view>
+                <view class="aui-list-item-text aui-text-gray aui-font-size-12 aui-padded-t-5">
+                  {{list.comment_time}}
+                </view>
+              </view>
+            </view>
+            <view class="aui-list-item-right aui-font-size-12 aui-text-gray" bindtap="zan">
+              <image src="/image/zan.png" mode="widthFix" style="width:30rpx;vertical-align: middle;" wx:if="{{list.is_likes==0}}"></image>
+              <image src="/image/zan-on.png"mode="widthFix" style="width:30rpx;vertical-align: middle;" wx:else></image>
+              <text style="vertical-align: middle;">{{list.like_num}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="inner">
+          <!--发布内容-->
+          <view class="aui-padded-b-15">
+            <view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+              {{list.content}} ​​​
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="pl">
+    <view class="pingjia-list">
+      <view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 " wx:for="{{replayList}}" wx:key="replayList">
+        <view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+          <view class="aui-list-item-inner aui-padded-r-0">
+            <view class="aui-list-item-title">
+              <view class="head-pic">
+                <image src="{{item.head_portrait}}" class="aui-img-round"></image>
+              </view>
+              <view class="aui-padded-l-10">
+                <view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{item.nick_name}}</view>
+                <view class="aui-list-item-text aui-text-gray aui-font-size-12 aui-padded-t-5">
+                  {{item.reply_time}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="inner">
+          <!--发布内容-->
+          <view class="aui-padded-b-15 nr aui-border-b">
+            <view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+              {{item.content}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="aui-bar aui-bar-tab aui-padded-15 clearfix footer-bar" id="footer">
+  <view class="xie-pl">
+    <view class="aui-searchbar aui-bg-white" id="search">
+      <view class="aui-searchbar-input aui-border-radius aui-bg-grayer aui-margin-l-0" tapmode>
+        <input type="search" placeholder="写下你的评论吧"  id="search-input" bindfocus="shuru" bindblur="del" bindinput="content" style="text-align:left"/>
+      </view>
+      <view class="aui-searchbar-cancel aui-padded-l-10 aui-padded-r-10 fabu"  tapmod bindtap="fabu" wx:if="{{foc==1}}">
+        发布
+      </view>
+    </view>
+  </view>
+</view>

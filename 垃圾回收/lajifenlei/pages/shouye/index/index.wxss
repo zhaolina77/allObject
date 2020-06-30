@@ -1,0 +1,30 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.top_bg{width: 100%;height: 260rpx;}
+.tuoyuan{width: 100%;height: 200rpx;position: absolute;}
+.tuoyuan image{width: 100%;height: 100%;object-fit: cover;}
+.weizhi{position: absolute;}
+.banner{height: 280rpx; margin-top: -200rpx;box-shadow:0 5rpx  10rpx #ddd;}
+.dingwei image{width: 40rpx; height: 40rpx;margin-top: 10rpx;}
+.sanjiao image{width:20rpx; height: 10rpx;}
+.fl_box{height: 170rpx;justify-content: space-between;}
+.fl_pic image{width: 68rpx;height: 68rpx;}
+
+.zx{width:44rpx;height: 28rpx;border-radius: 6rpx;line-height: 28rpx;}
+.zx_txt{width: 80%;}
+.zixun_banner{width:100%;height: 30rpx;line-height: 30rpx;}
+.title_line{width:6rpx;height: 32rpx;background-color: #4AE3E0;border-radius: 3rpx;}
+.liucheng{height: 150rpx;}
+.yy_pic{width: 68rpx;height: 68rpx;background-color: #E4FFFE;border-radius: 16rpx;margin: 0 auto;}
+.yy_pic image{width: 40rpx;height: 40rpx;margin: 12rpx auto;}
+.jt_right{width: 22rpx;height: 26rpx;margin-top: 80rpx;}
+.jt_right image{width: 22rpx;height: 26rpx;}
+
+
+
+/* 修改 */
+.item{width: 32%;margin-bottom: 30rpx;float: left;margin-right:1.66%;}
+.item:nth-of-type(3n){margin-right: 0% !important;}
+.item_pic{width:160rpx;height: 160rpx;overflow: hidden;margin: 0 auto;}
+.item_pic image{width: 100%;height:100%;}

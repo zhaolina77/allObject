@@ -1,0 +1,350 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="mine-content-footer">
+    <view class="shop-pic">
+        <swiper  interval="2000" circular="true" indicator-dots duration="500" autoplay indicator-color="rgba(204, 204, 204,1)" indicator-active-color="#1765FF" style="height: 720rpx;">
+            <swiper-item wx:for="{{list.pictures}}" wx:key="pic">
+                <image src="{{item}}" mode="aspectFill"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="aui-list aui-media-list">
+        <view class="aui-list-item aui-padded-l-0">
+            <view class="aui-media-list-item-inner aui-border-bgB aui-padded-l-15">
+                <view class="aui-list-item-inner">
+                    <view class="aui-list-item-text aui-font-size-15 aui-text-blacker aui-padded-t-5 aui-font-weight">
+                       {{list.name}}
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-15 aui-padded-b-15">
+                        <view class="">
+                            <view class="aui-text-orange aui-margin-r-5 fweight-5" style="vertical-align: middle;">￥<text class="aui-font-size-20">{{list.market_price}}</text></view>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-text aui-font-size-13 aui-text-gray">
+                        <text>库存：{{list.stocknum}}</text>
+                        <text>销量：{{list.sales}}</text>
+                        <text>配送:免运费</text>
+                    </view>
+                </view>
+            </view>
+            <view class="aui-border-bgB aui-padded-l-15">
+                <view class="aui-media-list-item-inner  aui-padded-t-5 aui-padded-b-5 aui-border-b"  bindtap="guige" data-id="{{list.id}}">
+                    <view class="aui-list-item-inner">
+                        <view class="aui-list-item-text">
+                            <view>
+                                <text class="aui-margin-r-10 aui-text-gray">已选</text>
+                                <text class="aui-text-blacker">请选择商品规格</text>
+                            </view>
+                            <view class="aui-font-size-13">
+                               <image src="/image/jt-right2.png" mode="widthFix" style="width:25rpx;"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5" bindtap="fuwu" data-id="{{list.id}}">
+                    <view class="aui-list-item-inner">
+                        <view class="aui-list-item-text">
+                            <view>
+                                <text class="aui-margin-r-10 aui-text-gray">已选</text>
+                                <text class="aui-text-blacker" wx:for="{{serviceList}}" wx:key="idx">{{item.title}}  </text>
+                            </view>
+                            <view class="aui-font-size-13">
+                                <image src="/image/jt-right2.png" mode="widthFix" style="width:25rpx;"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 评价 -->
+    <view class="" wx:if="{{evaluateCount>0}}">
+        <view class="aui-padded-t-15 aui-padded-l-15 aui-padded-b-5 aui-font-size-16">评价<text class="aui-text-grayer aui-font-size-12">({{evaluateCount}}条)</text></view>
+        <view class="pingjia-list" wx:for="{{evaluateList}}" wx:key="eva">
+            <view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 ">
+                <!--个人信息-->
+                <view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+                    <view class="aui-list-item-inner aui-padded-r-0">
+                        <view class="aui-list-item-title">
+                            <view class="head-pic">
+                                <image src="{{item.head_portrait}}"  class="aui-img-round"></image>
+                            </view>
+                            <view class="aui-padded-l-10">
+                                <view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{item.nick_name}}</view>
+                                <view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level<1}}">
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png"  mode="widthFix"></image>
+                                    <text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+                                </view>
+                                <view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:elif="{{item.level>=1&&item.level<2}}">
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png"  mode="widthFix"></image>
+                                    <text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+                                </view>
+                                <view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=2&&item.level<3}}">
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png"  mode="widthFix"></image>
+                                    <text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+                                </view>
+                                <view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=3&&item.level<4}}">
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png"  mode="widthFix"></image>
+                                    <text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+                                </view>
+                                <view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=4&&item.level<5}}">
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star.png"  mode="widthFix"></image>
+                                    <text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+                                </view>
+                                <view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level==5}}">
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+                                    <image class="star1" src="/image/star-on.png"  mode="widthFix"></image>
+                                    <text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="aui-list-item-right aui-font-size-12 aui-text-gray">{{item.create_date}}</view>
+                    </view>
+                </view>
+
+                <view class="inner">
+                    <!--发布内容-->
+                    <view class="aui-padded-b-15">
+                        <view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+                            {{item.content}}
+                        ​​​</view>
+
+                        <!-- <view class="show aui-font-size-14">全文</view> -->
+
+                        <!--图片滑动-->
+                        <view class="slide" wx:if="{{item.pic!=null}}">
+                            <scroll-view scroll-x enable-flex="true" style="height:150rpx" >
+                                <view class="slide-pic" wx:for="{{item.pic}}" wx:for-item="v" wx:key="pi">
+                                    <image style="width:100%;height:100%" src="{{v}}" mode="aspectFill" data-list="{{item.pic}}" data-src="{{v}}" bindtap="previewImage"></image>
+                                </view>
+                            </scroll-view>
+                        </view>
+
+
+                        <!--商家回复-->
+                        <!-- <view class="aui-margin-r-15 aui-bg-grayer bg-radius aui-padded-10 aui-font-size-13 aui-text-gray sjhf">
+                            <text class="aui-text-black fweight-5">商家回复：</text>
+                            尊贵的贵宾您好：我是壹加壹美团点评的负责人，我的电话是19829625610感谢您的星级好评，我们会继续努力，为顾客提供更满意的服务及满意的技术服务
+                        </view> -->
+
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="aui-text-center aui-font-size-13 aui-padded-b-15" bindtap="pinglun" data-id="{{list.id}}">查看全部评价<image src="/image/jt-right2.png" mode="widthFix" style="width:25rpx;"></image></view>
+    </view>
+
+    <view class="aui-list aui-media-list aui-padded-l-0 aui-padded-r-15 aui-border-bgT">
+        <view class="aui-font-weight aui-font-size-16 aui-padded-t-15 aui-padded-l-15">商家信息</view>
+        <view class="aui-list-item" bindtap="shop" data-id="{{shop.id}}" >
+            <view class="aui-media-list-item-inner aui-padded-b-10 aui-padded-t-5">
+                <view class="aui-list-item-media" style="width:150rpx !important;">
+                    <view class="" style="width:120rpx;height:120rpx;border-radius:10rpx;overflow: hidden;">
+                        <image src="{{shop.thumb}}" mode="aspectFill"></image>
+                    </view>
+                </view>
+                <view class="aui-list-item-inner aui-list-item-arrow aui-padded-r-0">
+                    <view class="aui-list-item-text">
+                        <view class="aui-list-item-title">
+                            <view class="fweight-5 aui-text-black aui-padded-t-10 aui-font-size-16 fweight-5">{{shop.shop_name}}</view>
+                            <view class="aui-font-size-12 aui-text-black aui-padded-t-5">在售商品{{shop.goodnum}}件  月销{{shop.sales}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--详情-->
+    <view class="aui-padded-15 aui-font-weight aui-font-size-16 aui-border-bgT">商品详情</view>
+
+    <view class="">
+        <template  is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+    </view>
+
+</view>
+
+<view class="aui-bar aui-bar-tab aui-border-t clearfix footer-bar " id="footer"  style="display: flex;align-items: center;">
+    <view class="aui-col-xs-5">
+        <view class="aui-row">
+            <view class="aui-col-xs-4" >
+            <button  open-type='contact' class="aui-font-size-10 aui-text-grayer" plain="true" style="background-color:#fff;height:auto;line-height:1;border-color:white;">
+             <image class="sc" src="/image/kefu.png" mode="widthFix" style="vertical-align: middle;"></image>
+            </button>
+                <!-- <image class="sc" src="/image/kefu.png" mode="widthFix" style="vertical-align: middle;"></image> -->
+                <view class="aui-font-size-10 aui-text-grayer">
+                <button  open-type='contact' class="aui-font-size-10 aui-text-grayer" plain="true" style="background-color:#fff;height:auto;line-height:1;border-color:white;"> 客服</button>
+                </view>
+                 
+            </view>
+            <view class="aui-col-xs-4" bindtap="toremark" >
+                <image class="sc" src="/image/sc1.png" mode="widthFix" style="vertical-align: middle;" wx:if="{{isColl==0}}" ></image>
+                <image class="sc" src="/image/sc-on.png" mode="widthFix" style="vertical-align: middle;" wx:else></image>
+                <view class="aui-font-size-10 aui-text-grayer">收藏</view>
+            </view>
+            <view class="aui-col-xs-4" bindtap="cart_list">
+                <view class="line top-li" wx:if="{{cartCount}}">{{cartCount}}</view>
+                <image class="sc" src="/image/care.png" mode="widthFix" style="vertical-align: middle;"></image>
+                <view class="aui-font-size-10 aui-text-grayer">购物车</view>
+            </view>
+        </view>
+    </view>
+        <view class="aui-col-xs-7 aui-padded-r-10">
+        <view class="btn aui-row">
+            <view class="aui-col-xs-6" bindtap="guige">
+                <view class="aui-font-size-13 aui-btn aui-btn-theme" style="background-color: #FE7648 !important;">加入购物车</view>
+            </view>
+            <view class="aui-col-xs-6" bindtap="guige">
+                <view class="aui-font-size-13 aui-btn aui-btn-theme">立即购买</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 规格弹窗 -->
+<view class="guige"  wx:if="{{show}}">
+    <view class='aui-content' >
+        <view class="close">
+            <image class="icon" src="/image/close.png" mode="widthFix" bindtap="close"></image>
+        </view>
+        
+        <view class="aui-list aui-media-list" >
+            <view class="aui-padded-l-15" style="padding-bottom: 120rpx;">
+                <view class=" aui-padded-t-5 aui-padded-b-5">
+                    <view class="aui-media-list-item-inner">
+                        <view class="aui-list-item-media" style='width:auto !important;'>
+                            <view class="shop-pic"><image src="{{info.thumb}}" mode="aspectFill"></image></view>
+                        </view>
+                        <view class="aui-list-item-inner aui-font-size-15">
+                            <view class="aui-list-item-text aui-text-orange">￥ <text class="aui-font-weight aui-font-size-16" >{{info.market_price}}</text></view>
+                            <view class="aui-list-item-text aui-text-gray aui-margin-t-10">已选择：<text class="aui-text-black">{{info.name}}</text></view>
+                            <view class="aui-list-item-text aui-text-gray aui-margin-t-10">库存：<text class="aui-text-black">{{info.stocknum}}</text></view>
+                        </view>
+                    </view>
+                </view>
+                <view class="sel" wx:if="{{data.one || t_list!='' || th_list!=''}}">
+                    <view class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t'  wx:if="{{data.one}}">
+                        <view class='aui-list-item-inner aui-padded-r-0'>
+                            <view class='aui-list-item-text aui-text-black aui-padded-b-5 aui-font-size-15'>{{data.spec_name}}</view>
+                            <view class='aui-list-item-text aui-margin-t-10 '>
+                                <block wx:for="{{data.one}}" wx:key="index" wx:for-index="index">
+                                  <text class="aui-font-size-12 spec {{o_idx==index?'aui-active':''}}" catchtap="one_spec" data-id="{{index}}">{{item.item_name}}</text>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t' wx:if="{{t_list!=''}}">
+                        <view class='aui-list-item-inner aui-padded-r-0'>
+                            <view class='aui-list-item-text aui-text-black aui-padded-b-5 aui-font-size-15'>{{t_list.spec_name}}</view>
+                            <view class='aui-list-item-text aui-margin-t-10'>
+                                <block  wx:for="{{t_list.list}}"  wx:key="inde" wx:for-index="inde">
+                                  <text class="aui-font-size-12 spec {{t_idx==inde?'aui-active':''}}" catchtap="t_spec" data-id="{{inde}}">{{item.item_name}}</text>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t' wx:if="{{th_list!=''}}">
+                        <view class='aui-list-item-inner aui-padded-r-0'>
+                            <view class='aui-list-item-text aui-text-black aui-padded-b-5 aui-font-size-15'>{{th_list.spec_name}}</view>
+                            <view class='aui-list-item-text aui-margin-t-10'>
+                                <block  wx:for="{{th_list.list}}"  wx:key="indee" wx:for-index="inde">
+                                  <text class="aui-font-size-12 spec {{th_idx==inde?'aui-active':''}}" catchtap="th_spec" data-id="{{inde}}">{{item.item_name}}</text>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t aui-border-b'>
+                    <view class='aui-list-item-inner aui-padded-r-0'>
+                        <view class='aui-list-item-text aui-text-black aui-font-size-15 aui-padded-b-5'>
+                            数量
+                        </view>
+                        <view class='aui-list-item-text aui-margin-t-5' style="border-radius: 1rem;">
+                            <view bindtap="miusNum">
+                                <image src='/image/mius.png' style='width:1.2rem;height:1.2rem;vertical-align:middle;'></image>
+                            </view>
+                            <view class='aui-margin-r-5 aui-margin-l-5'>
+                                <input class='aui-text-center num' placeholder="0" type='text' disabled="disabled" readonly="disabled" value="{{num}}"></input>
+                            </view>
+                            <view bindtap="addNum">
+                                <image src='/image/add.png' style='width:1.2rem;height:1.2rem;vertical-align:middle;'></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        
+        <view class="aui-bar aui-bar-tab aui-padded-15" id="footer">
+            <view class="aui-row">
+                <view class="aui-col-xs-6 aui-padded-r-5" bindtap="add_cart">
+                    <view class="aui-btn-block aui-btn aui-btn-theme aui-font-size-14"  style="background-color:#FE7648 !important;">
+                        加入购物车
+                    </view>
+                </view>
+                <view class="aui-col-xs-6 aui-padded-l-5" bindtap="payment">
+                    <view class="aui-btn-block aui-btn aui-btn-theme aui-font-size-14">
+                        立即购买
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 服务 -->
+<view class="fuwu" wx:if="{{shows}}">
+    <view class="aui-content aui-bg-white">
+        <header class="aui-bar aui-bar-nav aui-bar-light aui-padded-t-5" >
+            <view class="aui-title aui-font-size-32 aui-font-weight">全部服务</view>
+            <view class="aui-pull-right aui-btn" >
+                <image class="icon" src="/image/close.png" mode="widthFix" bindtap="close1"></image>
+            </view>
+        </header>
+        
+        <view>
+            <view class="aui-list aui-media-list aui-padded-t-15">
+                <view class="aui-list-item aui-margin-b-10" wx:for="{{serviceList}}" wx:key="ser">
+                    <view class="aui-media-list-item-inner">
+                        <view class="aui-list-item-media">
+                            <image  src="/image/dui.png" mode="widthFix"></image>
+                        </view>
+                        <view class="aui-list-item-inner">
+                            <view class="aui-list-item-text aui-text-black aui-font-weight aui-font-size-130 aui-margin-b-10">{{item.title}}</view>
+                            <view class="aui-list-item-text aui-font-size-12 aui-text-gray">
+                                <view class="aui-ellipsis-2">
+                                    {{item.content}}
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

@@ -1,0 +1,5 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+.aui-btn{
+    border-radius:80rpx;
+}

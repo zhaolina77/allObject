@@ -1,0 +1,31 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+/* .huiyuan_pic{width: 10%;} */
+.huiyuan_txt{width:90%;}
+.jh{width: 50rpx;height: 50rpx;}
+/* .huiyuan_pic image{width: 50rpx;height: 50rpx;} */
+
+scroll-view{
+  white-space:normal;
+}
+.order-item {
+position: relative;
+}
+.remove{  
+width: 160rpx;  
+height: 100%;  
+background-color: #FF4805; 
+color: white; 
+position: absolute;  
+top: 0;  
+right: -160rpx;  
+display: flex;  
+justify-content: center;  
+align-items: center;  
+} 
+.aui-list-item-title{
+  display: flex;
+  display: -webkit-flex;
+}
+.order-item:last-child .bbox .huiyuan_txt{border-bottom: none !important;}

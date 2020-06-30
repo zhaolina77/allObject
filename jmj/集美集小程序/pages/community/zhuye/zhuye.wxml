@@ -1,0 +1,89 @@
+<view class="top mine_guanzhu flex aui-padded-15">
+	<view class="flex">
+		<view class="head_pic">
+			<image src="{{account.head_portrait}}" mode="aspectFill"></image>
+		</view>
+		<view class="aui-padded-l-10">
+			<view class="aui-font-size-17 aui-text-blacker">{{account.nick_name}}</view>
+			<view class="aui-text-grayer aui-font-size-12 aui-margin-t-5">{{account.remark}}</view>
+			<view class="aui-text-grayer aui-font-size-13 aui-margin-t-5">
+				<text >关注：</text><text class="aui-text-gray">{{data.attentionCount}}</text>
+				<text class="aui-padded-l-15">粉丝：</text><text class="aui-text-gray">{{data.fansCount}}</text>
+			</view>
+		</view>
+	</view>
+<view class="aui-btn aui-btn-outlined gz aui-font-size-12   wgz"  bindtap="guanzhu" wx:if="{{data.attentionsTag==1}}">已关注</view>
+	<view class="aui-btn aui-btn-theme gz aui-font-size-12"  bindtap="guanzhu" wx:else>关注</view>
+	
+</view>
+
+<view class="aui-border-bgT">
+	<!-- 有数据 -->
+	<!-- 动态列表 -->
+	<view class="fabu-list ">
+		<view class="aui-list aui-media-list aui-padded-b-15 aui-padded-t-10 aui-border-b" wx:for="{{list}}" wx:key="list">
+			<view class="aui-list-item">
+				<view class="aui-media-list-item-inner">
+					<view class="aui-list-item-media">
+						<view class="head-pic">
+							<image src="{{item.head_portrait}}" mode="aspectFill"></image>
+						</view>
+					</view>
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-text">
+							<view class="aui-list-item-title">
+								<view class="aui-font-size-14 aui-ellipsis">{{item.nick_name}}</view>
+								<view class="aui-padded-t-5 aui-text-gray aui-font-size-12">{{item.create_time}}</view>
+							</view>
+
+						</view>
+
+					</view>
+				</view>
+			</view>
+			<view >
+				<view class="pingjia aui-padded-t-5 aui-padded-l-15 aui-padded-r-15 " >
+					<view class="{{item.elli==0?'aui-ellipsis-4':''}} " bindtap="detail" data-id="{{item.id}}">{{item.content}}</view>
+					<view class="qw " wx:if="{{item.content.length>80&&item.elli==0}}"  bindtap="quanwen" data-id='{{item.id}}' data-ell="0">全文</view>
+					<view class="qw " wx:if="{{item.elli==1}}"  bindtap="quanwen" data-id='{{item.id}}'   data-ell="1">收起</view>
+				</view>
+				<view class="aui-row aui-padded-15 aui-padded-b-0 three-pic" wx:if="{{item.type==1}}">
+					<view class="aui-col-xs-4" wx:for="{{item.pics}}" wx:key="pic" wx:for-item="items">
+						<view class="img-box">
+							<image src="{{items}}" mode="aspectFill" data-list="{{item.pics}}" data-src="{{items}}"  bindtap='imgYu'></image>
+						</view>
+					</view>
+				</view>
+				<view class="sp aui-margin-15 aui-padded-b-0 bg-radius" wx:else bindtap="detail" data-id="{{item.id}}">
+					<image src="{{item.pics}}" mode="aspectFill"></image>
+					<image class="bofang" src="/image/bofang.png" mode="aspectFill"></image>
+				</view>
+
+
+			</view>
+			<view class="caozuo">
+				<!-- <view class="aui-text-gray aui-font-size-12">2345人阅读</view> -->
+				<view class="aui-text-gray aui-font-size-12"></view>
+				<view class="right aui-row">
+					<view class="aui-col-xs-4 aui-text-right">
+
+						<image class="icon" src="/image/zan.png" mode="widthFix" wx:if="{{item.liketag==0}}" bindtap="zan" data-id="{{item.id}}"></image>
+						<image class="icon" src="/image/zan-on.png" mode="widthFix" wx:else bindtap="zan" data-id="{{item.id}}"></image>
+						<text class="num" wx:if="{{item.likescount>0}}">{{item.likescount}}</text>
+					</view>
+					<view class="aui-col-xs-4 aui-text-right">
+						<image class="icon" src="/image/mag.png" mode="widthFix" bindtap="detail" data-id="{{item.id}}"></image>
+						<text class="num" wx:if="{{item.commentcount>0}}">{{item.commentcount}}</text>
+					</view>
+					<button class="aui-col-xs-4 aui-text-right fenxiang" catchtap="shareView" open-type='share'>
+						<image class="icon" src="/image/shar.png" mode="widthFix"></image>
+					</button>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 无数据 -->
+	<view class="nodata disnone">
+		<image src="/image/nodata.png"></image>
+	</view>
+</view>

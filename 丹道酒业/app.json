@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/index/coupon/index",
+    "pages/index/products/index",
+    "pages/index/info/index",
+    "pages/login/login",
+    "pages/index/search/index",
+    "pages/index/allpingjia/index",
+    "pages/club/index/index",
+    "pages/cart/index/index",
+    "pages/cart/buy/index",
+    "pages/cart/allbuy/index",
+    "pages/my/index/index",
+    "pages/my/member/index",
+    "pages/my/invit/index",
+    "pages/my/coupon/index",
+    "pages/my/address/index",
+    "pages/my/caddress/index",
+    "pages/my/addressadd/index",
+    "pages/my/addressedit/index",
+    "pages/my/gonglue/index",
+    "pages/my/about/index",
+    "pages/my/wallet/index",
+    "pages/my/tixian/index",
+    "pages/my/banklist/index",
+    "pages/my/addbank/index",
+    "pages/my/editbank/index",
+    "pages/my/order/index",
+    "pages/my/orderdetials/index",
+    "pages/my/pingjia/index",
+    "pages/my/pingjiadetails/index",
+    "pages/my/addpingjia/index",
+    "pages/my/refund/index",
+    "pages/my/orcode/index",
+    "pages/my/refunddetails/index",
+    "pages/my/success/index"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#ff6433",
+    "color": "#999999",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index/index",
+      "text": "首页",
+      "iconPath": "/images/home.png",
+      "selectedIconPath": "/images/homeactive.png"
+    },
+    {
+      "pagePath": "pages/club/index/index",
+      "text": "俱乐部",
+      "iconPath": "/images/club.png",
+      "selectedIconPath": "/images/clubactive.png"
+    },
+    {
+      "pagePath": "pages/cart/index/index",
+      "text": "购物车",
+      "iconPath": "/images/cart.png",
+      "selectedIconPath": "/images/cartactive.png"
+    },
+    {
+      "pagePath": "pages/my/index/index",
+      "text": "我",
+      "iconPath": "/images/my.png",
+      "selectedIconPath": "/images/myactive.png"
+    }]
+  }
+}

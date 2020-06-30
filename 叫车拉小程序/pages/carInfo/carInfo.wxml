@@ -1,0 +1,54 @@
+<view class="aui-tab aui-padded-r-15 aui-bg-theme  mine-bar" id="tab">
+    <scroll-view scroll-x enable-flex="true" scroll-with-animation="true"  scroll-into-view="{{left}}">
+        <block wx:for="{{list}}" wx:key="{{idx}}">
+          <view class='swiper-slide {{state==index?"on":""}}' id="sw{{item.id}}" catchtap="tap" data-index="{{index}}">
+              <text class="aui-font-size-15">{{item.type_name}}</text>
+          </view>
+        </block>
+    </scroll-view>
+</view>
+
+<view style="margin:90rpx 0 0;">
+    <view class="banner" >
+        <swiper display-multiple-items='1' current='{{state}}' bindchange='changeFun' previous-margin='50' next-margin='50' >
+            <block wx:for="{{list}}" wx:key="{{index}}">
+                <swiper-item>
+                    <view class='optionBox' style='text-align:center'>
+                        <view class='mask' wx:if='{{ index != state }}'></view>
+                        <image src="{{item.images}}" mode='aspectFit' />
+                        <view class='swiperText ' style='font-size:32rpx;'>{{ item.intro }}</view>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+
+    <view class="aui-list aui-border-bgT aui-padded-l-10 aui-padded-r-10 aui-padded-t-15">
+        <view class="aui-list-item aui-padded-t-15 aui-padded-b-15">
+          <view class="aui-list-item-inner">
+            <view class="aui-list-item-title">
+              <view class="aui-font-size-15 aui-text-black">{{dl.type_name}}：</view>
+              <view class="aui-font-size-13 aui-text-gray aui-margin-t-5">{{dl.detail}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="aui-list-item aui-padded-t-15 aui-padded-b-15">
+          <view class="aui-list-item-inner">
+            <view class="aui-list-item-title">
+              <view class="aui-font-size-15 aui-text-black">可装载物品：</view>
+              <view class="aui-font-size-13 aui-text-gray aui-margin-t-5">{{dl.loadable_goods}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="aui-list-item aui-padded-t-15 aui-padded-b-15">
+          <view class="aui-list-item-inner">
+            <view class="aui-list-item-title">
+              <view class="aui-font-size-15 aui-text-black">不可装载物品：</view>
+              <view class="aui-font-size-13 aui-text-gray aui-margin-t-5">{{dl.unloadable_goods}}</view>
+            </view>
+          </view>
+        </view>
+    </view>
+
+</view>

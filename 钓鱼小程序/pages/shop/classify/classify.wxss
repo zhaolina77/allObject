@@ -1,0 +1,54 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.demo-box {
+    height: 99%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.demo-box::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+.aui-list-view-cell.aui-active {
+    border-left: none !important;
+}
+
+.aui-list-view-cell {
+    padding: 14px 0 !important;
+}
+
+.aui-list-view-cell.aui-active {
+    background-color: #fff !important;
+}
+
+.aui-list-view-cell.aui-active:after {
+    content: '';
+    position: absolute;
+    height:32rpx;
+    width: 3px;
+    background-color: #222;
+    top: 50%;
+    margin-top: -16rpx;
+    left:10rpx;
+}
+
+.aui-col-xs-4 {
+    padding-bottom: 30rpx;
+}
+
+.pic {
+    width:140rpx;
+    height:140rpx;
+}
+
+.pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:10rpx;
+}

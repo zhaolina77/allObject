@@ -1,0 +1,10 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.shangjia .aui-list-item-text{
+    justify-content:flex-start;
+    align-items: baseline;
+}
+.inner{
+    width: 70%;
+}

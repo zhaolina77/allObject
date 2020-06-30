@@ -1,0 +1,30 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+.aui-list-item-media {
+    width:110rpx !important;
+}
+
+.pic {
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail .aui-list-item-inner {
+    display: flex !important;
+}
+.enter{
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  width: 3rem !important;
+  color: white !important;
+}

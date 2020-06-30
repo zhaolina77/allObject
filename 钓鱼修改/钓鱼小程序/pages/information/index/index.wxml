@@ -1,0 +1,94 @@
+<view class="aui-tab  aui-padded-r-15 mine-bar" id="tab">
+  <scroll-view scroll-x enable-flex="true" class="nav">
+    <view class="swiper-slide on" wx:for="{{classify_list}}" wx:key="classify_l">
+      <text class="aui-font-size-15 aui-text-gray {{nav == index?'active':''}}" bindtap="change" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</text>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="mine-content">
+  <view class="aui-padded-15 aui-padded-t-5" wx:if="{{nav==0}}">
+    <view class="banner">
+      <swiper interval="2000" indicator-dots duration="500" autoplay indicator-color="rgba(204, 204, 204,1)" indicator-active-color="#1765FF">
+        <swiper-item wx:for="{{bannerList}}" wx:key="ban">
+          <image src="{{item.pic}}" mode="aspectFill"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="aui-padded-l-15 aui-padded-r-15 article-list">
+    <view class="aui-list aui-media-list" wx:for="{{list}}" wx:key="lis">
+      <!--一张图-->
+      <view class="aui-list-item aui-border-b aui-padded-l-0 aui-padded-t-5 aui-padded-b-5" wx:if="{{item.type==1}}" bindtap="tiaozhuan" data-id="{{item.id}}">
+        <view class="aui-media-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-inner">
+            <view class="aui-list-item-text">
+              <view class="aui-list-item-title aui-margin-b-10 aui-ellipsis-2 left-text">{{item.title}}</view>
+            </view>
+            <view class="aui-info aui-text-grayer aui-padded-b-0">
+              <view class="aui-info-item aui-margin-r-15 aui-font-size-11 aui-text-grayer">{{item.class_id}}</view>
+              <image style="width:24rpx;height:24rpx;margin-right:10rpx" src="/image/liulan.png"></image>
+              <view class="aui-info-item aui-margin-r-15 aui-font-size-11 aui-text-grayer">{{item.num}}</view>
+            </view>
+          </view>
+          <view class="aui-list-item-media aui-padded-r-0">
+            <view class="pic">
+              <image src="{{item.pic}}" mode="aspectFill"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!--三张图-->
+      <view class="aui-list-item aui-padded-l-0 aui-border-b aui-padded-t-5 aui-padded-b-5" wx:elif="{{item.type==2}}" bindtap="tiaozhuan" data-id="{{item.id}}">
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-margin-b-10 aui-ellipsis-2">{{item.title}}</view>
+          <view class="aui-row aui-row-padded aui-padded-b-5">
+            <view class="aui-col-xs-4 " wx:for="{{item.pic}}" wx:key="pic">
+              <view class="pic">
+                <image src="{{item}}" mode="aspectFill"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="aui-info aui-text-grayer" style="padding-top:0">
+          <view class="aui-info-item aui-margin-r-15 aui-font-size-11 aui-text-grayer">{{item.class_id}}</view>
+              <image style="width:24rpx;height:24rpx;margin-right:10rpx" src="/image/liulan.png"></image>
+              <view class="aui-info-item aui-margin-r-15 aui-font-size-11 aui-text-grayer">{{item.num}}</view>
+        </view>
+      </view>
+
+      <!--播放视频-->
+      <view class="aui-list-item aui-padded-l-0 aui-border-b aui-padded-t-5 aui-padded-b-5" wx:elif="{{item.type==3}}" bindtap="tiaozhuan" data-id="{{item.id}}">
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-margin-b-10 aui-ellipsis-2">{{item.title}}</view>
+          <view class="aui-row aui-padded-b-5">
+            <view class="pic void">
+              <image src="{{item.thumb}}" mode="aspectFill"></image>
+              <image class="bofang" mode="widthFix" src="/image/bofang.png"></image>
+            </view>
+          </view>
+        </view>
+        <view class="aui-info aui-text-grayer" style="padding-top:0">
+          <view class="aui-info-item aui-margin-r-15 aui-font-size-11 aui-text-grayer">{{item.class_id}}</view>
+              <image style="width:24rpx;height:24rpx;margin-right:10rpx" src="/image/liulan.png"></image>
+              <view class="aui-info-item aui-margin-r-15 aui-font-size-11 aui-text-grayer">{{item.num}}</view>
+        </view>
+      </view>
+      <!--无图-->
+      <view class="aui-list-item aui-border-b aui-padded-l-0 aui-padded-t-5 aui-padded-b-5" wx:else bindtap="tiaozhuan" data-id="{{item.id}}">
+        <view class="aui-media-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-inner">
+            <view class="aui-list-item-text">
+              <view class="aui-list-item-title aui-margin-b-10 aui-ellipsis-2 left-text">{{item.title}}</view>
+            </view>
+            <view class="aui-info aui-text-grayer aui-padded-b-0">
+              <view class="aui-info-item aui-margin-r-15 aui-font-size-11 aui-text-grayer">{{item.class_id}}</view>
+              <image style="width:24rpx;height:24rpx;margin-right:10rpx" src="/image/liulan.png"></image>
+              <view class="aui-info-item aui-margin-r-15 aui-font-size-11 aui-text-grayer">{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

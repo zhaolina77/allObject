@@ -1,0 +1,10 @@
+@import '../../../css/aui.wxss';
+@import '../../../css/common.wxss';
+@import '../../../css/global.wxss';
+.info{padding: 40rpx 0;}
+.aui-list-item-media{width: auto !important;}
+.info .head-pic{height: 100rpx;width:100rpx;border-radius: 50%;overflow: hidden;}
+.info .head-pic image{width: 100%;height:100%;object-fit: cover;}
+.aui-btn-theme{width: 120rpx;}
+.quanyi{width: 36rpx !important;}
+.vip{width: 80rpx !important;vertical-align: middle;}

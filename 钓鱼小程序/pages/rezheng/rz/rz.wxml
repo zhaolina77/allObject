@@ -1,0 +1,97 @@
+<view class="aui-content">
+			<view class="aui-list aui-media-list aui-border-bgT aui-border-bgB aui-padded-l-15 aui-padded-r-15" wx:if="{{state==0}}">
+				<view class="aui-padded-t-15 aui-padded-b-15 fweight-5 aui-font-size-15 aui-border-b">认证类型</view>
+				<block wx:for="{{list}}" wx:for-item="v" wx:key="sv">
+					<view class="aui-list-item aui-border-b aui-padded-l-0">
+						<view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+							<view class="aui-list-item-media">
+	                  <image class="vip" src="{{v.icon}}" mode="widthFix"></image>
+	              </view>
+	              <view class="aui-list-item-inner aui-padded-r-0">
+	                  <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+	                  	<view class="">
+	                  		<view class="aui-text-black aui-font-size-15">
+		                    	{{v.name}}
+		                    </view>
+		                    <view class="aui-text-gray aui-font-size-12 aui-padded-t-5">
+		                    	{{v.title}}
+		                    </view>
+	                  	</view>
+	                    <view class="aui-btn aui-btn-theme aui-font-size-12" bindtap="people_auth" data-id="{{v.id}}" data-index="{{index}}" >去认证</view>
+	                  </view>
+	              </view>
+	          </view>
+					</view>
+				</block>
+			</view>
+			<view class="aui-list aui-media-list aui-border-bgB aui-border-bgT aui-padded-l-15 aui-padded-r-15"   wx:elif="{{state==1}}">
+				<view class="aui-padded-t-15 aui-padded-b-15 fweight-5 aui-font-size-15 aui-border-b">认证类型</view>
+				<view class="aui-list-item  aui-padded-l-0">
+					<view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+						<view class="aui-list-item-media">
+                  <image class="vip" src="{{data.icon}}" mode="widthFix"></image>
+              </view>
+              <view class="aui-list-item-inner aui-padded-r-0">
+                  <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                  	<view class="">
+                  		<view class="aui-text-black aui-font-size-15">
+	                    	{{data.name}}
+	                    </view>
+	                    <view class="aui-text-gray aui-font-size-12 aui-padded-t-5">
+	                    	{{data.title}}
+	                    </view>
+                  	</view>
+                    <view class="aui-btn aui-btn-theme aui-font-size-12">审核中</view>
+                  </view>
+              </view>
+          </view>
+				</view>
+			</view>
+			<view class="aui-list aui-media-list aui-border-bgB aui-border-bgT aui-padded-l-15 aui-padded-r-15" wx:elif="{{state==2}}">
+				<view class="aui-padded-t-15 aui-padded-b-15 fweight-5 aui-font-size-15 aui-border-b">认证类型</view>
+				<view class="aui-list-item  aui-padded-l-0">
+					<view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+						<view class="aui-list-item-media">
+                  <image class="vip" src="{{data.icon}}" mode="widthFix"></image>
+              </view>
+              <view class="aui-list-item-inner aui-padded-r-0">
+                  <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                  	<view class="">
+                  		<view class="aui-text-black aui-font-size-15">
+	                    	{{data.name}}
+	                    </view>
+	                    <view class="aui-text-gray aui-font-size-12 aui-padded-t-5">
+	                    	{{data.title}}
+	                    </view>
+                  	</view>
+                    <view class="aui-btn aui-btn-theme aui-font-size-12" bindtap="pay">待支付</view>
+                  </view>
+              </view>
+          </view>
+				</view>
+			</view>
+			<view class="aui-list aui-media-list aui-border-bgB aui-border-bgT aui-padded-l-15 aui-padded-r-15"  wx:elif="{{state==3}}">
+				<view class="aui-padded-t-15 aui-padded-b-15 fweight-5 aui-font-size-15 aui-border-b">认证类型</view>
+				<view class="aui-list-item  aui-padded-l-0">
+					<view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+						<view class="aui-list-item-media">
+                  <image class="vip" src="{{data.icon}}" mode="widthFix"></image>
+              </view>
+              <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                  <view class="">
+                    <view class="aui-text-black aui-font-size-15">
+                      {{data.name}}
+                    </view>
+                    <view class="aui-text-gray aui-font-size-12 aui-padded-t-5">
+                      {{data.title}}
+                    </view>
+                  </view>
+                  <view class="aui-btn aui-btn-theme aui-font-size-12" bindtap="pay" wx:if="{{is_renewals==1}}">去续费</view>
+                </view>
+            </view>
+          </view>
+				</view>
+			</view>
+
+		</view>

@@ -1,0 +1,241 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+.slide-pic{
+    overflow: inherit;  
+}
+.shop-pic {
+    height: 720rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.shop-pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.laba {
+    position: absolute;
+    bottom:30rpx;
+    right: 30rpx;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius:32rpx;
+    padding:4rpx 32rpx;
+    
+}
+
+.aui-list-item-inner {
+    min-height: auto !important;
+}
+
+.aui-list-item-media {
+    width: auto !important;
+}
+
+.btn span {
+    width: 50%;
+    color: #fff;
+}
+
+.btn .aui-btn {
+    width: 100%;
+    height:80rpx !important;
+    line-height:80rpx !important;
+}
+
+.sc {
+    width:40rpx;
+}
+
+
+.line {
+    position: absolute;
+    top: 5rpx;
+    right: 20rpx;
+    width: 32rpx;
+    height: 32rpx;
+    border-radius: 50%;
+    background-color: #f32c52;
+    text-align: center;
+    line-height: 32rpx;
+    font-size:20rpx;
+    color: #fff;
+    border: 1rpx solid #fff;
+}
+.gui_box .aui-media-list-item-inner:last-child{
+    border-bottom: none !important;
+}
+/* 规格 */
+.guige{
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    
+}
+.guige .aui-content{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden; 
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.guige .close{
+    position: absolute;
+    top:30rpx;
+    right:30rpx;
+    z-index: 99;
+}
+.guige .close image{
+    width:32rpx;
+}
+.guige .shop-pic{
+    width:160rpx;
+    height:160rpx;
+    
+    overflow: hidden;
+}
+.guige .shop-pic image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+.guige .aui-list-item-text{ 
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+}
+.guige .spec{
+    display: inline-block; 
+    background-color: #f3f5f8;
+    padding:  0 20rpx;
+    height:60rpx;
+    line-height:60rpx; 
+    text-align: center; 
+    color: #000;
+    margin-right:20rpx;
+    margin-bottom:20rpx;
+    border-radius:10rpx;
+}
+.guige .aui-active{ 
+    background-color: #ff4805  !important;
+    color: #fff !important;
+}
+.guige .num{ 
+    width: 40rpx !important;
+    height:50rpx !important;
+}
+.guige .dialog{ 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.guige .add{
+    background-color:#666 !important;
+    color:#fff;
+}
+.guige .sel{
+    min-height:400rpx;
+    max-height:500rpx; 
+    overflow-y: scroll;
+}
+.guige .payment{
+    background-color:#34d594  !important;
+    color:#fff;
+}
+.youhui .sel{
+    max-height:500rpx; 
+    overflow-y: scroll;
+}
+
+/* 服务 */
+.fuwu{
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.fuwu .icon{
+    width:30rpx;
+}
+.fuwu .aui-content{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}		
+.fuwu .bj{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: .5rem .5rem 0 0;
+    overflow: hidden;
+}
+.fuwu .aui-list-item-media{
+    width: auto !important;
+    box-sizing: content-box;
+}
+.fuwu .aui-list-item-media image{
+    width:40rpx !important;
+    height: 40rpx !important;
+}
+.footer-bar{height: 110rpx;}
+.car{border-top-right-radius: 0% !important;border-bottom-right-radius: 0% !important;}
+.gm{border-top-left-radius: 0% !important;border-bottom-left-radius: 0% !important;}
+.huiyuan{background-color: #FEFBE9;}
+.money_ico{width: 30rpx;height: 30rpx;}
+/* .money_ico image{width: 24rpx;height: 24rpx;} */
+.dui{width:30rpx;height:30rpx;}
+/* .btn{width: 100% !important;} */
+.aui-col-xs-4 {width: 33.33333333% !important;}
+    
+button{height: unset !important;padding: 0 !important;font-weight:400 !important;background-color: white !important;line-height: unset !important;}
+
+
+radio .wx-radio-input{ 
+    /* 自定义样式.... */
+      height: 30rpx; 
+      width: 30rpx;
+      margin-top: -4rpx;
+      border-radius: 50%;
+      border: 1rpx solid #ccc;
+      background: transparent;
+   }
+   
+   
+   
+  /* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+  radio .wx-radio-input.wx-radio-input-checked{
+    height: 30rpx; 
+    width: 30rpx;
+     border: none;
+     background: red;
+  }
+  /* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+  radio .wx-radio-input.wx-radio-input-checked::before{
+     border-radius: 50%;/* 圆角 */
+     width: 30rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+     height: 30rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+     line-height: 30rpx;
+     text-align: center;
+     font-size:30rpx; /* 对勾大小 30rpx */
+     color:#fff; /* 对勾颜色 白色 */
+     background: #f00;
+     transform:translate(-50%, -50%) scale(1);
+     -webkit-transform:translate(-50%, -50%) scale(1);
+  }
+
+
+

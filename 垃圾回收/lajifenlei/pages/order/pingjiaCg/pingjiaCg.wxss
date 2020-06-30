@@ -1,0 +1,8 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+page{background-color: white !important;}
+.box{width:100%;height: 380rpx;position: fixed;top: 50%;margin-top: -260rpx;}
+.pic{width: 200rpx;height: 200rpx;margin:0 auto;}
+.pic image{width: 100%;height: 100%;}
+.aui-margin-t-30{margin-top: 60rpx;}

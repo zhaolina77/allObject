@@ -1,0 +1,25 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+
+<view class="aui-content">
+	<view class=" aui-font-size-14">
+		<view class="list" wx:for="{{list}}" wx:key="lis">
+			<view class="flex  aui-border-t aui-padded-15 aui-padded-b-15 lis aui-bg-white" bindtap="xiala" data-index="{{index}}" data-id="{{item.id}}">
+				<view>{{item.problem}}</view>
+				<view class="jt_right">
+					<image class="down" wx:if="{{item.type==1}}" src="/image/jt_down.png"></image>
+					<image class="right" wx:else src="/image/jt_right.png"></image>
+				</view>
+			</view>
+			<view class="aui-padded-15 aui-font-size-13 aui-border-t xl" wx:if="{{item.type==1}}">
+				<view class="li">
+				<template  is="wxParse" data="{{wxParseData:article.nodes}}"/>
+				</view>
+			</view>
+			
+		</view>
+
+
+
+	</view>
+
+</view>

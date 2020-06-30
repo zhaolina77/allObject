@@ -1,0 +1,21 @@
+<view class="aui-content">
+	<view class="pic">
+		<image src="/image/tjcg.png"></image>
+	</view>
+	<view class="aui-text-center fw5 aui-margin-t-15">恭喜您，提交成功！</view>
+	<view class="aui-text-center fw5 aui-margin-t-10 aui-text-gray aui-font-size-14">我们会在24小时内审核完成并反馈结果，请耐心等待！</view>
+
+	<view class="aui-text-center aui-text-gray aui-font-size-11 aui-margin-t-5">
+		<text>提示：如有疑问，请拨打客服电话：</text><text class="aui-text-theme">18682971964</text>
+	</view>
+
+
+		<view class="bbox">
+		<view class="btn" bindtap="back">我知道了</view>
+	</view>
+
+
+
+
+
+</view>

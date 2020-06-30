@@ -1,0 +1,9 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+
+.logo{width: 220rpx;height: 220rpx;border-radius: 50%;overflow: hidden;margin: 40rpx auto;}
+.logo image{width: 100%;height: 100%;object-fit: cover;}
+.txt{line-height: 50rpx;}
+.lis{justify-content: space-between;}

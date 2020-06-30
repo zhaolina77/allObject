@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "俱乐部",
+  "usingComponents": {
+    "van-action-sheet": "vant-weapp/action-sheet"
+  }
+}

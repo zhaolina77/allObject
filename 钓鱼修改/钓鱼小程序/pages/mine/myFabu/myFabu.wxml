@@ -1,0 +1,70 @@
+<view class="guanzhu-list aui-border-bgT">
+	<view class="aui-list aui-media-list">
+		<view class="aui-row" wx:if="{{list.length>0}}">
+			<block wx:for="{{list}}" wx:key="this" wx:for-item="v">
+				<view class="aui-list-item aui-padded-15 aui-border-bgB" bindtap="detail" data-id="{{v.reid}}">
+					<view class="aui-media-list-item-inner ">
+						<view class=" aui-padded-r-15">
+							<view class="aui-media-list">
+								<view class="pic aui-border">
+									<image src="{{v.head_portrait}}"></image>
+								</view>
+							</view>
+						</view>
+						<view class="aui-list-item-inner aui-padded-t-0 aui-padded-b-0 aui-padded-r-0">
+							<view class="">
+								<view class="aui-list-item-text aui-text-black aui-font-size-15 aui-padded-t-5">{{v.nick_name}}</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-11">{{v.create_time}}</view>
+							</view>
+							<view class="aui-text-orange aui-font-size-14">{{v.state_name}}</view>
+						</view>
+					</view>
+					<view class="aui-list-item-text aui-text-black aui-margin-t-10 aui-margin-b-10">{{v.content}}</view>
+					<!-- <view class="show aui-font-size-14">全文</view> -->
+					<!--发布图片-->
+					<view class="aui-row" wx:if="{{v.type==1}}">
+						<!-- <block wx:for="{{v.url}}"> -->
+						<block>
+							<view class="aui-col-xs-4" wx:for="{{v.url}}" wx:key="pc">
+							<!-- <view class="aui-col-xs-4"> -->
+								<image src="{{item}}"></image>
+							</view>
+						</block>
+					</view>
+					<!--发布视频-->
+					<view class="aui-row" wx:else>
+						<block>
+							<view class="aui-col-xs-4 sp_box">
+								<image class="thumb" src="{{v.vedio_thumb}}"></image>
+									<image class="bf"  src="/image/bofang.png"></image>
+							</view>
+						</block>
+					</view>
+					<view class="aui-list-item-text aui-text-grayer aui-font-size-10 aui-margin-b-10">{{v.angling_site_name}}</view>
+					<!--点赞收藏评论-->
+					<view class="clearfix">
+						<view class="aui-pull-left plq">
+							<image src="/image/zan-on.png" mode="widthFix" wx:if="{{v.is_like==1}}"></image>
+							<image src="/image/zan1.png" mode="widthFix" wx:else></image>
+							<text class="aui-font-size-13 aui-text-blacker">{{v.like_num}}</text>
+						</view>
+						<view class="aui-pull-left plq">
+							<image src="/image/sc-on.png" mode="widthFix" wx:if="{{v.is_coll==1}}"></image>
+							<image src="/image/sc1.png" mode="widthFix" wx:else></image>
+							<text class="aui-font-size-13 aui-text-blacker">{{v.coll_num}}</text>
+						</view>
+						<view class="aui-pull-left plq">
+							<image src="/image/xiaoxi.png" mode="widthFix"></image>
+							<text class="aui-font-size-13 aui-text-blacker">{{v.commentnum_num}}</text>
+						</view>
+						<!-- <view class="aui-pull-right"><image src="/image/fx.png" mode="widthFix" style="width: 32rpx;vertical-align: middle;"></image></view> -->
+					</view>
+				</view>
+			</block>
+		</view>
+		<view wx:else style="margin-top: 150px;">
+			<image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+		</view>
+
+	</view>
+</view>

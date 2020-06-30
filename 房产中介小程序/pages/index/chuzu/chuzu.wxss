@@ -1,0 +1,53 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.aui-bar image{
+  width: 32rpx;
+  vertical-align:middle;
+}
+.aui-title{
+  right:30rpx !important;
+  display: flex;
+  align-items: center;
+  left:30rpx !important;
+}
+.aui-bar{
+  height:100rpx;
+}
+.serch{
+  border-radius: 10rpx;
+  width: 100%;
+}
+.serch input{
+  float: left;
+  line-height:70rpx !important;
+  height: 70rpx;
+  width: 80%;
+  color: #222;
+  font-size: 14px;
+}
+/* 导航 */
+.classfy{justify-content: flex-end;color: #666;font-size: 26rpx;}
+.cl_active{color: #222;}
+.jt_d image{width: 14rpx;height:23rpx;}
+.jt_d1 image{width: 14rpx;height:10rpx;}
+.shouye_list .item{width: 30% !important;height: 160rpx;}
+.right{width: 70%;}
+
+
+/* 蒙层 */
+.up{width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);position: fixed; top: 170rpx; left: 0;z-index: 999;}
+.box{width:100%;position: absolute;left:0;left:0;top:0;background-color: #fff;padding: 30rpx;}
+
+.aui-col-xs-4{width: 32%;height: 60rpx;line-height: 60rpx;border-radius: 30rpx;background-color: #EEEEEE;margin-right: 2%;margin-bottom: 30rpx;}
+.aui-col-xs-4:nth-of-type(3n){margin-right: 0 !important;}
+.active{background-color: #fff4cd;color:#ffd12d ;}
+
+.aui-col-xs-6{width: 45%;height: 80rpx;line-height: 80rpx;border-radius: 10rpx;background-color: #EEEEEE;margin-right: 10%;margin-bottom: 30rpx;}
+.aui-col-xs-6:nth-of-type(2n){margin-right: 0 !important;}
+.act{background-color:#ffd12d ;color: #fff;}
+
+
+
+.shouye_list .item {width: 45% !important;height: 190rpx;}
+.address{width: 32rpx;height: 32rpx;}

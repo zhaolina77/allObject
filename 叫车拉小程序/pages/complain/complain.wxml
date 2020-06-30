@@ -1,0 +1,38 @@
+<view class="aui-content" id="app" v-cloak>
+			<view class="aui-list">
+				<view class="aui-list-item aui-bg-grayer">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title" style="display: flex;align-items: center;">
+							<image class="aui-img-round" src="{{head}}"></image>
+							<text class="aui-font-size-16 aui-margin-l-15">{{name}}  {{cnumber}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="aui-text-danger aui-text-center aui-margin-t-15">
+				“请选择投诉原因，我们会对司机进行管束”
+			</view>
+			<view class="tag aui-margin-t-10">
+        <block wx:for="{{list}}" wx:key="index">
+				<text class="actives {{item.is_del==1? 'active':''}}" data-index="{{index}}" bindtap="tab">{{item.name}}</text>
+        </block>
+			</view>
+			<view class="aui-padded-15">
+				<textarea placeholder="请描述具体细节，我们会不断改进..." bindblur="getphone"></textarea>
+			</view>
+			<view class="aui-row aui-padded-l-15 aui-padded-r-15">
+        <block wx:for="{{pic}}" wx:key="index">
+        <view class="aui-col-xs-4">
+          <image src="{{item}}"></image>
+          <image class="close" src="../../image/closePage.png" bindtap="del" data-index="{{index}}"></image>
+        </view>
+        </block>
+				<view class="aui-col-xs-4">
+					<image  src="../../image/upload.jpg" bindtap="changeAvatar" ></image>
+				</view>
+			</view>
+		</view>
+    <view class="aui-padded-15">
+      <view class="submit" bindtap="sub">提交</view>
+    </view>

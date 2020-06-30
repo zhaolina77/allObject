@@ -1,0 +1,196 @@
+<view class="aui-bar aui-bar-nav aui-bar-light aui-bg-white mine-bar">
+    <view class="aui-title">
+        <view class="aui-padded-l-15 aui-padded-r-15 aui-bg-grayer serch aui-text-left">
+            <image  mode="widthFix"  src="/image/sousuo.png" style=" float: left;width:24rpx;margin-top:24rpx;margin-right: 6px;"></image>
+           <input placeholder="搜索商品/商家/热帖/钓场/协会/比赛"  confirm-type="search" bindconfirm='search' bindinput='verification' value="{{val}}"  auto-focus focus="true"></input>
+        </view>
+    </view>
+</view>
+
+<view class="aui-tab public-tab aui-border-b mine-bar mine-content" id="tab">
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==0?'aui-active':''}} " bindtap="change" data-index="0">商品</view>
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==1?'aui-active':''}}" bindtap="change" data-index="1">商家</view>
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==2?'aui-active':''}}" bindtap="change" data-index="2">热帖</view>
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==3?'aui-active':''}}" bindtap="change" data-index="3"> 钓场</view>
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==4?'aui-active':''}}" bindtap="change" data-index="4"> 协会</view>
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==5?'aui-active':''}}" bindtap="change" data-index="5">比赛</view>
+</view>
+
+<!-- 搜索结果 -->
+<view class="aui-content aui-padded-t-10" style="margin-top:160rpx" wx:if="{{list.length>0}}">
+    <!-- 商品 -->
+    <view class="aui-row aui-margin-t-10 aui-padded-l-10 aui-padded-r-10 shop-list " wx:if="{{state==0}}">
+        <view class="aui-col-xs-6 aui-margin-b-10 aui-bg-white bg-radius" wx:for="{{list}}" wx:key="list1" bindtap="enterSp" data-id="{{item.id}}">
+            <view class="pic">
+                <image src="{{item.thumb}}" mode="aspectFill"></image>
+            </view>
+            <view class="aui-padded-l-5 aui-padded-r-5">
+                <view class="text aui-ellipsis-2 aui-font-size-13 aui-margin-t-10">
+                    {{item.name}}
+                </view>
+                <view class="aui-font-size-11 aui-padded-t-10 aui-padded-b-10 aui-text-gray">
+                    <text class="aui-text-orange">￥<text class="aui-font-size-16 fweight-5">{{item.market_price}}</text></text>
+                    <text class="aui-padded-l-5 delline">{{item.original_price}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 商家 -->
+    <view class="shangjia " wx:elif="{{state==1}}">
+        <view class="aui-bg-white aui-margin-10 bg-radius" wx:for="{{list}}" wx:key="list1" bindtap="enterSj" data-id="{{item.id}}">
+            <view class="aui-list aui-media-list aui-padded-l-0 aui-padded-r-15" >
+                <view class="aui-list-item" >
+                    <view class="aui-media-list-item-inner">
+                        <view class="aui-list-item-media">
+                            <view class="shop-pic">
+                                <image src="{{item.thumb}}"  mode="aspectFill"></image>
+                            </view>
+                        </view>
+                        <view class="aui-list-item-inner aui-padded-r-0">
+                            <view class="aui-list-item-text">
+                                <view class="aui-list-item-title aui-font-size-14">
+                                    <view class="aui-font-size-14 fweight-5">{{item.shop_name}}</view>
+                                </view>
+                            </view>
+                            <view class="aui-list-item-text aui-padded-t-5">
+                                <view class="aui-list-item-title aui-font-size-12 aui-text-gray">共{{item.goodnum}}件商品 l 月销{{item.sales}}</view>
+                                <view class="aui-list-item-right aui-font-size-12 aui-text-gray">{{item.distance}}m</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="aui-row aui-padded-15 aui-padded-t-5">
+                <view class="aui-col-xs-4" wx:for="{{item.goodlist}}">
+                    <view class="pic">
+                        <image src="{{item.thumb}}"  mode="aspectFill"></image>
+                    </view>
+                    <view class="aui-ellipsis-1 aui-font-size-12 aui-padded-t-12">{{item.name}}</view>
+                    <view class="aui-font-size-11 aui-text-orange aui-padded-t-5">￥<text class="aui-font-size-15 fweight-5">{{item.market_price}}</text></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+    <!--热帖-->
+    <view class="aui-row retie-list aui-margin-10 " wx:elif="{{state==2}}">
+        <view class="aui-col-5 aui-bg-white bg-radius aui-margin-b-10" wx:for="{{list}}" wx:key="list2" bindtap="enterRt" data-id="{{item.id}}">
+            <view class="pic">
+                <image src="{{item.vedio_thumb}}" mode="aspectFill"></image>
+                <image class="bofang" src="/image/bofang.png" mode="widthFix"></image>
+            </view>
+            <view class="aui-padded-10 aui-padded-b-0">
+                <view class="aui-ellipsis-2 aui-font-size-13">{{item.content}}</view>
+                
+                <view class="aui-list aui-media-list">
+                    <view class="aui-list-item aui-padded-l-0">
+                        <view class="aui-media-list-item-inner aui-padded-r-0">
+                            <view class="aui-list-item-media aui-padded-r-5">
+                                <view class="haed-pic"><image src="{{item.head_portrait}}" mode="aspectFill"></image></view>
+                            </view>
+                            <view class="inner">
+                                <view class="aui-font-size-11 aui-text-gray name aui-ellipsis-1" >{{item.nick_name}}</view>
+                                <view class="aui-font-size-11 aui-text-gray">
+                                    <image class="zan" src="/image/zan.png" mode="widthFix" wx:if="{{item.is_like==0}}"></image>
+                                    <image class="zan" src="/image/zan-on.png" mode="widthFix" wx:else></image>
+                                    <text style="vertical-align: middle;">{{item.like_num}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--钓场-->
+    <view class="diaochang-list" wx:elif="{{state==3}}">
+        <view class="aui-list aui-media-list aui-padded-l-0 aui-padded-t-5" >
+            <view class="aui-list-item aui-padded-t-5" wx:for="{{list}}" wx:key="list3" bindtap="enterDc" data-id="{{item.id}}">
+                <view class="aui-media-list-item-inner">
+                    <view class="aui-list-item-media">
+                        <view class="shop-pic">
+                            <image src="{{item.thumb}}" ></image>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-inner aui-padded-r-0 aui-padded-r-15 aui-padded-b-15 aui-border-b">
+                        <view class="aui-list-item-text">
+                            <view class="aui-list-item-title">
+                                <view class="aui-font-size-16 fweight-5">{{item.name}}</view>
+                            </view>
+                        </view>
+                        <view class="aui-list-item-text aui-padded-t-5">
+                            <view class="aui-list-item-title aui-font-size-12">
+                                <text class="aui-label aui-label-info" wx:for="{{item.type_name_list}}" wx:key="na">{{item}}</text>
+                            </view>
+                            <view class="aui-list-item-right aui-font-size-12 aui-text-gray">{{item.distance}}</view>
+                        </view>
+                        <view class="aui-list-item-text aui-padded-t-5">
+                            <view class="aui-list-item-title aui-font-size-12 aui-text-gray">{{item.fish}}</view>
+                        </view>
+                        <view class="aui-list-item-text aui-padded-t-5">
+                            <view class="aui-list-item-title aui-font-size-12 aui-text-orange">收费：{{item.price}}元/{{item.charging_standard_name}}</view>
+                        </view>
+                        <view class="aui-list-item-text aui-padded-t-5">
+                            <view class="aui-list-item-title aui-font-size-12 aui-text-gray aui-ellipsis-2">介绍：{{item.content}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+    <!--协会-->
+    <view class="xiehui-list" wx:elif="{{state==4}}">
+        <view class="aui-list aui-media-list aui-padded-l-15 aui-padded-r-15" wx:for="{{list}}" wx:key="list4" bindtap="enterXh" data-id="{{item.id}}">
+            <view class="aui-list-item aui-list-item-arrow aui-border-b aui-padded-l-0 aui-padded-r-0 aui-padded-t-5 aui-padded-b-5">
+                <view class="aui-media-list-item-inner">
+                    <view class="aui-list-item-media">
+                        <view class="pic"><image src="{{item.thumb}}"></image></view>
+                    </view>
+                    <view class="aui-list-item-inner">
+                        <view class="aui-list-item-text aui-padded-t-5">
+                            <view class="aui-list-item-title aui-font-size-15">{{item.name}}</view>
+                        </view>
+                        <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-5">{{item.address}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--比赛-->
+    <view class="aui-padded-15 saishi-list" wx:else>
+        <view class="">
+            <view class="aui-bg-white aui-padded-b-5 aui-margin-b-15 bg-radius" wx:for="{{list}}" wx:key="list5" bindtap="enterBs" data-id="{{item.id}}">
+                <view class="pic">
+                    <image src="{{item.pic}}"></image>
+                    <view class="aui-label">距离报名结束还有{{item.day}}天</view>
+                </view>
+                <view class="aui-padded-10 ">
+                    <view class="fweight-5 aui-ellipsis-2">{{item.name}}</view>
+                    <view class="aui-font-size-12 aui-text-gray aui-padded-t-10">
+                        <image class="icon" mode="widthFix" src="/image/rili.png"></image>
+                        {{item.open_time}}
+                    </view>
+                    <view class="aui-font-size-12 aui-text-gray aui-padded-t-10">
+                        <image class="icon" mode="widthFix" src="/image/dingwei.png"></image>
+                        {{item.address}}
+                    </view>
+                    <view class="aui-font-size-12 aui-text-gray aui-padded-t-10">
+                        <image class="icon" mode="widthFix" src="/image/renyuan.png"></image>
+                        {{item.already_num}}/{{item.num}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>
+<view wx:else  style="margin-top:260px;"> 
+  <image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>
+
+

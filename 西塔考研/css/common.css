@@ -1,0 +1,156 @@
+/**公共样式表**/
+body{ background:#fff; color:#121D36 ;font-size: 0.75rem !important;}
+img{ display: inline-block !important;}
+[v-cloak] {display: none;}
+.list-enter-active, .list-leave-active {transition: all 1s;}
+.list-enter, .list-leave-active {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.aui-grid [class*=aui-col-xs-]:active {
+	background:transparent;
+}
+/*header 线条*/
+.aui-bar-light{
+	border-bottom: none !important;
+	background-image:none !important;
+}
+.aui-bar-nav .aui-btn .aui-iconfont{
+	font-weight: bold !important;
+	color: #222 !important;
+}
+
+.aui-border-bg{border: 0.5rem solid #f5f5f5 !important;}
+.aui-border-bgT{ border-top: 0.5rem solid #f5f5f5 !important;}
+.aui-border-bgB{ border-bottom: 0.5rem solid #f5f5f5 !important;}
+
+.aui-border{border: 0.5px solid #eeeeee   !important;}
+.aui-border-t{ border-top: 0.5px solid #eeeeee !important;}
+.aui-border-b{ border-bottom: 0.5px solid #eeeeee !important;}
+.aui-border-l{ border-left: 0.5px solid #eeeeee !important;}
+.aui-border-r{ border-right: 0.5px solid #eeeeee !important;}
+
+.aui-list{background-image:none !important;}
+.aui-list .aui-list-item{ background-image:none !important; border-color:#eee; }
+.aui-list .aui-list-item:active {background:transparent;}
+
+.aui-font-size-9 {font-size: 0.45rem !important;}
+.aui-font-size-10 {font-size: 0.5rem !important;}
+.aui-font-size-11 {font-size: 0.55rem !important;}
+.aui-font-size-12{font-size: 0.6rem !important;}
+.aui-font-size-13 {font-size: 0.65rem !important;}
+.aui-font-size-14 {font-size: 0.7rem !important;}
+.aui-font-size-15 {font-size: 0.75rem !important;}
+.aui-font-size-17 {font-size: 0.85rem !important;}
+.aui-font-size-19 {font-size: 0.95rem !important;}
+.aui-font-size-26 {font-size: 1.3rem !important;}
+.aui-font-size-30 {font-size: 1.5rem !important;}
+.aui-font-size-32 {font-size: 1.6rem !important;}
+
+
+.aui-bg-theme{background-color:#58CAB9 !important;} /*主题背景颜色*/
+.aui-bg-white {background-color: #FFFFFF !important;}
+.aui-bg-grayer {background-color: #f5f5f5 !important;}
+.aui-bg-black{background-color: #474747 !important;}
+.aui-bg-orange{background-color: #FD5F04 !important;}
+.aui-bg-danger{background-color: #FF5D5D !important;}
+.aui-bg-success{background-color: #34d594 !important;}
+.aui-bg-pur{background-color: #FAF6FB;}
+.aui-bg-blue{background-color:#EDF2FD;}
+
+
+
+.aui-text-theme{color:#58CAB9 !important;} /*主题字体颜色*/
+.aui-text-black {color: #222 !important;}
+.aui-text-danger{color:#FF5D5D !important;}   /* 红色 */
+.aui-text-gray{color: #666 !important;}  /* 深灰 */
+.aui-text-grayer{color: #999 !important;} /* 浅灰 */
+.aui-text-success{color: #34d594 !important;} /* 绿色 */
+.aui-text-brown{ color: #DCC59D !important}
+.aui-text-pur{color: #A27BBA !important;}
+.aui-text-blue{color: #6793EC !important;}
+
+
+
+
+
+.aui-btn-theme{background-color: #58CAB9 !important;color: #ffffff !important;text-align: center;}/*主题按钮*/
+.aui-btn-theme.aui-btn-outlined {background: transparent !important;color:#58CAB9 !important;border: 1px solid #58CAB9 !important;} /*主题镂空按钮*/
+
+.aui-btn-danger {background-color: #FF5D5D !important;color: #ffffff !important;}
+.aui-btn-success{ background-color: #3DC68A !important;color: #FFFFFF !important;}
+.aui-btn-black { background-color: #222 !important;color: #ffffff !important;font-size:0.8rem;}
+
+.aui-font-weight{ font-weight: bold !important;}
+
+.aui-label-info{background-color:#3296fa;}
+.aui-label-warning{background-color: #ffae00 !important;}
+
+.aui-label-outlined {
+    background-color: transparent;
+    position: relative;
+}
+/**AUI重写css**/
+.aui-bar-light {color: #4A4A4A;}
+
+/*分类*/
+.aui-list-view {position: relative;padding-left: 0;margin-top: 0;margin-bottom: 15px;list-style: none;}
+.aui-list-view:after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	pointer-events: none;
+}
+.aui-list-view-cell {position: relative;padding:10px;overflow: hidden;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-touch-callout: none;}
+.aui-list-view-cell.aui-active{color: #3070e8 ; position: relative;}
+.aui-list-view-cell-block{position: relative;padding:10px 10px 10px 1.5rem; text-align:left;overflow: hidden;}
+.aui-list-view-cell-block.aui-active{ background: #fff;color: #ff574a;}
+
+
+i{ font-style: normal;}
+/*下划线*/
+.delline{ text-decoration: line-through;}
+/*左右箭头 icon 加粗*/
+.aui-iconfont{font-weight: bold !important;color: #999 !important;}
+.aui-list-item-arrow:before{border:1.3px solid #838998 !important;border-top: none !important;border-right: none !important;}
+
+/*隐藏显示*/
+.disnone{ display:none !important;}
+.disblock{ display: block !important;}
+
+
+.mui-table-view:before{display:none !important;}
+.mui-table-view-cell:after{display:none !important;}
+.mui-table-view-cell:before{display:none !important;}
+.mui-table-view:after{display:none !important;}
+.mui-table-view-cell:after{background-color: inherit;}
+
+.mui-btn-danger, .mui-btn-negative, .mui-btn-red{background-color: #FF3333 !important;}
+
+.aui-badge{background-color: #ff5941 !important;margin-left:0 !important;}
+
+
+.fweight-5{font-weight: 500;}
+
+/*阴影*/
+.aui-shadow{box-shadow:0px 2px 16px 0 rgba(0,0,0,0.1);}
+
+
+.disnone{ display:none !important;}
+
+.disblock{ display: block !important;}
+
+/*未滑动的时候需要这段的样式,轮播的是不需要*/
+.slide .swiper-container .swiper-slide {
+	letter-spacing:0 !important;
+	width:auto !important;
+	line-height: 2.15rem;
+	/*margin-left: 0.75rem !important;*/
+	/*margin-right: 0 !important;*/
+}

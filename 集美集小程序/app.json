@@ -1,0 +1,105 @@
+{
+  "pages":[
+    "pages/index/index/index",
+    "pages/index/msDetail/msDetail",
+    "pages/index/cart/cart",
+    "pages/index/fenlei/fenlei",
+    "pages/index/shenqingCg/shenqingCg",
+    "pages/index/shenqing/shenqing",
+    "pages/index/fuli/fuli",
+    "pages/index/chuangyeZq/chuangyeZq",
+    "pages/index/tuangouMs/tuangouMs",
+    "pages/index/fenleiShop/fenleiShop",
+    "pages/yongjin/yaoqing/yaoqing",
+    "pages/yongjin/huiyuan/huiyuan",
+    "pages/yongjin/yongjinMx/yongjinMx",
+    "pages/yongjin/zhanghuAdd/zhanghuAdd",
+    "pages/yongjin/bangdingZh/bangdingZh",
+    "pages/yongjin/tixian/tixian",
+    "pages/yongjin/tixianCg/tixianCg",
+    "pages/yongjin/index/index",
+    "pages/mine/lingquan/lingquan",
+    "pages/mine/youhuiquan/youhuiquan",
+    "pages/mine/myCollection/myCollection",
+    "pages/mine/addressBj/addressBj",
+    "pages/mine/address/address",
+    "pages/mine/addressAdd/addressAdd",
+    "pages/mine/yijian/yijian",
+    "pages/mine/personal/personal",
+    "pages/mine/myFabu/myFabu",
+    "pages/mine/myGuanzhu/myGuanzhu",
+    "pages/mine/index/index",
+    "pages/community/zhuye/zhuye",
+    "pages/community/index/index",
+    "pages/community/fabu/fabu",
+    "pages/community/replyDetail/replyDetail",
+    "pages/community/comDetail/comDetail",
+    "pages/shop/orderTj/orderTj",
+    "pages/shop/allPj/allPj",
+    "pages/shop/shopDetail/shopDetail",
+    "pages/search/searchJg/searchJg",
+    "pages/search/searchJl/searchJl",
+    "pages/order/wuliu/wuliu",
+    "pages/order/daifahuo/daifahuo",
+    "pages/order/pingjiaDetail/pingjiaDetail",
+    "pages/order/pingjia/pingjia",
+    "pages/order/pingjiaZx/pingjiaZx",
+    "pages/order/tuikuanJd/tuikuanJd",
+    "pages/order/tuikuanYy/tuikuanYy",
+    "pages/order/yituikuan/yituikuan",
+    "pages/order/yiquxiao/yiquxiao",
+    "pages/order/yiguanbi/yiguanbi",
+    "pages/order/yiwancheng/yiwancheng",
+    "pages/order/yifahuo/yifahuo",
+    "pages/order/daifukuan/daifukuan",
+    "pages/order/index/index",
+    "pages/login/login/login",
+    "pages/login/userinfo/userinfo",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"black"
+    
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#ff4805",
+    "list": [
+      {
+      "pagePath": "pages/index/index/index",
+      "text": "首页",
+      "iconPath": "/image/index.png",
+      "selectedIconPath": "/image/index-on.png"
+    },
+    {
+      "pagePath": "pages/index/fenlei/fenlei",
+      "text": "分类",
+      "iconPath": "/image/fenlei.png",
+      "selectedIconPath": "/image/fenlei-on.png"
+    },
+    {
+      "pagePath": "pages/community/index/index",
+      "text": "biling社区",
+      "iconPath": "/image/shequ.png",
+      "selectedIconPath": "/image/shequ-on.png"
+    },
+    {
+      "pagePath": "pages/index/cart/cart",
+      "text": "采购单",
+      "iconPath": "/image/cart.png",
+      "selectedIconPath": "/image/cart-on.png"
+    },
+    {
+      "pagePath": "pages/mine/index/index",
+      "text": "我的",
+      "iconPath": "/image/mine.png",
+      "selectedIconPath": "/image/mine-on.png"
+    }
+  ]
+  }
+}

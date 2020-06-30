@@ -1,0 +1,76 @@
+<view class="aui-tab  aui-padded-r-15 mine-bar" id="tab">
+    <scroll-view scroll-x enable-flex="true">
+        <view class="swiper-slide {{status==-1?'on':''}}" bindtap="change" data-index="-1">
+            <text class="aui-font-size-15 aui-text-gray">全部</text>
+        </view>
+        <view class="swiper-slide {{status==0?'on':''}}" bindtap="change" data-index="0">
+            <text class="aui-font-size-15 aui-text-gray">待付款</text>
+        </view>
+        <view class="swiper-slide {{status==1?'on':''}}" bindtap="change" data-index="1">
+            <text class="aui-font-size-15 aui-text-gray">待发货</text>
+        </view>
+        <view class="swiper-slide {{status==2?'on':''}}" bindtap="change" data-index="2">
+            <text class="aui-font-size-15 aui-text-gray">待收货</text>
+        </view>
+        <view class="swiper-slide {{status==3?'on':''}}" bindtap="change" data-index="3">
+            <text class="aui-font-size-15 aui-text-gray">已完成</text>
+        </view>
+        <view class="swiper-slide {{status==8?'on':''}}" bindtap="change" data-index="8">
+            <text class="aui-font-size-15 aui-text-gray">已关闭</text>
+        </view>
+    </scroll-view>
+</view>
+
+
+<view class="mine-content" wx:if="{{list.length>0}}">
+    <!-- 循环这一段 -->
+    <view class="aui-list aui-media-list aui-border-bgT aui-padded-l-15 aui-padded-r-15" wx:for="{{list}}" wx:key='li'>
+        <view class="aui-list-item aui-padded-l-0 aui-border-b">
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-text">
+                    <view class="aui-list-item-title">
+                        <view class="aui-font-size-13 aui-text-black">
+                            <text style="vertical-align: middle;margin-left: 0.1rem;">{{item.shop_name}}</text>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-right aui-text-black aui-font-size-15 fweight-5" style="vertical-align: middle;">{{item.pay_name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-padded-l-0" wx:for="{{item.goods_order_list}}" wx:key="g">
+            <view class="aui-media-list-item-inner aui-padded-t-5" >
+                <view class="aui-list-item-media">
+                    <view class="shop-pic">
+                        <image src="{{item.thumb}}"></image>
+                    </view>
+                </view>
+                <view class="aui-list-item-inner aui-padded-r-0" >
+                    <view class="aui-list-item-text ">
+                        <text class="aui-ellipsis-2 aui-font-size-14 aui-text-black">{{item.goods_name}}</text>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-font-size-10 aui-text-orange">￥<text class="aui-font-size-18 fweight-5">{{item.goods_price}}</text> </view>
+                    </view>
+                </view>
+            </view>
+            <view class="aui-padded-b-15 aui-padded-t-5 aui-border-b aui-text-right aui-text-gray aui-font-size-12">
+                共{{item.goods_num}}件商品<text class="aui-text-black">实付金额 ￥{{item.goods_price}}</text>
+            </view>
+        </view>
+
+        <!-- 判断显示btn -->
+        <view class="aui-list-item" > <!--待付款-->
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-font-size-13 aui-text-right">
+                    <view class="aui-btn aui-btn-outlined aui-font-size-12 " bindtap="todetail" data-id="{{item.id}}" data-status="{{item.status}}">订单详情</view>
+                    <view class="aui-btn aui-font-size-12 aui-btn-theme" wx:if="{{item.status==0}}" bindtap="wxPay" data-id="{{item.id}}">立即支付</view>
+                    <view class="aui-btn aui-font-size-12 aui-btn-theme " wx:if="{{item.status==2}}" bindtap="confirm" data-id="{{item.id}}">确认收货</view>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+</view>
+<view wx:else  style="margin-top: 150px;"> 
+  <image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>

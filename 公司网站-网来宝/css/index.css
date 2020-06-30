@@ -1,0 +1,377 @@
+/* 在线教育 */
+
+.online .title {
+    text-align: center;
+}
+
+.online .title .txt1 {
+    color: #222;
+    font-size: 38px;
+}
+
+.online .title .txt2 {
+    margin-top: 20px;
+    color: #666;
+    font-size: 20px;
+}
+
+.online .online_item {
+    width: 18%;
+    height: 456px;
+    overflow: hidden;
+}
+
+.online .online_part1 {
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 50px;
+    background-color: #ff731b;
+    text-align: center;
+}
+
+.online .online_part1_ic {
+    background-color: #556acb;
+}
+
+.online .online_txt1 {
+    font-size: 20px;
+    color: white;
+    padding-top: 26px;
+}
+
+.online .online_txt2 {
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+}
+
+.online .online_part2 {
+    width: 100%;
+    height: 356px;
+    background-color: white;
+    text-align: center;
+    color: #666;
+}
+
+.online .online_part2 .online_list {
+    width: 80px;
+    padding-top: 40px;
+    margin-left: 80px;
+}
+
+
+/* 互联网 */
+
+.net_box {
+    width: 1000px;
+    height: 580px;
+    margin-top: 70px;
+    position: relative;
+}
+
+.net_txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.net_txt1 {
+    border: 1px solid #ff731b;
+    width: 220px;
+    height: 70px;
+    position: relative;
+    border-radius: 7px;
+    left: 690px;
+    top: 53px;
+}
+
+.net_txt11 {
+    position: absolute;
+    color: #ff731b;
+    font-size: 45px;
+    top: 10px;
+    left: -14px;
+}
+
+.net_txt12 {
+    position: absolute;
+    color: #fff;
+    font-size: 45px;
+    top: 10px;
+    left: -12px;
+}
+
+.net_txt2 {
+    top: 120px;
+}
+
+.net_txt2 .net_txt21 {
+    position: absolute;
+    color: #ff731b;
+    font-size: 45px;
+    top: 39px;
+    left: 50px;
+}
+
+.net_txt2 .net_txt22 {
+    position: absolute;
+    color: #fff;
+    font-size: 45px;
+    top: 37px;
+    left: 50px;
+}
+
+.net_txt3 {
+    width: 260px;
+    height: 120px;
+    left: 50px;
+    top: 6px;
+}
+
+.net_txt3 .net_txt31 {
+    position: absolute;
+    color: #ff731b;
+    font-size: 45px;
+    top: 89px;
+    left: 50px;
+}
+
+.net_txt3 .net_txt32 {
+    position: absolute;
+    color: #fff;
+    font-size: 45px;
+    top: 87px;
+    left: 50px;
+}
+
+
+/* 个人定制 */
+
+.grdz {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ff731b;
+    /* background-image: url(../images/banner.png); */
+    position: relative;
+}
+
+.grdz_shang {
+    background-image: url(../images/shouye_bg1.png);
+    /* background-color: rgba(225, 115, 27, .9); */
+    padding-bottom: 80px;
+}
+
+.grdz .online {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.dingzhi_box {
+    height: 756px;
+    background-color: #fff;
+    margin-top: 50px;
+    box-shadow: 0 0 15px white;
+}
+
+.jiaoxue_right .dingzhi_ico {
+    width: 38px;
+    height: 34px;
+}
+
+.jiaoxue_right .dingzhi_ico img {
+    /* width: 100%;
+    height: 100%; */
+}
+
+.dingzhi_box .jiaoxue_text1 {
+    font-size: 22px;
+}
+
+.dingzhi_box .jiaoxue_text2 {
+    font-size: 16px;
+}
+
+.dingzhi_box .btn_box {
+    margin-top: 0;
+}
+
+
+/* 云部署 */
+
+.bushu_box {}
+
+.bushu_content {
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    margin: 160px auto;
+    position: relative;
+}
+
+.bushu_content img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.bushu_content .bs {
+    width: 500px;
+    text-align: center;
+    position: absolute;
+}
+
+.bushu_content .bs .txt1 {
+    font-size: 30px;
+    color: #222;
+}
+
+.bushu_content .bs .txt2 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* 云部署上 */
+
+.bushu_content .bs_top {
+    left: 50%;
+    top: -100px;
+    margin-left: -250px;
+}
+
+
+/* 云部署下 */
+
+.bushu_content .bs_bottom {
+    left: 50%;
+    bottom: -100px;
+    margin-left: -250px;
+}
+
+
+/* 云部署左1 */
+
+.bushu_content .bs_left1 {
+    left: -482px;
+    top: 106px;
+}
+
+
+/* 云部署左2 */
+
+.bushu_content .bs_left2 {
+    top: 442px;
+}
+
+
+/* 云部署右1 */
+
+.bushu_content .bs_right1 {
+    right: -482px;
+    top: 106px;
+}
+
+
+/* 云部署右2 */
+
+.bushu_content .bs_right2 {
+    top: 442px;
+}
+
+.navs_txt1 {
+    opacity: .6;
+}
+
+.txt1_active {
+    opacity: 1;
+}
+
+.jiaoxue .title_shang {
+    background-image: url(../images/shouye_bg2.png);
+}
+
+.ssjx {
+    position: relative;
+}
+
+.ssjx .net_txt11 {
+    font-size: 0;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+
+.ssjx_active .net_txt11 {
+    position: absolute;
+    color: #fff;
+    font-size: 122px;
+    top: -16px;
+    left: 392px;
+    z-index: 1;
+}
+
+.ssjx_active .net_txt12 {
+    left: 736px;
+}
+
+
+/* 轮播图 */
+
+.banner_x {
+    /* position: relative; */
+}
+
+.banner_video {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: absolute;
+    top: 140px;
+    left: 0;
+}
+
+.banner_video video {
+    width: 100%;
+    height: 1046px;
+    margin-top: -124px;
+    object-fit: fill;
+}
+
+.banner_box {
+    width: 100%;
+    height: 800px;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    top: 140px;
+    z-index: 3;
+}
+
+.banner_txt {
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+    /* border: 1px solid red; */
+    /* position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -600px;
+    z-index: 2; */
+}
+
+.zx {
+    width: 220px;
+    height: 60px;
+    background-color: rgba(255, 98, 0, .5);
+    line-height: 60px;
+    border: 1px solid #ff6200;
+    margin: 0 auto;
+    margin-top: 140px;
+}
+
+.zx:hover {
+    background-color: #ff6200;
+}

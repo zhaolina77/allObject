@@ -1,0 +1,65 @@
+<view class="top_box">
+	<view class="aui-bar aui-bar-nav aui-bar-light aui-bg-white mine-bar">
+		<view class="aui-title">
+			<view class="aui-padded-l-15 aui-padded-r-15 aui-bg-grayer serch aui-text-left">
+				<image mode="widthFix" src="/image/sousuo.png" style=" float: left;width:24rpx;margin-top:24rpx;margin-right: 6px;"></image>
+				<input placeholder="请输入手机号码" type="text" bindinput="mobile" confirm-type='search' bindconfirm='search'></input>
+			</view>
+		</view>
+	</view>
+	<view class="box">
+		<view class="box1  {{status==-2?'active':''}}" bindtap="sta" data-idx="-2">全部</view>
+		<view class="box1  {{status==0?'active':''}}" bindtap="sta" data-idx="0">已报备</view>
+		<view class="box1  {{status==1?'active':''}}" bindtap="sta" data-idx="1">报备有效</view>
+		<view class="box1  {{status==2?'active':''}}" bindtap="sta" data-idx="2">带看</view>
+		<view class="box1  {{status==3?'active':''}}" bindtap="sta" data-idx="3">大定</view>
+		<view class="box1  {{status==4?'active':''}}" bindtap="sta" data-idx="4">业绩确认</view>
+		<view class="box1  {{status==-1?'active':''}}" bindtap="sta" data-idx="-1">无效</view>
+	</view>
+	<!-- <view class="aui-tab   mine-bar" id="tab">
+		<scroll-view scroll-x enable-flex="true">
+			<view class="swiper-slide  " bindtap="sta" data-idx="-2">
+				<view class="aui-font-size-15 txt ">全部</view>
+			</view>
+			<view class="swiper-slide {{status==0?'active':''}}" bindtap="sta" data-idx="0">
+				<view class="aui-font-size-15 txt">已报备</view>
+			</view>
+			<view class="swiper-slide {{status==1?'active':''}}" bindtap="sta" data-idx="1">
+				<view class="aui-font-size-15 txt">报备有效</view>
+			</view>
+			<view class="swiper-slide {{status==2?'active':''}}" bindtap="sta" data-idx="2">
+				<view class="aui-font-size-15 txt">带看</view>
+			</view>
+			<view class="swiper-slide {{status==3?'active':''}}" bindtap="sta" data-idx="3">
+				<view class="aui-font-size-15 txt">大定</view>
+			</view>
+			<view class="swiper-slide {{status==4?'active':''}}" bindtap="sta" data-idx="4">
+				<view class="aui-font-size-15 txt">业绩确认</view>
+			</view>
+			<view class="swiper-slide {{status==-1?'active':''}}" bindtap="sta" data-idx="-1">
+				<view class="aui-font-size-15 txt">无效</view>
+			</view>
+		</scroll-view>
+	</view> -->
+</view>
+
+
+<view class="list aui-padded-l-15 aui-padded-r-15" wx:if="{{list.length>0}}" style="margin-top:180rpx">
+	<view class="flex aui-padded-t-15 aui-padded-b-15 aui-border-b" style="align-items:flex-start;" wx:for="{{list}}" wx:key="list">
+		<view class="aui-font-size-15">
+			<view class="">
+				<text class="ft_5 ">{{item.clientName}}</text>
+				<text class="aui-font-size-14 aui-text-gray aui-padded-l-15">{{item.clientPhone}}</text>
+			</view>
+			<view class="aui-margin-t-5">{{item.title}}</view>
+			<view class="aui-margin-t-5 aui-font-size-12">{{item.createDate}}</view>
+		</view>
+		<view class="aui-text-yellow aui-font-size-14">{{item.statusName}}</view>
+	</view>
+</view>
+
+<!-- 无数据 -->
+<view class="nodata " wx:else>
+	<image src="/image/nodata.png"></image>
+
+</view>

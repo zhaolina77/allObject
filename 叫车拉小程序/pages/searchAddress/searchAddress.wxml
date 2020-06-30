@@ -1,0 +1,43 @@
+<view class="aui-padded-15 aui-padded-t-0">
+    <view class="aui-searchbar aui-bg-white aui-margin-b-10 aui-padded-r-10">
+		<view class="aui-searchbar aui-bg-white" id="search">
+          <view class="aui-text-black aui-font-size-15 aui-padded-l-15" bindtap="city">
+            {{city}}
+            <image src="/image/down1.png" style="width:30rpx;height:30rpx"></image>
+          </view>
+            <view class="aui-searchbar-input aui-border-radius" tapmode style="background-color: #f6f6f6;">
+                <!-- <image class=" aui-pull-left"  src="/image/search.png" style="width:40rpx;" mode="widthFix"></image> -->
+                <input class="aui-text-left" type="search" tapmode placeholder="请输入要搜索的地址" confirm-type='search' bindinput='inputBinds'  bindconfirm='getsuggest' value="{{inputValue}}" id="search-input" />
+            </view>
+            <view class="aui-searchbar-cancel aui-font-size-14 aui-bg-white"  tapmode  bindtap="getsuggest">搜索</view>
+        </view>
+    </view>
+
+    <view class="flex  aui-padded-b-15">
+        <view class="aui-font-size-15 aui-text-blacker aui-font-weight">
+            当前位置：{{city_name}}
+        </view>
+        <view class="flex1 aui-text-right">
+            <!-- <image src="/image/getaddress.png" style="width: 18px;position: relative;top: 3px;" mode="widthFix"></image> -->
+            <!-- <text class="aui-font-size-12" style="color: #fe4502;">重新定位</text> -->
+        </view>
+    </view>
+    <view class="near aui-border-t aui-padded-t-15" wx:if="{{list.length!=0}}">
+        <view class="aui-text-grayer aui-font-size-13 aui-margin-t-15 aui-padded-b-5">
+            附近地址
+        </view>
+        <block wx:for="{{list}}" wx:key="*this">
+          <view class="aui-font-size-16 aui-text-blacker aui-border-b aui-margin-t-15 aui-padded-b-15"  bindtap="cahange">
+              {{item.address}}
+          </view>
+        </block> 
+    </view>
+    <view class="near aui-border-t aui-padded-t-15" wx:if="{{suggestion.length!=0}}">
+        <block wx:for="{{suggestion}}" wx:key="*this">
+          <view class="aui-font-size-16 aui-text-blacker aui-border-b aui-margin-t-15 aui-padded-b-15"   bindtap="backfills" id="{{index}}">
+              {{item.title}}
+          </view>
+        </block> 
+    </view>
+ 
+</view>

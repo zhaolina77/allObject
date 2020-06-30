@@ -1,0 +1,36 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+
+.box {
+  height: 332rpx;
+  background: linear-gradient(to right, #F35D4E, #FD9D5F);
+}
+
+.yq {
+  justify-content: flex-start;
+}
+
+.box .aui-list {
+  background-color: transparent;
+}
+.jinggao{width: 26rpx;height: 26rpx;}
+.jinggao image{width: 100%;height: 100%;}
+
+.tixian {
+  width: 148rpx;
+  height:60rpx;
+  border-radius: 0.2rem;
+  background-color: #FFFFFF;
+  vertical-align: middle;
+  color: #fd5f04;
+}
+.tixian_pic image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.bd{width: 32rpx;height: 28rpx;}
+.huiyuan_pic image{width: 32rpx;height: 32rpx;}
+.huiyuan_txt{width: 94%;}
+.jt{width: 22rpx;height: 22rpx;}

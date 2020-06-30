@@ -1,0 +1,43 @@
+<view class="aui-tab aui-border-b" id="tab">
+	<view class="aui-tab-item aui-text-gray aui-font-size-15 {{type==1?'active':''}}" bindtap="change" data-index="1">待评价</view>
+	<view class="aui-tab-item aui-text-gray aui-font-size-15 {{type==2?'active':''}}" bindtap="change" data-index="2">已评价</view>
+</view>
+
+
+<view class="aui-content" id="app">
+
+	<!--待评价-->
+	<block wx:if="{{list.length>0}}">
+	<view class="aui-list aui-media-list aui-padded-l-15 aui-padded-r-15" wx:for="{{list}}" wx:key='lis' >
+		<view class="aui-list-item aui-padded-l-0 aui-border-b">
+			<view class="aui-media-list-item-inner aui-padded-t-5">
+				<view class="aui-list-item-media">
+					<view class="shop-pic">
+						<image src="{{item.thumb}}"></image>
+					</view>
+				</view>
+				<view class="aui-list-item-inner aui-padded-r-0">
+					<view class="aui-list-item-text aui-margin-t-10">
+						<span class="aui-ellipsis-1 aui-font-size-14 aui-text-black">{{item.goods_name}}</span>
+					</view>
+					<view class="aui-list-item-text aui-padded-t-15 aui-margin-t-5">
+						<view class="aui-font-size-10 aui-text-orange">￥<span class="aui-font-size-18 fweight-5">{{item.goods_price}}</span></view>
+						<view class="aui-pull-right">
+							<view class="aui-btn aui-font-size-12 aui-btn-theme" wx:if="{{item.is_evaluation==0}}" bindtap="pingjia" data-goodId="{{item.goods_id}}" data-id="{{item.id}}" data-orderId="{{item.order_id}}">去评价</view>
+							<view class="aui-btn aui-font-size-12 aui-btn-outlined" wx:else bindtap="chakan" data-goodId="{{item.goods_id}}" data-id="{{item.id}}" data-orderId="{{item.order_id}}">查看</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	</block>
+	
+
+	<view class="nodata" wx:else>
+		<image src="/image/nodata.png"></image>
+
+	</view>
+
+
+</view>

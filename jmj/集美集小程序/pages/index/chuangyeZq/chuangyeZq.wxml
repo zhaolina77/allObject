@@ -1,0 +1,72 @@
+<view class="aui-bar aui-bar-nav aui-bar-light aui-bg-white mine-bar">
+	<view class="aui-title">
+		<view class="aui-padded-l-15 aui-padded-r-15 aui-bg-grayer serch aui-text-left">
+			<image mode="widthFix" src="/image/sousuo.png" style=" float: left;width:24rpx;margin-top:24rpx;margin-right: 6px;"></image>
+			<input placeholder="精油" type="text" bindinput="verification" confirm-type="search" bindconfirm='search' value="{{val}}"></input>
+		</view>
+	</view>
+</view>
+
+<view class="flex aui-padded-15 aui-padded-t-5" wx:if="{{idx==1}}">
+	<view class="flex" style="justify-content: flex-start;">
+		<view class="ico">
+			<image src="/image/tip.png"></image>
+		</view>
+		<view class="aui-text-or aui-font-size-13 aui-padded-l-10">购买创业专区任意商品即可成为对应级别会员！</view>
+	</view>
+
+	<view class="aui-text-or aui-font-size-13"  bindtap="renzheng" wx:if="{{idx==1&&sta_type==0}}">详情 ></view>
+</view>
+<view class="aui-padded-l-15 aui-padded-r-15">
+	<view class="banner bg-radius">
+		<swiper interval="2000" circular indicator-dots duration="500" autoplay indicator-color="#cccccc" indicator-active-color="#FF4805 ">
+			<swiper-item wx:for="{{bannerList}}" wx:key="bannerList">
+				<image src="{{item.pic}}" mode="aspectFill" bindtap="bannerJump" data-id="{{item.url}}" ></image>
+			</swiper-item>
+		</swiper>
+	</view>
+</view>
+<view class="aui-padded-15 aui-padded-t-15 aui-padded-b-5 aui-bg-white ">
+	<view class=" flex classfy aui-font-size-14">
+		<view class="flex {{status==0?'cl_active':''}}" bindtap="changTwo" data-idx="0">
+			<view class="moren aui-padded-r-5">综合</view>
+		</view>
+		<view class="flex aui-padded-l-15 aui-padded-r-15 {{status==1?'cl_active':''}}" bindtap="changTwo" data-idx="1">
+			<view class="moren aui-padded-r-5">销量</view>
+		</view>
+		<view class="flex {{status==2?'cl_active':''}}" bindtap="changTwo" data-idx="2">
+			<view class="moren aui-padded-r-5">价格</view>
+			<view class="jt" wx:if="{{status==2}}">
+				<image src="/image/up.png"></image>
+			</view>
+			<view class="jt" wx:elif="{{status==3}}">
+				<image src="/image/down.png"></image>
+			</view>
+			<view class="jt" wx:else>
+				<image src="/image/ud.png"></image>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="aui-content shop_list" wx:if="{{list.length>0}}">
+	<view class="aui-row aui-padded-15 aui-padded-t-10">
+		<view class="aui-col-xs-6 bg-radius box-shadow aui-margin-b-15" wx:for="{{list}}" wx:key="lis" bindtap="detail" data-id="{{item.id}}">
+			<view class="pic">
+				<image src="{{item.thumb}}" mode="aspectFill"></image>
+			</view>
+			<view class="aui-padded-5 aui-padded-b-10 aui-padded-t-10">
+				<view class="aui-font-size-14 aui-ellipsis-1">{{item.name}}</view>
+				<view class="aui-padded-t-5 flex">
+					<view class="aui-text-theme aui-font-size-15 aui-padded-r-10">￥{{item.market_price}}</view>
+					<view class="vip_box aui-text-bro aui-font-size-10" wx:if="{{item.member_price>0}}">会员价:￥{{item.member_price}}</view>
+					<view class="aui-del aui-text-grayc aui-font-size-10" wx:if="{{item.original_price>0&&item.member_price<=0}}">￥{{item.original_price}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="nodata" wx:else>
+	<image src="/image/nodata.png"></image>
+
+</view>

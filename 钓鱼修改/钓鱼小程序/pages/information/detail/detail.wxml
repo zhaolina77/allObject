@@ -1,0 +1,13 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="aui-content aui-padded-15">
+    <view class="aui-font-size-20 fweight-5">{{list.title}}</view>
+    <view class="aui-font-size-12 aui-padded-t-15 aui-padded-b-15 aui-text-gray">{{list.num}}阅读</view>
+    <view wx:if="{{list.type==3}}">
+    <video style="width:100%" src="{{list.url}}" object-fit="fill" poster="{{list.thumb}}" controls>
+     
+    </video>
+  </view>
+    <view class="">
+      <template  is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+</view>

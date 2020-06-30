@@ -1,0 +1,35 @@
+
+
+<view class="aui-content aui-border-bgT" >
+    <view class="guanzhu-list aui-padded-l-15">
+        <view class="aui-list aui-media-list">
+          <block wx:for="{{list}}" wx:key="index" >
+            <view class="aui-list-item aui-padded-15 aui-padded-l-0  aui-border-b">
+                <view class="aui-media-list-item-inner">
+               
+                    <view class=" aui-padded-r-15" bindtap="enter" data-id="{{item.a_id}}">
+                        <view class="aui-media-list">
+                            <view class="pic aui-border">
+                                <image src="{{item.head_portrait}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-inner aui-padded-t-0 aui-padded-b-0 aui-padded-r-0">
+                        <view class="" bindtap="enter" data-id="{{item.a_id}}">
+                            <view class="aui-list-item-text aui-text-black aui-font-size-15 aui-padded-t-5">{{item.nick_name}}</view>
+                            <view class="aui-list-item-text aui-text-grayer aui-font-size-11">
+                                <view class="aui-ellipsis-1">{{item.remark}}</view>
+                            </view>
+                        </view>
+                        <view class="aui-btn aui-btn-outlined" bindtap="del" data-id="{{item.a_id}}">取消关注</view>
+                    </view>
+                </view>
+            </view>
+          </block>
+        </view>
+    </view>
+</view>
+<view style="margin-top: 150px;" wx:if="{{list.length==0}}"> 
+  <image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>
+

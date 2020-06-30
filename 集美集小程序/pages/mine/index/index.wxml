@@ -1,0 +1,179 @@
+<view>
+	<view class="bg">
+		<image src="/image/bg.jpg" mode="aspectFill"></image>
+		<view class="shang"></view>
+		<!-- 已登录 -->
+		<view class="head_box aui-padded-15 flex" bindtap="ziliao" wx:if="{{token!=''}}" bindtap="personal">
+			<view class="flex" style="justify-content: flex-start;">
+				<view class="head">
+					<image src="{{data.account.head_portrait}}" mode="aspectFill"></image>
+				</view>
+				<view class="aui-fonr-size-17 aui-padded-l-15 aui-text-white">
+					<view>{{data.account.nick_name}} {{data.account.phone}}</view>
+					<view class="aui-fonr-size-13 aui-margin-t-5 vip_box aui-font-size-13 aui-text-center">
+						
+						<text wx:if="{{data.account.vip_level==0}}">普通用户</text>
+						<text wx:elif="{{data.account.vip_level==1}}">海星会员</text>
+						<text wx:elif="{{data.account.vip_level==2}}">珊瑚会员</text>
+						<text wx:elif="{{data.account.vip_level==3}}">水母会员</text>
+						<text wx:elif="{{data.account.vip_level==4}}">海豚会员</text>
+						<text wx:elif="{{data.account.vip_level==5}}">美人鱼会员</text>
+						
+					</view>
+				</view>
+			</view>
+			<view class="jtright">
+				<image src="/image/jt-right-white.png"></image>
+			</view>
+		</view>
+		<!-- 未登录 -->
+		<view class="head_box aui-padded-15 flex" bindtap="login" wx:else>
+			<view class="flex" style="justify-content: flex-start;">
+				<view class="head">
+					<image src="/image/head.png" mode="aspectFill"></image>
+				</view>
+				<view class="aui-fonr-size-17 aui-padded-l-15 aui-text-white">
+					请登录
+				</view>
+			</view>
+			<view class="jtright">
+				<image src="/image/jt-right-white.png"></image>
+			</view>
+		</view>
+	</view>
+
+
+
+	<view class="aui-padded-15 order ">
+		<view class="aui-bg-white bg-radius aui-padded-15 flex box-shadow">
+			<view class="left ">
+				<image src="/image/cgdingdan.png"></image>
+			</view>
+			<view class="right aui-margin-l-15 aui-border-l flex aui-text-center aui-padded-l-5">
+				<view class="aui-padded-l-15 aui-padded-r-15" bindtap="order" data-index="0">
+					<view class="aui-font-size-25 ">{{data.oneOrder}}</view>
+					<view class="aui-text-gray aui-font-size-13">待付款</view>
+				</view>
+				<view class="aui-padded-l-15 aui-padded-r-15" bindtap="order" data-index="1">
+					<view class="aui-font-size-25 ">{{data.twoOrder}}</view>
+					<view class="aui-text-gray aui-font-size-13">待发货</view>
+				</view>
+				<view class="aui-padded-l-15 " bindtap="order" data-index="2">
+					<view class="aui-font-size-25 ">{{data.threeOrder}}</view>
+					<view class="aui-text-gray aui-font-size-13">待收货</view>
+				</view>
+				<view class="aui-padded-l-15 " bindtap="order" data-index="4">
+					<view class="aui-font-size-25 ">{{data.fourOrder}}</view>
+					<view class="aui-text-gray aui-font-size-13">退款售后</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="aui-margin-t-5 aui-padded-l-15 aui-padded-r-15  aui-bg-white cont">
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="huiyuan">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/vip.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">会员中心</view>
+				<view class="jt_right">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="yaoqing">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/yaoqing.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">邀请好友</view>
+				<view class="jt_right flex">
+					<text class="aui-font-size-13 aui-text-theme">邀请好友升级会员哦！</text>
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="yongjin">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/yongjin.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">我的佣金</view>
+				<view class="jt_right flex">
+					<text class="aui-font-size-13 aui-text-theme">本月已获得佣金￥{{totalMoney}}</text>
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="zhuye">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/zhuye.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">我的主页</view>
+				<view class="jt_right ">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+    <view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="youhui">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/youhui.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">我的优惠券</view>
+				<view class="jt_right ">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+     <view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="shoucang">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/shoucang.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">我的收藏</view>
+				<view class="jt_right ">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+     <view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="address">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/address.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">收货地址</view>
+				<view class="jt_right ">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+	
+		<button open-type="contact" bindcontact="handleContact" class="kf flex  aui-padded-t-15  flex guanli" style="justify-content: space-between;">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/kefu.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">在线客服 </view>
+				<view class="jt_right">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+
+		</button>
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="yijian">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/yijian.png"></image>
+			</view>
+			<view class="flex  righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">意见反馈 </view>
+				<view class="jt_right">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+		
+	</view>
+</view>

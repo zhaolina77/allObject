@@ -1,0 +1,135 @@
+<view class="aui-content">
+	<view class="aui-padded-15 flex" >
+		<view class="pic">
+			<image src="/image/logo.jpg" mode="aspectFill"></image>
+		</view>
+		<view class="search flex aui-text-center  aui-font-size-13  aui-text-gray bg-radius aui-margin-l-15 " bindtap="search">
+			<view class="sea flex">
+				<view>
+					<image src="/image/sousuo.png"></image>
+				</view>
+				<view class="aui-padded-l-10 ">搜索商品</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-l-15 aui-padded-r-15">
+		<view class="banner bg-radius">
+			<swiper interval="2000" circular indicator-dots duration="500" autoplay indicator-color="#cccccc" indicator-active-color="#FF4805 ">
+				<swiper-item wx:for="{{bannerList}}" wx:key="bannerList" >
+					<image src="{{item.pic}}" mode="aspectFill" bindtap="bannerJump" data-id="{{item.url}}"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+	</view>
+	<view class="aui-padded-15 aui-padded-t-5">
+		<view class="flex fl">
+			<view class="fl_item" wx:for="{{prList}}" wx:key="prList" bindtap="prList" data-id="{{item.id}}">
+				<view class="item_pic">
+					<image src="{{item.thumb}}" mode="aspectFill"></image>
+				</view>
+				<view class="aui-text-center aui-text-gray aui-font-size-13 aui-margin-t-10">{{item.name}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-15 aui-padded-t-10" bindtap="zhuanqu" data-idx="1">
+		<view class="zq">
+			<image src="{{img}}"></image>
+		</view>
+	</view>
+	<view class="aui-bg-white table  aui-margin-15 aui-margin-t-0 shop-list bg-radius aui-border">
+		<view class="aui-row">
+			<view class=" aui-padded-10 aui-padded-b-0 aui-border-r col-xs-6" bindtap="zhuanqu" data-idx="2">
+				<view class="fweight-5 aui-font-size-13">星选好物</view>
+				<view class="aui-row aui-padded-t-10">
+					<view class="aui-col-xs-6 aui-padded-b-10" wx:for="{{haowoList}}" wx:key="haowoList">
+						<view class="pic">
+							<image src="{{item.thumb}}" mode="aspectFill"></image>
+						</view>
+						<view class="aui-font-size-12 aui-text-gray aui-padded-t-10 aui-ellipsis-1 aui-text-center">{{item.name}}</view>
+					</view>
+				</view>
+			</view>
+			<!-- <view class=" aui-padded-10 col-xs-6" bindtap="fuli"> -->
+			<view class=" aui-padded-10  aui-padded-b-0 col-xs-6 aui-border-l" bindtap="zhuanqu" data-idx="3">
+				<view class="fweight-5 aui-font-size-13">0元福利社</view>
+				<view class="aui-row aui-padded-t-10">
+					<view class="aui-col-xs-6 aui-padded-b-10	" wx:for="{{fuliList}}" wx:key="fuliList">
+						<view class="pic">
+							<image src="{{item.thumb}}" mode="aspectFill"></image>
+						</view>
+						<view class="aui-font-size-12 aui-text-gray aui-padded-t-10 aui-ellipsis-1 aui-text-center">{{item.name}}</view>
+					</view>
+				
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="tg_box aui-margin-15 aui-margin-r-0 " wx:if="{{tuangouList.length>0}}">
+		<view class="flex aui-margin-r-15" bindtap="more">
+			<view class=" aui-font-size-17 fweight-5 aui-text-black">团购秒杀</view>
+			<view class=" aui-font-size-14 aui-text-grayer" >更多>></view>
+		</view>
+		<scroll-view scroll-x enable-flex="true" class="aui-padded-t-15" >
+			<view class="swiper-slide tg_item" wx:for="{{tuangouList}}" wx:key="groupBuyingList" bindtap="tg_detail" data-id="{{item.id}}">
+				<view class="tg_pic">
+					<image src="{{item.thumb}}" mode="aspectFill"></image>
+				</view>
+				<view class="aui-margin-t-5">
+					<view class="flex aui-text-theme">
+						<text class="aui-font-size-14">￥{{item.group_price}}</text>
+						<text class="aui-font-size-10 aui-text-grayer aui-del">￥{{item.original_price}}</text>
+					</view>
+				</view>
+			</view>
+			
+		</scroll-view>
+	</view>
+	<view class="tg_box aui-margin-15 aui-margin-r-0">
+		<view class="flex aui-margin-r-15" bindtap="zhuanqu" data-idx="4">
+			<view class=" aui-font-size-17 fweight-5 aui-text-black">青春正当季</view>
+			<view class=" aui-font-size-14 aui-text-grayer">更多>></view>
+		</view>
+		<view class="qc banner bg-radius aui-margin-r-15 aui-margin-t-15" bindtap="zhuanqu" data-idx="4">
+			<image src="{{poster}}" mode="aspectFill"></image>
+		</view>
+		<scroll-view scroll-x enable-flex="true" class="aui-margin-t-15" wx:if="{{qingchunList.length>0}}">
+			<view class="swiper-slide tg_item" wx:for="{{qingchunList}}" wx:key="qingchunList" bindtap="detail" data-id="{{item.id}}">
+				<view class="tg_pic">
+					<image src="{{item.thumb}}" mode="aspectFill"></image>
+				</view>
+				<view class="aui-margin-t-5">
+					<view class="flex aui-text-theme">
+						<text class="aui-font-size-14">￥{{item.market_price}}</text>
+						<text class="aui-font-size-11 aui-text-grayer aui-del">￥{{item.original_price}}</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view class="shouye_tg_list aui-padded-b-15" wx:if="{{list.length>0}}" >
+		<view class="tit aui-font-size-17 aui-text-center aui-padded-t-15 aui-text-white">优选热卖</view>
+		<view class="list aui-margin-l-15 aui-margin-r-15">
+			<view class="list_item bg-radius box-shadow aui-padded-15  flex aui-bg-white aui-margin-t-15" wx:for="{{list}}" wx:key="list" bindtap="detail" data-id="{{item.id}}">
+				<view class="list_pic bg-radius">
+					<image src="{{item.thumb}}" mode="aspectFill"></image>
+				</view>
+				<view class="list_r">
+					<view class="aui-font-size-14 aui-ellipsis-3" style="height:130rpx">{{item.name}}</view>
+					<view class="aui-margin-t-15 flex">
+						<view>
+							<text class="aui-text-theme aui-font-size-15">￥{{item.market_price}}</text><text class="aui-del aui-font-size-10 aui-text-grayer aui-padded-l-15">￥{{item.original_price}}</text>
+						</view>
+						<view class="aui-btn aui-btn-outlined flex  aui-font-size-13">
+							<text class="aui-padded-r-5">马上抢</text>
+							<image class="jt_right1" src="/image/jt_right2.png"></image>
+						</view>
+					</view>
+					<view class="vip_box aui-text-bro aui-font-size-10 aui-margin-t-15" wx:if="{{item.member_price>0}}">会员价:￥{{item.member_price}}</view>
+					<view class="aui-font-size-10 aui-margin-t-15 aui-text-or" wx:if="{{item.remark!=''}}">{{item.remark}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+

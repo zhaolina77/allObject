@@ -1,0 +1,6 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+.logo{padding: 1.65rem;}
+.logo img{ width: 4rem;height: 4rem;}
+.aui-list-item-right image{ width: 30rpx;height: 30rpx;}
+.hide{ width: 100%;height: 100%;z-index: 1000;position: fixed;top: 0;background-color: rgba(0,0,0,0)}

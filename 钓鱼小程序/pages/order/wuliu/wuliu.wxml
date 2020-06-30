@@ -1,0 +1,33 @@
+<view class="aui-padded-15 aui-bg-grayer">
+    <view class="aui-font-size-14 aui-padded-b-5">快递单号：{{logistics.logistics_number}}</view>
+    <view class="aui-font-size-14 aui-padded-b-5">快递名称：{{logistics.tran_name}}</view>
+</view>	
+
+<view class="aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-padded-t-15 aui-padded-b-15 aui-border-b fweight-5">物流详情</view>
+    <view class="aui-padded-t-15 aui-padded-b-15">
+        <!--active 当前的位置-->
+        <!-- <view class="li active aui-padded-b-15">
+            <view class="aui-pull-left jd1"></view>
+            <view class="inner aui-border-b  aui-padded-b-15">
+                <view class="aui-padded-b-10">运输中</view>
+                <view class="aui-font-size-14 aui-padded-b-5">【陕西西安高新公司】已收入</view>
+                <view class="aui-text-grayer aui-font-size-12 aui-padded-b-5">2018-02-14  08:14:12</view>
+            </view>
+        </view> -->
+        <view class="li aui-padded-b-15 {{index==list.length-1?'active':''}}" wx:for="{{list}}" wx:for-item="index">
+            <view class="aui-pull-left jd1"></view>
+            <view class="inner aui-border-b  aui-padded-b-15">
+                <view class="aui-text-grayer aui-font-size-14 aui-padded-b-5">{{item.AcceptStation}}</view>
+                <view class="aui-text-grayer aui-font-size-12 aui-padded-t-5">{{item.AcceptTime}}</view>
+            </view>
+        </view>
+        <!-- <view class="li aui-padded-b-15">
+            <view class="aui-pull-left jd1"></view>
+            <view class="inner aui-border-b  aui-padded-b-15">
+                <view class="aui-text-grayer aui-font-size-14 aui-padded-b-5">快件已到达【陕西西安转运中心】发往【陕西西安高新公司】</view>
+                <view class="aui-text-grayer aui-font-size-12 aui-padded-t-5">2018-02-14  08:14:12</view>
+            </view>
+        </view> -->
+    </view>
+</view>

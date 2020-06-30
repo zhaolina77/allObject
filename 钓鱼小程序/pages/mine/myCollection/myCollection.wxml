@@ -1,0 +1,200 @@
+<view class="mine-bar">
+    <view class="aui-tab public-tab aui-border-b " id="tab">
+        <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==1?' aui-active':''}}"  bindtap="change" data-index="1">
+            商品
+        </view>
+        <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==2?' aui-active':''}}"  bindtap="change" data-index="2">
+            商家
+        </view>
+        <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==3?' aui-active':''}}"  bindtap="change" data-index="3">
+            钓场
+        </view>
+        <view class="aui-tab-item aui-text-gray aui-font-size-14 {{state==4?' aui-active':''}}"  bindtap="change" data-index="4">
+            动态
+        </view>
+    </view>
+</view>
+
+
+<!-- 内容 -->
+<view class="mine-content" wx:if="{{data.length>0}}">
+    <!-- 商品 -->
+    <view class="shangpin-list" wx:if="{{state==1}}">
+        <scroll-view scroll-y="{{isScroll}}" >
+            <view class="aui-list aui-media-list ">
+                <block wx:key="item" wx:for="{{data}}">
+                <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+                    <view class="aui-list-item" catchtap="detail_shop"data-id="{{item.goods_id}}">
+                        <view class="aui-media-list-item-inner aui-padded-l-0">
+                            <view class="aui-list-item-media aui-padded-b-0">
+                                <view class="shop-pic">
+                                    <image src="{{item.thumb}}"></image>
+                                </view>
+                            </view>
+
+                            <view class="aui-list-item-inner aui-padded-b-0">
+                                <view class="aui-list-item-text">
+                                    <text class="aui-ellipsis-2  aui-font-size-13 aui-text-black">{{item.name}}</text>
+                                </view>
+                                <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-5">已售:{{item.sales}}</view>
+                                <view class="aui-list-item-text aui-font-size-12 aui-text-grayer">
+
+                                    <view class="aui-list-item-title">
+
+                                        <view class="aui-font-size-13 aui-text-orange aui-padded-t-5">
+                                            ￥<text class="fweight-5 aui-font-size-18">{{item.market_price}}</text>
+                                            <text class="aui-text-gray aui-font-size-10  aui-padded-t-5 aui-padded-l-5" style="text-decoration: line-through;">￥{{item.original_price}}</text>
+                                        </view>
+                                        <view class="aui-text-gray aui-font-size-10  aui-padded-t-5" bindtap="open_shop_detail" data-id="{{item.shop_id}}">{{item.shop_name}} <image src="/image/jt-right2.png" mode="widthFix" style="width: 0.5rem;vertical-align: middle;"></image></view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="remove" catchtap="del_shop" data-id="{{item.id}}" data-index="{{index}}">删除 </view>
+                    </view>
+                </view>
+                </block>
+            </view>
+        </scroll-view>
+    </view>
+
+    <!-- 商家 -->
+    <view class="shangjia-list" wx:elif="{{state==2}}">
+        <scroll-view scroll-y="{{isScroll}}" >
+            <view class="aui-list aui-media-list ">
+                <block wx:key="itemes" wx:for="{{data}}">
+                <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx" catchtap="open_shop_detail" data-id="{{item.shop_id}}">
+                    <view class="aui-list-item aui-padded-l-0 aui-padded-r-0">
+                        <view class="aui-media-list-item-inner aui-margin-l-15  aui-padded-t-5 aui-padded-b-5 aui-border-b">
+                            <view class="aui-list-item-media">
+                                <view class="pic"><image src="{{item.thumb}}"></image></view>
+                            </view>
+                            <view class="aui-list-item-inner aui-padded-r-0 "  style="display: flex !important;">
+                                <view class="">
+                                    <view class="aui-list-item-text">
+                                        <view class="aui-list-item-title aui-font-size-15">{{item.name}}</view>
+                                    </view>
+                                    <view class="aui-list-item-text aui-font-size-12 aui-text-gray ">共{{item.good_num}}件商品 | 销量{{item.all_sales}}</view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="remove" catchtap="del" data-id="{{item.id}}">删除 </view>
+                    </view>
+                </view>
+                </block>
+            </view>
+        </scroll-view>
+    </view>
+
+    <!-- 钓场 -->
+    <view class="diaochang-list" wx:elif="{{state==3}}">
+        <scroll-view scroll-y="{{isScroll}}" >
+            <view class="aui-list aui-media-list ">
+              <block wx:key="i" wx:for="{{data}}">
+                <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx" catchtap="dc_detail" data-id="{{item.angling_site_id}}">
+                    <view class="aui-list-item" >
+                        <view class="aui-media-list-item-inner">
+                            <view class="aui-list-item-media">
+                                <view class="shop-pic">
+                                    <image src="{{item.thumb}}" ></image>
+                                </view>
+                            </view>
+                            <view class="aui-list-item-inner aui-padded-r-0 aui-padded-r-15 aui-padded-b-15 aui-border-b">
+                                <view class="aui-list-item-text">
+                                    <view class="aui-list-item-title">
+                                        <view class="aui-font-size-16 fweight-5">{{item.name}}</view>
+                                    </view>
+                                </view>
+                                <view class="aui-list-item-text aui-padded-t-5">
+                                    <view class="aui-list-item-title aui-font-size-12">
+                                      <block wx:for="{{item.type_name_list}}" wx:key="ty" wx:for-item="vs">
+                                        <text class="aui-label aui-label-info">{{vs}}</text>
+                                      </block>
+                                    </view>
+                                    <view class="aui-list-item-right aui-font-size-12 aui-text-gray">{{item.distance}}</view>
+                                </view>
+                                <view class="aui-list-item-text aui-padded-t-5">
+                                    <view class="aui-list-item-title aui-font-size-12 aui-text-gray">{{item.fish}}</view>
+                                </view>
+                                <view class="aui-list-item-text aui-padded-t-5">
+                                    <view class="aui-list-item-title aui-font-size-12 aui-text-orange">收费：{{item.price}}元/{{item.charging_standard_name}}</view>
+                                </view>
+                                <view class="aui-list-item-text aui-padded-t-5">
+                                    <view class="aui-list-item-title aui-font-size-12 aui-text-gray aui-ellipsis-2">介绍：{{item.content}}</view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="remove" catchtap="del" data-id="{{item.id}}">删除 </view>
+                    </view>
+                </view>
+                </block>
+            </view>
+        </scroll-view>
+    </view>
+    
+    <!-- 动态 -->
+    <view class="guanzhu-list" wx:else>
+        <view class="aui-list aui-media-list">
+          <block wx:key="ie" wx:for="{{data}}">
+            <view class="aui-list-item aui-padded-15 aui-border-bgB" catchtap="yhb" data-id="{{item.id}}">
+                <view class="aui-media-list-item-inner ">
+                    <view class=" aui-padded-r-15">
+                        <view class="aui-media-list">
+                            <view class="pic aui-border">
+                                <image src="{{item.head_portrait}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-inner aui-padded-t-0 aui-padded-b-0 aui-padded-r-0">
+                        <view class="">
+                            <view class="aui-list-item-text aui-text-black aui-font-size-15 aui-padded-t-5">{{item.nick_name}}</view>
+                            <view class="aui-list-item-text aui-text-grayer aui-font-size-11">{{item.create_time}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="aui-list-item-text aui-text-black aui-margin-t-10 aui-margin-b-10">{{item.content}}</view>
+                <!-- <view class="show aui-font-size-14">全文</view> -->
+                <!--发布图片-->
+                <view class="aui-row" wx:if="{{item.type==1}}">
+                    <block wx:for="{{item.url}}" wx:for-item="vs" wx:key="dong">
+                      <view class="aui-col-xs-4">
+                          <image src="{{vs}}"></image>
+                      </view>
+                    </block>
+                </view>
+                <!--发布视频-->
+                <view class="shiping aui-padded-b-10 clearfix" wx:else>
+                  <image class="sp" src="{{item.vedio_thumb}}"></image>
+                  <view class="bofang">
+                    <image src="/image/bofang.png"></image>
+                  </view>
+                </view>
+                <view class="aui-list-item-text aui-text-grayer aui-font-size-10 aui-margin-b-10">{{item.angling_site_name}}</view>
+                <!--点赞收藏评论-->
+                <view class="clearfix">
+                <view class="aui-pull-left plq">
+                        <image src="/image/zan-on.png" mode="widthFix" wx:if="{{item.is_like==1}}"></image>
+                      <image src="/image/zan1.png" mode="widthFix" wx:else></image>
+                      <text class="aui-font-size-13 aui-text-blacker">{{item.like_num}}</text>
+                    </view>
+                    <view class="aui-pull-left plq">
+                         <image src="/image/sc-on.png" mode="widthFix" wx:if="{{item.is_coll==1}}"></image>
+                      <image src="/image/sc1.png" mode="widthFix" wx:else></image>
+                      <text class="aui-font-size-13 aui-text-blacker">{{item.coll_num}}</text>
+                    </view>
+                    <view class="aui-pull-left plq">
+                        <image src="/image/xiaoxi.png" mode="widthFix"></image>
+                        <text class="aui-font-size-13 aui-text-blacker">{{item.commentnum_num}}</text>
+                    </view>
+                    <!-- <view class="aui-pull-right"><image src="/image/shanchu.png" mode="widthFix" style="width: 32rpx;vertical-align: middle;"></image></view> -->
+                </view>
+            </view>
+          </block>
+           
+        </view>
+    </view>
+    
+</view>
+<view wx:else  style="margin-top: 150px;"> 
+  <image src="/image/nocollect.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>

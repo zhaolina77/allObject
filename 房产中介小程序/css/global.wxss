@@ -1,0 +1,80 @@
+/* 背景颜色 */
+page{color: #222222;}
+image{height: auto;}
+/*背景圆角*/
+.bg-radius{border-radius: 10rpx;overflow: hidden;}
+
+/* 字体加粗 */
+.fw-bold{font-weight: bold;}
+/* banner */
+.shouye .banner{
+    height:280rpx;
+    position: relative;
+    background-color: #F5F6FA;
+    border-radius: 15rpx;
+    overflow: hidden;
+}
+.shouye .banner swiper{
+    height:280rpx;
+    position: relative;
+    
+}
+.shouye .banner swiper-item image{
+    width: 100%;
+    height: 100%;
+}
+
+
+.flex{display: flex;justify-content:space-between;align-items: center;}
+.box-shadow{box-shadow: 0 0 14rpx 0 rgba(0, 0, 0, 0.2);}/*阴影*/
+
+
+
+/* 背景颜色 */
+.aui-bg-red{background-color: #ffefeb !important;}
+.aui-bg-lighty{background-color: #fff4cd !important;}
+.aui-bg-yellow{background-color: #ffd12d !important;}
+/* 字体颜色 */
+.aui-text-red{color: #ff6642 !important;}
+/* 右箭头 */
+.jt{width: 10rpx;height: 16rpx;}
+/* 字体加粗 */
+.ft_bold{font-weight: bold !important;}
+.ft_5{font-weight: 500 !important;}
+.aui-border-bg{border: 20rpx solid #F5F6FA !important;}
+.aui-border-bgT{ border-top: 20rpx solid #F5F6FA !important;}
+.aui-border-bgB{ border-bottom: 20rpx solid #F5F6FA !important;}
+
+/* 重置滑动样式 */
+scroll-view { 
+    white-space:nowrap;
+    width:100%;
+    display: flex;  
+  }
+  scroll-view .swiper-slide:last-child{
+    margin-right: 30rpx;
+  }
+
+
+
+  /* 首页 */
+ .shouye_list .item_box{justify-content: flex-start;align-items: flex-start;}
+.shouye_list .item{width: 30% !important;height: 160rpx;}
+.shouye_list .item image{width: 100%;height: 100%;}
+.shouye_list .address{width: 32rpx;height: 32rpx;}
+/* 底部 */
+.footer{width: 100%;height: 100rpx;background-color: #fff;position: fixed;bottom: 0;left: 0;z-index: 99;}
+.footer .sc{width: 50%;}
+.footer .sc image{width: 46rpx;height: 46rpx;margin: 0 auto;}
+.footer .aui-btn{width: 48% !important;height: 80rpx !important;line-height: 80rpx;border-radius: 10rpx;}
+
+
+ .btn_box{width: 100%; position: fixed;bottom: 0;left: 0;z-index: 99;}
+.btn_box .btn{width: 100%;height: 86rpx;background-color: #ffd12d;border-radius: 10rpx;line-height: 86rpx;text-align: center;color: #ffffff;font-size: 30rpx;font-weight: 500;} 
+
+/* 标签 */
+.label{padding: 3rpx 5rpx;}
+.label_box{justify-content: flex-start;flex-wrap: wrap;}
+/* 暂无数据 */
+.nodata{width: 500rpx;height: 500rpx;margin: 0 auto;margin-top: 280rpx;}
+.nodata image{width: 100%;height: 100%;}

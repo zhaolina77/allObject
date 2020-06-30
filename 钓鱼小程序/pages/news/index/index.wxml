@@ -1,0 +1,62 @@
+<view class="aui-list aui-media-list">
+	<view class="aui-list-item aui-list-item-middle aui-list-item-arrow" bindtap="news" data-type="1">
+		<view class="aui-media-list-item-inner">
+			<view class="aui-list-item-media">
+				<image src="/image/news1.png" mode="widthFix"></image>
+			</view>
+			<view class="aui-list-item-inner aui-border-b">
+				<view class="aui-list-item-text">
+					<view class="aui-list-item-title aui-font-size-15 fweight-5">活动消息</view>
+					<view class="aui-list-item-right" wx:if="{{list.activity_num!=0}}">
+						<view class="aui-badge">{{list.activity_num}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-list-item aui-list-item-middle aui-list-item-arrow" bindtap="news" data-type="2">
+		<view class="aui-media-list-item-inner">
+			<view class="aui-list-item-media">
+				<image src="/image/news2.png" mode="widthFix"></image>
+			</view>
+			<view class="aui-list-item-inner aui-border-b">
+				<view class="aui-list-item-text">
+					<view class="aui-list-item-title aui-font-size-15 fweight-5">会议消息</view>
+					<view class="aui-list-item-right" wx:if="{{list.meeting_num!=0}}">
+						<view class="aui-badge">{{list.meeting_num}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-list-item aui-list-item-middle aui-list-item-arrow" bindtap="news" data-type="3">
+		<view class="aui-media-list-item-inner">
+			<view class="aui-list-item-media">
+				<image src="/image/news3.png" mode="widthFix"></image>
+			</view>
+			<view class="aui-list-item-inner aui-border-b">
+				<view class="aui-list-item-text">
+					<view class="aui-list-item-title aui-font-size-15 fweight-5">通知消息</view>
+					<view class="aui-list-item-right" wx:if="{{list.notice_num!=0}}">
+						<view class="aui-badge">{{list.notice_num}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-list-item aui-list-item-middle aui-list-item-arrow" bindtap="dongtai">
+		<view class="aui-media-list-item-inner">
+			<view class="aui-list-item-media">
+				<image src="/image/news4.png" mode="widthFix"></image>
+			</view>
+			<view class="aui-list-item-inner aui-border-b">
+				<view class="aui-list-item-text">
+					<view class="aui-list-item-title aui-font-size-15 fweight-5">动态消息</view>
+					<view class="aui-list-item-right" wx:if="{{list.dynamic_num!=0}}">
+						<view class="aui-badge">{{list.dynamic_num}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

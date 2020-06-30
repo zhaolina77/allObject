@@ -1,0 +1,25 @@
+<!--pages/my/wallet/index.wxml-->
+
+<view class="flex aui-bg-white aui-padded-15 aui-font-size-15 aui-text-black title aui-text-center"style="justify-content:space-around;">
+  <text  class="{{type==0?'active':''}}"  data-idx="0" bindtap="tab">退款中</text>
+  <text  class="{{type==1?'active':''}}"  data-idx="1" bindtap="tab">已完成</text>
+</view>
+<view class="aui-bg-white aui-padded-15 aui-margin-t-15" wx:if="{{list.length>0}}">
+  <block wx:for="{{list}}">
+    <block wx:for="{{item.goods_order_list}}" wx:for-item="voo">
+    <view class="flex list">
+    <image class="img" src="{{voo.thumb}}"></image>
+    <view class="aui-margin-l-15">
+      <view class="aui-font-size-15 aui-text-blacker">{{voo.goods_name}}</view>
+       <view class="aui-font-size-11 aui-text-grayer aui-margin-t-10">{{voo.spec_name}}</view>
+    </view>
+  </view>
+  </block>
+  <view class="aui-text-right">
+    <text class="opt" data-id="{{item.id}}" bindtap="torefunddetails">查看详情</text>
+  </view>
+  <view class="line"></view>
+  </block>
+
+</view>
+<view class="aui-text-center"  wx:if="{{list.length==0}}"><image class="nodata" src="/images/nodata.png" mode="aspectFill"></image></view>

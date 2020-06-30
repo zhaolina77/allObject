@@ -1,0 +1,46 @@
+<view class="aui-content" style="padding-top:90rpx;">
+	<view class="aui-padded-15">
+		<view class="pic">
+			<image src="/image/txcg.png" mode="aspectFill"></image>
+		</view>
+		<view class="aui-font-size-17 fw5 aui-text-center aui-padded-t-15">
+			您的提现申请已提交成功
+		</view>
+	</view>
+	<view class="content aui-margin-b-15 aui-margin-t-15 aui-font-size-15">
+		<view class="flex aui-padded-15" style="justify-content: flex-start;">
+			<view class="tx_left aui-text-grayer">
+				提现金额
+			</view>
+			<view class="tx_right aui-padded-l-5">
+				<span>￥</span><span>{{money}}</span>
+			</view>
+		</view>
+		<view class="flex aui-padded-l-15 aui-padded-r-15" style="justify-content: flex-start;align-items: flex-start;">
+			<view class="tx_left aui-text-grayer">
+				提现账户
+			</view>
+			<view class="tx_right aui-padded-l-5 aui-font-size-15">
+				<view>{{card}}</view>
+				<view class="aui-margin-t-5">{{cardNo}}</view>
+			</view>
+		</view>
+		<view class="flex aui-padded-15" style="justify-content: flex-start;">
+			<view class="tx_left aui-text-grayer">
+				收款人姓名
+			</view>
+			<view class="tx_right aui-padded-l-5">
+				{{name}}
+			</view>
+		</view>
+
+	</view>
+	<view class="aui-text-center">
+		<view class="aui-btn aui-btn-theme tj_btn  aui-text-white " bindtap="back">我知道了</view>
+	</view>
+
+	<view class="aui-font-size-11 fweight-5 aui-text-center aui-padded-t-5 aui-text-grayer aui-margin-t-10">
+		我们会在24小时内审核完成并将申请金额打到相应账户
+	</view>
+
+</view>

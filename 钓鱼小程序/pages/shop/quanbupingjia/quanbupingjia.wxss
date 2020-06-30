@@ -1,0 +1,20 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.fabiao {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.fabiao .out {
+    padding: 14rpx 20rpx;
+    border-radius:5rpx;
+}
+
+.fabiao .active {
+    background-color: #0055fe !important;
+    color: #fff !important;
+}

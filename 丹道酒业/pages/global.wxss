@@ -1,0 +1,112 @@
+/*定义选框大小*/
+input[type=radio],input[type=checkbox]{ width: 40rpx;height: 40rpx;}
+
+textarea::-webkit-input-placeholder,input::-webkit-input-placeholder { color: #999;font-size: 26rpx;}
+textarea:-moz-placeholder,input:-moz-placeholder { color: #999;font-size: 26rpx;}
+textarea::-moz-placeholder,input::-moz-placeholder { color:#999;font-size: 26rpx;}
+textarea:-ms-input-placeholder,input:-ms-input-placeholder{ color:#999;font-size: 26rpx;}
+
+input[type=radio]:checked{ background-color: #fff !important;border: 1px solid #AAAAAA !important;}
+.aui-radio:checked, .aui-radio.aui-checked, .aui-checkbox:checked, .aui-checkbox.aui-checked{background-color: #222222;border: solid 1px #222222;}
+.aui-radio:checked:before, .aui-radio.aui-checked:before, .aui-checkbox:checked:before, .aui-checkbox.aui-checked:before, .aui-radio:checked:after, .aui-radio.aui-checked:after, .aui-checkbox:checked:after, .aui-checkbox.aui-checked:after{
+	content: '';
+    width: 0.5rem !important;
+    height: 0.5rem !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.25rem !important;
+    margin-top: -0.25rem !important;
+    border: none !important; 
+    z-index: 2;
+    background-color: #222 !important;
+    border-radius: 0.5rem;
+}
+
+
+.clearfix:after{
+	content: ' ';
+	display: block;
+	clear: both;
+	visibility:hidden;
+	line-height: 0;
+	height:0;
+}
+.clearfix:after {
+	clear: both;
+}
+
+.aui-label-outlined.aui-label-danger, .aui-label-outlined.aui-label-danger:after{
+	color: #ff3333;
+    border-color: #ff3333;
+}
+.aui-label{
+	color: #fff;
+    background-color: #222;
+    border-radius: 7rpx;
+    padding: 10rpx 15rpx !important;
+    vertical-align: text-bottom;
+}
+.nodata{text-align: center;padding:20rpx 120rpx 0;}
+
+/* 滑动样式重置 */
+scroll-view { 
+    white-space:nowrap;
+    width:100%;
+    display: flex;  
+}
+scroll-view .swiper-slide {
+    margin-left:30rpx;
+}
+scroll-view .swiper-slide:last-child{
+    margin-right: 30rpx;
+}
+
+
+/*列表上的 icon 搜索筛选 右箭头.icon*/
+.aui-list-item-right .icon{
+	width: 35rpx;
+}
+
+/*heard icon 返回和叉号*/
+header .icon{
+	width: 40rpx;
+}
+
+/*按钮点击样式*/
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+}
+
+.btn-ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle,#ccc 10%,transparent 10.10%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10,10);
+    opacity: 0;
+    transition: transform .5s,opacity 1s;
+}
+
+.btn-ripple:active:after {
+    transform: scale(0, 0);
+    opacity: .5;
+    transition: 0s;
+}
+
+
+
+image{
+    display: inline-block !important;
+}
+
+

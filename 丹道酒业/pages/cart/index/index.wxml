@@ -1,0 +1,67 @@
+<view class="out">
+  <scroll-view scroll-y="{{isScroll}}">
+    <checkbox-group class="radio-group" bindchange="radioChange">
+      <view class="aui-list aui-media-list">
+        <block wx:key="item" wx:for="{{expired_list}}">
+          <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+            <view class="aui-list-item aui-pad ded-l-15">
+              <view class="aui-media-list-item-inner  aui-padded-r-15">
+                <view class="aui-pull-left aui-margin-r-5 aui-font-size-15">
+                     <checkbox color="#fff" name="text" checked="{{item.is_select==1?true:false}}" data-index="{{index}}" bindtap='one_select'/>
+                   
+                </view>
+                <view class="aui-list-item-media">
+                  <view class="shop-pic">
+                    <image src="{{item.thumb}}" mode="widthFix"></image>
+                  </view>
+                </view>
+                <view class="aui-list-item-inner aui-padded-r-0">
+                  <view class="aui-list-item-text">
+                    <view class="aui-text-black aui-font-size-28 aui-ellipsis-1">{{item.name}}</view>
+                  </view>
+                  <view class="aui-list-item-text">
+                    <view class="">
+                      <view class="aui-list-item-text aui-font-size-24 aui-text-gray aui-padded-t-10">规格: {{item.spec_name}}</view>
+                      <view class="aui-list-item-text aui-font-size-16 aui-text-blacker aui-padded-t-5">
+                        ￥
+                        {{item.market_price}}
+                      </view>
+                    </view>
+                    <view class='shuliang' style="border-radius: 1rem;margin-top: 0.75rem;">
+                      <view>
+                        <image src='/images/mius.png' mode="widthFix" style='width:1.25rem;vertical-align:middle;'  data-index="{{index}}" bindtap='miuscart'></image>
+                      </view>
+                      <view class="num">
+                        <input class='aui-text-center ' placeholder="00" type='text' readonly="" value="{{item.goods_num}}"></input>
+                      </view>
+                      <view>
+                        <image src='/images/add.png' mode="widthFix" style='width:1.25rem;vertical-align:middle;' data-index="{{index}}" bindtap='addcart'></image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="remove" data-id="{{item.cart_id}}" bindtap="delItem">删除 </view>
+          </view>
+        </block>
+      
+      </view>
+    </checkbox-group>
+  </scroll-view>
+</view>
+
+<view class="aui-text-center"  wx:if="{{expired_list.length==0}}"><image src="/images/empty_cart.png" mode="aspectFit"></image></view>
+<view class="aui-bar aui-bar-tab aui-padded-l-15 aui-border-t aui-padded-t-5 aui-padded-b-5 footer flex" id="footer">
+  <view class="aui-pull-left aui-text-theme aui-margin-r-5 aui-font-size-28">
+    <checkbox color='#fff' checked='{{is_all_select}}' bindtap="all_select" ></checkbox>
+    全选
+  </view>
+  <view style="display: flex;align-items: center;">
+    <view class="aui-padded-r-10 aui-font-size-30 aui-text-grayer">
+      <text style="position:relative;bottom:6rpx;">合计：</text>
+      <text class="aui-font-size-20 aui-text-danger">￥<text class="aui-font-size-36">{{total}}</text></text>
+    </view>
+    <view class="tobuy" bindtap="buallbuy">立即结算</view>
+  </view>
+</view>

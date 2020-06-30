@@ -1,0 +1,15 @@
+<view class="aui-list aui-media-list aui-padded-l-15 aui-padded-r-15 xiehui-list aui-border-t"> 
+    <view class="aui-list-item aui-list-item-arrow aui-border-b aui-padded-l-0 aui-padded-r-0 aui-padded-t-5 aui-padded-b-5" wx:for="{{associationList}}" wx:key="associationList" bindtap="tiaozhuan" data-id="{{item.id}}" >
+        <view class="aui-media-list-item-inner">
+            <view class="aui-list-item-media">
+                <view class="pic"><image src="{{item.thumb}}"></image></view>
+            </view>
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-text aui-padded-t-5">
+                    <view class="aui-list-item-title aui-font-size-15">{{item.name}}</view>
+                </view>
+                <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-5">{{item.address}}</view>
+            </view>
+        </view>
+    </view>
+</view>

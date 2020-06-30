@@ -1,0 +1,43 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+
+/* page{background-color:#000000;} */
+.pic{width: 70rpx;height:70rpx;overflow: hidden;}
+.pic image{width: 100%;height: 100%;}
+.search{width: 84%;height: 70rpx;background-color: #f5f5f5;}
+.search image{width: 24rpx;height: 24rpx;}
+.sea{width:168rpx;margin: 0 auto;}
+.fl{flex-wrap: wrap;justify-content: space-between;}
+.fl_item{width: 18%;margin-top: 30rpx;}
+.item_pic{width: 90rpx;height: 90rpx;border-radius: 30rpx;overflow: hidden;margin: 0 auto;}
+.item_pic image{width: 100%;height: 100%; }
+
+.shop-list .col-xs-6{width:49.9%;float: left;}
+.shop-list .aui-col-xs-6{width: 48%;margin-right: 4%;}
+.shop-list .aui-col-xs-6:nth-of-type(2n){margin-right: 0 !important;}
+.shop-list .aui-col-xs-6 .pic {width: 100%;height:150rpx;border-radius:10rpx;overflow: hidden;}
+.shop-list .aui-col-xs-6 .pic image {width: 100%;height: 100%;object-fit: cover;}
+.zq{width: 100%;height: 134rpx;border-radius: 10rpx;overflow: hidden;}
+.zq image{width: 100%;height: 100%;}
+.tg_item{width: 170rpx;}
+.tg_pic{width: 170rpx;height: 170rpx;border-radius: 10rpx;overflow: hidden;}
+.tg_pic image{width: 100%;height: 100%;}
+.qc image{width: 100%;height: 100%;}
+
+
+scroll-view{
+  /* background-color: #fff !important; */
+  white-space:nowrap;
+  width:100%;
+  display: flex;  
+  height:240rpx;
+}
+scroll-view .swiper-slide{
+  margin-right:30rpx ;
+}
+scroll-view .swiper-slide:last-child{
+  margin-right:120rpx;
+}
+.shouye_tg_list  .list{margin-top: -200rpx;}
+.shouye_tg_list  .list .list_item:last-child{margin-bottom: 30rpx;}

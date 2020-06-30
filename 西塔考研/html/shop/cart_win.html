@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>我的购物车</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+		<style type="text/css">
+			
+			.sc {
+				width: 1rem;
+			}
+			
+			.line {
+				position: absolute;
+				top: 7px;
+				right: 10px;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background-color: #f32c52;
+				text-align: center;
+				line-height: 16px;
+				font-size: 0.5rem;
+				color: #fff;
+				border: 1px solid #fff;
+			}
+			.quanxuan{
+				width: 25%;
+			}
+			.zixun {
+				width: 40%;
+				height: 2.5rem;
+				line-height: 2.5rem;
+			}
+			
+			.zixun img {
+				width: 1.2rem;
+				height: 1.2rem;
+				margin-top: 0.3rem;
+			}
+			
+			.qianggou {
+				width: 35%;
+				height: 2.5rem;
+				line-height: 2.5rem;
+			}
+			.aui-radio:checked, .aui-radio.aui-checked, .aui-checkbox:checked, .aui-checkbox.aui-checked {
+    background-color: #58CAB9;
+    border: solid 1px #58CAB9;
+    text-align: center;
+    background-clip: padding-box;
+}
+		</style>
+	</head>
+
+	<body>
+		<header class="aui-bar aui-bar-nav aui-bar-light aui-border-b">
+			<a class="aui-pull-left aui-btn " onclick="closeWin()">
+				<img class="icon" src="../../image/jt-left.png">
+			</a>
+			<div class="aui-title aui-font-size-18">我的购物车</div>
+		</header>
+		<footer class="aui-bar aui-bar-tab aui-border-t clearfix flex" id="footer">
+			<div class="aui-pull-left aui-margin-r-5 aui-font-size-15 quanxuan">
+				<input type="checkbox" name="is_pay" class="aui-radio aui-margin-t-0 aui-margin-r-5" /> 全选
+			</div>
+				<div class="zixun">
+					<p class="aui-text-black aui-font-size-15">
+						<span class="aui-font-size-13 aui-text-black">合计:</span><span>￥</span><span>890.0</span>
+					</p>
+
+				</div>
+				<div class="qianggou aui-bg-theme aui-text-center aui-text-white">立即结算
+
+				</div>
+
+		</footer>
+
+	</body>
+
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>
+<script>
+	apiready = function() {
+		$api.fixIos7Bar($api.dom("header")); //修复ios系统bar
+		$api.fixTabBar($api.dom("footer"));//修复ios系统bar
+		api.openFrame({
+			name: 'cart_frm',
+			url: 'widget://html/shop/cart_frm.html',
+			rect: {
+				x: 0,
+				y: $api.dom('header').offsetHeight,
+				w: 'auto',
+				h: api.winHeight - $api.dom('header').offsetHeight - $api.dom('footer').offsetHeight;
+			},
+			bounces: true,
+			pageParam: {
+				id: api.pageParam.id
+			}
+		});
+	};
+</script>

@@ -1,0 +1,191 @@
+<view class="mine-bar">
+	<view class="aui-bar aui-bar-nav aui-bar-light mine-bar header">
+		<!-- <navigator class="aui-pull-left aui-btn" onclick="closeWin()">
+            <image class="icon" src="/image/jt-left.png" mode="widthFix"></image>
+        </navigator> -->
+		<view class="aui-title">
+			<view class="aui-tab dyl" id="tab">
+				<view class="aui-tab-item aui-font-size-17 {{first == 1?'aui-active':''}} " bindtap="changeOne" data-index="1">赛事</view>
+				<view class="aui-tab-item aui-font-size-17 {{first == 2?'aui-active':''}}" bindtap="changeOne" data-index="2">视频</view>
+			</view>
+		</view>
+		<navigator class="aui-pull-right aui-btn">
+			<image class="icon" src="/image/quan.png" mode="widthFix" bindtap="quan"></image>
+		</navigator>
+	</view>
+
+	<!-- 赛事 -->
+	<view class=" mine-content " wx:if="{{first == 1}}">
+		<view class="aui-tab public-tab  aui-border-b" id="tab">
+			<view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 1?'aui-active':''}}  " bindtap="changeTwo" data-index="1">
+				综合
+			</view>
+			<view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 2?'aui-active':''}}" bindtap="changeTwo" data-index="2">
+				最新
+			</view>
+			<view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 3?'aui-active':''}}" bindtap="select" data-index="3">
+				筛选 <image class="td aui-margin-l-5" src="/image/sx.png" mode="widthFix" style="width:30rpx"></image>
+			</view>
+		</view>
+	</view>
+
+	<!-- 视频 -->
+	<!-- <view class=" mine-content " wx:else>
+        <view class="aui-tab public-tab  aui-border-b" id="tab">
+            <view class="aui-tab-item aui-text-gray aui-font-size-14 {{classify_id == item.id?'aui-active':''}}" wx:for="{{classify_list}}" wx:key="classify_list" bindtap="changeThree" data-id="{{item.id}}">
+                {{item.name}}
+            </view>
+        </view>
+    </view> -->
+
+	<view class="aui-tab  aui-padded-r-15 mine-content" wx:else>
+		<scroll-view scroll-x enable-flex="true">
+			<view class="swiper-slide {{classify_id == item.id?'on':''}}" wx:for="{{classify_list}}" wx:key="classify_list" bindtap="changeThree" data-id="{{item.id}}">
+				<text class="aui-font-size-15 aui-text-gray">{{item.name}}</text>
+			</view>
+		</scroll-view>
+	</view>
+
+
+</view>
+
+
+
+<!-- 切换后的内容 -->
+<view class="" style="margin-top:180rpx">
+	<!-- 赛事 -->
+	<view class="aui-padded-15  saishi-list" wx:for="{{list}}" wx:key="list" bindtap="jieshao" data-id="{{item.id}}" wx:if="{{first == 1}}">
+		<view class="">
+			<view class="aui-bg-white aui-padded-b-5 aui-margin-b-15 bg-radius">
+				<view class="pic">
+					<image src="{{item.pic}}"></image>
+					<view class="aui-label">距离报名结束还有{{item.day}}天</view>
+				</view>
+				<view class="aui-padded-10 ">
+					<view class="fweight-5 aui-ellipsis-2">{{item.name}}</view>
+					<view class="aui-font-size-12 aui-text-gray aui-padded-t-10">
+						<image class="icon" mode="widthFix" src="/image/rili.png"></image>
+						{{item.open_time}}
+					</view>
+					<view class="aui-font-size-12 aui-text-gray aui-padded-t-10">
+						<image class="icon" mode="widthFix" src="/image/dingwei.png"></image>
+						{{item.address}}
+					</view>
+					<view class="aui-font-size-12 aui-text-gray aui-padded-t-10">
+						<image class="icon" mode="widthFix" src="/image/renyuan.png"></image>
+						{{item.already_num}}/{{item.num}}
+					</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+
+	<!-- 视频 -->
+	<view class="shipin aui-bg-white" wx:if="{{first == 2}}">
+		<view class="aui-list aui-media-list aui-padded-b-15" wx:for="{{list}}" wx:key="list">
+			<view class="aui-list-item" bindtap="xiehui" data-id="{{item.association_id}}">
+				<view class="aui-media-list-item-inner">
+					<view class="aui-list-item-media">
+						<view class="pic">
+							<image src="{{item.association_thumb}}"></image>
+						</view>
+					</view>
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-text aui-padded-t-5">
+							<view class="aui-list-item-title aui-font-size-13">{{item.association_name}}</view>
+						</view>
+						<view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-5">{{item.create_date}}</view>
+					</view>
+				</view>
+			</view>
+			<view class="aui-padded-l-15 aui-padded-r-15">
+				<view class="aui-font-size-16 aui-padded-b-10">{{item.name}}</view>
+				<view  class="void bg-radius">
+                <video style="width:100%;" object-fit="fill" poster="{{item.vedio_img}}"  src="{{item.url}}"></video>
+                </view>
+				<!-- <view class="aui-row aui-padded-b-5">
+
+					<view class="pic void">
+						<image src="{{item.vedio_img}}" mode="aspectFill"></image>
+						<image class="bofang" mode="widthFix" src="/image/bofang.png"></image>
+					</view>
+				</view> -->
+			</view>
+		</view>
+	</view>
+</view>
+
+
+<!-- 弹窗 -->
+<view class="pop-out" wx:if="{{xianshi}}">
+	<view class='aui-content  aui-bg-white animated slideInDown pop'>
+		<view class="aui-tab public-tab aui-border-b" id="tab" wx:if="{{first == 1}}">
+			<view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 1?'aui-active':''}}  " bindtap="changeTwo" data-index="1">
+				综合
+			</view>
+			<view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 2?'aui-active':''}}" bindtap="changeTwo" data-index="2">
+				最新
+			</view>
+			<view class="aui-tab-item aui-text-gray aui-font-size-14 {{second == 3?'aui-active':''}}" bindtap="select" data-index="3">
+				筛选 <image class="td aui-margin-l-5" src="/image/sx.png" mode="widthFix" style="width:30rpx"></image>
+			</view>
+		</view>
+		<view class="aui-list aui-media-list aui-padded-t-10">
+			<view class="aui-padded-l-15" style="padding-bottom: 4rem;">
+				<view class="sel">
+					<view class='aui-list-item aui-padded-l-0'>
+						<view class='aui-list-item-inner aui-padded-r-0'>
+							<view class='aui-list-item-text aui-text-gray aui-padded-b-5 aui-font-size-14'>赛事类型</view>
+							<view class='aui-list-item-text aui-margin-t-10 '>
+								<text class="aui-font-size-12 spec {{type_state == 0?'aui-active':''}}" bindtap="type" data-index="0">免费</text>
+								<text class="aui-font-size-12 spec {{type_state == 1?'aui-active':''}}" bindtap="type" data-index="1">收费</text>
+							</view>
+						</view>
+					</view>
+					<view class='aui-list-item aui-padded-l-0'>
+						<view class='aui-list-item-inner aui-padded-r-0'>
+							<view class='aui-list-item-text aui-text-gray aui-padded-b-5 aui-font-size-14'>赛事举办方</view>
+							<view class='aui-list-item-text aui-margin-t-10'>
+								<text class="aui-font-size-12 spec  {{jbf == 1?'aui-active':''}}" bindtap="jbf" data-index="1">协会</text>
+								<text class="aui-font-size-12 spec {{jbf == 2?'aui-active':''}}" bindtap="jbf" data-index="2">钓场</text>
+							</view>
+						</view>
+					</view>
+					<view class='aui-list-item aui-padded-l-0'>
+						<view class='aui-list-item-inner aui-padded-r-0'>
+							<view class='aui-list-item-text aui-text-gray aui-padded-b-5 aui-font-size-14'>参赛人数</view>
+							<view class='aui-list-item-text aui-margin-t-10'>
+								<text class="aui-font-size-12 spec {{people_num == index?'aui-active':''}}"  wx:for="{{people}}" wx:key="people" bindtap="people" data-index="{{index}}">{{item}}</text>
+							</view>
+						</view>
+					</view>
+					<view class='aui-list-item aui-padded-l-0'>
+						<view class='aui-list-item-inner aui-padded-r-0'>
+							<view class='aui-list-item-text aui-text-gray aui-padded-b-5 aui-font-size-14'>比赛地区</view>
+							<view class='aui-list-item-text aui-margin-t-10'>
+								<text class="aui-font-size-12 spec  {{region_id ==item.id ?'aui-active':''}}" wx:for="{{address}}" wx:key="address" bindtap="saiqu" data-index="{{item.id}}">{{item.name}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+
+		<view class="aui-bar aui-bar-tab aui-padded-15" id="footer">
+			<view class="aui-row">
+				<view class="aui-col-xs-6 aui-padded-r-5">
+					<view class="aui-btn-block aui-btn aui-btn-theme aui-btn-outlined aui-text-theme aui-font-size-14" bindtap="reset">
+						重置
+					</view>
+				</view>
+				<view class="aui-col-xs-6 aui-padded-l-5">
+					<view class="aui-btn-block aui-btn aui-btn-theme aui-font-size-14" bindtap="shaixuan">
+						筛选
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,27 @@
+/* pages/my/success/index.wxss */
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+page {
+
+				background: #fff;
+			}
+      .img {
+        width: 190rpx;
+        height: 156rpx;
+      }
+			.btn {
+				height: 80rpx;
+				line-height: 80rpx;
+				background: #ff6433;
+				border-radius: 10px;
+				margin: 0 60rpx;
+				margin-top: 28rpx;
+				
+			}
+			.bg {
+				background: #f6f6f6;
+				margin:20px 30px;
+				border-radius: 8px;
+				text-align: left;
+				padding:20px 20px;
+			}

@@ -1,0 +1,64 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+page{background-color: #f5f5f5 !important;}
+.aui-bar image{
+  width: 32rpx;
+  vertical-align:middle;
+}
+.aui-title{
+  right:30rpx !important;
+  display: flex;
+  align-items: center;
+  left:30rpx !important;
+}
+.aui-bar{
+  height:100rpx;
+background-color: #f5f5f5 !important;
+  
+}
+.serch{
+  border-radius: 10rpx;
+  width: 100%;
+  background-color: #fff !important;
+  
+}
+.serch input{
+  float: left;
+  line-height:70rpx !important;
+  height: 70rpx;
+  width: 80%;
+  color: #222;
+  font-size: 14px;
+  
+}
+.item_box{justify-content: flex-start;}
+
+
+.radio_box{width: 50rpx;height: 50rpx;}
+.aui-radio{border: none !important;}
+
+
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input {
+ border-radius: 10rpx;/* 圆角 */
+  width:40rpx; /* 背景的宽 */
+  height:40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #ffd12d;
+  border: 1rpx solid #ffd12d;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size:40rpx; /* 对勾大小 */
+  background: transparent;
+  color: #fff;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

@@ -1,0 +1,49 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.inpt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height:120rpx;
+}
+
+.list li:last-child {
+    border-bottom: none !important;
+}
+
+.info {
+    width: 40%;
+}
+
+.sel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.jt {
+    width:40rpx;
+    vertical-align: middle;
+    margin-left: 6rpx;
+}
+
+.sel input {
+    text-align: right;
+}
+
+.head-pic {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.head-pic image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,102 @@
+<view class="aui-border-bgT aui-padded-l-15 aui-padded-r-15">
+
+	<view class="aui-padded-t-5 aui-padded-b-5 aui-border-b">
+		<view class="flex aui-padded-t-15 aui-padded-b-15">
+			<view class=" aui-font-size-15">账户类型</view>
+			<view class="flex">
+				<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+					<view class="picker">
+						<text>{{card_type==1?'银行卡':'支付宝'}}</text>
+					</view>
+				</picker>
+				<view class="jt_right aui-padded-l-5">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-t-5 aui-padded-b-5 aui-border-b" wx:if="{{card_type==1}}">
+		<view class="flex aui-padded-t-15 aui-padded-b-15">
+			<view class=" aui-font-size-15">开户行</view>
+			<view class="flex">
+			<picker bindchange="bindPickerChange_card" value="{{index}}" range="{{card_list}}">
+					<view class="picker">
+						<text>{{card_name}}</text>
+					</view>
+				</picker>
+				<view class="jt_right aui-padded-l-5">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-t-10 aui-padded-b-10 aui-border-b" wx:if="{{card_type==1}}">
+		<view class="flex ">
+			<view class="aui-font-size-15">开户行全称</view>
+			<view class="flex">
+				<view>
+					<input type="text" placeholder-class="phcolor" placeholder="请输入开户行全称" value="{{open_bank_names}}" bindinput="open_bank_names"></input>
+				</view>
+				<view class="pen aui-padded-l-5">
+					<image src="/image/pen.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-t-10 aui-padded-b-10 aui-border-b" wx:if="{{card_type==1}}">
+		<view class="flex ">
+			<view class="aui-font-size-15">银行卡号</view>
+			<view class="flex">
+				<view>
+					<input type="number" placeholder-class="phcolor" placeholder="请输入银行卡号" value="{{card_number}}" bindinput="card_number"></input>
+				</view>
+				<view class="pen aui-padded-l-5">
+					<image src="/image/pen.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+  <view class="aui-padded-t-10 aui-padded-b-10 aui-border-b" wx:if="{{card_type==2}}">
+		<view class="flex ">
+			<view class="aui-font-size-15">支付宝账号</view>
+			<view class="flex">
+				<view>
+					<input type="number" placeholder-class="phcolor" placeholder="请输入支付宝账号" value="{{alipay_number}}" bindinput="alipay_number"></input>
+				</view>
+				<view class="pen aui-padded-l-5">
+					<image src="/image/pen.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-t-10 aui-padded-b-10 aui-border-b">
+		<view class="flex ">
+			<view class="aui-font-size-15">真实姓名</view>
+			<view class="flex">
+				<view>
+					<input type="text" placeholder-class="phcolor" placeholder="请输入真实姓名" value="{{card_member_name}}" bindinput="card_member_name"></input>
+				</view>
+				<view class="pen aui-padded-l-5">
+					<image src="/image/pen.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-list aui-list-in aui-padded-t-15">
+		<view class="aui-list-item aui-padded-l-0">
+			<view class="aui-list-item-inner aui-padded-r-0">
+				<view class="aui-list-item-title fweight-5 aui-font-size-28">
+					设为默认
+				</view>
+				<view class="aui-list-item-right">
+					<switch bindchange="switch1Change" style="zoom:.9" color="#ff4805" checked="{{default_status==0}}"/>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>
+
+<view class="btn_box aui-bg-white aui-padded-15" bindtap="save">
+	<view class="btn">保存</view>
+</view>

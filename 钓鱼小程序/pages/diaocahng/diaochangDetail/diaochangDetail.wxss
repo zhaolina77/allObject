@@ -1,0 +1,14 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.icon{
+    width:36rpx;
+}
+.footer image{
+    width: 30rpx;
+    vertical-align: middle;
+}
+.footer .num{
+    vertical-align: middle;
+    margin-left:7rpx
+}

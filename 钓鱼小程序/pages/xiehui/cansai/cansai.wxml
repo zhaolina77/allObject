@@ -1,0 +1,55 @@
+<view class="mine-content-footer">
+<view wx:if="{{is_charge==1}}">
+<view class="num aui-text-center" >
+        <view class="aui-font-size-14 aui-text-gray aui-padded-b-10">参赛费用</view>
+        <view class="aui-text-orange">￥<text class="aui-font-weight" style="font-size:1.6rem;">{{price}}</text></view>
+    </view>
+    <view class="aui-padded-15 aui-padded-b-0 aui-border-bgB" >
+        <view class="aui-font-size-13 aui-padded-b-10">支付方式</view>
+        <view class="aui-list" >
+            <view class="aui-list-item aui-padded-l-0 aui-padded-t-5 aui-padded-b-5 aui-border-b">
+                <view class="aui-list-item-inner aui-padded-r-0">
+                    <view class="aui-list-item-title aui-font-size-14">
+                        <image src="/image/wxzf.png" class="pay" mode="widthFix"></image>
+                        <text style="vertical-align: middle">微信支付</text>
+                    </view>
+                    <view class="aui-list-item-right">
+                        <radio color="#0055FE" checked="{{check}}" ></radio>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view></view>
+    
+
+    <view class="aui-list aui-padded-l-15 aui-padded-r-15">
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-text-grayer">
+                <view class="aui-list-item-label">参赛人姓名</view>
+                <view class="aui-list-item-input aui-padded-r-0">
+                    <input type="text" class="aui-text-right aui-font-size-14" placeholder="请输入参赛人姓名"  bindinput="user"/>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-text-grayer">
+                <view class="aui-list-item-label">联系电话</view>
+                <view class="aui-list-item-input aui-padded-r-0">
+                    <input type="text" class="aui-text-right aui-font-size-14" placeholder="请输入联系电话"  bindinput="phone"/>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-text-grayer">
+                <view class="aui-list-item-label">身份证号</view>
+                <view class="aui-list-item-input aui-padded-r-0">
+                    <input type="text" class="aui-text-right aui-font-size-14" placeholder="请输入本人身份证号"  bindinput="idNumber"/>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="aui-bar aui-bar-tab aui-padded-15 clearfix footer-bar" id="footer">
+    <view class="aui-btn aui-btn-theme aui-btn-block aui-font-size-15 " bindtap="cansai">立即参赛</view>
+</view>

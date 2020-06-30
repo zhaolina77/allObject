@@ -1,0 +1,21 @@
+/* pages/my/invit/index.wxss */
+@import "../../../wxParse/wxParse.wxss";
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+.fiexed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 30rpx;
+}
+.btn {
+  width: 90%;
+  left:5%;
+  text-align: center;
+  background: linear-gradient(to right,#ff7237,#ff512e);
+  border: none !important;
+  line-height: 80rpx !important;
+  height:80rpx !important;
+  color: #fff !important;
+  
+}

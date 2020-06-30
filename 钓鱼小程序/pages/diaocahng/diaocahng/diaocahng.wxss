@@ -1,0 +1,67 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.pop-out{
+   position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pop input::-webkit-input-placeholder {
+    color: #000;
+    font-size:28px;
+}
+
+.pop input:-moz-placeholder {
+    color: #000;
+    font-size:28px;
+}
+.pop input::-moz-placeholder {
+    color: #000;
+    font-size:28px;
+}
+
+.pop input:-ms-input-placeholder {
+    color: #000;
+    font-size: 28px;
+}
+
+.pop .aui-list-item-text {
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+}
+
+.pop .spec {
+    display: inline-block;
+    background-color: #f3f5f8;
+    width: 120rpx;
+    height:60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    color: #000;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+    border-radius: 15rpx
+}
+.pop .sel{
+    max-height:500rpx;
+    overflow-x: scroll;
+}
+.pop .sel .aui-active {
+    background-color: #3072f6 !important;
+    color: #fff !important;
+}
+.pop .aui-bar-tab{
+    position: absolute;
+}

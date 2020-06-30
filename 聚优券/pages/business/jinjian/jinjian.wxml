@@ -1,0 +1,44 @@
+<view class="aui-padded-15">
+	<view class="">
+		<view class="li active aui-padded-t-15">
+			<view class="aui-pull-left jd1">
+				<image src="/image/jd.png"></image>
+			</view>
+			<view class="inner aui-border-b aui-padded-t-15 aui-padded-b-15 bg-radius aui-bg-gray aui-padded-l-15" bindtap="zhuti">
+				<view class="aui-font-size-14 aui-padded-b-5 aui-text-theme fw5">主体信息</view>
+				<view class="aui-text-grayer aui-font-size-13 aui-padded-b-5">请填写商户的营业执照/登记证书、经营者/法人的证件等信息</view>
+			</view>
+		</view>
+		<view class="li active aui-padded-t-15">
+			<view class="aui-pull-left jd1">
+				<image src="/image/jd.png"></image>
+			</view>
+			<view class="inner aui-border-b aui-padded-t-15 aui-padded-b-15 bg-radius aui-bg-gray aui-padded-l-15"  bindtap="zhuti1">
+				<view class="aui-font-size-14 aui-padded-b-5 aui-text-theme fw5">商户信息</view>
+				<view class="aui-text-grayer aui-font-size-13 aui-padded-b-5">请填写商户的营业执照/登记证书、经营者/法人的证件等信息</view>
+			</view>
+		</view>
+		<view class="li active aui-padded-t-15">
+			<view class="aui-pull-left jd1">
+				<image src="/image/jd.png"></image>
+			</view>
+			<view class="inner aui-border-b aui-padded-t-15 aui-padded-b-15 bg-radius aui-bg-gray aui-padded-l-15"  bindtap="zhuti2">
+				<view class="aui-font-size-14 aui-padded-b-5 aui-text-theme fw5">行业规则</view>
+				<view class="aui-text-grayer aui-font-size-13 aui-padded-b-5">请填写商户的营业执照/登记证书、经营者/法人的证件等信息</view>
+			</view>
+		</view>
+		<view class="li active aui-padded-t-15">
+			<view class="aui-pull-left jd1">
+				<image src="/image/jd.png"></image>
+			</view>
+			<view class="inner aui-border-b aui-padded-t-15 aui-padded-b-15 bg-radius aui-bg-gray aui-padded-l-15"  bindtap="zhuti3">
+				<view class="aui-font-size-14 aui-padded-b-5 aui-text-theme fw5">收款账户</view>
+				<view class="aui-text-grayer aui-font-size-13 aui-padded-b-5">请填写商户的营业执照/登记证书、经营者/法人的证件等信息</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- <view class="btn_box aui-padded-15">
+	<view class="aui-btn aui-btn-theme">提交进件</view>
+</view> -->

@@ -1,0 +1,32 @@
+<view class="aui-padded-15 aui-bg-grayer">
+    <view class="aui-padded-b-10">订单编号：{{order.order_sn}}</view>
+    <view class="aui-padded-b-10">退款状态：<span class="aui-text-orange">{{order.pay_name}}</span></view>
+    <view>退款金额：￥{{order.pay_price}}</view>
+</view>
+
+<!-- <view class="aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-padded-t-15 aui-padded-b-15 aui-border-b fweight-5">退款信息</view>
+    <view class="">
+        <view class="li active">
+            <view class="aui-pull-left jd1"></view>
+            <view class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+                <view class="aui-font-size-14 aui-padded-b-5">商家拒绝了您的退款申请，如有疑问请联系客服</view>
+                <view class="aui-text-grayer aui-font-size-12 aui-padded-b-5">2018-02-14  08:14:12</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="aui-pull-left jd1"></view>
+            <view class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+                <view class="aui-text-grayer aui-font-size-14 aui-padded-b-5">商家同意了您的退款申请</view>
+                <view class="aui-text-grayer aui-font-size-12 aui-padded-t-5">2018-02-14  08:14:12</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="aui-pull-left jd1"></view>
+            <view class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+                <view class="aui-text-grayer aui-font-size-14 aui-padded-b-5">您的退款信息已提交</view>
+                <view class="aui-text-grayer aui-font-size-12 aui-padded-t-5">2018-02-14  08:14:12</view>
+            </view>
+        </view>
+    </view>
+</view> -->

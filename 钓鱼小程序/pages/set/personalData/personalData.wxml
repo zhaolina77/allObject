@@ -1,0 +1,66 @@
+<view class="aui-bg-white" id="app" v-cloak>
+	<header class="" style="width:100%; background-color: black !important; position: fixed;top:48rpx;z-index:0">
+		<view class="" style="width: 100%;">
+			<image src="{{background}}" style="width: 100%;" bindtap="backImg" data-info="1"></image>
+		</view>
+		<!-- <a class="aui-pull-right aui-btn aui-text-white" @click="preserve_data()">保存</a> -->
+	</header>
+	<view class="bac">
+
+		<!-- <view class="top-pic">
+    <view class="head-pic"> -->
+		<image class="tu" src="{{head_portrait}}" bindtap="backImg" data-info="2"></image>
+		<!-- </view> -->
+		<!-- </view> -->
+		<view class="aui-padded-15 aui-margin-t-15" style="margin:240rpx 0">
+			<view class="aui-padded-t-15">
+				<view class="aui-font-size-12 aui-text-gray aui-padded-b-10 aui-padded-t-10">昵称</view>
+				<view class="aui-border-b">
+					<input type="text" v-model="name" value="{{user}}" bindinput="user" show-confirm-bar="{{false}}" />
+				</view>
+			</view>
+			<view class="aui-padded-t-15">
+				<view class="aui-font-size-12 aui-text-gray aui-padded-b-10 aui-padded-t-10">性别</view>
+				<view class="aui-border-b list">
+					<picker style="width:100%" bindchange="sex" value="{{index1}}" range="{{sexli}}">
+						<view style="width:100%" class="picker aui-font-size-13 aui-text-gray aui-ellipsis-1">
+							{{sex==1?'男':'女'}}
+						</view>
+					</picker>
+					<image class="icon" src="/image/jt-right2.png"></image>
+				</view>
+
+			</view>
+			<view class="aui-padded-t-15">
+				<view class="aui-font-size-12 aui-text-gray aui-padded-b-10 aui-padded-t-10">生日</view>
+				<view class="aui-border-b list">
+					<picker mode="date" style="width:100%" value="{{birthday}}" start="1929-09-01" end="2019-09-01" bindchange="bindDateChange">
+						<view class="picker" style="width:100%;">
+							{{birthday}}
+							<!-- {{list.birthday?list.birthday:'请选择出生日期'}} -->
+						</view>
+					</picker>
+					<image class="icon" src="/image/jt-right2.png"></image>
+				</view>
+			</view>
+			<view class="aui-padded-t-15">
+				<view class="aui-font-size-12 aui-text-gray aui-padded-b-10 aui-padded-t-10">所在城市</view>
+				<view class="aui-border-b list">
+					<input value="{{address}}" placeholder="请输入所在城市" type="text" bindinput="address" />
+					<image class="icon" src="/image/jt-right2.png"></image>
+				</view>
+			</view>
+			<view class="aui-padded-t-15">
+				<view class="aui-font-size-12 aui-text-gray aui-padded-b-10 aui-padded-t-10">简介</view>
+				<view class="kuang">
+					<!-- <input class="txt" bindinput="remark" value="{{remark}}" type="text"></input> -->
+					<textarea class="txt1" bindinput="remark" value="{{remark}}" type="text" wx:if="{{show1}}" auto-focus="{{show1}}" bindblur="change1" style="font-size:28rpx;color:#333" show-confirm-bar="{{false}}"></textarea>
+					<view class="txt2" wx:if="{{show2}}" bindtap="change2" style="font-size:28rpx;color:#333">{{remark}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="foot" style="width:100%;background-color:white;padding:30rpx;position:fixed;bottom:0;z-index:30 !important">
+	<view class="aui-btn aui-btn-theme aui-btn-block aui-font-size-15 btn" bindtap="save">保存</view>
+</view>

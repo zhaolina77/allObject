@@ -1,0 +1,13 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.num {
+    padding:40rpx 0;
+}
+
+.pay {
+    width:48rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}

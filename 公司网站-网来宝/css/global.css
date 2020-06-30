@@ -1,0 +1,860 @@
+.container {
+    width: 100% !important;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.content_box {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.box_content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 背景图片设置 */
+
+.back_img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* 对齐方式 */
+
+.align_right {
+    text-align: right !important;
+}
+
+.align_left {
+    text-align: left !important;
+}
+
+
+/* 页面头部 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 网站顶部 */
+
+.head_box {
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+    line-height: 40px;
+    color: white;
+}
+
+.ttop {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+.top_box {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    /* line-height: 100px; */
+}
+
+.top_box .txt1 {
+    color: #222;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.top_box .txt2 {
+    line-height: 26px;
+    margin-left: 10px;
+    padding-left: 10px;
+    color: #222;
+    font-size: 22px;
+    border-left: 1px solid #222;
+}
+
+.phone {
+    width: 20px;
+    height: 20px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    box-shadow: 5px 0 10px gray;
+}
+
+
+/* 导航部分 */
+
+.navs {
+    width: 622px;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.daohang {
+    height: 100px;
+    line-height: 100px;
+    font-size: 18px;
+}
+
+.daohang a {
+    display: block;
+    height: 100px;
+    color: #222;
+    text-decoration: none;
+}
+
+.daohang a:hover {
+    color: #FF731B;
+}
+
+.navs .dh_active a {
+    color: #ff7426;
+}
+
+
+/* banner */
+
+.banner {
+    width: 100%;
+    height: 800px;
+}
+
+#myCarousel {
+    width: 100%;
+    height: 800px;
+}
+
+#myCarousel .carousel-inner .item img {
+    width: 100%;
+    height: 800px;
+}
+
+.mui-slider-indicator .mui-indicator {
+    background-color: #fff !important;
+    box-shadow: none !important;
+}
+
+.mui-slider-indicator .mui-active {
+    background-color: #ff731b !important;
+}
+
+
+/* 轮播图 */
+
+
+/* 
+.carousel-indicators .active {
+    background-color: #ff7426 !important;
+    border: 1px solid #ff7426 !important;
+}
+
+.carousel-indicators li {
+    background-color: white !important;
+} */
+
+
+/*首页五个小图标 */
+
+.shouye .item_icon {
+    width: 10%;
+    text-align: center;
+}
+
+.shouye .item_icon img {
+    width: 100%;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.shouye .item_icon .txt {
+    margin-top: 32px;
+    font-size: 20px;
+    color: #666666;
+}
+
+.shouye .icon_img:hover {
+    transform: rotate(360deg);
+    transition: all .8s;
+}
+
+
+/* 立即咨询按钮 */
+
+.btn_box {
+    width: 760px;
+    height: 80px;
+    margin: 50px auto;
+}
+
+.btn_box .btn {
+    width: 300px;
+    height: 60px;
+    color: white;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+    padding: 0 !important;
+}
+
+.btn_box .online_zixun {
+    background: linear-gradient(#ff9858, #ff8e47, #ff6200);
+}
+
+.btn_box .online_shiyong {
+    border: 1px solid #ff731b;
+    background-color: white;
+    color: #ff731b;
+}
+
+
+/* 在线教育 */
+
+.online .title {
+    text-align: center;
+}
+
+.online .title .txt1 {
+    color: #222;
+    font-size: 38px;
+}
+
+.online .title .txt2 {
+    margin-top: 20px;
+    color: #666;
+    font-size: 20px;
+}
+
+.online .online_item {
+    width: 18%;
+    height: 456px;
+    overflow: hidden;
+}
+
+.online .online_part1 {
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 50px;
+    background-color: #ff731b;
+    text-align: center;
+}
+
+.online .online_part1_ic {
+    background-color: #556acb;
+}
+
+.online .online_txt1 {
+    font-size: 20px;
+    color: white;
+    padding-top: 26px;
+}
+
+.online .online_txt2 {
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+}
+
+.online .online_part2 {
+    width: 100%;
+    height: 356px;
+    background-color: white;
+    text-align: center;
+    color: #666;
+}
+
+.online .online_part2 .online_list {
+    width: 80px;
+    padding-top: 40px;
+    margin-left: 80px;
+    /* font-weight: bold; */
+    font-size: 16px;
+}
+
+
+/* 解决方案 */
+
+.fangan_box {
+    flex-wrap: wrap !important;
+}
+
+.btn_box .fangan_zixun {
+    background: linear-gradient(#8ea2e7, #5569cb);
+}
+
+.btn_box .fangan_shiyong {
+    border: 1px solid #5a6ece;
+    background-color: white;
+    /* color: #5a6ece !important; */
+}
+
+.fangan_item {
+    width: 32%;
+    height: 390px;
+    border: 1px solid #e5e5e5;
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    transition: all .7s !important;
+}
+
+.fangan_item .txt1 {
+    text-align: center;
+    font-size: 24px;
+    color: #222;
+    margin-top: 24px;
+}
+
+.fangan_item .txt2 {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.fangan_item_pic {
+    width: 100%;
+    height: 248px;
+    overflow: hidden;
+}
+
+.fangan_item_img {
+    width: 100%;
+    height: 248px;
+    transition: all .7s;
+}
+
+.fangan_item:hover {
+    top: -5px;
+    border: none;
+}
+
+.fangan_item:hover .fangan_item_img {
+    transform: scale(1.2);
+}
+
+
+/* 线形边框 */
+
+.biankuang {
+    width: 1px;
+    height: 3px;
+    position: absolute;
+    z-index: 99;
+    border-radius: 10px;
+}
+
+.biankuang_1 {
+    height: 0px;
+    top: 0px;
+    left: 0px;
+    border-left: 1px solid #fcad82;
+}
+
+.biankuang_2 {
+    width: 0px;
+    bottom: -3px;
+    left: 0px;
+    border-top: 1px solid #fcad82;
+}
+
+.biankuang_3 {
+    height: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-right: 1px solid #fcad82;
+}
+
+.biankuang_4 {
+    width: 0px;
+    top: -3px;
+    right: 0px;
+    border-bottom: 1px solid #fcad82;
+}
+
+
+/* 标签 */
+
+.target {
+    width: 100%;
+    height: 260px;
+    background-color: #ff8e47;
+}
+
+.target_shang {
+    width: 100%;
+    height: 260px;
+    background-image: url(../images/shouye_bg2.png);
+    /* background-color: rgba(225, 115, 27, .9); */
+    position: relative;
+    z-index: 0;
+}
+
+.target .fl {
+    box-shadow: 5px 5px 10px lightgray;
+    background-color: #fff;
+    color: #222;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: -130px;
+    margin-left: -600px;
+    z-index: 999;
+}
+
+.target .txt1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #ff731b;
+}
+
+.target .txt2 {
+    font-size: 18px;
+}
+
+
+/* 首页合作伙伴 */
+
+.hzhb .company {
+    width: 200px;
+    height: 220px;
+    border: 1px solid lightgray;
+}
+
+.company_pic {
+    width: 198px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.company_pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.company_txt {
+    margin-top: 20px;
+}
+
+
+/* 页面底部 */
+
+.footer {
+    width: 100%;
+    height: 660px;
+    background-color: #f8f6f5;
+}
+
+.foot_box {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.foot_part1 {
+    width: 1200px;
+    height: 198px;
+    border-bottom: 1px solid lightgray;
+}
+
+.foot_part1_one {
+    width: 22%;
+    text-align: center;
+}
+
+.foot_part1_txt {
+    color: #222;
+    margin-top: 20px;
+}
+
+.foot_part2 {
+    height: 400px;
+}
+
+.foot_part2_one {
+    width: 33.3%;
+    height: 400px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-right: 1px solid lightgray;
+}
+
+.foot_part2_li {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.foot_part2_li1 {
+    line-height: 46px;
+    color: #222;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.foot_part2_li2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.foot_part2_one img {
+    width: 160px;
+    height: 160px;
+}
+
+.foot_part2_one .txt {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.foot_part3_txt {
+    text-align: center;
+}
+
+.foot_part3_txt p {
+    margin-top: 10px;
+}
+
+
+/* 首页 */
+
+
+/* 在线教育 */
+
+.online .title {
+    text-align: center;
+}
+
+.online .title .txt1 {
+    color: #222;
+    font-size: 38px;
+}
+
+.online .title .txt2 {
+    margin-top: 20px;
+    color: #666;
+    font-size: 20px;
+}
+
+.online .online_item {
+    width: 18%;
+    height: 456px;
+    overflow: hidden;
+}
+
+.online .online_part1 {
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 50px;
+    background-color: #ff731b;
+    text-align: center;
+}
+
+.online .online_part1_ic {
+    background-color: #556acb;
+}
+
+.online .online_txt1 {
+    font-size: 20px;
+    color: white;
+    padding-top: 26px;
+}
+
+.online .online_txt2 {
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+}
+
+.online .online_item .online_part2 {
+    width: 100%;
+    height: 356px;
+    background-color: white;
+    text-align: center;
+    color: #666;
+}
+
+#ul_list {
+    list-style-type: disc !important;
+}
+
+.online .online_part2 .online_list {
+    width: 80px;
+    padding-top: 40px;
+    margin-left: 80px;
+}
+
+.online_zixun {
+    background: linear-gradient(#ff9858, #ff8e47, #ff6200);
+}
+
+.online_shiyong {
+    border: 1px solid #ff731b;
+    background-color: white;
+    color: #ff731b;
+}
+
+
+/* 实时教学 */
+
+.jiaoxue .title {
+    height: 280px;
+    /* background-image: url(../images/banner.png); */
+    position: relative;
+    /* color: white !important; */
+}
+
+.jiaoxue .title_shang {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* background-color: rgba(225, 115, 27, .9); */
+}
+
+.jiaoxue .title .txt1 {
+    /* color: #fff !important; */
+    padding-top: 40px;
+}
+
+.jiaoxue .title .navs {
+    font-size: 34px;
+    color: #fff;
+}
+
+.jiaoxue .navs_txt2 {
+    /* opacity: 0.5; */
+}
+
+.jiaoxue_box {
+    width: 1200px;
+    height: 734px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ff731b;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+    top: -78px;
+}
+
+.jiaoxue_box .txt {
+    font-size: 18px;
+    text-align: center;
+    color: #666;
+    padding-top: 50px;
+}
+
+.jiaoxue_content {
+    height: 456px;
+    margin-top: 50px;
+}
+
+.jiaoxue_right1 {
+    margin-top: 30px;
+}
+
+.jiaoxue_right .jiaoxue_ico {
+    width: 90px;
+    height: 90px;
+    /* border: 1px solid #ff731b; */
+    border-radius: 50%;
+}
+
+.jiaoxue_right .jiaoxue_ico img {
+    width: 100%;
+    height: 100%;
+}
+
+.jiaoxue_right .jiaoxue_text {
+    width: 80%;
+}
+
+.jiaoxue_right .jiaoxue_text1 {
+    color: #222;
+    font-size: 18px;
+}
+
+.jiaoxue_right .jiaoxue_text2 {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* 产品方案 */
+
+
+/* 互联网+教育 */
+
+.net_edu .content_box {
+    margin: 80px auto !important;
+}
+
+.net_edu .net_left {
+    width: 45%;
+}
+
+.net_edu .net_right {
+    width: 52%;
+    height: 428px;
+}
+
+.net_edu .net_right img {
+    /* width: 100%;
+    height: 100%; */
+}
+
+.net_edu .net_title {
+    font-size: 32px;
+    color: #222222;
+    margin-left: 20px;
+}
+
+.net_edu .net_txt {
+    font-size: 18px;
+    color: #666;
+    margin-top: 30px;
+}
+
+.net_edu .btn {
+    width: 146px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 3px;
+    margin-top: 40px;
+    font-size: 20px;
+    padding: 0;
+}
+
+.net_edu .btn1 {
+    background: linear-gradient(#ff9858, #ff8e47, #ff6200);
+    color: #fff;
+}
+
+.net_edu .btn2 {
+    border: 1px solid #ff8e47;
+    color: #ff8e47;
+    margin-left: 40px;
+}
+
+
+/* 服务案例 */
+
+
+/* 为什么选择云博士 */
+
+.select_txt2 {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.select .select_content {
+    height: 648px;
+    box-shadow: 0px 0px 5px #eee;
+}
+
+.select_item {
+    width: 32%;
+    height: 448px;
+}
+
+.select_pic {
+    width: 260px;
+    height: 230px;
+    margin: 30px auto;
+}
+
+.select_pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.select_xian {
+    width: 1px;
+    height: 220px;
+    background-color: #d8d8d8;
+}
+
+.select_shiyong {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.select_shiyong .txt1 {
+    width: 220px;
+    height: 64px;
+    padding-left: 20px;
+}
+
+::-webkit-input-placeholder {
+    /*Webkit browsers 谷歌*/
+    color: rgba(164, 164, 164, 1);
+    font-size: 18px !important;
+}
+
+input {
+    font-size: 18px !important;
+}
+
+.select_shiyong_btn1 {
+    width: 310px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    background: linear-gradient(#FF9858, #FF8E47, #FF6200);
+}
+
+.select_shiyong_btn2 {
+    width: 220px;
+}
+
+
+/* 回到顶部 */
+
+.back_top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+}
+
+.back_top img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 字体加粗 */
+
+.font-w {
+    font-weight: bold;
+}
+
+.text-orang {
+    color: #ff6200;
+}

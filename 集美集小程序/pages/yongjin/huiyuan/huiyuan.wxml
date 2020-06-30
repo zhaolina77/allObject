@@ -1,0 +1,12 @@
+<import src="../../../wxParse/wxParse.wxml" />
+
+<view class="" style="margin-bottom:120rpx">
+	<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+</view>
+
+<view class=" aui-text-center yq">
+<button class="aui-btn " open-type="share" >立即邀请</button>
+
+	<!-- <view ></view> -->
+</view>

@@ -1,0 +1,38 @@
+<view class="aui-content">
+  <view class="aui-list">
+    <view class="aui-list-item aui-border-bgB">
+      <view class="aui-list-item-inner aui-padded-t-15 aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 aui-text-black">头像</view>
+        <view class="aui-list-item-right" bindtap='changeAvatar'>
+          <image src="{{cover_url?cover_url:'/image/header.png'}}" style="width: 3rem;height: 3rem;object-fit: cover;border-radius: 50%;vertical-align: middle;"></image>
+          <!-- <image src="/image/right.png" style="width: 0.7rem;height: 0.7rem;"></image> -->
+        </view>
+      </view>
+    </view>
+    <view class="aui-list-item">
+      <view class="aui-list-item-inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 aui-text-black">昵称</view>
+        <view class="aui-list-item-right aui-text-gray aui-font-size-16">
+          <input class="aui-text-right" placeholder="" value="{{name}}" bindinput="inputBinds" type="text" align="right" placeholder-class="phcolor"/>
+          <!-- <image src="/image/edit.png" style="width:0.7rem;height:0.7rem"/> -->
+        </view>
+      </view>
+    </view>
+    <view class="aui-list-item">
+      <view class="aui-list-item-inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+        <view class="aui-list-item-title aui-font-size-15 aui-text-black">出生年月</view>
+        <view class="aui-list-item-right aui-text-gray aui-font-size-16">
+            <picker mode="date" value="{{date}}" start="1978-01-01" end="2050-1-23" bindchange="bindDateChange"> 
+              <view class="picker"> 
+                {{birthday}} <image src="/image/right.png" style="width:0.7rem;height:0.7rem"></image>
+              </view> 
+            </picker> 
+            
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="aui-bar aui-bar-tab aui-padded-15 footer" id="footer" bindtap="save">
+    <view class="aui-btn-block aui-btn-black aui-font-size-28" style="background-color:#fe4501 !important">保存</view>
+</view>

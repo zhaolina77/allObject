@@ -1,0 +1,33 @@
+<!-- 有数据 -->
+<view class="mine-content-footer mine_guanzhu" wx:if="{{data.length>0}}">
+	<scroll-view scroll-y="{{isScroll}}">
+		<view class="aui-list aui-padded-l-15 ">
+			<block wx:key="item" wx:for="{{data}}" >
+				<view data-index='{{index}}' class="order-item aui-padded-r-15" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx" >
+					<view class="aui-list-item aui-padded-l-0  aui-padded-t-15 aui-padded-b-15 aui-border-b" bindtap="detail" data-id="{{item.member_id}}">
+						<view class="aui-list-item-inner aui-padded-r-0">
+							<view class="aui-list-item-title aui-padded-r-12">
+								<view class="">
+									<view class="aui-list-item-text aui-font-size-16 fweight-5">
+										<view class="flex">
+											<view class="head_pic">
+												<image src="{{item.head_portrait}}" mode="aspectFill"></image>
+											</view>
+											<view class="aui-text-blacker fweight-5 aui-padded-l-15">{{item.nick_name}} </view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="remove aui-font-size-14" bindtap="guanzhu" data-id="{{item.member_id}}">取消关注 </view>
+				</view>
+			</block>
+		</view>
+	</scroll-view>
+</view>
+<!-- 无数据 -->
+<view class="nodata " wx:else>
+	<image src="/image/nodata.png"></image>
+
+</view>

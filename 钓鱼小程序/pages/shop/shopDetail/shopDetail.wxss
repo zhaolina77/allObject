@@ -1,0 +1,179 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+.shop-pic {
+    height: 720rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.shop-pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.laba {
+    position: absolute;
+    bottom:30rpx;
+    right: 30rpx;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius:32rpx;
+    padding:4rpx 32rpx;
+}
+
+.aui-list-item-inner {
+    min-height: auto !important;
+}
+
+.aui-list-item-media {
+    width: auto !important;
+}
+
+.btn span {
+    width: 50%;
+    color: #fff;
+}
+
+.btn .aui-btn {
+    width: 90%;
+    height:72rpx !important;
+    line-height:72rpx !important;
+}
+
+.sc {
+    width:40rpx;
+}
+.line {
+    position: absolute;
+    top: 4px;
+    right:10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #f32c52;
+    text-align: center;
+    line-height: 16px;
+    font-size:10px;
+    color: #fff;
+    /* border: 1px solid #fff; */
+}
+
+/* 规格 */
+.guige{
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    
+}
+.guige .aui-content{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden; 
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.guige .close{
+    position: absolute;
+    top:30rpx;
+    right:30rpx;
+    z-index: 99;
+}
+.guige .close image{
+    width:32rpx;
+}
+.guige .shop-pic{
+    width:160rpx;
+    height:160rpx;
+    
+    overflow: hidden;
+}
+.guige .shop-pic image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+.guige .aui-list-item-text{ 
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+}
+.guige .spec{
+    display: inline-block; 
+    background-color: #f3f5f8;
+    width:120rpx;
+    height:60rpx;
+    line-height:60rpx; 
+    text-align: center; 
+    color: #000;
+    margin-right:20rpx;
+    margin-bottom:20rpx;
+    border-radius:10rpx;
+}
+.guige .aui-active{ 
+    background-color: #0055FE  !important;
+    color: #fff !important;
+}
+.guige .num{ 
+    width: 40rpx !important;
+    height:50rpx !important;
+}
+.guige .dialog{ 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.guige .add{
+    background-color:#666 !important;
+    color:#fff;
+}
+.guige .sel{
+    min-height:400rpx;
+    max-height:500rpx; 
+    overflow-y: scroll;
+}
+.guige .payment{
+    background-color:#34d594  !important;
+    color:#fff;
+}
+
+/* 服务 */
+.fuwu{
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.fuwu .icon{
+    width:30rpx;
+}
+.fuwu .aui-content{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}		
+.fuwu .bj{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: .5rem .5rem 0 0;
+    overflow: hidden;
+}
+.fuwu .aui-list-item-media{
+    width: auto !important;
+    box-sizing: content-box;
+}
+.fuwu .aui-list-item-media image{
+    width:32rpx !important;
+}

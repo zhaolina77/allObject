@@ -1,0 +1,35 @@
+<view class="aui-tab aui-padded-r-15 aui-bg-theme  mine-bar" id="tab">
+   <scroll-view scroll-x enable-flex="true" scroll-with-animation="true"  scroll-into-view="{{left}}">
+        <block wx:for="{{list}}" wx:key="{{idx}}">
+          <view class='swiper-slide {{state==index?"on":""}}' id="sw{{item.id}}" catchtap="tap" data-index="{{index}}">
+              <text class="aui-font-size-15">{{item.type_name}}</text>
+          </view>
+        </block>
+    </scroll-view>
+</view>
+
+<view style="margin:90rpx 0 0;">
+    <view class="banner" >
+        <swiper display-multiple-items='1' current='{{state}}' bindchange='changeFun' previous-margin='50' next-margin='50' >
+            <block wx:for="{{list}}" wx:key="{{index}}">
+                <swiper-item>
+                    <view class='optionBox' style='text-align:center'>
+                        <view class='mask' wx:if='{{ index != state }}'></view>
+                        <image src="{{item.images}}" mode='aspectFit' />
+                        <view class='swiperText ' style='font-size:32rpx;'>{{ item.intro }}</view>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+
+    <!-- 详情信息 -->
+    <view class="aui-padded-15 detail">
+        <image src="{{dl.ac_thumb}}"></image>
+    </view>
+    <!-- 文字 -->
+    <view class="aui-padded-15"><template  is="wxParse" data="{{wxParseData:article.nodes}}"/></view>
+
+</view>
+<import src="../../wxParse/wxParse.wxml"/>

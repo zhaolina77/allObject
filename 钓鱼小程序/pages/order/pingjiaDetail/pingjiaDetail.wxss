@@ -1,0 +1,12 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.star1{
+  width: 20rpx;
+  height: 20rpx;
+}
+.ms-pic{
+
+  width: 33%;
+  float: left;
+}

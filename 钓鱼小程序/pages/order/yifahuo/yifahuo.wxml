@@ -1,0 +1,80 @@
+<view class=" mine-content-footer" >
+    <view class="aui-bg-grayer aui-padded-15">
+        <view class="aui-font-size-18 fweight-5">{{order.pay_name}}</view>
+		<view class="aui-font-size-13 aui-text-gray aui-padded-t-10">商家已发货，请注意收货</view>
+    </view>
+    <view class="aui-padded-15 aui-bg-white">
+        <view class="aui-font-size-16 fweight-5 aui-padded-b-15">收货地址</view>
+        <view class="aui-text-gray aui-font-size-14">{{order.name}}  {{order.mobile}}</view>
+        <view class="aui-text-gray aui-font-size-14 aui-padded-t-5">{{order.address_info}}</view>
+    </view>
+    <view class="aui-padded-l-15 aui-padded-r-15 aui-bg-white" bindtap="wuliu" data-id="{{order.id}}">
+        <view class="aui-border-t aui-padded-t-15 aui-padded-b-15">
+            <view class="aui-font-size-16 fweight-5 aui-padded-b-15">
+                配送信息
+            </view>
+            <view class="" style="display: flex;align-items: center;justify-content: space-between;">
+                <view class="">
+                    <view class="aui-text-gray aui-font-size-15">物流名称： <text class="aui-text-black">圆通</text></view>
+                    <view class="aui-text-gray aui-font-size-15 aui-padded-t-5">物流单号：<text class="aui-text-black">{{order.logistics_number}}</text></view>
+                </view>
+                <view class="">
+                    <view class="aui-btn aui-font-size-12 aui-btn-outlined">物流详情</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list aui-media-list aui-padded-l-15 aui-padded-r-15 aui-border-bgT">
+        <view class="aui-list-header fweight-5 aui-font-size-16 aui-bg-white aui-border-b aui-padded-l-0 aui-padded-t-15 aui-padded-b-15">
+            <view class="aui-font-size-14">
+                <text style="vertical-align: middle;margin-left: 0.1rem;">{{order.shop_name}}</text>
+            </view>
+        </view>
+        <view class="aui-list-item  aui-padded-l-0 aui-padded-t-5 aui-padded-b-5 aui-border-b" wx:for="{{goodsList}}" wx:key="goo">
+            <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-media">
+                    <image src="{{item.thumb}}"></image>
+                </view>
+                <view class="aui-list-item-inner aui-padded-r-0">
+                    <view class="aui-list-item-text">
+                        <view class="aui-text-black aui-font-size-14 aui-ellipsis-1">{{item.goods_name}}</view>
+                    </view>
+                    <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-10" wx:if="{{item.spec_name!=''}}">规格:{{item.spec_name}}</view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-list-item-title aui-font-size-10 aui-text-orange">
+                            ￥<text class="aui-text-orange aui-padded-r-5 aui-font-size-18">{{item.goods_price}}</text>
+                        </view>
+                        <view class="aui-list-item-right aui-font-size-12 aui-text-gray">共{{item.goods_num}}件</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="aui-padded-t-15">
+            <view class="aui-font-size-15 aui-text-black aui-padded-b-15">
+                实付金额
+                <text class="aui-pull-right fweight-5 aui-text-orange">￥170</text>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="aui-border-bgT aui-padded-15 aui-padded-t-5 aui-font-size-14 aui-text-gray aui-bg-white">
+        <view class="aui-padded-t-10">订单编号：{{order.order_sn}}</view>
+        <view class="aui-padded-t-10">下单时间：{{order.create_time}}</view>
+        <view class="aui-padded-t-10">支付方式：微信支付</view>
+        <view class="aui-padded-t-10">支付时间：{{order.pay_time}}</view>
+        <view class="aui-padded-t-10">发货时间：{{order.update_time}}</view>
+    </view>
+
+
+</view>
+
+
+<view class="aui-bar aui-bar-tab aui-border-t " id="footer" style="display: flex;align-items: center;justify-content: flex-end;">
+    <view class="aui-text-right aui-padded-r-10">
+        <!-- <view class="aui-btn aui-font-size-12 aui-btn-outlined aui-margin-r-10" >联系客服</view> -->
+         <button  open-type='contact' class=" aui-btn aui-font-size-12 aui-btn-outlined aui-margin-r-10" plain="true" style="height:60rpx !important;line-height:56rpx !important;background-color:#fff;height:auto;line-height:1;border:1px solid #eeeeee"> 联系客服</button>
+        <view class="aui-btn aui-btn-theme aui-font-size-12" bindtap="qr_shouhuo">确认收货</view>
+    </view>
+</view>
+

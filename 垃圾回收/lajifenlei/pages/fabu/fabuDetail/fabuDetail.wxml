@@ -1,0 +1,63 @@
+<import src="../../../wxParse/wxParse.wxml" />
+
+<view class="aui-content " style="padding-bottom:140rpx">
+	<view class="aui-padded-l-15 aui-padded-r-15 aui-bg-white">
+	
+
+		<view class="flex ms_box  aui-border-b aui-padded-t-15 aui-padded-b-15">
+			<view class="fw-bold">物品分类</view>
+			<view class="ms aui-font-size-14 flex aui-pull-right">
+				<picker bindchange="bindPickerChange" value="{{index}}" range="{{fl_list}}">
+					<view class="picker" style="">
+						{{fl_name}}
+					</view>
+				</picker>
+
+
+				<!-- <view class="aui-font-size-12 aui-text-grayer aui-padded-r-10">旧书籍</view> -->
+				<view class="jt_right">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+
+		<view class="flex   ms_box  aui-border-b aui-padded-t-15 aui-padded-b-15" bindtap="change_address">
+			<view class="fw-bold">上门地址</view>
+			<view class="ms aui-font-size-14 flex aui-pull-right">
+				<view class="aui-font-size-12 aui-text-grayer aui-padded-r-10">{{full_address}}{{address_info}}</view>
+				<view class="jt_right">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="flex   ms_box  aui-border-b aui-padded-t-15 aui-padded-b-15">
+			<view class="fw-bold">预约时间</view>
+			<view class="ms aui-font-size-14 flex aui-pull-right">
+			
+				<picker mode="multiSelector" style="float: right;" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}" style="flex:1">
+					<view class="tui-picker-detail">
+						{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+					</view>
+				</picker>
+				<view class="jt_right">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="flex ">
+			<view class="aui-font-size fw-bold ">留言备注</view>
+			<view class="aui-padded-l-15">
+				<input type="text" placeholder="选填" value="{{remark}}" bindinput="remark" placeholder-style="color: #999; font-size: 24rpx;" />
+			</view>
+		</view>
+	</view>
+	<view class="aui-bg-white aui-padded-15 aui-margin-t-15">
+		<view class="aui-font-size-16 aui-font-weight">接单须知</view>
+		<view class="aui-margin-t-15">
+			<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+		</view>
+	</view>
+</view>
+<view class="btn_box aui-bg-white aui-padded-15">
+	<view class="btn" bindtap="fabu">下单</view>
+</view>

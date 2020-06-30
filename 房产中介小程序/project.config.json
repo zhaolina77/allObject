@@ -1,0 +1,201 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wxf8b731460952e24c",
+	"projectname": "%E6%88%BF%E4%BA%A7%E4%B8%AD%E4%BB%8B",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/index/chuzu/chuzu",
+					"pathName": "pages/index/chuzu/chuzu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/baobei/baobei",
+					"pathName": "pages/index/baobei/baobei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/baobei/baobei",
+					"pathName": "pages/index/baobei/baobei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/selectKh/selectKh",
+					"pathName": "pages/index/selectKh/selectKh",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myJilu/myJilu",
+					"pathName": "pages/mine/myJilu/myJilu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myInformation/myInformation",
+					"pathName": "pages/mine/myInformation/myInformation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myCollection/myCollection",
+					"pathName": "pages/mine/myCollection/myCollection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/selectFy/selectFy",
+					"pathName": "pages/index/selectFy/selectFy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myCollection/myCollection",
+					"pathName": "pages/mine/myCollection/myCollection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/baobei/baobei",
+					"pathName": "pages/index/baobei/baobei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/chuzu/chuzu",
+					"pathName": "pages/index/chuzu/chuzu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/baobei/baobei",
+					"pathName": "pages/index/baobei/baobei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/selectKh/selectKh",
+					"pathName": "pages/index/selectKh/selectKh",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/baobei/baobei",
+					"pathName": "pages/index/baobei/baobei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myJilu/myJilu",
+					"pathName": "pages/mine/myJilu/myJilu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/baobei/baobei",
+					"pathName": "pages/index/baobei/baobei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myJilu/myJilu",
+					"pathName": "pages/mine/myJilu/myJilu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/selectKh/selectKh",
+					"pathName": "pages/index/selectKh/selectKh",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/gonggaoList/gonggaoList",
+					"pathName": "pages/index/gonggaoList/gonggaoList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/gonggaoList/gonggaoList",
+					"pathName": "pages/index/gonggaoList/gonggaoList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

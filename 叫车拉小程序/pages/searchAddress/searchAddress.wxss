@@ -1,0 +1,14 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+.search {
+    background: #f0f0f0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    position: relative;
+}
+.flex{ 
+    display: flex;
+    justify-content: space-between;
+}

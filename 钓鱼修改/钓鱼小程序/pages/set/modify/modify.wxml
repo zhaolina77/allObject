@@ -1,0 +1,31 @@
+<view class="aui-bg-grayer aui-padded-15  aui-text-orange aui-text-center aui-font-size-13 ">
+    请使用超过6位的数字或字母设置密码
+</view>
+<view class="aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-list ">
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-text-gray">
+                <view class="aui-list-item-input aui-padded-r-0">
+                    <input type="password"  placeholder="请输入当前密码" bindinput="old_pass"/>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-text-gray">
+                <view class="aui-list-item-input aui-padded-r-0">
+                    <input type="password"  placeholder="请设置您新的登录密码"  bindinput="new_pass"/>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-padded-t-5 aui-padded-b-5 aui-border-b">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-text-gray">
+                <view class="aui-list-item-input ">
+                    <input type="password"  placeholder="请确认密码"  bindinput="re_pass"/>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="aui-btn aui-btn-theme aui-btn-block  aui-font-size-15 " style="margin-top:2rem;" bindtap="qr_pass">确定更换</view>
+</view>
+

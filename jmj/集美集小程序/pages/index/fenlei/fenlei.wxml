@@ -1,0 +1,36 @@
+<!-- 商品列表 -->
+<!-- <scroll-view scroll-y enable-flex="true" style=""> -->
+	<view class="  aui-border-t" wx:if="{{token!=''}}">
+		<view class="left" style="">
+			<view class="left_txt aui-text-center {{classifyId==item.id?'left_active':''}}" wx:for="{{categoryList}}" wx:key="categoryList" bindtap="change" data-id="{{item.id}}">{{item.name}}</view>
+		</view>
+		<view class="shop_list">
+
+			<view class="right  aui-row aui-padded-l-15 aui-padded-r-15 aui-padded-t-15" style="" wx:if="{{list.length>0}}">
+				<view class="aui-col-xs-6 bg-radius box-shadow aui-margin-b-15" wx:for="{{list}}" wx:key="list" bindtap="detail" data-id="{{item.id}}">
+					<view class="pic">
+						<image src="{{item.thumb}}" mode="aspectFill"></image>
+					</view>
+					<view class="aui-padded-5 aui-padded-b-10 aui-padded-t-10">
+						<view class="aui-font-size-14 aui-ellipsis-1">{{item.name}}</view>
+						<view class="aui-padded-t-5 flex" style="justify-content: flex-start;">
+							<view class="aui-text-theme aui-font-size-13 aui-padded-r-5">￥{{item.market_price}}</view>
+							<view class="vip_box aui-text-bro aui-font-size-9" wx:if="{{item.member_price>0}}">会员价:￥{{item.member_price}}</view>
+							<view class="aui-del aui-text-grayc aui-font-size-10" wx:if="{{item.original_price>0&&item.member_price<=0}}">￥{{item.original_price}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="right  aui-row aui-padded-l-15 aui-padded-r-15 aui-padded-t-15" wx:else>
+				<view class="nodata">
+					<image src="/image/nodata.png"></image>
+				</view>
+			</view>
+
+		</view>
+	</view>
+	<view class="nodata" wx:else>
+		<image src="/image/nodata1.png"></image>
+	</view>
+<!-- </scroll-view> -->

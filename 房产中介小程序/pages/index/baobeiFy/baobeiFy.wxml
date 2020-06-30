@@ -1,0 +1,56 @@
+<view class="aui-margin-t-15 aui-bg-white aui-padded-15">
+	<view class=" shouye_list">
+		<view class="flex">
+			<view class="aui-font-size-17 ft_5">报备房源</view>
+			<view class="flex">
+				<view class="aui-margin-r-5 aui-font-size-12">查看更多</view>
+				<image class="jt" src="/image/jt_right.png"></image>
+			</view>
+		</view>
+		<view class=" ">
+			<view class="flex item_box aui-padded-t-15 aui-margin-b-15">
+				<view class="item bg-radius">
+					<image src="/image/lizi.jpg" mode="aspectFill"></image>
+				</view>
+				<view class="aui-margin-l-10  right ">
+					<view class="aui-font-size-15 aui-ellipsis-1 ">西港碧水湾</view>
+					<view class="weui-label  aui-text-gray aui-font-size-11 aui-margin-t-10">18m<sup>2</sup>·朝南·4室1厅1卫</view>
+					<view class="flex aui-margin-t-10" style="justify-content: flex-start;">
+						<view class="aui-text-theme weui-label aui-font-size-15"><text class="ft_5">13000</text>元/月</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class=" aui-border-bgT">
+		<view class="aui-margin-t-15">
+			<view class="aui-font-size-17 ft_5">报备客户</view>
+			<view class="aui-font-size-12 aui-text-gray">该项目为全号报备项目，仅支持报备电话为全号的客户</view>
+		</view>
+		<view>
+		<view class="aui-margin-t-15 aui-margin-b-15  flex aui-padded-15 aui-bg-gray" style="justify-content: flex-start;">
+		<text>炫迈</text>
+		<text class="aui-margin-l-10 aui-text-gray aui-font-szie-12">17868879654</text>
+		</view>
+		</view>
+		<view class="add">
+			<image src="/image/add.png"></image>
+		</view>
+	</view>
+</view>
+<view class="up aui-padded-15 disnone">
+	<view class="box aui-text-center">
+		<view class="flex baobei_kh_box aui-padded-15">
+			<image class="baobei_kh" src="/image/baobei_kh.png"></image>
+			<view class="aui-font-size-15">报备客户</view>
+		</view>
+		<view class="flex baobei_kh_box aui-padded-15">
+			<image class="baobei_kh" src="/image/add_kh.png"></image>
+			<view class="aui-font-size-15">添加客户</view>
+		</view>
+		<view class="aui-text-center aui-font-size-15 cancel aui-border-t aui-padded-15">取消</view>
+	</view>
+</view>
+<view class="btn_box aui-padded-15">
+	<view class="btn">提交</view>
+</view>

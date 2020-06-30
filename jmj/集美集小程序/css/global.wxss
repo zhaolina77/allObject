@@ -1,0 +1,164 @@
+/* 背景颜色 */
+image{height: auto;}
+page{color: #222;}
+/*背景圆角*/
+.bg-radius{border-radius: 10rpx;overflow: hidden;}
+
+/* 字体加粗 */
+.fw-bold{font-weight: bold;}
+.fw5{font-weight: 500;}
+/* banner */
+.banner{
+    height:328rpx;
+    position: relative;
+    background-color: #F5F6FA;
+    overflow: hidden;
+}
+.banner swiper{
+    height:328rpx;
+    position: relative;
+    
+}
+.banner swiper-item image{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 字体颜色 */
+.aui-text-bro{color: #663900;}
+.aui-text-or{color: #FF6502;}
+/* 背景颜色 */
+.aui-bg-or{background-color: #FF6502;}
+.aui-bg-grayc{background-color: #F5F6FA;}
+.flex{display: flex;align-items: center;justify-content: space-between;}/*弹性布局*/
+.box-shadow{box-shadow: 0 0 14rpx 0 rgba(222, 222, 222, 0.5);}/*阴影*/
+
+/* 提交button */
+.btn_box{width: 100%; position: fixed;bottom: 0;left: 0;background-color: #ffffff;padding: 30rpx;}
+.btn_box .btn{width: 100%;height: 86rpx;background-color: #ff4805;border-radius:10rpx;line-height: 86rpx;text-align: center;color: #ffffff;font-size: 30rpx;font-weight: 500;}
+
+
+/* 首页团购列表 */
+.shouye_tg_list .tit{height: 290rpx;background-image: linear-gradient( #E55312 , #F4A02F,#ffffff);}
+.shouye_tg_list  .list_item{align-items: flex-start;}
+.shouye_tg_list  .list_pic{width: 234rpx;height: 234rpx;}
+.shouye_tg_list  .list_pic image{width: 100%;height: 100%;}
+.shouye_tg_list  .list_r{width: 60%;}
+.vip_box{max-width: 170rpx; height: 28rpx;background-image: linear-gradient(to right,#CCAF7B, #FCE3B6);border-radius: 14rpx;padding:0 10rpx;color: #663900;}
+.shouye_tg_list  .aui-btn{height: 50rpx !important;line-height: 50rpx;padding:0 10rpx;}
+.shouye_tg_list .jt_right1{width: 14rpx;height: 14rpx;}
+/* 2人团 */
+.tuan{border: 1rpx solid #ff4805;border-top-right-radius: 10rpx;border-bottom-left-radius: 10rpx;padding:0rpx 8rpx;color: #ff4805;}
+
+
+/* 商品列表 */
+.shop_list .aui-col-xs-6{width: 48%;margin-right: 4%;}
+.shop_list .aui-col-xs-6:nth-of-type(2n){margin-right: 0 !important;}
+.shop_list .aui-col-xs-6 .pic{width: 100%;height: 338rpx;}
+.shop_list .aui-col-xs-6 .pic image{width: 100%;height: 100%;}
+/* 个人中心 */
+.aui-font-size-25{font-size: 50rpx;}
+
+
+/* checkbox样式 */
+
+checkbox .wx-checkbox-input {
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 50%;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #ff4805;
+  border-color:#ff4805;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 20rpx;
+  height: 20rpx;  
+  line-height: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+/*评价  评价中心*/
+.pingjia-list .aui-list:last-child{border-bottom: none !important;}
+.pingjia-list .aui-list-item-title{display: flex;display: -webkit-flex;align-items: center;}
+.pingjia-list .head-pic{width: 80rpx;height: 80rpx;border-radius: 40rpx;overflow: hidden;}
+.pingjia-list .head-pic image{height: 100%;width: 100%;object-fit: cover;}
+.pingjia-list  .star1{width:20rpx;margin-right: 7rpx;}
+.pingjia-list .inner{margin-left: 100rpx;}
+.pingjia-list .inner .pj{line-height: 23px;}
+.pingjia-list .show{margin: 20rpx 0 30rpx;color:#1375FF ;}
+.pingjia-list  .slide{margin-bottom: 16rpx;}
+.pingjia-list  .slide .slide-pic{margin-right: 20rpx;} 
+ .pingjia-list  .slide .slide-pic image{width:140rpx;height:140rpx;border-radius: 10rpx;} 
+ .pingjia-list .sjhf{line-height: 22px;} 
+/* 滑动样式重置 */
+scroll-view { 
+  white-space:nowrap;
+  width:100%;
+  display: flex;  
+}
+/* scroll-view .swiper-slide {
+  margin-left:30rpx;
+} */
+scroll-view .swiper-slide:last-child{
+  margin-right: 30rpx;
+}
+/* 输入框的颜色 */
+.phcolor{
+  color: #cfcfcf;
+  font-size: 30rpx;
+}
+/*地址 订单提交*/
+.address{position: relative;}
+.address .line{ position: absolute;bottom: 0;left:0;width: 100%;height: 4px;}
+/* 暂无数据 */
+.nodata{width: 500rpx;height: 500rpx;margin: 0 auto;margin-top: 280rpx;}
+.nodata image{width: 100%;height: 100%;}
+
+/* 我的关注头像 */
+.mine_guanzhu .head_pic{width: 80rpx;height: 80rpx;border-radius: 50%;overflow: hidden;}
+.mine_guanzhu .head_pic image{width: 100%;height: 100%;}
+
+/* 底部评论 */
+.pinglun_foot{width: 100%;position: fixed;bottom: 0;left: 0;z-index: 999;justify-content: flex-start;}
+.pinglun_foot .foot_left{width: 85%;height: 70rpx;background-color: #F5F5F5 ;border-radius: 35rpx;}
+.pinglun_foot .foot_ico image{width: 24rpx;height: 24rpx;}
+
+.pinglun_foot .zan{width: 35rpx;height: 35rpx;position: relative;}
+.pinglun_foot .zan image{width: 100%;height: 100%;}
+.pinglun_foot .zan_txt{position: absolute;right: -26rpx;top: -20rpx;}
+
+
+
+/* 发布列表 我的发布*/
+.fabu-list .aui-list-item-media{width: auto  !important;}
+.fabu-list .aui-list:last-child{border-bottom: none !important;}
+.fabu-list .head-pic{width: 80rpx;height: 80rpx;border-radius: 50%;overflow: hidden;}
+.fabu-list .head-pic image{width: 100%;height: 100%}
+.fabu-list .aui-list-item-title{width: 70%;}
+.fabu-list .more{width: 40rpx;}
+.fabu-list .pingjia{line-height: 50rpx;font-size: 30rpx;}
+.fabu-list .pingjia .qw{color: #2C7CE7;}
+.fabu-list .caozuo{display: flex;justify-content:space-between;align-items: center;padding: 15rpx 30rpx;}
+.fabu-list .caozuo .right{width:50%}
+.fabu-list .caozuo .right .icon{width: 40rpx}
+.fabu-list .caozuo .right .num{color: #AAA6A5;font-size:20rpx;position: relative;top:-20rpx;right: -5rpx;}
+/* 一行三张照片展示 我的发布页面*/
+.three-pic .aui-col-xs-4{margin-right: 3%;width: 31.3%;margin-bottom:20rpx;}
+.three-pic .aui-col-xs-4:nth-child(3n){margin-right: 0 !important;}
+.three-pic .img-box{width: 100%;position:relative;z-index:1;border-radius: 10rpx;overflow: hidden;}
+.three-pic .img-box image{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height: 100%;object-fit:cover;margin:auto;z-index: -1;}
+.three-pic .img-box:before {content: "";display: inline-block;padding-bottom: 100%;width: 0.1px;vertical-align: middle;}
+
+
+/* 订单取消订单按钮 */
+.aui-btn-gray{color: #222 !important;border-color: #e6ebf4 !important;}
+.order-aui-btn{width: 160rpx !important;margin-right: 20rpx !important;}

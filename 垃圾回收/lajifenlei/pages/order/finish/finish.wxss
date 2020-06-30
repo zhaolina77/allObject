@@ -1,0 +1,7 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+page{background-color: #fff !important;}
+.fl_pic image{width: 100rpx;height: 100rpx;}
+.btn{height: 80rpx;line-height:80rpx !important;padding: 0 !important;}

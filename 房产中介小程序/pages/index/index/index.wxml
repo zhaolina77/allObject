@@ -1,0 +1,126 @@
+<view wx:if="{{one && two}}">
+	<!-- <view class='' style="width:100% !important;height:100% !important">
+    <image src='/images/loading.gif'></image>   
+  </view> -->
+	<loading>
+		加载中...
+	</loading>
+</view>
+<view hidden="{{one && two}}">
+	<view class='aui-padded-15 aui-bg-white aui-padded-b-0'>
+		<view class="box-shadow flex aui-padded-10">
+			<view class="flex">
+				<view class="flex" bindtap="city">
+					<view class="aui-font-size-14">{{area_name}}</view>
+					<view class="down aui-margin-l-5">
+						<image src="/image/down.png"></image>
+					</view>
+				</view>
+
+				<view class="aui-margin-l-10" bindtap="jump_zu">
+					<input class="inp" type="text" placeholder="请输入小区名称..." readOnly="readOnly" disabled="disabled"></input>
+				</view>
+			</view>
+		</view>
+		<view class="aui-margin-t-15 shouye">
+			<view class="banner bg-radius">
+				<swiper interval="2000" circular indicator-dots duration="500" autoplay indicator-color="#cccccc" indicator-active-color="#ffd12d ">
+					<swiper-item wx:for="{{banner_list}}" wx:key="{{key}}">
+						<image src="{{item.coverImage}}" mode="aspectFill" bindtap="jump" data-id="{{item.id}}" data-status="{{item.status}}" data-prid="{{item.primaryId}}"></image>
+					</swiper-item>
+				</swiper>
+			</view>
+		</view>
+		<!-- 通告 -->
+		<!-- 通知、公告 -->
+		<view class="aui-padded-t-10 aui-padded-b-10" wx:if="{{activityList.length>0}}" bindtap="zx_detail">
+			<view class="bg-radius flex aui-bg-white">
+				<view class="zx_pic aui-margin-r-5">
+					<image src="/image/gonggao2.png"></image>
+				</view>
+				<view class="aui-font-size-13 aui-ellipsis-1 zx_txt aui-text-theme">
+					<swiper class="zixun_banner" interval="2000" autoplay="true" circular duration="500" vertical='true'>
+						<swiper-item wx:for="{{activityList}}" wx:key="act">
+							<view>{{item.title}}</view>
+						</swiper-item>
+					</swiper>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-border-bgT aui-padded-15 aui-bg-white">
+		<view class="fl flex aui-margin-t-5 aui-padded-l-15 aui-padded-r-15">
+			<view class="fl_box aui-text-center aui-text-gray aui-font-size-14" bindtap="old_house" data-status="1">
+				<view class="fl_pic">
+					<image src="/image/fl1.png"></image>
+				</view>
+				<view class="aui-margin-t-5">新房</view>
+			</view>
+			<view class="fl_box aui-text-center aui-text-gray aui-font-size-14" bindtap="old_house" data-status="2">
+				<view class="fl_pic">
+					<image src="/image/fl2.png"></image>
+				</view>
+				<view class="aui-margin-t-5">二手房</view>
+			</view>
+			<view class="fl_box aui-text-center aui-text-gray aui-font-size-14" bindtap="old_house" data-status="3">
+				<view class="fl_pic">
+					<image src="/image/fl3.png"></image>
+				</view>
+				<view class="aui-margin-t-5">租房</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-border-bgT aui-padded-15 aui-bg-white">
+
+		<view class="flex ">
+			<view class="aui-font-size-17 fw_bold">西安必看好房</view>
+			<view class="flex" bindtap="more">
+				<view class="aui-margin-r-5 aui-font-size-12">查看更多</view>
+				<image class="jt" src="/image/jt_right.png"></image>
+			</view>
+		</view>
+		<view class="aui-row aui-padded-t-10">
+			<block wx:for="{{list}}" wx:key="{{index}}" wx:for-item="item">
+				<view class="aui-col-xs-4" catchtap="detail" data-id="{{item.houseId}}" data-type="2">
+					<view class="zq bg-radius">
+						<image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+					</view>
+					<view class="weui-label aui-margin-t-5 aui-font-size-12 aui-ellipsis-1">{{item.info}}<sup></sup></view>
+					<view class="aui-text-theme aui-font-size-13 ">{{item.price}}</view>
+				</view>
+			</block>
+		</view>
+	</view>
+	<view class="aui-border-bgT aui-padded-15 aui-bg-white">
+		<view class=" shouye_list">
+			<view class="aui-font-size-17 fw_bold ">热荐楼盘</view>
+
+
+			<view class=" aui-padded-t-10">
+				<block wx:for="{{list_data}}" wx:key="{{idx}}" wx:for-item="item">
+					<view class="flex item_box aui-margin-b-10 aui-padded-t-5" catchtap="detail" data-id="{{item.houseId}}" data-type="2">
+						<view class="item bg-radius">
+							<image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+						</view>
+						<view class="aui-margin-l-10  right ">
+							<view class=" aui-ellipsis-1 fw_5">{{item.houseName}}</view>
+							<view class="flex aui-margin-t-10">
+								<image class="address" src="/image/address.png"></image>
+								<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 " style="width:92%">{{item.address}}</view>
+							</view>
+							<view class="flex aui-margin-t-10" style="justify-content: flex-start;">
+								<view class="aui-text-theme weui-label aui-font-size-15"><text class="ft_5">{{item.price}}</text></view>
+								<view class="aui-text-gray weui-label aui-font-size-10 aui-margin-l-10">{{item.area}}</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+
+
+
+
+
+	</view>
+</view>

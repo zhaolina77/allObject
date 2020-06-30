@@ -1,0 +1,20 @@
+<view class="aui-padded-15">
+	<view class="aui-bg-white flex aui-padded-15 aui-margin-b-15 bg-radius" wx:for="{{list}}" wx:key="lis">
+		<view class="flex ">
+			<view class="pic bg-radius">
+				<image src="{{item.businessLicense}}" mode="aspectFill"></image>
+			</view>
+			<view class="aui-margin-l-10">
+				<view>{{item.merchantName}}</view>
+				<view class="aui-text-grayer aui-font-size-12 aui-margin-t-10 flex">
+				
+					<view class="aui-text-danger aui-font-size-12 " wx:if="{{item.status==4}}" bindtap="content" data-content="{{item.refusalCause}}" wx:if="{{item.status==4}}">驳回原因>></view>
+						<text wx:else>{{item.statusName}}</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="aui-text-theme aui-font-size-12" data-id="{{item.id}}" bindtap="detail">查看详情</view>
+	</view>
+
+</view>

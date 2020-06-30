@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>我的购物车</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css" />
+	</head>
+	<style type="text/css">
+		.shangpin-list .shop-pic {
+			height: 3.5rem;
+			width: 6rem;
+			border-radius: 0.3rem;
+			overflow: hidden;
+			border: none !important;
+		}
+		
+		.shangpin-list .shop-pic img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		
+		.pic img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		.guanzhu-list .aui-list-item-inner {
+			display: flex !important;
+		}
+		
+		.aui-text-blue {
+			border-radius: 0.3rem;
+		}
+		
+		.mui-btn-danger,
+		.mui-btn-negative,
+		.mui-btn-red {
+			background-color: #FF5D5D !important;
+		}
+		
+		.laoshi_pic {
+			width: .5rem;
+			height: .5rem;
+		}
+		
+		.laoshi_pic img {
+			width: 100%;
+			height: 100%;
+		}
+		
+		.sp_list .shop-pic {
+			height: 3.5rem;
+			width: 3.5rem;
+			border-radius: 0.3rem;
+			overflow: hidden;
+			border: 1px solid #EEEEEE;
+		}
+		
+		.aui-radio:checked, .aui-radio.aui-checked, .aui-checkbox:checked, .aui-checkbox.aui-checked {background-color: #58CAB9;border: solid 1px #58CAB9;text-align: center;background-clip: padding-box;}
+		.add_pic{width: 0.8rem;height: 0.8rem;}
+		.add_pic img{width: 100%;height: 100%;}
+		.shanchu img{width: 0.75rem;height: 0.75rem;}
+		.sc_pic{position: relative;}
+		.sc_shang{width: 100%;height:100%;position: absolute;left: 0;top: 0;background-color: rgba(255,255,255,.6);}
+		
+		.aui-list .mui-table-view:last-child .aui-list-item{border-bottom:  none !important}
+
+	</style>
+
+	<body class="aui-bg-white">
+		<div class="aui-content ">
+
+			<div class="shangpin-list sp_list ">
+				<ul class="aui-list aui-media-list sp">
+					<li class="mui-table-view aui-padded-l-15  ">
+						<div class="mui-table-view-cell aui-padded-0 aui-padded-t-10 ">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red aui-font-size-15">删除</a>
+							</div>
+							<div class="mui-slider-handle   aui-padded-r-15">
+								<div class="aui-list-item aui-padded-l-0  aui-border-b">
+									<div class="aui-media-list-item-inner aui-padded-l-0  aui-padded-b-5 aui-padded-b-15 flex">
+										<div class="aui-pull-left aui-margin-r-5 aui-font-size-15 quanxuan">
+											<input type="checkbox" name="is_pay" class="aui-radio aui-margin-t-0 aui-margin-r-5" />
+										</div>
+										<div class="aui-list-item-media aui-padded-b-0 ">
+											<div class="shop-pic">
+												<img src="../../image/banner.jpg" />
+											</div>
+										</div>
+										<div class="aui-list-item-inner" style="padding-right: 0 !important;">
+											<div class="flex aui-list-item-text">
+												<div class=" aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-ellipsis-1" >
+													中国古典园林史正版中国古典园林史正版中国古典园林史正版
+												</div>
+												<div class="aui-text-right flex aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-padded-l-15" style="width: 6rem;justify-content: flex-end;">
+													
+													<span>￥</span><span>18</span>
+												</div>
+											</div>
+											<div class="flex aui-list-item-text aui-margin-t-15" style="justify-content: space-between;">
+												<div class=" aui-padded-t-5 aui-font-size-12 fweight-5 aui-text-grayer aui-ellipsis-1" >
+													<span>正版</span><span class="aui-margin-l-10">X</span><span>2</span>
+												</div>
+												<div class="flex aui-list-item-text flex aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-padded-l-15" style="width:4rem;">
+													<div class="add_pic">
+														<img src="../../image/mius.png"/>
+													</div>
+													<div class="aui-margin-l-10 aui-margin-r-10">2</div>
+													<div class="add_pic">
+														<img src="../../image/add.png"/>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view aui-padded-l-15  ">
+						<div class="mui-table-view-cell aui-padded-0 aui-padded-t-10 ">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red aui-font-size-15">删除</a>
+							</div>
+							<div class="mui-slider-handle   aui-padded-r-15">
+								<div class="aui-list-item aui-padded-l-0  aui-border-b">
+									<div class="aui-media-list-item-inner aui-padded-l-0  aui-padded-b-5 aui-padded-b-15 flex">
+										<div class="aui-pull-left aui-margin-r-5 aui-font-size-15 quanxuan">
+											<input type="checkbox" name="is_pay" class="aui-radio aui-margin-t-0 aui-margin-r-5" />
+										</div>
+										<div class="aui-list-item-media aui-padded-b-0 ">
+											<div class="shop-pic">
+												<img src="../../image/banner.jpg" />
+											</div>
+										</div>
+										<div class="aui-list-item-inner" style="padding-right: 0 !important;">
+											<div class="flex aui-list-item-text">
+												<div class=" aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-ellipsis-1" >
+													中国古典园林史正版中国古典园林史正版中国古典园林史正版
+												</div>
+												<div class="aui-list-item-text flex aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-padded-l-15" style="width: 6rem;">
+													<span>￥</span><span>1889</span>
+												</div>
+											</div>
+											<div class="flex aui-list-item-text aui-margin-t-15" style="justify-content: space-between;">
+												<div class=" aui-padded-t-5 aui-font-size-12 fweight-5 aui-text-grayer aui-ellipsis-1" >
+													<span>正版</span><span class="aui-margin-l-10">X</span><span>2</span>
+												</div>
+												<div class="flex aui-list-item-text flex aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-padded-l-15" style="width:4rem;">
+													<div class="add_pic">
+														<img src="../../image/mius.png"/>
+													</div>
+													<div class="aui-margin-l-10 aui-margin-r-10">2</div>
+													<div class="add_pic">
+														<img src="../../image/add.png"/>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view aui-padded-l-15  ">
+						<div class="mui-table-view-cell aui-padded-0 aui-padded-t-10 ">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red aui-font-size-15">删除</a>
+							</div>
+							<div class="mui-slider-handle   aui-padded-r-15">
+								<div class="aui-list-item aui-padded-l-0  aui-border-b">
+									<div class="aui-media-list-item-inner aui-padded-l-0  aui-padded-b-5 aui-padded-b-15 flex">
+										<div class="aui-pull-left aui-margin-r-5 aui-font-size-15 quanxuan">
+											<input type="checkbox" name="is_pay" class="aui-radio aui-margin-t-0 aui-margin-r-5" />
+										</div>
+										<div class="aui-list-item-media aui-padded-b-0 ">
+											<div class="shop-pic">
+												<img src="../../image/banner.jpg" />
+											</div>
+										</div>
+										<div class="aui-list-item-inner" style="padding-right: 0 !important;">
+											<div class="flex aui-list-item-text">
+												<div class=" aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-ellipsis-1" >
+													中国古典园林史正版中国古典园林史正版中国古典园林史正版
+												</div>
+												<div class="aui-list-item-text flex aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-padded-l-15" style="width: 6rem;">
+													<span>￥</span><span>1889</span>
+												</div>
+											</div>
+											<div class="flex aui-list-item-text aui-margin-t-15" style="justify-content: space-between;">
+												<div class=" aui-padded-t-5 aui-font-size-12 fweight-5 aui-text-grayer aui-ellipsis-1" >
+													<span>正版</span><span class="aui-margin-l-10">X</span><span>2</span>
+												</div>
+												<div class="flex aui-list-item-text flex aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-black aui-padded-l-15" style="width:4rem;">
+													<div class="add_pic">
+														<img src="../../image/mius.png"/>
+													</div>
+													<div class="aui-margin-l-10 aui-margin-r-10">2</div>
+													<div class="add_pic">
+														<img src="../../image/add.png"/>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+
+				</ul>
+				<ul class="aui-list aui-media-list aui-border-bgT">
+					<li class="mui-table-view aui-padded-l-15 aui-padded-r-15 flex aui-padded-t-15" style="justify-content: space-between;">
+						<div class="">
+							<span>失效商品</span><span>（3）</span>
+						</div>
+						<div class="flex">
+							<div class="shanchu">
+								<img src="../../image/sc.png"/>
+								
+							</div>
+							<div class="aui-text-gray aui-font-size-14 aui-padded-l-5">
+								清空失效商品
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view aui-padded-l-15  ">
+						<div class="mui-table-view-cell aui-padded-0 aui-padded-t-10 ">
+							
+							<div class="mui-slider-handle   aui-padded-r-15">
+								<div class="aui-list-item aui-padded-l-0 aui-border-b">
+									<div class="aui-media-list-item-inner aui-padded-l-0  aui-padded-b-5 aui-padded-b-15 flex">
+										
+										<div class="aui-list-item-media aui-padded-b-0 ">
+											<div class="shop-pic sc_pic">
+												<img src="../../image/banner.jpg" />
+												<div class="sc_shang">
+													
+												</div>
+											</div>
+										</div>
+										<div class="aui-list-item-inner" style="padding-right: 0 !important;">
+											<div class="flex aui-list-item-text">
+												<div class=" aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-grayer aui-ellipsis-1" >
+													中国古典园林史正版中国古典园林史正版中国古典园林史正版
+												</div>
+											</div>
+											<div class="flex aui-list-item-text aui-margin-t-15 aui-text-grayer" style="justify-content: space-between;">
+												<div class=" aui-padded-t-5 aui-font-size-12 fweight-5 aui-text-grayer aui-ellipsis-1 " >
+													<span>正版</span><span class="aui-margin-l-10">X</span><span>2</span>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view aui-padded-l-15  ">
+						<div class="mui-table-view-cell aui-padded-0 aui-padded-t-10 ">
+							
+							<div class="mui-slider-handle   aui-padded-r-15">
+								<div class="aui-list-item aui-padded-l-0 aui-border-b">
+									<div class="aui-media-list-item-inner aui-padded-l-0  aui-padded-b-5 aui-padded-b-15 flex">
+										
+										<div class="aui-list-item-media aui-padded-b-0 ">
+											<div class="shop-pic sc_pic">
+												<img src="../../image/banner.jpg" />
+												<div class="sc_shang">
+													
+												</div>
+											</div>
+										</div>
+										<div class="aui-list-item-inner" style="padding-right: 0 !important;">
+											<div class="flex aui-list-item-text">
+												<div class=" aui-padded-t-5 aui-font-size-15 fweight-5 aui-text-grayer aui-ellipsis-1" >
+													中国古典园林史正版中国古典园林史正版中国古典园林史正版
+												</div>
+											</div>
+											<div class="flex aui-list-item-text aui-margin-t-15 aui-text-grayer" style="justify-content: space-between;">
+												<div class=" aui-padded-t-5 aui-font-size-12 fweight-5 aui-text-grayer aui-ellipsis-1 " >
+													<span>正版</span><span class="aui-margin-l-10">X</span><span>2</span>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+
+				</ul>
+			</div>
+
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>
+<script type="text/javascript" src="../../script/mui.min.js"></script>

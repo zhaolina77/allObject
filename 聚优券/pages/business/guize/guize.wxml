@@ -1,0 +1,86 @@
+<view>
+	<view class="aui-padded-15 aui-bg-white">
+		<view class="top">
+			<image src="/image/step_3.png"></image>
+		</view>
+		<view class="flex aui-margin-t-5">
+			<text class="aui-text-theme">主体信息</text>
+			<text class="aui-text-theme">商户信息</text>
+			<text class="aui-text-theme">行业规则</text>
+			<text class="">收款账户</text>
+		</view>
+	</view>
+
+
+	<view class="aui-padded-15">
+		<view class="fw-bold">商户信息</view>
+	</view>
+
+
+	<view class="aui-bg-white">
+		<view class="aui-padded-15 aui-padded-b-0">
+			<view class=" flex aui-border-b aui-padded-b-15">
+				<view class="aui-font-size-14">行业规则</view>
+				<view class="flex" style="max-width:80%">
+					<view class="section">
+						<picker bindchange="bindPickerChange" value="{{index}}" range="{{list}}">
+							<view class="picker  aui-ellipsis-1">
+								{{guize==''?'请选择':guize}}
+							</view>
+						</picker>
+					</view>
+					<view class="jt aui-margin-l-5">
+						<image src="/image/jt_right.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-15 aui-padded-b-0">
+			<view class=" flex aui-border-b aui-padded-b-15">
+				<view class="aui-font-size-14">特殊资质</view>
+				<view class="flex" style="max-width:80%">
+					<view class="section">
+						<picker bindchange="bindPickerChange1" value="{{index}}" range="{{zzList}}">
+							<view class="picker  aui-ellipsis-1">
+								{{zizhi==''?'请选择':zizhi}}
+							</view>
+						</picker>
+					</view>
+					<view class="jt aui-margin-l-5">
+						<image src="/image/jt_right.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-15 aui-font-size-12" wx:if="{{tixing!=''}}">
+			<view class="aui-text-red">
+				{{tixing}}
+			</view>
+		</view>
+		<view class="aui-padded-15">
+			<view class="aui-font-size-14">
+				<text>请上传特殊资质照片</text>
+				<text class="aui-text-grayer aui-font-size-11">（最多3张）</text>
+			</view>
+			<view class="aui-row aui-padded-b-15 aui-border-b  aui-row">
+				<view class="pic   aui-margin-t-15 aui-col-xs-4 bg-radius" wx:for='{{img}}'>
+					<image src="{{item}}" mode="aspectFill"></image>
+					<image src="/image/close1.png" class="close" bindtap="del" data-index="{{index}}"></image>
+				</view>
+				<view class="add   aui-margin-t-15 aui-col-xs-4" bindtap="changeAvatar" wx:if="{{img.length<3||img==null}}">
+					<image src="/image/add-pic1.png"></image>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+
+	<view class="flex aui-padded-15" wx:if="{{status==-1||status==0||status==4}}">
+		<view class="aui-btn next" bindtap="next">保存草稿</view>
+		<view class="aui-btn aui-btn-theme next" bindtap="next">下一步</view>
+	</view>
+	<view class="flex aui-padded-15" wx:else>
+		<view class="aui-btn aui-btn-theme next" style="width:100%" bindtap="next1">下一页</view>
+	</view>
+</view>

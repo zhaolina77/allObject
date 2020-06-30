@@ -1,0 +1,8 @@
+<view class="aui-content mine-content-footer aui-padded-10">
+  <template  is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view class="aui-bar aui-bar-tab aui-padded-15 aui-bg-white " id="footer" bindtap="rz">
+    <view class="aui-btn aui-btn-block aui-btn-theme aui-font-size-15">立即认证</view>
+</view>
+<import src="../../../wxParse/wxParse.wxml"/>

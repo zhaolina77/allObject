@@ -1,0 +1,71 @@
+<view class="aui-content" id="app">
+
+			<view class="aui-list aui-media-list info">
+				<view class="aui-list-item">
+					<view class="aui-media-list-item-inner ">
+              <view class="aui-list-item-inner">
+                  <view class="aui-list-item-text">
+                  	<view class="">
+                  		<text class="fweight-5 aui-text-black aui-font-size-16">{{account.nick_name}}</text>
+                  	</view>
+                  </view>
+
+									<view class="aui-list-item-text aui-text-orange aui-font-size-12 aui-padded-t-10">
+										<view>	{{account.type_name}}<label  wx:if="{{state>=3}}">：{{account.expire_date}}</label></view>
+									</view>
+
+              </view>
+              <view class="aui-list-item-media">
+                  <view class="head-pic">
+                  	<image src="{{account.head_portrait}}"></image>
+                  </view>
+              </view>
+          </view>
+				</view>
+			</view>
+			<view class="aui-list aui-media-list aui-border-bgT aui-border-bgB aui-padded-l-15 aui-padded-r-15">
+				<view class="aui-padded-t-15 aui-padded-b-15 fweight-5 aui-font-size-15 aui-border-b">认证类型</view>
+					<view class="aui-list-item aui-border-b aui-padded-l-0" bindtap="people_auth">
+						<view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+							<view class="aui-list-item-media">
+                   <image class="vip" src="/image/personal.png"  mode="widthFix"></image>
+              </view>
+              <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                	<view class="">
+                		<view class="aui-text-black aui-font-size-15">
+                    	个人认证
+                    </view>
+                	</view>
+                  <!-- <view class="aui-btn aui-btn-theme aui-font-size-12" @click="people_auth()">去认证</view> -->
+									<view class="aui-list-item-right">
+										<image class="jt" src="/image/jt-right2.png" mode="widthFix"></image>
+									</view>
+                </view>
+              </view>
+	          </view>
+					</view>
+					<view class="aui-list-item aui-border-b aui-padded-l-0" bindtap="company_auth">
+						<view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5">
+							<view class="aui-list-item-media">
+                   <image class="vip" src="/image/company.png" mode="widthFix"></image>
+              </view>
+              <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-text aui-text-grayer aui-font-size-12">
+                	<view class="">
+                		<view class="aui-text-black aui-font-size-15">
+                    	单位认证
+                    </view>
+                	</view>
+                  <!-- <view class="aui-btn aui-btn-theme aui-font-size-12" @click="company_auth()">去认证</view> -->
+									<view class="aui-list-item-right">
+										<image class="jt" src="/image/jt-right2.png"  mode="widthFix"></image>
+									</view>
+                </view>
+              </view>
+	          </view>
+					</view>
+			</view>
+
+
+		</view>

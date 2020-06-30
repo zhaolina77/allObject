@@ -1,0 +1,21 @@
+<view class="aui-bg-grayer aui-text-center aui-padded-15 aui-text-orange aui-font-size-13">请支付认证费用，支付完成后完成账号认证</view>
+<view class="aui-text-center" style="padding: 1.8rem 0;">
+    <view class="aui-text-gray aui-font-size-13">支付金额</view>
+    <view class="aui-padded-t-15">￥ <text class="aui-font-weight" style="font-size: 1.5rem;"> {{price}}</text>/年</view>
+</view>
+<view class="aui-list aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-padded-t-15 aui-padded-b-15 fweight-5 aui-font-size-16">支付方式</view>
+    <view class="aui-list-item aui-padded-l-0 aui-padded-t-5 aui-padded-b-5 aui-border-b">
+        <view class="aui-list-item-inner aui-padded-r-0">
+            <view class="aui-list-item-title aui-font-size-14">
+                <image src="/image/wxzf.png" mode="widthFix"  class="pay"></image> 微信支付
+            </view>
+            <view class="aui-list-item-right">
+                <radio color="#0051FE" checked></radio>
+            </view>
+        </view>
+    </view>
+    <view class="aui-padded-15" style="margin-top:1.5rem;" bindtap="pay">
+        <view class="aui-btn aui-btn-block  aui-btn-theme">立即支付</view>
+    </view>
+</view>

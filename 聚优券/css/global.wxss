@@ -1,0 +1,60 @@
+/* 背景颜色 */
+page{background-color: #F6F6F6 !important;color: #333333;}
+/*背景圆角*/
+.bg-radius{border-radius: 10rpx;overflow: hidden;}
+
+/* 字体加粗 */
+.fw-bold{font-weight: bold;}
+.fw5{font-weight: 500;}
+/* banner */
+.banner{
+    height:330rpx;
+    position: relative;
+    background-color: #F5F6FA;
+    border-radius: 15rpx;
+    overflow: hidden;
+}
+.banner swiper{
+    height:330rpx;
+    position: relative;
+    
+}
+.banner swiper-item image{
+    width: 100%;
+    height: 100%;
+}
+.flex{display: flex;justify-content:space-between;align-items: center;}
+
+
+.pholder{font-size: 28rpx;color: #999;}
+
+
+/* 箭头图标 */
+.jt image{width: 24rpx;height: 24rpx;}
+
+
+radio .wx-radio-input.wx-radio-input-checked {
+    border-color: #03a9f4;
+    background: #03a9f4;
+  }
+   
+  radio .wx-radio-input {
+    height:30rpx;
+    width:30rpx;
+    margin-top: -4rpx;
+    border-radius: 50%;
+    border: 1rpx solid #999;
+    background: transparent;
+  }
+   
+  radio .wx-radio-input.wx-radio-input-checked::before {
+    border-radius: 50%; /* 圆角 */
+    width: 30rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+    height: 30rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+    line-height: 30rpx;
+    text-align: center;
+    font-size: 30rpx; /* 对勾大小 30rpx */
+    color: #fff; /* 对勾颜色 白色 */
+    background: #009B4D;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);}

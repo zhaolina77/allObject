@@ -1,0 +1,12 @@
+<!--pages/message/message.wxml-->
+<block wx:for="{{list}}" wx:key="{{index}}">
+<view class="aui-text-center aui-font-size-13 aui-text-gray aui-padded-15" data-id="{{index}}" bindtap="todetail">{{item.create_time}}</view>
+<view class="aui-padded-15 aui-padded-t-0 aui-padded-b-0"  data-id="{{index}}" bindtap="todetail">
+    <view class="aui-bg-white aui-padded-15">
+      <view class="aui-font-size-17 aui-text-blacker aui-font-weight">{{item.title}}</view>
+      <image class="img" src="{{item.thumb}}"></image>
+      <!-- <view class="aui-font-size-14">{{item.content}}</view> -->
+    </view>
+</view>
+</block>
+

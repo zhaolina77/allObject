@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>二手商品详情</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper-4.3.3.min.css" />
+		<style type="text/css">
+			.shop-pic {
+				height: 18rem;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.shop-pic .swiper-container {
+				height: 18rem;
+			}
+			
+			.shop-pic img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.laba {
+				position: absolute;
+				bottom: 0.75rem;
+				right: 0.75rem;
+				background-color: rgba(0, 0, 0, .2);
+				border-radius: 0.8rem;
+				padding: .1rem 0.8rem;
+			}
+			
+			.aui-list-item-inner {
+				min-height: auto !important;
+			}
+			
+			.aui-list-item-media {
+				width: auto !important;
+			}
+			.shoucang{
+				height: 2.75rem;
+			}
+			.shoucang img{
+				width: 1.1rem;
+				height: 1.1rem;
+			}
+			.jcx{padding: 0.2rem;}
+		</style>
+	</head>
+
+	<body>
+		<div class="aui-content">
+			<div class=" shop-pic">
+				<div id="topNav" class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="aui-list aui-media-list">
+				<div class="aui-list-item aui-padded-l-0">
+					<div class="aui-media-list-item-inner aui-border-bgB aui-padded-l-15">
+						<div class="aui-list-item-inner">
+							<div class="aui-list-item-text  aui-padded-t-5" style="justify-content: flex-start;">
+								<div class="aui-font-size-12 aui-text-blue aui-bg-blue  border-radius-2 jcx">
+									九成新
+								</div>
+								<div class="aui-font-size-20 aui-text-blacker  aui-font-weight">
+									《中国古典园林史》正版
+								</div>
+								
+							</div>
+							<div class="aui-list-item-text aui-padded-t-15  flex">
+									<div class="">
+										<span class="aui-text-grayer aui-margin-r-5 fweight-5" style="vertical-align: middle;">商议价</span>
+										<span class="aui-font-size-20 aui-text-theme">￥2430</span>
+										<span class="aui-font-size-20 delline aui-font-size-12 aui-text-grayer aui-padded-l-10">￥3000</span>
+									</div>
+									<div class="shoucang aui-text-center">
+										<img src="../../image/shoucang.png"/>
+										<p class="aui-text-gray aui-font-size-13">
+											收藏677+
+										</p>
+									</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="aui-padded-b-15">
+				<!--详情-->
+				<div class="aui-padded-15 aui-font-weight aui-font-size-16 aui-border-bgT">商品描述</div>
+				<div class="aui-padded-l-15 aui-padded-r-15">
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">品牌: 水戏黑鲨</div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">颜色分类: 单只黑鲨3.6米定制款 </div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">钓竿长度: 2.7M 3.9m 3M 3.6m 4.5</div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">型号：P31pro</div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">垂钓场所: 海洋滩钓 海洋船钓 海</div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">钓竿分类: 台钓竿</div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">颜色：天空蓝</div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">上市时间: 2018年春季</div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">钓竿调性: 超硬调</div>
+					<div class="aui-font-size-14 aui-text-gray aui-margin-t-10">价格区间: 101-200元</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		</div>
+	</body>
+
+</html>
+<script src="../../script/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper('#topNav', {
+		freeMode: false,
+		slidesPerView: 'auto',
+		autoplay: true,
+		on: {
+			click: function(e) {
+				console.log(JSON.stringify(
+					e));
+				vm.handleClickSlide(this
+					.realIndex);
+			},
+		},
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		preventLinksPropagation: false,
+	})
+	var mySwiper = new Swiper('#slide', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		freeModeMomentumRatio: 1
+	})
+</script>

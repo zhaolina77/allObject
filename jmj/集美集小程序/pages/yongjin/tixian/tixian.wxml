@@ -1,0 +1,86 @@
+<view class="aui-content">
+	<view class=" list">
+		<view class="aui-padded-15 aui-border-bgT aui-border-bgB" bindtap="bdZhanghu">
+
+			<view wx:if="{{ite==''}}">添加银行账号</view>
+			<view class="flex" wx:else>
+				<view class="flex">
+					<view class="huiyuan_pic">
+						<image src="{{ite.thumb}}"></image>
+					</view>
+					<view class="flex huiyuan_txt aui-padded-l-10">
+						<view class="aui-padded-l-5 aui-font-size-17 fweight-5 flex">
+							<view class="aui-border-r aui-padded-r-10">{{ite.name}}</view>
+							<view class=" fweight-5 aui-padded-l-10">{{ite.card_number}}</view>
+						</view>
+					</view>
+				</view>
+				<view class="jt">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+
+		</view>
+		<view class="aui-padded-15 aui-border-bgB">
+			<view class=" aui-padded-t-5 aui-font-size-15 aui-padded-t-15">提现金额</view>
+			<view class="flex aui-padded-t-15 fweight-5">
+				<view class="flex " style="width:50% !important">
+					<view class="aui-font-size-15">￥</view>
+					<input class="jine" type="number" value="{{jine}}" bindinput="jine"></input>
+					<!-- <view class="aui-font-size-30 aui-padded-l-5">4000</view> -->
+				</view>
+				<view class="aui-font-size-15 aui-text-grayer">
+					<view>（可提现：{{commission}}）</view>
+				</view>
+			</view>
+			<view class="flex aui-padded-t-10 aui-padded-b-15 fweight-5 aui-text-theme">
+				<view class="">
+				</view>
+				<view class=" " bindtap="all">
+					全部提现
+				</view>
+			</view>
+
+		</view>
+		<view class="aui-list aui-form-list aui-padded-15">
+			<view class="aui-list-item aui-border-b aui-padded-0">
+				<view class="aui-list-item-inner phone">
+					<view class="aui-list-item-label aui-font-size-15" style="width:20% !important">
+						手机号:
+					</view>
+					<view class="aui-list-item-input">
+						<input type="text" placeholder="请输入手机号" disabled="{{phone==''?'false':'true'}}" value="{{phone}}"></input>
+					</view>
+				</view>
+			</view>
+			<view class="aui-list-item aui-border-b aui-padded-0">
+				<view class="aui-list-item-inner yanzheng">
+					<view class="aui-list-item-input">
+						<input type="text" placeholder-class="phcolor" placeholder="请输入验证码" bindinput="codeNum" value="{{code}}"></input>
+					</view>
+					<view class=" aui-btn-outlined aui-btn aui-font-size-14 aui-text-center" bindtap="code"  wx:if="{{dis==0}}">
+						{{codename}}
+					</view>
+					<view class=" aui-btn-outlined aui-btn aui-font-size-14 aui-text-center"   wx:else>
+						{{codename}}
+					</view>
+				</view>
+			</view>
+			<view class="flex aui-list-item aui-padded-0  aui-padded-t-15 aui-font-size-12" style="justify-content: flex-start;">
+				<view class="dui_icon">
+					<image src="/image/dui.png"></image>
+				</view>
+				<view class="aui-padded-l-5">
+					以上账号为本人确认提交，如发生财产纠纷与本平台无关
+				</view>
+
+			</view>
+		</view>
+	</view>
+
+
+</view>
+
+<view class="btn_box">
+	<view class="btn aui-bg-theme aui-text-center aui-text-white aui-margin-t-10" bindtap="sub">提交</view>
+</view>

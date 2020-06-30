@@ -1,0 +1,2192 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.0",
+	"appid": "wx97855cf97e1ca875",
+	"projectname": "%E9%92%93%E9%B1%BC%E4%BF%AE%E6%94%B9",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/business/business",
+					"pathName": "pages/index/business/business",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/home/home",
+					"pathName": "pages/yuhuobang/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/index/index",
+					"pathName": "pages/information/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/xiehui/xiehui",
+					"pathName": "pages/xiehui/xiehui/xiehui",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/xiehuiDetail/xiehuiDetail",
+					"pathName": "pages/xiehui/xiehuiDetail/xiehuiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/jieshao/jieshao",
+					"pathName": "pages/xiehui/jieshao/jieshao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"pathName": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/jieshao/jieshao",
+					"pathName": "pages/xiehui/jieshao/jieshao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/detail/detail",
+					"pathName": "pages/information/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/pinglunDetail/pinglunDetail",
+					"pathName": "pages/yuhuobang/pinglunDetail/pinglunDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/home/home",
+					"pathName": "pages/yuhuobang/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/cansai/cansai",
+					"pathName": "pages/xiehui/cansai/cansai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/quan/quan",
+					"pathName": "pages/saishi/quan/quan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/quan/quan",
+					"pathName": "pages/mine/quan/quan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/quanDetail/quanDetail",
+					"pathName": "pages/saishi/quanDetail/quanDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/jieshao/jieshao",
+					"pathName": "pages/xiehui/jieshao/jieshao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/cansai/cansai",
+					"pathName": "pages/xiehui/cansai/cansai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/index/index",
+					"pathName": "pages/information/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myFabu/myFabu",
+					"pathName": "pages/mine/myFabu/myFabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myGuanzhu/myGuanzhu",
+					"pathName": "pages/mine/myGuanzhu/myGuanzhu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaocahng/diaocahng",
+					"pathName": "pages/diaocahng/diaocahng/diaocahng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"pathName": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/dccomment/dccomment",
+					"pathName": "pages/diaocahng/dccomment/dccomment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/dcco/dcc",
+					"pathName": "pages/diaocahng/dcco/dcc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/index/index",
+					"pathName": "pages/information/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/dccomment/dccomment",
+					"pathName": "pages/diaocahng/dccomment/dccomment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaocahng/diaocahng",
+					"pathName": "pages/diaocahng/diaocahng/diaocahng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/guize/guize",
+					"pathName": "pages/yuhuobang/guize/guize",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/jubao/jubao",
+					"pathName": "pages/yuhuobang/jubao/jubao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/fabu/fabu",
+					"pathName": "pages/yuhuobang/fabu/fabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/renzhengTj/renzhengTj",
+					"pathName": "pages/rezheng/renzhengTj/renzhengTj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"pathName": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"pathName": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"pathName": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/home/home",
+					"pathName": "pages/yuhuobang/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/index/index",
+					"pathName": "pages/information/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myCollection/myCollection",
+					"pathName": "pages/mine/myCollection/myCollection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myGuanzhu/myGuanzhu",
+					"pathName": "pages/mine/myGuanzhu/myGuanzhu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myFabu/myFabu",
+					"pathName": "pages/mine/myFabu/myFabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yinsi/yinsi",
+					"pathName": "pages/mine/yinsi/yinsi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/zc/zc",
+					"pathName": "pages/mine/zc/zc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userinfo/userinfo",
+					"pathName": "pages/userinfo/userinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/index/index",
+					"pathName": "pages/set/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/daifahuo/daifahuo",
+					"pathName": "pages/order/daifahuo/daifahuo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/index/index",
+					"pathName": "pages/information/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/detail/detail",
+					"pathName": "pages/information/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/xiehuiDetail/xiehuiDetail",
+					"pathName": "pages/xiehui/xiehuiDetail/xiehuiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"pathName": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/index/index",
+					"pathName": "pages/set/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/replacePhoneCg/replacePhoneCg",
+					"pathName": "pages/set/replacePhoneCg/replacePhoneCg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/modify/modify",
+					"pathName": "pages/set/modify/modify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/account/account",
+					"pathName": "pages/set/account/account",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/replacePhoneCg/replacePhoneCg",
+					"pathName": "pages/set/replacePhoneCg/replacePhoneCg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userinfo/userinfo",
+					"pathName": "pages/userinfo/userinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/aboutUs/aboutUs",
+					"pathName": "pages/mine/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/index/index",
+					"pathName": "pages/news/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/newsDetail/newsDetail",
+					"pathName": "pages/news/newsDetail/newsDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/huodongTz/huodongTz",
+					"pathName": "pages/news/huodongTz/huodongTz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/newsDetail/newsDetail",
+					"pathName": "pages/news/newsDetail/newsDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/dongtai/dongtai",
+					"pathName": "pages/news/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/classify/classify",
+					"pathName": "pages/shop/classify/classify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/classifyShop/classifyShop",
+					"pathName": "pages/shop/classifyShop/classifyShop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shopDetail/shopDetail",
+					"pathName": "pages/shop/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/xianshigou/xianshigou",
+					"pathName": "pages/shop/xianshigou/xianshigou",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shangjia/shangjia",
+					"pathName": "pages/shop/shangjia/shangjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shangjiaDetail/shangjiaDetail",
+					"pathName": "pages/shop/shangjiaDetail/shangjiaDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shopDetail/shopDetail",
+					"pathName": "pages/shop/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/quanbupingjia/quanbupingjia",
+					"pathName": "pages/shop/quanbupingjia/quanbupingjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/business/business",
+					"pathName": "pages/index/business/business",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJl/searchJl",
+					"pathName": "pages/search/searchJl/searchJl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJg/searchJg",
+					"pathName": "pages/search/searchJg/searchJg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/newsDetail/newsDetail",
+					"pathName": "pages/news/newsDetail/newsDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/personal/personal",
+					"pathName": "pages/news/personal/personal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/company/company",
+					"pathName": "pages/news/company/company",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/home/home",
+					"pathName": "pages/yuhuobang/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/home/home",
+					"pathName": "pages/yuhuobang/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/orderTj/orderTj",
+					"pathName": "pages/shop/orderTj/orderTj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/daifahuo/daifahuo",
+					"pathName": "pages/order/daifahuo/daifahuo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/myOrder/myOrder",
+					"pathName": "pages/order/myOrder/myOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/daifahuo/daifahuo",
+					"pathName": "pages/order/daifahuo/daifahuo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/daifukuan/daifukuan",
+					"pathName": "pages/order/daifukuan/daifukuan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/yiwancheng/yiwancheng",
+					"pathName": "pages/order/yiwancheng/yiwancheng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/yiguanbi/yiguanbi",
+					"pathName": "pages/order/yiguanbi/yiguanbi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/yituikuan/yituikuan",
+					"pathName": "pages/order/yituikuan/yituikuan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/tuikuan/tuikuan",
+					"pathName": "pages/order/tuikuan/tuikuan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/tuikuanJd/tuikuanJd",
+					"pathName": "pages/order/tuikuanJd/tuikuanJd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/yifahuo/yifahuo",
+					"pathName": "pages/order/yifahuo/yifahuo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjiaZx/pingjiaZx",
+					"pathName": "pages/order/pingjiaZx/pingjiaZx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjiaDetail/pingjiaDetail",
+					"pathName": "pages/order/pingjiaDetail/pingjiaDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjia/pingjia",
+					"pathName": "pages/order/pingjia/pingjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjiaDetail/pingjiaDetail",
+					"pathName": "pages/order/pingjiaDetail/pingjiaDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shopDetail/shopDetail",
+					"pathName": "pages/shop/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/daifahuo/daifahuo",
+					"pathName": "pages/order/daifahuo/daifahuo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/tuikuanYy/tuikuanYy",
+					"pathName": "pages/order/tuikuanYy/tuikuanYy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/daifukuan/daifukuan",
+					"pathName": "pages/order/daifukuan/daifukuan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/daifukuan/daifukuan",
+					"pathName": "pages/order/daifukuan/daifukuan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/myOrder/myOrder",
+					"pathName": "pages/order/myOrder/myOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/daifukuan/daifukuan",
+					"pathName": "pages/order/daifukuan/daifukuan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/yifahuo/yifahuo",
+					"pathName": "pages/order/yifahuo/yifahuo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/wuliu/wuliu",
+					"pathName": "pages/order/wuliu/wuliu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/yiguanbi/yiguanbi",
+					"pathName": "pages/order/yiguanbi/yiguanbi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shopDetail/shopDetail",
+					"pathName": "pages/shop/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/orderTj/orderTj",
+					"pathName": "pages/shop/orderTj/orderTj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/orderTj/orderTj",
+					"pathName": "pages/shop/orderTj/orderTj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myGuanzhu/myGuanzhu",
+					"pathName": "pages/mine/myGuanzhu/myGuanzhu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shangjia/shangjia",
+					"pathName": "pages/shop/shangjia/shangjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/orderTj/orderTj",
+					"pathName": "pages/shop/orderTj/orderTj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/orderTj/orderTj",
+					"pathName": "pages/shop/orderTj/orderTj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myCollection/myCollection",
+					"pathName": "pages/mine/myCollection/myCollection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/index/index",
+					"pathName": "pages/set/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/help/help",
+					"pathName": "pages/set/help/help",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/helpDetail/helpDetail",
+					"pathName": "pages/set/helpDetail/helpDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/index/index",
+					"pathName": "pages/set/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/account/account",
+					"pathName": "pages/set/account/account",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/replacePhone/replacePhone",
+					"pathName": "pages/set/replacePhone/replacePhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/replacePhone/replacePhone",
+					"pathName": "pages/set/replacePhone/replacePhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/replacePhoneCg/replacePhoneCg",
+					"pathName": "pages/set/replacePhoneCg/replacePhoneCg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/modify/modify",
+					"pathName": "pages/set/modify/modify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/heimingdan/heimingdan",
+					"pathName": "pages/set/heimingdan/heimingdan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myCollection/myCollection",
+					"pathName": "pages/mine/myCollection/myCollection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/huodongTz/huodongTz",
+					"pathName": "pages/news/huodongTz/huodongTz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/dongtai/dongtai",
+					"pathName": "pages/news/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/dongtai/dongtai",
+					"pathName": "pages/news/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/classify/classify",
+					"pathName": "pages/shop/classify/classify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shangjia/shangjia",
+					"pathName": "pages/shop/shangjia/shangjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/onindex/onindex",
+					"pathName": "pages/rezheng/onindex/onindex",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"pathName": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaocahng/diaocahng",
+					"pathName": "pages/diaocahng/diaocahng/diaocahng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"pathName": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/map/map",
+					"pathName": "pages/diaocahng/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/map/map",
+					"pathName": "pages/diaocahng/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/map/map",
+					"pathName": "pages/diaocahng/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"pathName": "pages/diaocahng/diaochangDetail/diaochangDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/dongtai/dongtai",
+					"pathName": "pages/news/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/jubao/jubao",
+					"pathName": "pages/yuhuobang/jubao/jubao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/jubao/jubao",
+					"pathName": "pages/yuhuobang/jubao/jubao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/dongtai/dongtai",
+					"pathName": "pages/yuhuobang/dongtai/dongtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"pathName": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shopDetail/shopDetail",
+					"pathName": "pages/shop/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjia/pingjia",
+					"pathName": "pages/order/pingjia/pingjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shopDetail/shopDetail",
+					"pathName": "pages/shop/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shopDetail/shopDetail",
+					"pathName": "pages/shop/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shopDetail/shopDetail",
+					"pathName": "pages/shop/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/business/business",
+					"pathName": "pages/index/business/business",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myFabu/myFabu",
+					"pathName": "pages/mine/myFabu/myFabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myGuanzhu/myGuanzhu",
+					"pathName": "pages/mine/myGuanzhu/myGuanzhu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/index/index",
+					"pathName": "pages/news/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/myOrder/myOrder",
+					"pathName": "pages/order/myOrder/myOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/myOrder/myOrder",
+					"pathName": "pages/order/myOrder/myOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/personalAuth/personalAuth",
+					"pathName": "pages/rezheng/personalAuth/personalAuth",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/onindex/onindex",
+					"pathName": "pages/rezheng/onindex/onindex",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/rz/rz",
+					"pathName": "pages/rezheng/rz/rz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/index/index",
+					"pathName": "pages/rezheng/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/dcAuth/dcAuth",
+					"pathName": "pages/rezheng/dcAuth/dcAuth",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/zhuangtai/zhuangtai",
+					"pathName": "pages/rezheng/zhuangtai/zhuangtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/index/index",
+					"pathName": "pages/rezheng/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/rz/rz",
+					"pathName": "pages/rezheng/rz/rz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/zhuangtai/zhuangtai",
+					"pathName": "pages/rezheng/zhuangtai/zhuangtai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/renzhengTj/renzhengTj",
+					"pathName": "pages/rezheng/renzhengTj/renzhengTj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/quanDetail/quanDetail",
+					"pathName": "pages/saishi/quanDetail/quanDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/quan/quan",
+					"pathName": "pages/mine/quan/quan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/index/index",
+					"pathName": "pages/set/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/replacePhone/replacePhone",
+					"pathName": "pages/set/replacePhone/replacePhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/replacePhone/replacePhone",
+					"pathName": "pages/set/replacePhone/replacePhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/modify/modify",
+					"pathName": "pages/set/modify/modify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJg/searchJg",
+					"pathName": "pages/search/searchJg/searchJg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJl/searchJl",
+					"pathName": "pages/search/searchJl/searchJl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/account/account",
+					"pathName": "pages/set/account/account",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/replacePhone/replacePhone",
+					"pathName": "pages/set/replacePhone/replacePhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/fabu/fabu",
+					"pathName": "pages/yuhuobang/fabu/fabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myFabu/myFabu",
+					"pathName": "pages/mine/myFabu/myFabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myFabu/myFabu",
+					"pathName": "pages/mine/myFabu/myFabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myFabu/myFabu",
+					"pathName": "pages/mine/myFabu/myFabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myCollection/myCollection",
+					"pathName": "pages/mine/myCollection/myCollection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaocahng/diaocahng",
+					"pathName": "pages/diaocahng/diaocahng/diaocahng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/business/business",
+					"pathName": "pages/index/business/business",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaocahng/diaocahng",
+					"pathName": "pages/diaocahng/diaocahng/diaocahng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myFabu/myFabu",
+					"pathName": "pages/mine/myFabu/myFabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjiaZx/pingjiaZx",
+					"pathName": "pages/order/pingjiaZx/pingjiaZx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/personal/personal",
+					"pathName": "pages/news/personal/personal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"pathName": "pages/xiehui/dongtaiDetail/dongtaiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/dccomment/dccomment",
+					"pathName": "pages/diaocahng/dccomment/dccomment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJl/searchJl",
+					"pathName": "pages/search/searchJl/searchJl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJg/searchJg",
+					"pathName": "pages/search/searchJg/searchJg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userinfo/userinfo",
+					"pathName": "pages/userinfo/userinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/rz/rz",
+					"pathName": "pages/rezheng/rz/rz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rezheng/onindex/onindex",
+					"pathName": "pages/rezheng/onindex/onindex",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaocahng/diaocahng",
+					"pathName": "pages/diaocahng/diaocahng/diaocahng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/myFabu/myFabu",
+					"pathName": "pages/mine/myFabu/myFabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/fabu/fabu",
+					"pathName": "pages/yuhuobang/fabu/fabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/fabu/fabu",
+					"pathName": "pages/yuhuobang/fabu/fabu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/index/index",
+					"pathName": "pages/information/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saishi/saishi/saishi",
+					"pathName": "pages/saishi/saishi/saishi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yinsi/yinsi",
+					"pathName": "pages/mine/yinsi/yinsi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/diaocahng/diaocahng/diaocahng",
+					"pathName": "pages/diaocahng/diaocahng/diaocahng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJl/searchJl",
+					"pathName": "pages/search/searchJl/searchJl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yuhuobang/index/index",
+					"pathName": "pages/yuhuobang/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set/personalData/personalData",
+					"pathName": "pages/set/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiehui/xiehui/xiehui",
+					"pathName": "pages/xiehui/xiehui/xiehui",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/login/login",
+					"scene": null
+				}
+			]
+		}
+	}
+}

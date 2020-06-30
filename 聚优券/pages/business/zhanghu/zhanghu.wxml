@@ -1,0 +1,92 @@
+<view>
+	<view class="aui-padded-15 aui-bg-white">
+		<view class="top">
+			<image src="/image/step_4.png"></image>
+		</view>
+		<view class="flex aui-margin-t-5">
+			<text class="aui-text-theme">主体信息</text>
+			<text>商户信息</text>
+			<text>行业规则</text>
+			<text>收款账户</text>
+		</view>
+	</view>
+
+
+	<view class="aui-padded-15">
+		<view class="fw-bold">账户信息</view>
+	</view>
+
+
+	<view class="aui-bg-white">
+		<view class="aui-margin-t-10 aui-padded-15 aui-bg-white flex aui-font-size-14">
+			<view class="aui-font-size-14">账户类型</view>
+			<view>
+				<radio-group class="radio-group" bindchange="radioChange">
+					<radio checked="{{accountType==1?true:false}}" value="1">对公</radio>
+					<radio class="aui-margin-l-10" checked="{{accountType==2?true:false}}" value="2">个人</radio>
+				</radio-group>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">银行卡或公户正面照片</view>
+			<view class="add_pic" bindtap="changeAvatar" wx:if="{{cardPhoto!=''}}">
+				<image src="{{cardPhoto}}" mode="aspectFill"></image>
+			</view>
+			<view class="add_pic" bindtap="changeAvatar" wx:else>
+				<image src="/image/add_pic.png"></image>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">开户名称</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入开户名称" bindinput="accountName" value="{{accountName}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">开户行</view>
+			<view class=" flex">
+				<picker bindchange="bindPickerChange" value="{{index}}" range="{{bankList}}">
+					<view class="picker  aui-ellipsis-1">
+						{{bank==''?'请选择':bank}}
+					</view>
+				</picker>
+				<view class="jt aui-margin-l-5">
+					<image src="/image/jt_right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">开户支行</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入开户支行" bindinput="accountOpeningBranch" value="{{accountOpeningBranch}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">银行账号</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入银行账号" bindinput="cardNumber" value="{{cardNumber}}"></input>
+			</view>
+		</view>
+
+		
+	</view>
+	<view class="aui-padded-15">
+		<view class="fw-bold">支付码</view>
+	</view>
+	<view class="aui-bg-white">
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">支付码</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入支付码" bindinput="payCode" value="{{payCode}}"></input>
+			</view>
+		</view>
+	</view>
+
+	<view class="flex aui-padded-15" wx:if="{{status==-1||status==0||status==4}}">
+		<view class="aui-btn next" data-idx="0" bindtap="next">保存草稿</view>
+		<view class="aui-btn aui-btn-theme next" bindtap="next" data-idx="1">完成</view>
+	</view>
+	<view class="flex aui-padded-15" wx:else>
+		<view class="aui-btn aui-btn-theme next" style="width:100%" bindtap="next1">完成</view>
+	</view>
+</view>

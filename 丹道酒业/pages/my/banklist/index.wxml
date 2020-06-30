@@ -1,0 +1,35 @@
+<!--pages/my/banklist/index.wxml-->
+
+  <view class="aui-padded-15 aui-text-grayer aui-font-size-15" wx:if="{{list[2].length>0}}">微信</view>
+<block wx:for="{{list[2]}}">
+  <view class="aui-bg-white aui-padded-15 flex" bindtap="gotitem" data-item="{{item}}">
+  <image src="/images/wechat.png" class="img"></image>
+  <text class="aui-font-size-18 aui-font-weight flex1">{{item.card_number}}({{item.real_name}})</text>
+  <text class="default" data-item="{{item}}" catchtap="edit">编辑</text>
+  <text class="default" data-id="{{item.id}}" catchtap="del">删除</text>
+</view>
+ </block>
+<view class="aui-padded-15 aui-text-grayer aui-font-size-15" wx:if="{{list[1].length>0}}">支付宝</view>
+<block wx:for="{{list[1]}}">
+  <view class="aui-bg-white aui-padded-15 flex" bindtap="gotitem" data-item="{{item}}">
+  <image src="/images/alipy.png" class="img"></image>
+  <text class="aui-font-size-18 aui-font-weight flex1">{{item.card_number}}({{item.real_name}})</text>
+  <text class="default" data-item="{{item}}" catchtap="edit">编辑</text>
+  <text class="default" data-id="{{item.id}}" catchtap="del">删除</text>
+</view>
+ </block>
+ <view class="aui-padded-15 aui-text-grayer aui-font-size-15" wx:if="{{list[0].length>0}}">银行卡</view>
+ <block wx:for="{{list[0]}}">
+ <view class="aui-bg-white aui-padded-15 flex" bindtap="gotitem" data-item="{{item}}">
+  <image src="{{item.thumb}}" class="img"></image>
+  <text class="aui-font-size-18 aui-font-weight">{{item.open_bank}}</text>
+  <text class="line"></text>
+  <text class="aui-font-size-14 account flex1">{{item.card_number}}</text>
+  <text class="default" data-item="{{item}}" catchtap="edit">编辑</text>
+  <text class="default" data-id="{{item.id}}" catchtap="del">删除</text>
+</view>
+ </block>
+  <view class="aui-text-center" wx:if="{{(list[0].length==0) && (list[1].length==0) && (list[2].length==0) }}"><image src="/images/nodata.png" mode="aspectFill" ></image></view>
+
+<view class="fiexed" bindtap="toaddbank"><view class="btn">添加账号</view></view>
+

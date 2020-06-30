@@ -1,0 +1,52 @@
+<view class="aui-tab public-tab mine-bar" id="tab">
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{is_part_in==0?' aui-active':''}}"  bindtap="change" data-index="0">
+        待使用
+    </view>
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{is_part_in==1?' aui-active':''}}"  bindtap="change" data-index="1">
+        已使用
+    </view>
+    <view class="aui-tab-item aui-text-gray aui-font-size-14 {{is_part_in==2?' aui-active':''}}"  bindtap="change" data-index="2">
+        已过期
+    </view>
+</view>
+
+<view class="aui-content saiquan-list aui-padded-15 mine-content">
+
+    <!-- 切换 -->
+    <view class="aui-list aui-media-list aui-padded-l-0 aui-bg-grayer"  wx:if="{{list.length>0}}">
+      <block wx:for="{{list}}" wx:for-item="v" wx:key="this">
+        <view class="aui-list-item bg-radius aui-margin-b-15 aui-bg-white"  bindtap="detail" data-id="{{v.id}}">
+            <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-media">
+                    <view class="shop-pic">
+                        <image src="{{v.pic}}" ></image>
+                    </view>
+                </view>
+                <view class="aui-list-item-inner aui-padded-r-0 aui-padded-r-15 aui-padded-b-15">
+                    <view class="aui-list-item-text">
+                        <view class="aui-list-item-title">
+                            <view class="aui-font-size-15 fweight-5 aui-ellipsis-2">{{v.name}}</view>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-gray">
+                            <image class="icon"  mode="widthFix" src="/image/rili.png"></image>
+                            {{v.open_time}}
+                        </view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-gray">
+                            <image class="icon" mode="widthFix" src="/image/dingwei.png"></image>
+                            {{v.address}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+      </block>
+    </view>
+     <view wx:else  style="margin-top: 150px;"> 
+        <image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+      </view>
+
+</view>

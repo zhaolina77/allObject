@@ -1,0 +1,91 @@
+<view class="aui-tab public-tab aui-border-b mine-bar" id="tab">
+  <view class="aui-tab-item aui-text-gray aui-font-size-14 {{num == 1?'aui-active':''}}"   bindtap="change" data-index="1">
+    赛事详情
+  </view>
+  <view class="aui-tab-item aui-text-gray aui-font-size-14 {{num == 2?'aui-active':''}}" bindtap="change" data-index="2">
+    赛事流程
+  </view>
+  <view class="aui-tab-item aui-text-gray aui-font-size-14 {{num == 3?'aui-active':''}}" bindtap="change" data-index="3">
+    基础信息
+  </view>
+</view>
+
+<!-- 切换后的内容 -->
+<view class="mine-content mine-content-footer">
+  <!-- 赛事详情 -->
+  <view class="aui-padded-15  detail" wx:if="{{num==1||num==2}}">
+    <view wx:if="{{num==1}}">
+      <view class="aui-font-size-18">{{saishiList.name}}</view>
+      <view class="aui-list aui-media-list">
+        <view class="aui-list-item aui-padded-l-0 aui-padded-r-0 aui-padded-t-10 aui-padded-b-10">
+          <view class="aui-media-list-item-inner">
+            <view class="aui-list-item-media">
+              <view class="pic">
+                <image src="{{saishiList.module_thumb}}"></image>
+              </view>
+            </view>
+            <view class="aui-list-item-inner aui-padded-r-0">
+              <view class="">
+                <view class="aui-list-item-text">
+                  <view class="aui-list-item-title aui-font-size-15">{{saishiList.module_name}}</view>
+                </view>
+                <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-5">{{saishiList.address}}</view>
+              </view>
+              <view class="enter aui-btn-theme aui-font-size-12" bindtap="enter" data-id="{{saishiList.association_id}}" >进入</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+
+  <!-- 赛事流程 -->
+
+
+  <!-- 基础信息 -->
+  <view class="aui-list aui-media-list shangjia" wx:else>
+    <view class="aui-list-item aui-padded-r-15">
+      <view class="aui-list-item-inner aui-padded-0" style="line-height: 160%;">
+        <view class="aui-list-item-text aui-font-size-14  aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+          <view class="title">举办单位</view>
+          <view class="inner">{{saishiList.module_name}}</view>
+        </view>
+        <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+          <view class="title">赛事名称</view>
+          <view class="inner">{{saishiList.name}}</view>
+        </view>
+        <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+          <view class="title">报名截止日期</view>
+          <view class="inner">{{saishiList.open_time}}</view>
+        </view>
+        <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+          <view class="title">比赛地址</view>
+          <view class="inner">{{saishiList.address}}</view>
+        </view>
+        <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+          <view class="title">比赛人数</view>
+          <view class="inner">{{saishiList.already_num}}</view>
+        </view>
+        <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+          <view class="title">参赛要求</view>
+          <view class="inner">{{saishiList.require}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>
+
+
+<!-- footer -->
+<view class="aui-bar aui-bar-tab aui-padded-15 clearfix" id="footer">
+  <view class="aui-text-center aui-text-orange aui-font-size-12 aui-padded-b-10">已报名{{saishiList.already_num}}人 剩余{{saishiList.part_num}}名额</view>
+  <view class="aui-btn aui-btn-theme aui-btn-block aui-font-size-15 " bindtap="jump" data-id="{{saishiList.id}}" data-charge="{{saishiList.is_charge}}" data-price="{{saishiList.price}}" >立即报名参赛</view>
+</view>
+
+<import src="../../../wxParse/wxParse.wxml" />

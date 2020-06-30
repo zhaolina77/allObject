@@ -1,0 +1,57 @@
+<view class="aui-list aui-media-list aui-bg-grayer aui-padded-15 saiquan-list" >
+    <view class="aui-list-item bg-radius aui-bg-white" >
+        <view class="aui-media-list-item-inner">
+            <view class="aui-list-item-media">
+                <view class="shop-pic">
+                    <image src="{{list.pic}}" ></image>
+                </view>
+            </view>
+            <view class="aui-list-item-inner aui-padded-r-0 aui-padded-r-15 aui-padded-b-15">
+                <view class="aui-list-item-text">
+                    <view class="aui-list-item-title">
+                        <view class="aui-font-size-15 fweight-5 aui-ellipsis-2">{{list.name}}</view>
+                    </view>
+                </view>
+                <view class="aui-list-item-text aui-padded-t-10">
+                    <view class="aui-list-item-title aui-font-size-12 aui-text-gray">
+                        <image class="icon" src="/image/rili.png" mode="widthFix"></image>
+                        {{list.open_time}}
+                    </view>
+                </view>
+                <view class="aui-list-item-text aui-padded-t-10">
+                    <view class="aui-list-item-title aui-font-size-12 aui-text-gray">
+                        <image class="icon" src="/image/dingwei.png" mode="widthFix"></image>
+                        {{list.address}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="aui-list aui-media-list shangjia">
+    <view class="aui-list-item aui-padded-r-15">
+        <view class="aui-list-item-inner aui-padded-0" style="line-height: 160%;">
+            <view class="aui-list-item-text aui-font-size-14  aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+                <view class="title">举办单位</view>
+                <view class="inner">{{list.association_name==null?"":list.association_name}}</view>
+            </view>
+            <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+                <view class="title">参赛费用</view>
+                <view class="inner">{{list.price}}</view>
+            </view>
+            <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+                <view class="title">参赛人姓名</view>
+                <view class="inner">{{list.contacts_name}}</view>
+            </view>
+            <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0 aui-border-b">
+                <view class="title">联系电话</view>
+                <view class="inner">{{list.contacts_mobile}}</view>
+            </view>
+            <view class="aui-list-item-text aui-font-size-14 aui-padded-10 aui-padded-r-0 aui-padded-l-0">
+                <view class="title">身份证号</view>
+                <view class="inner">{{list.id_number}}</view>
+            </view>
+        </view>
+    </view>
+</view>

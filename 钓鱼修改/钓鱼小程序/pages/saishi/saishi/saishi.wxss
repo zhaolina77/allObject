@@ -1,0 +1,150 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+page {
+    background-color: #f5f6fa !important;
+}
+.header .icon{
+    width: 32rpx;
+}
+.shipin .aui-list-item-media {
+    width:100rpx !important;
+}
+scroll-view{
+    height:90rpx;
+    line-height: 90rpx;
+}
+scroll-view .swiper-slide{
+    margin-left:30rpx;
+    margin-right:30rpx ;
+    color: 
+}
+scroll-view .swiper-slide:last-child{
+    margin-right:120rpx;
+}
+scroll-view .swiper-slide.on text{
+    color: #222 !important;
+    font-weight: 500;
+}
+.shipin .pic {
+    width:80rpx;
+    height:80rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.shipin .pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shipin .void {
+    height:380rpx;
+    position: relative;
+}
+
+.shipin .void image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shipin .void .bofang {
+    width:100rpx;
+    height:100rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50rpx;
+    margin-left: -50rpx;
+}
+
+.dyl .aui-tab-item.aui-active {
+    color: #121d36;
+    border-bottom: none !important;
+    position: relative;
+    font-weight: 500;
+}
+
+.dyl .aui-tab-item.aui-active:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    margin-left: -12rpx;
+    background-color: #0051fe;
+    width: 24rpx;
+    height: 5rpx;
+    border-radius: 10rpx;
+}
+
+
+.pop-out{
+   position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pop input::-webkit-input-placeholder {
+    color: #000;
+    font-size:28px;
+}
+
+.pop input:-moz-placeholder {
+    color: #000;
+    font-size:28px;
+}
+.pop input::-moz-placeholder {
+    color: #000;
+    font-size:28px;
+}
+
+.pop input:-ms-input-placeholder {
+    color: #000;
+    font-size: 28px;
+}
+
+.pop .aui-list-item-text {
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+}
+
+.pop .spec {
+    display: inline-block;
+    background-color: #f3f5f8;
+    width: 120rpx;
+    height:60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    color: #000;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+    border-radius: 15rpx
+}
+.pop .sel{
+    max-height:500rpx;
+    overflow-x: scroll;
+}
+.pop .sel .aui-active {
+    background-color: #3072f6 !important;
+    color: #fff !important;
+}
+.pop .aui-bar-tab{
+    position: absolute;
+}
+.active{
+  color: #333;
+}

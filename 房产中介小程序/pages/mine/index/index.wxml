@@ -1,0 +1,119 @@
+<view>
+	<view class="top">
+		<view class="bg">
+			<image src="/image/bg.png" mode="aspectFill"></image>
+		</view>
+		<view class="flex aui-padded-15 head_box" wx:if="{{!token}}" bindtap="login">
+			<view class="head">
+				<image src="/image/head.png" mode="aspectFill"></image>
+			</view>
+			<view class="aui-font-size-18 aui-padded-l-15">请先登录</view>
+		</view>
+    <view class="flex aui-padded-15 head_box" wx:else>
+			<view class="head">
+				<image src="{{data.accountHead}}" mode="aspectFill"></image>
+			</view>
+			<view class="aui-font-size-18 aui-padded-l-15">{{data.accountName}}</view>
+		</view>
+	</view>
+
+	<view class="aui-bg-white aui-margin-t-15">
+		<view class="aui-padded-15 aui-padded-b-0 " bindtap="history">
+			<view class=" flex aui-border-b aui-padded-b-15 item_box">
+				<view class="flex">
+					<view class="left_pic">
+						<image style="height:40rpx" src="/image/jilu.png"></image>
+					</view>
+					<view class="aui-font-size-15 aui-margin-l-15">报备记录</view>
+				</view>
+				<view class="flex">
+					<view class="jt_right">
+						<image src="/image/jt-right1.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-15 aui-padded-b-0 " bindtap="coll">
+			<view class=" flex aui-border-b aui-padded-b-15 item_box">
+				<view class="flex">
+					<view class="left_pic">
+						<image src="/image/shoucang.png"></image>
+					</view>
+					<view class="aui-font-size-15 aui-margin-l-15">我的收藏</view>
+				</view>
+				<view class="flex">
+					<view class="jt_right">
+						<image src="/image/jt-right1.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-15 aui-padded-b-0 " bindtap="infor">
+			<view class=" flex aui-border-b aui-padded-b-15 item_box">
+				<view class="flex">
+					<view class="left_pic">
+						<image src="/image/xiaoxi.png"></image>
+					</view>
+					<view class="aui-font-size-15 aui-margin-l-15">我的消息</view>
+				</view>
+				<view class="flex">
+					<view class="dot aui-margin-r-15" wx:if="{{data.readStatus==1}}"></view>
+					<view class="jt_right">
+						<image src="/image/jt-right1.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-15 aui-padded-b-0 " bindtap="yj">
+			<view class=" flex aui-border-b aui-padded-b-15 item_box">
+				<view class="flex">
+					<view class="left_pic">
+						<image src="/image/yijian.png"></image>
+					</view>
+					<view class="aui-font-size-15 aui-margin-l-15">意见反馈</view>
+				</view>
+				<view class="flex">
+					<view class="jt_right">
+						<image src="/image/jt-right1.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-15 aui-padded-b-0 " bindtap="call">
+			<view class=" flex aui-border-b aui-padded-b-15 item_box">
+				<view class="flex">
+					<view class="left_pic">
+						<image src="/image/kefu.png"></image>
+					</view>
+					<view class="aui-font-size-15 aui-margin-l-15">客服电话</view>
+				</view>
+				<view class="flex">
+					<view class=" aui-margin-r-15 aui-font-size-14">{{data.agreementContent}}</view>
+					<view class="jt_right">
+						<image src="/image/jt-right1.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+    <view class="aui-padded-15 aui-padded-b-0 " bindtap="about">
+			<view class=" flex aui-border-b aui-padded-b-15 item_box">
+				<view class="flex">
+					<view class="left_pic">
+						<image src="/image/about.png"></image>
+					</view>
+					<view class="aui-font-size-15 aui-margin-l-15">关于我们</view>
+				</view>
+				<view class="flex">
+					<view class="jt_right">
+						<image src="/image/jt-right1.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+
+
+
+</view>

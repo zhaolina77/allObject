@@ -1,0 +1,35 @@
+<view class="aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-font-size-16 fweight-5 aui-padded-b-10 aui-padded-t-15">账号管理</view>
+    <view class="aui-list aui-padded-b-15">
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0" >
+            <view class="aui-list-item-inner aui-text-gray aui-padded-r-0" bindtap="phone">
+                <view class="aui-list-item-title">更换手机号</view>
+                <view class="aui-list-item-right">
+                    <text class="aui-font-size-14 aui-text-gray aui-padded-r-5">{{phone}}</text>
+                    <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0">
+            <view class="aui-list-item-inner aui-padded-r-0" bindtap="pass">
+                <view class="aui-list-item-title">登录密码</view>
+                <view class="aui-list-item-right">
+                    <text class="aui-font-size-14 aui-text-gray aui-padded-r-5">去修改</text>
+                    <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- <view class="aui-font-size-16 fweight-5 aui-padded-b-10 aui-padded-t-15">授权管理</view>
+    <view class="aui-list">
+        <view class="aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-b">
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-title">微信账号</view>
+                <view class="aui-list-item-right">
+                    <text class="aui-font-size-14 aui-text-gray aui-padded-r-5">德德</text>
+                    <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+    </view> -->
+</view>

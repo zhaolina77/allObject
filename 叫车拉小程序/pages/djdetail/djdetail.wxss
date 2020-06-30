@@ -1,0 +1,73 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '../../wxParse/wxParse.wxss';
+page{
+  margin-bottom: 200rpx;
+}
+.shop-tj .aui-media-list-item-inner{
+    align-items: center;
+    border-radius: 6rpx;
+}
+.shop-tj .aui-list-item-media{
+    width: auto !important;
+}
+.shop-tj .shop-pic{
+    width:200rpx;
+    height: 200rpx;
+}
+.shop-tj .aui-list-item-inner{
+    min-width: 0;
+}
+.big-btn{
+    padding:30rpx 30rpx 40rpx;
+    position: relative;
+}
+.big-btn image{ 
+    width: 32rpx;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    margin-top: -0.4rem;
+}
+
+.pinglun .aui-list-item-media{
+    width: auto !important;
+}
+.pinglun .head-pic{
+    width:75rpx;
+    height:75rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.pinglun .head-pic image{
+    width: 100%;
+    height: 100%;
+}
+.pinglun .aui-list-item-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pinglun .zan image{
+    width:30rpx;
+}
+.pinglun .inner{
+    padding: 0 30rpx 30rpx 100rpx;
+    line-height: 50rpx;
+}
+.xie-pl{
+    margin-top:120rpx !important;
+    padding: 0rpx 30rpx 30rpx 30rpx;
+}
+.aui-searchbar-input{
+    height:80rpx !important;
+    line-height:80rpx !important;
+    border-radius: 0 !important;
+}
+.aui-searchbar-input input{
+    height:80rpx !important;
+}
+.aui-searchbar-cancel image{
+    width:40rpx !important;
+}

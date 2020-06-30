@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>规格</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/animate.css" />
+	</head>
+	<style>
+		.aui-content{position: fixed;bottom: 0;left: 0;width: 100%;overflow: hidden; border-radius: 0.5rem 0.5rem 0 0;}
+		.close{position: absolute;top: 0.75rem;right: 0.75rem;z-index: 99;}
+		.close img{width: 0.8rem;}
+		.shop-pic{width: 4rem;height:4rem;border-radius: 0.15rem;overflow: hidden;}
+		.shop-pic img{width: 100%;height: 100%;object-fit: cover;}
+		
+		input::-webkit-input-placeholder { color: #000;font-size: 0.7rem;}
+		input:-moz-placeholder { color: #000;font-size: 0.7rem;}
+		input::-moz-placeholder { color: #000;font-size: 0.7rem;}
+		input:-ms-input-placeholder{ color: #000;font-size: 0.7rem;}
+		
+		.aui-list-item-text{ justify-content: flex-start !important;flex-wrap: wrap;}
+    	.spec{display: inline-block; background-color: #f3f5f8;width:3rem;height: 1.5rem;line-height: 1.5rem; text-align: center; color: #000;margin-right: 0.5rem;margin-bottom: 0.5rem;border-radius:0.75rem}
+    	
+    	.aui-active{ background-color: #58CAB9 !important;color: #fff !important;}
+    	.num{ width: 1rem !important;height: 1.2rem !important;}
+    	.dialog{ position: fixed;bottom: 0;width: 100%;}
+    	.hide{ width:100%;height:15rem;}
+    	.add{background-color:#666 !important;color:#fff;}
+    	
+    	.sel{min-height:10rem;max-height: 15rem; overflow-y: scroll;}
+    	
+		.payment{background-color:#34d594  !important;color:#fff;}
+		.aui-bar .aui-btn{border-radius: 1.125rem;}
+	</style>
+	<body style="background: rgba(0,0,0,0.5);" >
+		<div class="hide" onclick="hide()"></div>
+		<div class='aui-content  aui-bg-white animated slideInUp' >
+			<div class="close">
+				<img class="icon" src="../../image/close.png">
+			</div>
+			
+			<div class="aui-list aui-media-list" >
+				<div class="aui-padded-l-15" style="padding-bottom: 3rem;">
+			        <div class=" aui-padded-t-5 aui-padded-b-5">
+			            <div class="aui-media-list-item-inner">
+			                <div class="aui-list-item-media" style='width:4.75rem !important;'>
+			                	<div class="shop-pic"><img src="../../image/banner.jpg" /></div>
+			                </div>
+			                <div class="aui-list-item-inner aui-font-size-15">
+			                    <div class="aui-list-item-text aui-text-orange">￥ <span class="aui-font-weight aui-font-size-16" >263.0</span></div>
+			                    <div class="aui-list-item-text aui-text-grayer aui-margin-t-10">已选择：<span class="aui-text-black">红色、大、原产</span></div>
+			                    <div class="aui-list-item-text aui-text-grayer aui-margin-t-10">库存：<span class="aui-text-black">25</span></div>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="sel">
+				        
+				        <div class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t'>
+				            <div class='aui-list-item-inner aui-padded-r-0'>
+				                <div class='aui-list-item-text aui-text-black aui-padded-b-5 aui-font-size-15'>尺寸</div>
+				                <div class='aui-list-item-text aui-margin-t-10'>
+			                		<span class="aui-font-size-15 spec aui-active" >xs</span>
+									<span class="aui-font-size-15 spec ">s</span>
+									<span class="aui-font-size-15 spec">m</span>
+									<span class="aui-font-size-15 spec">l</span>
+				                </div>
+				            </div>
+				        </div>
+				        <div class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t'>
+				            <div class='aui-list-item-inner aui-padded-r-0'>
+				                <div class='aui-list-item-text aui-text-black aui-padded-b-5 aui-font-size-15'>颜色</div>
+				                <div class='aui-list-item-text aui-margin-t-10 '>
+									<span class="aui-font-size-12 spec aui-active">白色</span>
+				                    <span class="aui-font-size-12 spec">黄色</span>
+				                </div>
+				            </div>
+				        </div>
+			        </div>
+			        <div class=' aui-padded-t-15 aui-padded-b-15 aui-padded-l-0 aui-border-t aui-border-b'>
+			            <div class=' aui-padded-r-0 flex'>
+			                <div class='aui-list-item-text aui-text-black  aui-padded-b-5 aui-font-size-15'>
+			                	数量
+			                </div>
+			                <div class='aui-list-item-text  aui-margin-l-10 aui-padded-r-15' style="border-radius: 1rem;">
+			                    <div  @click="miusNum()">
+			                        <image src='../../image/mius.png' style='width:1.2rem;height:1.2rem;vertical-align:middle;'></image>
+			                    </div>
+			                    <div class='aui-margin-r-5 aui-margin-l-5'>
+			                        <input class='aui-text-center num' placeholder="0" type='text' readonly="" :value="num"></input>
+			                    </div>
+			                    <div @click="addNum()">
+			                        <image src='../../image/add.png' style='width:1.2rem;height:1.2rem;vertical-align:middle;'></image>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+				</div>
+			</div>
+			
+			<footer class="aui-bar aui-bar-tab aui-padded-15" id="footer">
+			    <div class="aui-row">
+			    	<!--<div class="aui-col-xs-6 aui-padded-r-5">
+			    		<div class="aui-btn-block aui-btn aui-btn-theme aui-font-size-14" style="background-color: #FE7648 !important;">
+			    			加入购物车
+			    		</div>
+			    	</div>-->
+			    	<div class=" aui-padded-l-5">
+			    		<div class="aui-btn-block aui-btn aui-btn-theme aui-font-size-14">
+			    			立即购买
+			    		</div>
+			    	</div>
+			    </div>
+			</footer>
+	    </div>
+	</body>
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>

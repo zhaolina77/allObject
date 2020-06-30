@@ -1,0 +1,6 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+page {
+    background-color: #f8f9fb;
+}

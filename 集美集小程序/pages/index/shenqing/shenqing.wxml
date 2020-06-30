@@ -1,0 +1,62 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+
+<view class="aui-padded-15" style="margin-bottom:140rpx">
+	<view class="aui-font-size-14 aui-text-gray tit">
+	<!-- {{dic}} -->
+	<template  is="wxParse" data="{{wxParseData:article.nodes}}"/>
+	
+	<!-- 购买创业专区任意产品并完成订单即可申请认证为本平台商户，购买之后需在一个月内上传营业执照和身份证等认证信息，经审核成功后即可成为本平台合作商户： -->
+	</view>
+	<view>
+		<view class="aui-margin-t-15 aui-padded-t-15">
+			<view class='aui-font-size-14 fw5'>上传营业执照</view>
+			<view class="bg_pic aui-margin-t-15" wx:if="{{pic1!=''}}">
+				<image src="{{pic1}}" mode="aspectFill"></image>
+			</view>
+			<view class="bg_pic aui-margin-t-15" wx:else bindtap="changeAvatar" data-idx="1">
+				<image src="/image/pic.png"></image>
+			</view>
+		</view>
+		<view class="aui-margin-t-15 aui-padded-t-15">
+			<view class='aui-font-size-14 fw5'>上传身份证</view>
+			<view class="flex " style="width:100%">
+				<view class="sm_pic aui-margin-t-15">
+					<view class="pic1 " wx:if="{{pic2!=''}}">
+						<image src="{{pic2}}" mode="aspectFill"></image>
+					</view>
+					<view class="pic1 " wx:else bindtap="changeAvatar" data-idx="2">
+						<image src="/image/pic1.png"></image>
+					</view>
+				</view>
+				<view class="sm_pic aui-margin-t-15">
+					<view class="pic1 " wx:if="{{pic3!=''}}">
+						<image src="{{pic3}}" mode="aspectFill"></image>
+					</view>
+					<view class="pic1 " wx:else bindtap="changeAvatar" data-idx="3">
+						<image src="/image/pic2.png"></image>
+					</view>
+				</view>
+
+
+
+			</view>
+		</view>
+		<view class="flex aui-text-grayer aui-font-size-11 aui-padded-t-15" style="justify-content: flex-start;align-items: flex-start;">
+			<view>说明：</view>
+			<view>
+				<view>照片确保边框完整，字迹清晰、亮度均匀</view>
+				<view>照片要求5M以内，支持jpg、jpeg、png格式</view>
+			</view>
+
+
+		</view>
+	</view>
+</view>
+
+<view>
+
+</view>
+<view class="btn_box" bindtap="tijiao">
+	<view class="btn">提交</view>
+
+</view>

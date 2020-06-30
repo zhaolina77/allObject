@@ -1,0 +1,61 @@
+	<view class="aui-content" id="app">
+			<view class="aui-viewst aui-padded-l-15 aui-padded-r-15">
+      
+				<view class="aui-viewst-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0" >
+					<view class="aui-viewst-item-inner aui-padded-r-0 box" >
+						<view class="aui-viewst-item-title aui-font-size-14" style="line-height:80rpx;">联系人姓名</view>
+						<view class="aui-viewst-item-right aui-font-size-14 aui-text-grayer">
+							<input type="text" placeholder="请输入联系人姓名"  id="contacts_name" bindinput="user" />
+						</view>
+					</view>
+				</view>
+        <view class="aui-viewst-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0" >
+					<view class="aui-viewst-item-inner aui-padded-r-0 box" >
+						<view class="aui-viewst-item-title aui-font-size-14" style="line-height:80rpx;">协会职务</view>
+						<view class="aui-viewst-item-right aui-font-size-14 aui-text-grayer">
+							<input type="text" placeholder="请输入协会职务"  id="contacts_name" bindinput="job" />
+						</view>
+					</view>
+				</view>
+				<view class="aui-viewst-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+					<view class="aui-viewst-item-inner aui-padded-r-0 box">
+						<view class="aui-viewst-item-title aui-font-size-14" style="line-height:80rpx;">身份证号码</view>
+						<view class="aui-viewst-item-right aui-font-size-14 aui-text-grayer">
+							<input type="text" placeholder="请输入身份证号码"  id="card" bindinput="personid"/>
+						</view>
+					</view>
+				</view>
+        <view class="aui-viewst-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+					<view class="aui-viewst-item-inner aui-padded-r-0 box">
+						<view class="aui-viewst-item-title aui-font-size-14" style="line-height:80rpx;">协会名称</view>
+						<view class="aui-viewst-item-right aui-font-size-14 aui-text-grayer">
+							<input type="text" placeholder="请输入协会名称"  id="card" bindinput="comname"/>
+						</view>
+					</view>
+				</view>
+        <view class="aui-viewst-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+					<view class="aui-viewst-item-inner aui-padded-r-0 box">
+						<view class="aui-viewst-item-title aui-font-size-14" style="line-height:80rpx;">参会人数</view>
+						<view class="aui-viewst-item-right aui-font-size-14 aui-text-grayer">
+							<input type="text" placeholder="请输入参会人数"  id="card" bindinput="num"/>
+						</view>
+					</view>
+				</view>
+				<view class="aui-viewst-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+					<view class="aui-viewst-item-inner aui-padded-r-0 box">
+						<view class="aui-viewst-item-title aui-font-size-14" style="line-height:80rpx;">联系方式</view>
+						<view class="aui-viewst-item-right aui-font-size-14 aui-text-grayer">
+							<input type="text" placeholder="请输入联系方式"  id="mobile"  bindinput="phone"/>
+						</view>
+					</view>
+				</view>
+        
+			</view>
+
+
+		</view>
+
+    <view class="footer" bindtap="canhui">
+  <view class="aui-btn aui-btn-theme aui-btn-block aui-font-size-15 canhui"  bindtap="submit"  >立即提交</view>
+
+</view>

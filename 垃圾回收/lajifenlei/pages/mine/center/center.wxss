@@ -1,0 +1,19 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+
+.txt{line-height: 50rpx;}
+.lis{justify-content: space-between;}
+.jt_right{width:34rpx;height: 40rpx;}
+.jt_right .right{width: 100%;height: 100%;}
+.jt_right .down{width: 100%;height: 100%;}
+.li{line-height:60rpx;}
+
+.list:last-child .lis{border-bottom: 1rpx solid #e6ebf4;}
+.list:last-child .xl{border-bottom: 1rpx solid #e6ebf4;border-top: none !important;}
+/* .xl{display: none;} */
+
+.active{display: block;}
+
+

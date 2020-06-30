@@ -1,0 +1,186 @@
+/**公共样式表**/
+body{ background:#fff; color:#333;font-size: 0.75rem !important;}
+img{ display: inline-block !important;}
+[v-cloak] {display: none;}
+.list-enter-active, .list-leave-active {transition: all 1s;}
+.list-enter, .list-leave-active {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.aui-grid [class*=aui-col-xs-]:active {
+	background:transparent;
+}
+/*header 线条*/
+.aui-bar-light{
+	border-bottom: none !important;
+	background-image:none !important;
+}
+.aui-bar-nav .aui-btn .aui-iconfont{
+	font-weight: bold !important;
+	color: #222 !important;
+}
+
+.aui-border-bg{border: 0.5rem solid #e0e0e0 !important;}
+.aui-border-bgT{ border-top: 0.5rem solid #f6f6f6 !important;}
+.aui-border-bgB{ border-bottom: 0.5rem solid #f6f6f6 !important;}
+
+.aui-border-t{ border-top: 0.5px solid #EEEEEE !important;}
+.aui-border-b{ border-bottom: 0.5px solid #EEEEEE !important;}
+.aui-border-l{ border-left: 0.5px solid #EEEEEE !important;}
+.aui-border-r{ border-right: 0.5px solid #EEEEEE !important;}
+
+.aui-list .aui-list-item{ background-image:none; border-color:#eee; }
+.aui-list .aui-list-item:active {background:transparent;}
+
+.aui-font-size-9{font-size: 18rpx !important;}
+.aui-font-size-10 {font-size: 20rpx !important;}
+.aui-font-size-11 {font-size: 22rpx !important;}
+.aui-font-size-12 {font-size: 24rpx !important;}
+.aui-font-size-13 {font-size: 26rpx !important;}
+.aui-font-size-14 {font-size: 28rpx !important;}
+.aui-font-size-15 {font-size: 30rpx !important;}
+.aui-font-size-16 {font-size: 32rpx !important;}
+.aui-font-size-17 {font-size: 34rpx !important;}
+.aui-font-size-18 {font-size: 36rpx !important;}
+.aui-font-size-19 {font-size: 38rpx !important;}
+.aui-font-size-20 {font-size: 40rpx !important;}
+.aui-font-size-22 {font-size: 44rpx !important;}
+
+.aui-bg-blue {background-color: #42a4ff !important;}
+.aui-bg-white {background-color: #FFFFFF !important;}
+.aui-bg-grayer {background-color: #f6f6f6 !important;}
+.aui-bg-black{background-color: #222222 !important;}
+.aui-bg-danger{background-color: #f3456d !important;}
+.aui-bg-success{background-color: #34d594 !important;}
+.textDcoration{ text-decoration: line-through;}
+
+.aui-text-black{color: #222 !important;}
+.aui-text-blacker{color: #333 !important;}
+.aui-text-green{color: #0bcaab !important;}
+.aui-text-danger{color: #fe4501 !important;}
+.aui-text-light-gray{color: #f4f4f4 !important;}
+.aui-text-gray{color: #666666 !important;}
+.aui-text-grayer{color: #999 !important;}
+.aui-text-success{color: #34d594 !important;}
+.aui-text-brown{ color: #e97d11 !important}
+.aui-text-blue{ color: #5e376b !important;}
+.aui-text-red{ color: #E45432 !important;}
+
+.aui-btn-danger.aui-btn-outlined {background: transparent !important;color: #fe4501 !important;border: 1px solid #fe4501 !important;}
+.aui-btn-success.aui-btn-outlined {background: transparent !important;color: #22d559 !important;border: 1px solid #22d559 !important;}
+
+.aui-btn-danger {background-color: #fe4501 !important;color: #ffffff !important;}
+.aui-btn-borrow {background-color: #5e376b !important;color: #ffffff !important;}
+.aui-btn-blue {background-color: #42a4ff !important;color: #ffffff !important;}
+.aui-btn-green{ background-color: #0bcaab !important;color: #FFFFFF !important;}
+.aui-btn-block { height: 2.25rem;line-height: 2.25rem; font-size:0.8rem;}
+.aui-font-weight{ font-weight: bold !important;}
+
+.aui-label-info{background-color:#3296fa;}
+.aui-label-warning{background-color: #ffae00 !important;}
+
+.aui-label-outlined {
+    background-color: transparent;
+    position: relative;
+}
+.fweight-5{
+	font-weight: 500;
+}
+.fw_5{font-weight: 500 !important;}
+.fw_bold{font-weight: bold !important;}
+
+/*定义选框大小*/
+input[type=radio],input[type=checkbox]{ width: 0.8rem;height: 0.8rem;}
+input[type=radio]:checked,input[type=checkbox]:checked{ background-color: #fe4501 !important;border: 1px solid #fe4501 !important;}
+
+
+
+.aui-shadow{box-shadow:0 1px 6px rgba(0,0,0,.1);}
+
+.aui-list{ border:none; background-image:none;}
+.aui-list .aui-list-item{background-image:none;border:none;}
+
+.aui-ellipsis-2{height: 40px;line-height: 20px;}
+
+/**AUI重写css**/
+.aui-bar-light {color: #4A4A4A;}
+
+/*分类*/
+.aui-list-view {position: relative;padding-left: 0;margin-top: 0;margin-bottom: 15px;list-style: none;}
+.aui-list-view:after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	pointer-events: none;
+}
+.aui-list-view-cell {position: relative;padding:20px 17px; text-align:center;overflow: hidden;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-touch-callout: none;border-left:2px solid transparent;}
+.aui-list-view-cell.aui-active{color: #fe4070;background-color: #fff;}
+.aui-list-view-cell-block{position: relative;padding:10px 10px 10px 1.5rem; text-align:left;overflow: hidden;}
+.aui-list-view-cell-block.aui-active{ background: #fff;color: #ff574a;}
+
+
+i{ font-style: normal;}
+/*下划线*/
+.delline{ text-decoration: line-through;}
+/*左右箭头 icon 加粗*/
+.aui-icon-left,
+.aui-icon-right{font-weight: bold !important;}
+.aui-icon-right{font-size: 12px !important; color: #666666;}
+.aui-list-item-arrow:before{ border-color:#666666;}
+
+/*隐藏显示*/
+.disnone{ display:none !important;}
+.disblock{ display: block !important;}
+
+
+.mui-table-view:before{display:none !important;}
+.mui-table-view-cell:after{display:none !important;}
+.mui-table-view-cell:before{display:none !important;}
+.mui-table-view:after{display:none !important;}
+.mui-table-view-cell:after{background-color: inherit;}
+
+.mui-btn-danger, .mui-btn-negative, .mui-btn-red{background-color: #ff3333 !important;}
+
+input::-webkit-input-placeholder{
+    color:#aeaaaf;
+    font-size:0.8rem
+}
+
+.nodata{ text-align: center;}
+.nodata img{ width: 12.5rem;height: 12.5rem;margin: 5rem auto 0}
+.aui-padded{padding: 0.75rem 0.6rem;}  /*上下30 左右24*/
+
+.animated {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@font-face
+{
+font-family: 'myFirstFont';
+/*src: url('DINPro-Medium.otf');*/
+src:url('PINGFANG-MEDIUM.ttf');
+}
+html{
+	font-family: "myFirstFont";
+	font-size: 20px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex1 {
+  flex:1;
+}
+.bg-radius{border-radius: 10rpx;overflow: hidden;} 
+.flex_sta{display: flex;justify-content: flex-start;align-items: center;flex-wrap: wrap;}
+.flex_bet{display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;}
+.aui-border-l-red{border-left:2rpx solid #E45432 ;}

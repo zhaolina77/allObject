@@ -1,0 +1,31 @@
+<!--pages/my/addressadd/index.wxml-->
+<view class="aui-padded-15 aui-bg-white aui-padded-b-0 aui-margin-t-15">
+<view class="section">
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker aui-text-grayer aui-font-size-14" wx:if="{{region.length>0}}" style="font-size:0.8rem">
+{{region[0]}} {{region[1]}} {{region[2]}}
+    </view>
+     <view class="picker aui-text-grayer aui-font-size-14" wx:else style="font-size:0.8rem">
+省份、城市、县区
+    </view>
+  </picker>
+</view>
+<view>
+<input class="weui-input aui-text-grayer aui-font-size-14" bindinput="getfulladdress" type="text" placeholder="详细地址，如街道、楼牌号等" />
+</view>
+<view>
+<input class="weui-input aui-text-grayer aui-font-size-14" bindinput="getname" type="text" placeholder="姓名" />
+</view>
+<view>
+<input class="weui-input aui-text-grayer aui-font-size-14" bindinput="getphone" type="number" placeholder="手机号码" />
+</view>
+</view>
+<view class="aui-margin-t-15 aui-bg-white aui-padded-15 flex">
+ <text class="aui-font-size-14 aui-text-blacker flex1">设为默认地址</text>
+  <checkbox value="1" checked="false"/>
+</view>
+<view class="aui-padded-15">
+    <view class="btn" bindtap="submit">完成</view>
+  </view>
+
+

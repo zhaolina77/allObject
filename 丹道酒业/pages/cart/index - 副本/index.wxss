@@ -1,0 +1,27 @@
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+page{ background-color: #f6f6f6;margin-bottom: 300rpx;}
+.aui-content{ background-color: #fff;}
+.height{ height: 50rpx;}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  
+   background: #FF4444;
+       border: 1px solid #FF4444 !important;
+}
+checkbox .wx-checkbox-input{
+
+    border-radius:50%;
+
+    width:20px;height:20px;
+
+
+}
+
+.aui-list-item-inner{ display: block !important}
+.item-cb{ padding: 0 0.75rem}
+.aui-col-xs-6{ width: 46%}
+.show{ display: block}
+.hide{ display: none}
+.visiH{ visibility: hidden}
+.aui-bar-tab{ border-top: 1px solid #eee}
+.aui-bar-btn-item{  width: 0.8%;}

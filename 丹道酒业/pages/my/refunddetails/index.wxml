@@ -1,0 +1,58 @@
+<!--pages/my/orderdetials/index.wxml-->
+<image class="cover" src="/images/orderstatus.png"></image>
+<view class="paystatus">
+  <view  class="aui-font-size-17 aui-text-white" wx:if="{{type==0}}">退款中</view>
+  <view  class="aui-font-size-17 aui-text-white" wx:if="{{type==1}}">退款完成</view>
+  <view class="aui-font-size-12 aui-text-white aui-margin-t-15"  wx:if="{{type==0}}">退款订单正在处理，请耐心等待！</view>
+  <view class="aui-font-size-12 aui-text-white aui-margin-t-15"  wx:else>商家已退款，金额会原路返回</view>
+</view>
+
+<block wx:for="{{goodsList}}" wx:for-item="voo">
+  <view class="flex flex1 aui-padded-15 aui-bg-white">
+    <image class="pimg" src="{{voo.thumb}}"></image>
+    <view class="aui-margin-l-15 flex1">
+      <view class="aui-font-size-15 aui-text-blacker">{{voo.goods_name}}</view>
+      <view class="aui-font-size-11 aui-text-grayer">{{voo.spec_name}}</view>
+      <view class="aui-font-size-16 aui-text-black aui-margin-t-15">￥{{voo.goods_price}}</view>
+    </view>
+    <view class="aui-font-size-11 aui-text-grayer">X{{voo.goods_num}}</view> 
+  </view>
+  </block>
+  <view class="info aui-bg-white aui-padded-top aui-padded-15" style="margin-top:2rpx;">
+  
+     <view class="flex">
+      <text class="aui-font-size-12 aui-text-grayer flex1">退款金额</text>
+      <text class="aui-font-size-12 total">￥{{order.pay_price}}</text>
+    </view>
+  </view>
+  <view class="aui-bg-white aui-padded-15 aui-margin-t-15">
+    <text class="aui-font-size-14 aui-text-black">退款信息</text>
+    <view class="line"></view>
+     <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-13 aui-text-grayer">订单编号：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.order_sn}}</text>
+    </view>
+     <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-13 aui-text-grayer">申请时间：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.refund_time}}</text>
+    </view>
+    <view class="flex aui-margin-t-15" wx:if="{{type==1}}">
+      <text class="aui-font-size-13 aui-text-grayer">退款完成时间：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.refund_success_time}}</text>
+    </view>
+    <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-13 aui-text-grayer">退款数量：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.goods_num}}</text>
+    </view>
+    <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-13 aui-text-grayer">退款金额：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.pay_price}}</text>
+    </view>
+   
+  </view>
+  <view class="fixedheight"></view>
+  <view class="fixed aui-text-right">
+    <view class="aui-padded-15">
+      <button class="opt" open-type="contact" catchtap="nothing">联系客服</button>
+    </view>
+  </view>

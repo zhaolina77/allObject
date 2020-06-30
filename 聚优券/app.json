@@ -1,0 +1,27 @@
+{
+  "pages":[
+    
+   
+    "pages/business/index/index",
+    "pages/business/guize/guize",
+    "pages/business/shenhe/shenhe",
+    "pages/business/jinjianGl/jinjianGl",
+    "pages/business/zhanghu/zhanghu",
+    "pages/business/shanghu/shanghu",
+    "pages/business/zhuti/zhuti",
+    "pages/business/jinjian/jinjian",
+    "pages/login/index/index",
+    "pages/business/bohuiYy/bohuiYy",
+    
+    
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f4f4f4",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

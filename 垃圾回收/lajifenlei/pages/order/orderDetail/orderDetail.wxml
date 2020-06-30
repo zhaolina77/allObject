@@ -1,0 +1,114 @@
+<view class="aui-content">
+	<view class="top">
+		<view class="or_detail">
+			<image src="/image/or_detail.jpg"></image>
+		</view>
+
+		<view class="aui-text-white aui-padded-15 aui-font-size-18 or_txt " wx:if="{{detail.status==2}}">
+			<view style="line-height:50rpx" class="aui-padded-t-10">{{detail.ordername}}</view>
+			<view style="line-height:20rpx" class="aui-font-size-12 aui-margin-t-5">接单1小时后不能取消订单</view>
+		</view>
+		<view class="aui-text-white aui-padded-l-15 aui-padded-r-15 aui-font-size-18 or_txt" wx:else>{{detail.ordername}}</view>
+		
+
+
+	</view>
+	<view class="flex aui-padded-15 aui-bg-white" style="justify-content: space-between;">
+		<view class="left">
+			<view class="flex">
+				<view class="icon">
+					<image src="/image/people.png"></image>
+				</view>
+				<view class="aui-font-size-14 aui-padded-l-10">{{detail.nick_name}}</view>
+			</view>
+			<view class="flex aui-margin-t-10" bindtap="address">
+				<view class="icon1 ">
+					<image src="/image/dw_g.png"></image>
+				</view>
+				<view class="aui-font-size-14 aui-padded-l-10">{{detail.full_address}}{{detail.address_info}}</view>
+			</view>
+		</view>
+		<view class="right aui-padded-l-15 aui-border-l" bindtap="call">
+			<image src="/image/phone_on.png"></image>
+		</view>
+	</view>
+	<view class="aui-bg-white aui-padded-15 aui-margin-t-15">
+
+		<view class="content">
+			<view class="flex aui-border-b aui-padded-b-15" style="justify-content: space-between;">
+				<view class="flex">
+					<view class="pic">
+						<image src="{{detail.thumb}}" mode="aspectFill"></image>
+					</view>
+					<view class="aui-padded-l-15">
+						<view class="title_txt1 ">{{detail.classifyname}}</view>
+						<view class="title_txt2 aui-text-orange aui-font-size-9 aui-text-center">{{detail.classifyname}}</view>
+					</view>
+				</view>
+				
+			</view>
+			
+			<view class="flex aui-padded-t-15  ms_box">
+				<view class=" aui-font-size-13 aui-text-grayer">备注</view>
+				<view class="ms aui-font-size-14">{{detail.remark}}</view>
+			</view>
+
+		</view>
+	</view>
+	<view class="aui-bg-white aui-padded-15 aui-margin-t-15">
+		<view class="tit aui-padded-l-10">订单信息</view>
+		<view class="flex aui-padded-t-15  aui-text-gray aui-font-size-14">
+			<text>订单信息：</text>
+			<text>{{detail.order_sn}}</text>
+		</view>
+		<view class="flex aui-padded-t-15  aui-text-gray aui-font-size-14">
+			<text>发布时间：</text>
+			<text>{{detail.create_date}}</text>
+		</view>
+		<view class="flex aui-padded-t-15  aui-text-gray aui-font-size-14" wx:if="{{detail.status==3}}">
+			<text>完成时间：</text>
+			<text>{{detail.create_date}}</text>
+		</view>
+		<view class="flex aui-padded-t-15  aui-text-gray aui-font-size-14" wx:if="{{detail.status==4}}">
+			<text>取消时间：</text>
+			<text>{{detail.create_date}}</text>
+		</view>
+
+	</view>
+
+</view>
+
+
+
+<view class="fix aui-bg-white aui-padded-10"  wx:if="{{detail.isself==1}}">
+
+	<!-- 已完成 -->
+	<view class="flex   aui-pull-right " wx:if="{{detail.status==3}}" >
+		<view class="qx  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="pingjia" wx:if="{{detail.is_evaluate==0}}">
+			去评价
+		</view>
+			<view class="qx  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" wx:else>
+			已评价
+		</view>
+	</view>
+
+	<!-- 已取消 -->
+	<view class="flex   aui-pull-right " wx:elif="{{detail.status==4}}" >
+		<view class="qx  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="again"  data-id="{{detail.id}}">
+			重新发布
+		</view>
+	</view>
+		<!-- 待结单 -->
+	<view class="flex   aui-pull-right " wx:elif="{{detail.status==1}}">
+		<view class="qx  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="qxOrder">
+			取消订单
+		</view>
+	</view>
+
+	<!-- 接单中 -->
+	<view class="flex   aui-pull-right " wx:else>
+		<view class="qx  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="finsh">
+			已完成
+		</view>
+	</view>
+</view>

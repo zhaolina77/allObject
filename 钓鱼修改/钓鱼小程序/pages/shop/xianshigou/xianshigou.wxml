@@ -1,0 +1,73 @@
+<view class="aui-padded-15 aui-padded-t-5">
+    <view class="banner" >
+        <swiper  interval="2000" indicator-dots duration="500" autoplay indicator-color="rgba(204, 204, 204,1)" indicator-active-color="#1765FF">
+            <swiper-item >
+                <image src="{{pic}}" mode="aspectFill"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
+<view class="shangpin-list">
+    <view class="aui-list aui-media-list ">
+        <view class="aui-list-item" wx:for="{{list}}" wx:key="li" bindtap="enter" data-id="{{item.id}}">
+            <view class="aui-media-list-item-inner aui-padded-l-0">
+                <view class="aui-list-item-media">
+                    <view class="shop-pic">
+                        <image src="{{item.thumb}}" mode="aspectFill"></image>
+                    </view>
+                </view>
+
+                <view class="aui-list-item-inner">
+                    <view class="aui-list-item-text">
+                        <text class="aui-ellipsis-2  aui-font-size-13 aui-text-black">{{item.name}}</text>
+                    </view>
+                    <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-5">已售:{{item.sales}}</view>
+                    <view class="aui-list-item-text aui-font-size-12 aui-text-grayer">
+
+                        <view class="aui-list-item-title">
+
+                            <view class="aui-font-size-13 aui-text-orange aui-padded-t-10">
+                                ￥<text class="fweight-5 aui-font-size-18">{{item.market_price}}</text>
+                                <text class="aui-text-gray aui-font-size-10  aui-padded-t-5 aui-padded-l-5" style="text-decoration: line-through;">￥{{item.original_price}}</text>
+                            </view>
+                            <view class="aui-text-gray aui-font-size-10  aui-padded-t-5">{{item.shop_name}} <image src="/image/jt-right2.png" mode="widthFix" style="width: 0.5rem;vertical-align: middle;"></image> </view>
+                        </view>
+                        <view class='aui-list-item-right'>
+                            <view class=" aui-btn aui-btn-theme">去抢购</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- <view class="aui-list-item">
+            <view class="aui-media-list-item-inner aui-padded-l-0">
+                <view class="aui-list-item-media">
+                    <view class="shop-pic">
+                        <image src="/image/lizi.png" mode="aspectFill"></image>
+                    </view>
+                </view>
+
+                <view class="aui-list-item-inner">
+                    <view class="aui-list-item-text">
+                        <text class="aui-ellipsis-2  aui-font-size-13 aui-text-black">Vero Moda2018秋季新款chic毛衫针织衫女边圆领桃心图案落肩宽松</text>
+                    </view>
+                    <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-5">已售:344</view>
+                    <view class="aui-list-item-text aui-font-size-12 aui-text-grayer">
+
+                        <view class="aui-list-item-title">
+
+                            <view class="aui-font-size-13 aui-text-orange aui-padded-t-10">
+                                ￥<text class="fweight-5 aui-font-size-18">120</text>
+                                <text class="aui-text-gray aui-font-size-10  aui-padded-t-5 aui-padded-l-5" style="text-decoration: line-through;">￥120</text>
+                            </view>
+                            <view class="aui-text-gray aui-font-size-10  aui-padded-t-5">阡阡水果店 <image src="/image/jt-right2.png" mode="widthFix" style="width: 0.5rem;vertical-align: middle;"></image> </view>
+                        </view>
+                        <view class='aui-list-item-right'>
+                            <view class=" aui-btn aui-btn-theme">去抢购</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view> -->
+    </view>
+</view>

@@ -1,0 +1,58 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+page{background-color: white !important;}
+textarea {
+    height: 280rpx;
+}
+.pic {
+    width: 32%;
+    height: 240rpx;
+    margin-left: 1%;
+    position: relative;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pic .close {
+    position: absolute;
+    top: 6rpx;
+    right: 6rpx;
+    width: 40rpx;
+}
+
+.add {
+    width: 32%;
+    height: 240rpx;
+}
+
+.add image {
+    width: 100%;
+    height: 100%;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+    font-size: 28rpx;
+}
+
+input:-moz-placeholder {
+    color: #999;
+    font-size: 28rpx;
+}
+
+input::-moz-placeholder {
+    color: #999;
+    font-size: 28rpx;
+}
+
+input:-ms-input-placeholder {
+    color: #999;
+    font-size: 28rpx;
+}

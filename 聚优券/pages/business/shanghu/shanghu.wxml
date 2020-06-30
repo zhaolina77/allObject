@@ -1,0 +1,116 @@
+<view>
+	<view class="aui-padded-15 aui-bg-white">
+		<view class="top">
+			<image src="/image/step_2.png"></image>
+		</view>
+		<view class="flex aui-margin-t-5">
+			<text class="aui-text-theme">主体信息</text>
+			<text class="aui-text-theme">商户信息</text>
+			<text>行业规则</text>
+			<text>收款账户</text>
+		</view>
+	</view>
+
+
+	<view class="aui-padded-15">
+		<view class="fw-bold">商户信息</view>
+	</view>
+
+
+	<view class="aui-bg-white">
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">商户名称</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入商户名称" bindinput="merchantNameTwo" value="{{merchantNameTwo}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">商户电话</view>
+			<view class="right">
+				<input type="number" placeholder-class="pholder" placeholder="请输入商户电话" bindinput="merchantTelephone" value="{{merchantTelephone}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">商户邮箱</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入商户邮箱" bindinput="businessEmail" value="{{businessEmail}}"></input>
+			</view>
+		</view>
+	
+		
+	</view>
+	<view class="aui-padded-15">
+		<view class="fw-bold">拓展员信息</view>
+	</view>
+	<view class="aui-bg-white">
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">拓展员姓名</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入拓展员姓名" bindinput="developerName" value="{{developerName}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">拓展员电话</view>
+			<view class="right">
+				<input type="number" placeholder-class="pholder" placeholder="请输入拓展员电话" bindinput="developerPhone" value="{{developerPhone}}"></input>
+			</view>
+		</view>
+
+	</view>
+	<view class="aui-padded-15">
+		<view class="fw-bold">店铺信息</view>
+	</view>
+	<view class="aui-bg-white">
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">店铺名称</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入店铺名称" bindinput="shopName" value="{{shopName}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">商户简称</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入商户简称" bindinput="shopProvincialCode" value="{{shopProvincialCode}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">约定折扣比例</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="请输入约定折扣" bindinput="agreedDiscount" value="{{agreedDiscount}}"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">店铺地址</view>
+			<view class="right">
+				<input type="text" placeholder-class="pholder" placeholder="店铺地址" bindinput="shopAddress" value="{{shopAddress}}" style="text-align:right"></input>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">店铺门头照片</view>
+			<view class="add_pic" bindtap="changeAvatar1" data-idx1="1" wx:if="{{shopDoorHeadPhoto!=''}}">
+				<image src="{{shopDoorHeadPhoto}}" mode="aspectFill"></image>
+			</view>
+			<view class="add_pic" bindtap="changeAvatar1" data-idx1="1" wx:else>
+				<image src="/image/add_pic.png"></image>
+			</view>
+		</view>
+		<view class="aui-padded-15 flex">
+			<view class="aui-font-size-14">店铺环境照片</view>
+			<view class="add_pic" bindtap="changeAvatar2" data-idx1="2" wx:if="{{shopEnvironmentalPhoto!=''}}">
+				<image src="{{shopEnvironmentalPhoto}}" mode="aspectFill"></image>
+			</view>
+			<view class="add_pic" bindtap="changeAvatar2" data-idx1="2" wx:else>
+				<image src="/image/add_pic.png"></image>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="flex aui-padded-15" wx:if="{{status==-1||status==0||status==4}}">
+		<view class="aui-btn next" bindtap="next">保存草稿</view>
+		<view class="aui-btn aui-btn-theme next" bindtap="next">下一步</view>
+	</view>
+	<view class="flex aui-padded-15" wx:else>
+		<view class="aui-btn aui-btn-theme next" style="width:100%" bindtap="next1">下一页</view>
+	</view>
+</view>

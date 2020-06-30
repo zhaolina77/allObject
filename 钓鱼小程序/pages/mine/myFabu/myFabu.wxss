@@ -1,0 +1,26 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+page {
+    background-color: #fff !important;
+}
+
+.aui-list-item-inner {
+    display: flex !important;
+}
+.sp_box{
+    position: relative !important;
+    top: 0;
+    left: 0;
+}
+.bf{
+    width: 80rpx !important;
+    height:80rpx !important;
+    position: absolute;
+     left: 50%;
+    top: 50%;
+    margin-left: -40rpx;
+    margin-top: -40rpx;
+    z-index: 999;
+}

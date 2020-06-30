@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>交易关闭</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css"/>
+		<link rel="stylesheet" href="../../css/swiper-4.3.3.min.css"/>
+	</head>
+	<style type="text/css">
+				footer .aui-btn{margin-left: .5rem;width: 4rem;height: 1.5rem;line-height: 1.5rem;margin-top: 0.1rem; }
+
+	</style>
+	<body class="">
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+		    <a class="aui-pull-left aui-btn" onclick="closeWin()">
+		        <img class="icon" src="../../image/jt-left.png">
+		    </a>
+		    <div class="aui-title">订单详情 </div>
+		</header>
+		<footer class="aui-bar aui-bar-tab aui-border-t orderDetail" id="footer">
+        	<div class="aui-text-right aui-padded-r-10 aui-padded-t-5">
+        		<div class="aui-btn aui-font-size-12 aui-btn-outlined" >删除订单</div>
+        		<div class="aui-btn aui-font-size-12 aui-btn-outlined" >再次下单</div>
+        	</div>
+        </footer> 
+		
+		
+		
+	</body>
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>
+<script src="../../script/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+	
+	apiready = function(){
+		 $api.fixIos7Bar($api.dom("header"));//修复ios系统bar
+	        api.openFrame({
+	            name: 'jiaoyiGb_frm',
+	            url: 'widget://html/order/jiaoyiGb_frm.html',
+	            rect: {
+	                x: 0,
+	                y: $api.dom('header').offsetHeight ,
+	                w: 'auto',
+	                h: api.winHeight - $api.dom('header').offsetHeight - $api.dom('footer').offsetHeight
+	            },
+	            bounces: true,
+	            pageParam: {
+	                id: api.pageParam.id
+	            }
+	        });     
+	};
+</script>

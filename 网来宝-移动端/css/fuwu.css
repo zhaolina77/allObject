@@ -1,0 +1,340 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0.8);
+}
+
+li {
+	list-style: none;
+}
+
+.service-banner {
+	position: relative;
+	min-width: 1200px;
+	height: 630px;
+	margin: 0 auto;
+	background-image: url(/img/kc-bg.jpg);
+	background-size: auto 630px;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.service-banner img {
+	position: absolute;
+	width: 500px;
+	height: 150px;
+	left: 50%;
+	top: 207px;
+	margin-left: -545px;
+	-webkit-animation: fadeInImg 1s ease;
+	animation: fadeInImg 1s ease;
+}
+
+.service-tech {
+	height: 540px;
+}
+
+.service-tech h3 {
+	font-size: 30px;
+	font-weight: normal;
+	font-family: "Microsoft YaHei";
+	color: #333333;
+	line-height: 140px;
+	text-align: center;
+}
+
+.service-tech ul {
+	width: 1200px;
+	margin: 0 auto;
+	clear: both;
+}
+
+.service-tech ul li {
+	float: left;
+	width: 25%;
+}
+
+.service-tech ul li a {
+	display: block;
+	width: 280px;
+	height: 273px;
+	padding-top: 30px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-box-shadow: 0px 1px 11.83px 1.17px rgba(0, 0, 0, 0.23);
+	box-shadow: 0px 1px 11.83px 1.17px rgba(0, 0, 0, 0.23);
+	border-radius: 5px;
+}
+
+.service-tech ul li a i {
+	font-size: 50px;
+	line-height: 90px;
+	color: #429BE6;
+}
+
+.service-tech ul li a h4 {
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 3.5;
+	color: #666;
+}
+
+.service-tech ul li a p {
+	padding: 0 30px;
+	font-size: 14px;
+	color: #666;
+}
+
+.service-tech ul li a:hover i {
+	font-size: 70px;
+}
+
+.service-tech ul li:nth-child(2) a {
+	margin-left: 7px;
+}
+
+.service-tech ul li:nth-child(3) a {
+	margin-left: 15px;
+}
+
+.service-tech ul li:last-child a {
+	float: right;
+}
+
+.service-course {
+	height: 670px;
+	background-color: #F5F5F5;
+}
+
+.service-course h3 {
+	font-size: 30px;
+	font-weight: normal;
+	font-family: "Microsoft YaHei";
+	color: #333333;
+	line-height: 140px;
+	text-align: center;
+}
+
+.service-course ul {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.service-course ul li {
+	float: left;
+	width: 33.33%;
+	height: 215px;
+	margin-bottom: 23px;
+}
+
+.service-course ul li img {
+	display: block;
+	width: 382px;
+	height: 215px;
+}
+
+.service-course ul li:nth-child(3n+2) img {
+	margin-left: 8px;
+}
+
+.service-course ul li:nth-child(3n+3) img {
+	margin-left: 16px;
+}
+
+.service-course ul li:hover img {
+	-webkit-animation: shakes .3s ease;
+	animation: shakes .3s ease;
+}
+
+.service-device {
+	clear: both;
+	position: relative;
+	height: 840px;
+	background-image: url(../img/bg_pic2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.service-device .cover-1,
+.service-device .cover-2 {
+	height: 420px;
+	background-repeat: no-repeat;
+	background-size: auto 420px;
+	background-position: center;
+	overflow: hidden;
+}
+
+.service-device .cover-1 {
+	background-image: url(/img/kc-f-1.jpg);
+}
+
+.service-device .cover-2 {
+	background-image: url(/img/kc-f-2.jpg);
+}
+
+.service-device .word {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 466px;
+	height: 198px;
+	margin-left: -233px;
+	margin-top: -99px;
+	text-align: center;
+	line-height: 198px;
+	font-size: 32px;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px 3px 16.02px 1.98px rgba(0, 0, 0, 0.28);
+	box-shadow: 0px 3px 16.02px 1.98px rgba(0, 0, 0, 0.28);
+	font-family: "Microsoft YaHei";
+	color: #FF6200;
+}
+
+@media screen and (max-width: 1024px) {
+	.service-banner {
+		width: 100vw;
+		min-width: 100vw;
+		height: 48vw;
+		background-image: url(../img/fangan_pic2.png);
+		background-size: 100vw;
+		height: 48vw;
+	}
+	.service-banner img {
+		height: 20vw;
+		margin-left: -33.66vw;
+		top: 14vw;
+		-webkit-animation: fadeInImgM 1s ease;
+		animation: fadeInImgM 1s ease;
+	}
+	.service-tech {
+		width: 100vw;
+		min-width: 100vw;
+		height: 130vw;
+	}
+	.service-tech h3 {
+		line-height: 18.66vw;
+		font-size: 4vw;
+	}
+	.service-tech ul {
+		width: 100%;
+	}
+	.service-tech ul li {
+		width: 50%;
+		margin-bottom: 5.6vw;
+	}
+	.service-tech ul li a {
+		width: 44.44vw;
+		height: 44vw;
+		margin: 0 auto !important;
+		padding-top: 4vw;
+	}
+	.service-tech ul li a i {
+		font-size: 8vw;
+		line-height: 12vw;
+		color: #429BE6;
+	}
+	.service-tech ul li a h4 {
+		font-size: 3.466vw;
+		font-weight: normal;
+		line-height: 3.5;
+		color: #666;
+	}
+	.service-tech ul li a p {
+		padding: 0 4vw;
+		font-size: 14px;
+		color: #666;
+	}
+	.service-tech ul li a:hover i {
+		font-size: 9.33vw;
+	}
+	.service-tech ul li:nth-child(2) a {
+		margin-left: auto;
+	}
+	.service-tech ul li:nth-child(3) a {
+		margin-left: auto;
+	}
+	.service-tech ul li:last-child a {
+		float: none;
+	}
+	.service-course {
+		width: 100vw;
+		/*height: 108.4vw;*/
+	}
+	.service-course h3 {
+		line-height: 7.66vw;
+		font-size: 4vw;
+	padding-top: 5vw;
+	}
+	.service-course ul {
+		width: 100vw;
+	}
+	.service-course ul li {
+		width: 50%;
+		height: 25.33vw;
+		margin-bottom: 4vw;
+	}
+	.service-course ul li img {
+		width: 44.8vw;
+		height: 48.33vw;
+		margin: 0 auto;
+		/*margin-top: 20vw;*/
+	}
+	.service-course ul li:nth-child(3n+2) img {
+		margin-left: auto;
+	}
+	.service-course ul li:nth-child(3n+3) img {
+		margin-left: auto;
+	}
+	.service-course ul li:nth-child(2n+1) img {
+		margin: 0 1.2vw 0 3.466vw;
+	}
+	.service-course ul li:nth-child(2n+2) img {
+		margin: 0 3.466vw 0 1.2vw;
+	}
+	.service-device {
+		width: 100vw;
+		height: 44vw;
+	}
+	.service-device .cover-1,
+	.service-device .cover-2 {
+		width: 100vw;
+		height: 22vw;
+		background-size: 100vw 22vw;
+	}
+	.service-device .word {
+		width: 35.86vw;
+    height: 13vw;
+    margin-left: -18.93vw;
+    margin-top: -8vw;
+    line-height: 13vw;
+    font-size: 4.466vw;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.service-tech {
+		height: 158vw;
+	}
+	.service-tech ul li a {
+		height: 62vw;
+	}
+}
+
+@media screen and (max-width: 325px) {
+	.service-tech {
+		height: 170vw;
+	}
+	.service-tech ul li a {
+		height: 68vw;
+	}
+}
+
+
+/* date 2019/1/3 */
+
+
+/*# sourceMappingURL=service.css.map */

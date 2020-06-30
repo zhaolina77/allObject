@@ -1,0 +1,13 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="">
+  <view class="logo bg-radius">
+    <image src="{{data.logo}}" mode="aspectFill"></image>
+  </view>
+  <view class="aui-text-center aui-margin-t-15">{{data.name}}</view>
+  <view class="aui-padded-15 aui-margin-t-15 aui-padded-t-15">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+
+  </view>
+  <!-- <view class="aui-text-center aui-margin-t-15">版本号：8.2.1</view> -->
+</view>

@@ -1,0 +1,3 @@
+<view class="aui-padded-12 aui-font-size-14 ">
+{{content}}
+</view>

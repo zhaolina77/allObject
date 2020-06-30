@@ -1,0 +1,55 @@
+{
+    "pages": [
+        
+        "pages/index/index",
+        "pages/djdetail/djdetail",
+        "pages/password/password",
+        "pages/userinfo/userinfo",
+        "pages/citys/citys",
+        "pages/login/login",
+        "pages/orderCg/orderCg",
+        "pages/confirmeInfo/confirmeInfo",
+        "pages/searchAddress/searchAddress",
+        "pages/addAddress/addAddress",
+        "pages/address/address",
+        "pages/carInfo/carInfo",
+        "pages/otherPay/otherPay",
+        "pages/personData/personData",
+        "pages/yijian/yijian",
+        "pages/change_coupon/change_coupon",
+        "pages/new/new",
+        "pages/re_confirmeInfo/re_confirmeInfo",
+        "pages/invitFirend/invitFirend",
+	    	"pages/order/order",
+        "pages/evaluat/evaluat",
+        "pages/complain/complain",
+        "pages/mine/mine",
+        
+        "pages/coupon/coupon",
+        "pages/orderdetail/orderdetail",
+        "pages/message/message",
+        "pages/aboutUs/aboutUs",
+        
+        "pages/info/info",
+
+        
+        "pages/useragent/useragent",
+        "pages/privacy/privacy",
+        "pages/profile/profile",
+        "pages/mdetails/mdetails"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "permission": {
+      "scope.userLocation": {
+        "desc": "你的位置信息将用于小程序获取就近的城市数据展示"
+      }
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

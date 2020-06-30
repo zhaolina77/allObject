@@ -1,0 +1,5 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.aui-switch:checked{border-color: #0051FE ;background-color: #0051FE ;}

@@ -1,0 +1,10 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+.tit{line-height: 46rpx;}
+.bg_pic{width: 100%;height: 400rpx;}
+.bg_pic image{width: 100%;height: 100%;}
+.sm_pic{width: 48%;height: 240rpx;}
+.pic1{width: 100%;height: 100%;}
+.pic1 image{width: 100%;height: 100%;}

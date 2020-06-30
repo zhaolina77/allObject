@@ -1,0 +1,6 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+.aui-btn{width: 200rpx !important; background-color: #C4A65D;color: #745300;}
+.yq{width: 100%;position: fixed;bottom: 20rpx;left: 0;}

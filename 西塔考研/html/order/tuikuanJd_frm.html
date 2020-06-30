@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <title>退款进度</title>
+	   	<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css"/>
+	</head>
+	<style type="text/css">
+		.aui-bg-gr{background-color: #f8f9fb;}
+		.aui-iconfont{font-size: 12px;}
+		.inner{margin-left: 1.5rem;}
+		.aui-border-b{border-color: #eee !important;}
+		
+		li{position: relative;}
+		li:after{content: '';position: absolute;height: 100%;width: 1px;background-color: #ccc;top:50%;left: 0.32rem; }
+		li:last-child:after{display: none;}
+		.jd1{position: absolute;left: 0.2rem;top:50%;margin-top: -0.2rem;width: 0.3rem;height: 0.3rem;line-height: 0.4rem; border-radius: 0.4rem;background-color: #ccc;z-index: 9;}
+		
+		.active .jd1{position: absolute;left: 0rem;top: 50%;margin-top: -0.3rem; z-index: 1;width: 0.6rem;height: 0.6rem;line-height: 0.6rem; border-radius: 0.5rem;background-color: #58CAB9; }
+		
+	</style>
+	<body >
+		<div class="aui-content">
+			
+			<div class="aui-padded-15 aui-bg-gr aui-font-size-15">
+				<div class="aui-padded-b-10">订单编号：3871232887123</div>
+				<div class="aui-padded-b-10">退款状态：<span class="aui-text-theme">审核中</span></div>
+				<div>退款金额：￥1750</div>
+			</div>	
+			
+			<div class="aui-padded-l-15 aui-padded-r-15">
+				<div class="aui-padded-t-15 aui-padded-b-15 aui-border-b fweight-5">退款信息</div>
+				<ul class="">
+					<!--active 当前的位置-->
+					<li class="active">
+						<div class="aui-pull-left jd1"></div>
+						<div class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+							<div class="aui-font-size-14 aui-padded-b-5">商家拒绝了您的退款申请，如有疑问请联系客服</div>
+							<div class="aui-text-grayer aui-font-size-11 aui-padded-b-5">2018-02-14  08:14:12</div>
+						</div>
+					</li>
+					<li class="">
+						<div class="aui-pull-left jd1"></div>
+						<div class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+							<div class="aui-text-grayer aui-font-size-14 aui-padded-b-5">商家同意了您的退款申请</div>
+							<div class="aui-text-grayer aui-font-size-11 aui-padded-t-5">2018-02-14  08:14:12</div>
+						</div>
+					</li>
+					<li class="">
+						<div class="aui-pull-left jd1"></div>
+						<div class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+							<div class="aui-text-grayer aui-font-size-14 aui-padded-b-5">您的退款信息已提交</div>
+							<div class="aui-text-grayer aui-font-size-11 aui-padded-t-5">2018-02-14  08:14:12</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>

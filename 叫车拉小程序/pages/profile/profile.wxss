@@ -1,0 +1,4 @@
+/* pages/useragent/useragent.wxss */
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import "/wxParse/wxParse.wxss";

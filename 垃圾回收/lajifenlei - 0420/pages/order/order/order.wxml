@@ -1,0 +1,151 @@
+<view class="aui-content">
+	<!-- <scroll-view scroll-x enable-flex="true"> -->
+	<view class="top_box">
+		<view class="flex top aui-padded-15 aui-bg-white">
+			<view class="txt swiper-slide {{status==-1?'active':''}} " bindtap="change" data-index="-1">
+				<view class="">全部</view>
+				<view class="line"></view>
+			</view>
+			<view class="txt swiper-slide {{status==1?'active':''}}" bindtap="change" data-index="1">
+				<view class="">待接单</view>
+				<view class="line"></view>
+			</view>
+			<view class="txt swiper-slide {{status==2?'active':''}}" bindtap="change" data-index="2">
+				<view class="">接单中</view>
+				<view class="line"></view>
+			</view>
+			<view class="txt swiper-slide {{status==3?'active':''}}" bindtap="change" data-index="3">
+				<view class="">已完成</view>
+				<view class="line"></view>
+			</view>
+			<view class="txt swiper-slide {{status==4?'active':''}}" bindtap="change" data-index="4">
+				<view class="">已取消</view>
+				<view class="line"></view>
+			</view>
+		</view>
+	</view>
+	<!-- </scroll-view> -->
+
+	<view class=" aui-padded-l-15  aui-padded-r-15 aui-padded-b-15 aui-margin-t-30" wx:if="{{list.length>0}}">
+		<!-- 待结单 -->
+		<view class="bg-radius aui-bg-white aui-margin-t-15" wx:for="{{list}}" wx:key="li">
+			<view data-id="{{item.id}}" bindtap="detail">
+
+				<view class="title flex aui-padded-10 aui-border-b">
+					<view class="aui-font-size-14 aui-text-gray">
+						<text class="">订单编号：</text>
+						<text class="">{{item.order_sn}}</text>
+					</view>
+					<view class="aui-font-size-14 aui-text-theme">
+						{{item.ordername}}
+					</view>
+				</view>
+				<view class=" aui-padded-10 ">
+					<view class="aui-font-size-14  aui-padded-b-10">
+						<text class="" decode="true">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</text>
+						<text class="">{{item.name}}</text>
+					</view>
+					<!-- <view class="aui-font-size-14 aui-padded-b-10">
+						<text class="">物品描述：</text>
+						<text class="">{{item.content}}</text>
+					</view> -->
+					<view class="aui-font-size-14 ">
+						<text class="">下单时间：</text>
+						<text class="">{{item.create_date}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="" wx:if="{{item.isself==1}}">
+
+			<!-- 待接单 -->
+			<view class="flex aui-padded-10  aui-pull-right" wx:if="{{item.status==1}}">
+				<view class="qx aui-font-size-10 aui-btn-outlined aui-text-gray aui-text-center" bindtap="qxOrder" data-id="{{item.id}}">
+					取消订单
+				</view>
+			</view>
+			<!-- 接单中 -->
+			<view class="flex aui-padded-10  aui-pull-right " wx:elif="{{item.status==2}}">
+				<view class="qx  aui-font-size-10  aui-btn-outlined aui-text-gray">
+					<view class="flex lx" bindtap="lianxi" data-mobile="{{item.mobile}}">
+						<view class="phone">
+							<image src='/image/phone.png'></image>
+						</view>
+						<view class="aui-padded-l-5 aui-padded-r-5">联系对方</view>
+					</view>
+				</view>
+				<view class="qx finish aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="finish" data-id="{{item.id}}">
+					已完成
+				</view>
+			</view>
+			<!-- 已取消 -->
+			<view class="flex aui-padded-10  aui-pull-right " wx:elif="{{item.status==4}}">
+				<view class="qx  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="again"  data-id="{{item.id}}">
+					重新发布
+				</view>
+				<view class="qx  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="scOrder" data-id="{{item.id}}">
+					删除订单
+				</view>
+			</view>
+			<!-- 已完成 -->
+			<view class="flex aui-padded-10  aui-pull-right " wx:elif="{{item.status==3}}">
+				<view class="qx  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="scOrder" data-id="{{item.id}}">
+					删除订单
+				</view>
+				<view class="qx finish  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" bindtap="pingjia" data-id="{{item.id}}" wx:if="{{item.is_evaluate==0}}" >
+				<text>去评价</text>
+				</view>
+				<view class="qx finish  aui-font-size-10 aui-btn-outlined  aui-margin-l-10 aui-text-center" wx:else>
+				<text>已评价</text>
+				</view>
+			</view>
+			</view>
+		</view>
+		<!-- 接单中 -->
+
+	</view>
+
+	<!-- 无订单 -->
+	<view class="no_order" wx:else>
+		<image src="/image/no_order.png"> </image>
+	</view>
+
+</view>
+
+
+<!-- 取消订单 -->
+
+
+<view class="memgceng " wx:if="{{qx==1}}">
+	<view class="cg_box">
+		<view class="pic">
+			<image src="/image/del_order1.png"></image>
+		</view>
+		<view class="txt_box aui-bg-white">
+			<view class="aui-text-grayer aui-text-center aui-padded-15">确定取消该订单吗？</view>
+			<view class="flex qr_box">
+				<view class="queren aui-font-size-15 aui-btn-theme" bindtap="qxY">确定</view>
+				<view class="queren aui-btn-outlined aui-font-size-15  aui-btn-theme" bindtap="qxN">取消</view>
+
+			</view>
+		</view>
+	</view>
+
+</view>
+
+
+
+<!-- 删除订单 -->
+
+
+<view class="memgceng " wx:if="{{sc==1}}">
+	<view class="sc_box">
+		<view class="txt_box aui-bg-white">
+			<view class="tit aui-text-center aui-padded-15 aui-border-b">确认删除订单？</view>
+			<view class="flex qx_box aui-text-center">
+				<view class="qx_order aui-font-size-15 aui-text-theme " bindtap="scN">取消</view>
+				<view class="qx_order qx_order1 aui-font-size-15 aui-text-theme " bindtap="scY">确定</view>
+			</view>
+		</view>
+	</view>
+
+</view>

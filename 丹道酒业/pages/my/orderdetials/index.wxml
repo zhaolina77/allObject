@@ -1,0 +1,106 @@
+<!--pages/my/orderdetials/index.wxml-->
+<image class="cover" src="/images/orderstatus.png"></image>
+<view class="paystatus">
+  <view  class="aui-font-size-17 aui-text-white">{{order.pay_name}}</view>
+  <view class="aui-font-size-12 aui-text-white aui-margin-t-15" wx:if="{{order.status==0}}">剩余{{time}}分钟自动关闭订单</view>
+  <view class="aui-font-size-12 aui-text-white aui-margin-t-15" wx:if="{{order.status==1}}">我们承诺24小时内发货，请耐心等耐！</view>
+  <view class="aui-font-size-12 aui-text-white aui-margin-t-15" wx:if="{{order.status==2}}">包裹已经发出，请注意查收！</view>
+  <view class="aui-font-size-12 aui-text-white aui-margin-t-15" wx:if="{{order.status==7}}">订单已取消</view>
+  <view class="aui-font-size-12 aui-text-white aui-margin-t-15" wx:if="{{order.status==-3}}">订单已关闭</view>
+  <view class="aui-font-size-12 aui-text-white aui-margin-t-15" wx:if="{{order.status==3}}">交易成功，期待下次为您服务！</view>
+</view>
+<view class="flex aui-padded-15 aui-bg-white">
+  <image class="oaddress" src="/images/oaddress.png"></image>
+  <view class="">
+    <view class="flex">
+      <text class="aui-font-size-15 aui-text-black aui-margin-r-15">{{address.name}}</text>
+      <text class="aui-font-size-15 aui-text-grayer">{{adress.mobile}}</text>
+    </view>
+    <text class="aui-font-size-14 aui-text-black">{{address.province}} {{address.city}} {{address.district}}{{address.address_info}}</text>
+  </view>
+</view>
+<image class="imgaddress" src="/images/addressbottom.png"></image>
+  <block wx:for="{{goodsList}}" wx:for-item="voo">
+  <view class="flex flex1 aui-padded-15 aui-bg-white">
+    <image class="pimg" src="{{voo.thumb}}"></image>
+    <view class="aui-margin-l-15 flex1">
+      <view class="aui-font-size-15 aui-text-blacker">{{voo.goods_name}}</view>
+      <view class="aui-font-size-11 aui-text-grayer">{{voo.spec_name}}</view>
+      <view class="aui-font-size-16 aui-text-black aui-margin-t-15">￥{{voo.goods_price}}</view>
+    </view>
+    <view class="aui-font-size-11 aui-text-grayer">X{{voo.goods_num}}</view> 
+  </view>
+  </block>
+  <view class="info aui-bg-white aui-padded-top aui-padded-15" style="margin-top:2rpx;">
+    <view class="flex">
+      <text class="aui-font-size-12 aui-text-grayer flex1">配送方式</text>
+      <text class="aui-font-size-12 aui-text-blacker">快递包邮</text>
+    </view>
+    <view class="flex aui-margin-t-15" wx:if="{{order.coupon_money}}">
+      <text class="aui-font-size-12 aui-text-grayer flex1">优惠</text>
+      <text class="aui-font-size-12 discount">优惠券-￥{{order.coupon_money}}</text>
+    </view>
+    <view class="flex aui-margin-t-15" wx:else>
+      <text class="aui-font-size-12 aui-text-grayer flex1">优惠</text>
+      <text class="aui-font-size-12 discount">未使用优惠券</text>
+    </view>
+    <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-12 aui-text-grayer flex1">商品数量</text>
+      <text class="aui-font-size-12 aui-text-blacker">{{order.goods_num}}</text>
+    </view>
+     <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-12 aui-text-grayer flex1">商品合计</text>
+      <text class="aui-font-size-12 aui-text-blacker">￥{{order.total_price}}</text>
+    </view>
+    <view class="line"></view>
+     <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-12 aui-text-grayer flex1" wx:if="{{order.status==0 || order.status==-3}}">需支付</text>
+      <text class="aui-font-size-12 aui-text-grayer flex1" wx:else>已支付</text>
+      <text class="aui-font-size-12 total">￥{{order.pay_price}}</text>
+    </view>
+  </view>
+  <view class="aui-bg-white aui-padded-15 aui-margin-t-15">
+    <text class="aui-font-size-14 aui-text-black">订单信息</text>
+    <view class="line"></view>
+     <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-13 aui-text-grayer">发货地址：</text>
+      <text class="aui-font-size-13 aui-text-black">{{club.province}}{{club.city}}{{club.district}}{{club.address}}</text>
+    </view>
+     <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-13 aui-text-grayer">订单编号：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.order_sn}}</text>
+    </view>
+     <view class="flex aui-margin-t-15">
+      <text class="aui-font-size-13 aui-text-grayer">创建时间：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.create_time}}</text>
+    </view>
+    <view class="flex aui-margin-t-15" wx:if="{{order.status>0}}">
+      <text class="aui-font-size-13 aui-text-grayer">付款时间：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.pay_time}}</text>
+    </view>
+    <view class="flex aui-margin-t-15" wx:if="{{order.status>1 && order.status!=7}}">
+      <text class="aui-font-size-13 aui-text-grayer">发货时间：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.send_time}}</text>
+    </view>
+    <view class="flex aui-margin-t-15" wx:if="{{order.status==-3}}">
+      <text class="aui-font-size-13 aui-text-grayer">关闭时间：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.update_time}}</text>
+    </view>
+     <view class="flex aui-margin-t-15"  wx:if="{{order.status>2 && order.status!=7 }}">
+      <text class="aui-font-size-13 aui-text-grayer">收货时间：</text>
+      <text class="aui-font-size-13 aui-text-black">{{order.receive_time}}</text>
+    </view>
+  </view>
+  <view class="fixedheight"></view>
+  <view class="fixed aui-text-right">
+    <view class="aui-padded-15">
+     <button class="opt" open-type="contact"  wx:if="{{order.status==1 || order.status==2}}" catchtap="nothing">联系客服</button>
+     <text class="opt" wx:if="{{order.status==0}}" data-id="{{order.id}}" catchtap="cancel">取消订单</text>
+      <text class="opt" wx:if="{{order.status==7}}" data-id="{{order.id}}" catchtap="delorder">删除订单</text>
+     <text class="opt" wx:if="{{item.status==3 && item.is_evaluation==1}}" data-id="{{item.id}}">再来一单</text>
+     <text class="opt red"  wx:if="{{order.status==0}}"  data-id="{{order.id}}" catchtap="pay">付款</text>
+     <text class="opt" wx:if="{{order.status==1}}" data-id="{{order.id}}" catchtap="refund">申请退款</text>
+     <text class="opt red"  wx:if="{{order.status==2}}"  data-id="{{order.id}}" catchtap="confirm">确认收货</text>
+     <text class="opt red" wx:if="{{order.status==3 && order.is_evaluation==0}}" data-item="{{order}}" catchtap="addpingjia">评价</text>
+    </view>
+  </view>

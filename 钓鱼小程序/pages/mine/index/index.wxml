@@ -1,0 +1,166 @@
+<view class="aui-bar aui-bar-nav aui-bar-light" style="background-color: initial !important; position:absolute;">
+	<view class="aui-pull-right aui-btn" bindtap="sest">
+        <image src="/image/set.png" style="width:36rpx;" mode="widthFix"></image>
+    </view>
+</view>
+<view class="top-pic">
+	<image src="{{account.background}}" style="height：700rpx !important"></image>
+</view>
+<view class="top aui-bg-white">
+	<view class="aui-list aui-media-list info aui-padded-t-5" wx:if="{{token}}" bindtap="enter">
+		<view class="aui-list-item aui-list-item-middle">
+			<view class="aui-media-list-item-inner">
+				<view class="aui-list-item-media">
+					<view class="head-pic">
+						<image src="{{account.head_portrait}}" mode="aspectFill"></image>
+					</view>
+				</view>
+				<view class="aui-list-item-inner">
+					<view class="aui-list-item-text" style="margin-top:-5rpx">
+						<view class="aui-list-item-title aui-font-size-18 fweight-5">{{account.nick_name}}</view>
+					</view>
+					<view class="aui-list-item-text aui-text-grayer aui-padded-t-5" style="margin-top:-10rpx">
+						<view class="aui-label aui-label-info " style="padding: 5rpx 10rpx !important" >{{account.type_name}} </view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-list aui-media-list info aui-padded-t-5" wx:else>
+		<view class="aui-list-item aui-list-item-middle" bindtap="login">
+			<view class="aui-media-list-item-inner">
+				<view class="aui-list-item-media">
+					<view class="head-pic">
+						<image src="/image/head.png" mode="aspectFill"></image>
+					</view>
+				</view>
+				<view class="aui-list-item-inner">
+					<view class="aui-list-item-text">
+						<view class="aui-list-item-title aui-font-size-20 fweight-5">请先登录</view>
+					</view>
+					<view class="aui-list-item-text aui-text-grayer aui-padded-t-5">
+						<!-- <view class="aui-label aui-label-info ">普通用户 </view> -->
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+
+	<view class="aui-row aui-padded-b-15 aui-padded-t-15 aui-bg-white" style="position: relative;z-index: 9;">
+		<view class="aui-col-xs-3 aui-text-center" bindtap="colls">
+			<view class="aui-font-size-20 fweight-5 ">{{account.coll_num}}</view>
+			<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">收藏</view>
+		</view>
+		<view class="aui-col-xs-3 aui-text-center" bindtap="gz">
+			<view class="aui-font-size-20 fweight-5 ">{{account.follow_num}}</view>
+			<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">关注</view>
+		</view>
+		<view class="aui-col-xs-3 aui-text-center" bindtap="ss">
+			<view class="aui-font-size-20 fweight-5 ">{{account.part_in_num}}</view>
+			<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">赛事</view>
+		</view>
+		<view class="aui-col-xs-3 aui-text-center" bindtap="fb">
+			<view class="aui-font-size-20 fweight-5 ">{{account.release_num}}</view>
+			<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">发布</view>
+		</view>
+	</view>
+</view>
+
+<view class="aui-margin-15 aui-padded-t-15 aui-padded-b-15 aui-row zhuangtai">
+	<view class="aui-col-5 aui-text-center" bindtap="order" data-index="1">
+		<view class="">
+			<image src="/image/mine-order1.png" mode="widthFix"></image>
+		</view>
+		<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">待发货 </view>
+	</view>
+	<view class="aui-col-5 aui-text-center" bindtap="order" data-index="2">
+		<view class="">
+			<image src="/image/mine-order2.png" mode="widthFix"></image>
+		</view>
+		<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">待收货 </view>
+	</view>
+	<view class="aui-col-5 aui-text-center" bindtap="pingjia">
+		<view class="">
+			<image src="/image/pj.png" mode="widthFix"></image>
+		</view>
+		<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">待评价 </view>
+	</view>
+	<view class="aui-col-5 aui-text-center" bindtap="order" data-index="4">
+		<view class="">
+			<image src="/image/mine-order4.png" mode="widthFix"></image>
+		</view>
+		<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">退款 </view>
+	</view>
+	<view class="aui-col-5 aui-text-center" bindtap="order" data-index="-1">
+		<view class="">
+			<image src="/image/mine-order5.png" mode="widthFix"></image>
+		</view>
+		<view class="aui-font-size-12 aui-text-gray aui-padded-t-5">全部订单 </view>
+	</view>
+</view>
+<view class="aui-padded-l-15 aui-padded-r-15 list">
+	<view class="aui-list aui-border-bgB bg-radius" bindtap="rz">
+		<view class="aui-list-item aui-list-item-middle">
+			<view class="aui-list-item-inner">
+				<view class="aui-list-item-title">
+					<image class="fl" src="/image/mine1.png" mode="widthFix"></image>
+					<text class="aui-font-size-15 fweight-5">账号认证</text>
+				</view>
+				<view class="aui-list-item-right">
+					<text class="aui-font-size-12 aui-text-orange">立即认证</text>
+					<image class="jt" src="/image/jt-right2.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-list aui-border-bgB bg-radius list">
+		<view class="aui-list-item aui-list-item-middle" bindtap="about">
+			<view class="aui-list-item-inner">
+				<view class="aui-list-item-title">
+					<image class="fl" src="/image/mine2.png" mode="widthFix"></image>
+					<text class="aui-font-size-15 fweight-5">关于我们</text>
+				</view>
+				<view class="aui-list-item-right">
+					<image class="jt" src="/image/jt-right2.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
+		<view class="aui-list-item aui-list-item-middle">
+			<view class="aui-list-item-inner" bindtap="address">
+				<view class="aui-list-item-title">
+					<image class="fl" src="/image/mine3.png" mode="widthFix"></image>
+					<text class="aui-font-size-15 fweight-5">收货地址</text>
+				</view>
+				<view class="aui-list-item-right">
+					<image class="jt" src="/image/jt-right2.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-list aui-border-bgB bg-radius list">
+		<view class="aui-list-item aui-list-item-middle" bindtap="yj">
+			<view class="aui-list-item-inner">
+				<view class="aui-list-item-title">
+					<image class="fl" src="/image/mine4.png" mode="widthFix"></image>
+					<text class="aui-font-size-15 fweight-5">意见反馈</text>
+				</view>
+				<view class="aui-list-item-right ">
+					<image class="jt" src="/image/jt-right2.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
+		<button open-type='contact' class="aui-list-item aui-list-item-middle" plain="true">
+			<view class="aui-list-item-inner">
+				<view class="aui-list-item-title">
+					<image class="fl" src="/image/mine5.png" mode="widthFix"></image>
+					<text class="aui-font-size-15 fweight-5">联系客服</text>
+				</view>
+				<view class="aui-list-item-right">
+					<image class="jt" src="/image/jt-right2.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</button>
+	</view>
+</view>

@@ -1,0 +1,74 @@
+<view class="aui-content aui-padded-15" style="background-color:white">
+
+	<view class="aui-bg-white bg-radius aui-text-center pingfen">
+		<view class="aui-row" style="display: inline-block;">
+			<view class="aui-col-5" wx:if="{{level==1}}">
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="0"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="5"></image>
+			</view>
+			<view class="aui-col-5" wx:if="{{level==2}}">
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="5"></image>
+			</view>
+			<view class="aui-col-5" wx:if="{{level==3}}">
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="5"></image>
+			</view>
+			<view class="aui-col-5" wx:if="{{level==4}}">
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="5"></image>
+			</view>
+			<view class="aui-col-5" wx:if="{{level==5}}">
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star-on.png" bindtap="star" data-num="4"></image>
+			</view>
+			<view class="aui-col-5" wx:if="{{level==0}}">
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="5"></image>
+			</view>
+		</view>
+		<view class="aui-font-size-12 aui-padded-t-15 aui-text-grayer">使用体验如何？给商家打个分吧</view>
+	</view>
+
+	<view class="aui-margin-t-15 bg-radius aui-bg-white aui-padded-15">
+		<textarea class="aui-font-size-15" placeholder="说说你的真实感受吧" bindinput="content"></textarea>
+
+
+		<view class="aui-row">
+			<view class="pic aui-pull-left  aui-margin-t-15" wx:for="{{pic}}" wx:key="pi">
+				<image src="/image/close1.png" class="close" bindtap="del" data-index="{{index}}"></image>
+				<image src="{{item}}"></image>
+			</view>
+
+			<view class="add aui-pull-left aui-margin-t-15" wx:if="{{pic.length<3}}">
+				<image src="/image/add-pic.png" bindtap="changeAvatar"></image>
+			</view>
+		</view>
+
+
+	</view>
+
+
+
+</view>
+<view class="aui-bar aui-bar-tab aui-padded-15" id="footer" bindtap="submit">
+	<view class="aui-btn aui-btn-block aui-btn-theme aui-font-size-14">提交</view>
+</view>

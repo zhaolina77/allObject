@@ -1,0 +1,95 @@
+/* pages/index/coupon/index.wxss */
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+
+page {
+  background: #f5f5f5;
+}
+
+.flex {
+  display: flex;
+}
+
+.tab {
+  background: #fff;
+  padding: 0 30rpx;
+  justify-content:space-around;
+  font-size: 30rpx;
+  display: flex;
+  height: 80rpx;
+}
+
+.tab view {
+  position: relative;
+  width: 33.3%;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.tab .active {
+  color: #ff2c2c;
+  border-bottom: solid 1px #ff2c2c;
+}
+
+/* .tab .active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #ff2c2c;
+  left: 4rpx;
+  bottom:0rpx;
+} */
+
+
+
+.coupon {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 46rpx;
+  width: 100%;
+  padding: 30rpx;
+  padding-left: 1rem !important;
+}
+
+.top, .item {
+  display: flex;
+  align-items: center;
+}
+
+.top {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #c34de3;
+  font-size: 0;
+}
+
+.price>span:first-child {
+  position: relative;
+  top: -1rem;
+}
+
+.btn {
+  position: relative;
+  top: 20rpx;
+  left: -100rpx;
+  color: #f73636;
+}
+
+.btns {
+  position: relative;
+  top: 20rpx;
+  left: -100rpx;
+  color: #fff;
+}
+.img {
+  width: 690rpx;
+  height: 230rpx;
+}

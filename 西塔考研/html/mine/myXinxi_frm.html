@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>个人资料</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+	</head>
+	<style type="text/css">
+		.top-pic {
+			height: 7rem;
+			position: relative;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-image: url(../../image/banner.jpg);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		
+		.top {
+			height: 5.4rem;
+			margin: 0.75rem;
+			margin-top: -3rem;
+			border-radius: 0.25rem;
+			overflow: hidden;
+			vertical-align: middle;
+			box-shadow: 0 0 10px 0 rgba(241, 241, 241, 1);
+		}
+		
+		.info .aui-list-item-media {
+			width: auto !important;
+		}
+		
+		.head-pic {
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		
+		.head-pic img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		.right_pic {
+			width: 2rem;
+			height: 1.2rem;
+			overflow: hidden;
+		}
+		
+		.right_pic img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		.aui-label {
+			border-radius: 1rem;
+			padding: 0.25em 0.5em !important;
+		}
+		
+		.zhuangtai img {
+			width: 1.15rem;
+			margin: auto;
+		}
+		
+		.list .fl {
+			width: 0.9rem;
+			vertical-align: middle;
+			margin-right: 0.25rem;
+		}
+		
+		.list .jt {
+			width: 1rem;
+			vertical-align: middle;
+		}
+		
+		.list span {
+			vertical-align: middle;
+		}
+		
+		.list .aui-list-item-inner {
+			min-height: 2.75rem;
+		}
+		
+		.fl_pic {
+			width: 2rem;
+			height: 1.8rem;
+			margin: 0 auto;
+		}
+		
+		.fl_pic img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		.yaoqing {
+			width: 100%;
+			height: 3.5rem;
+			margin: 0 auto;
+		}
+		
+		.yaoqing img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		.huiyuan_pic {
+			width: 7%;
+		}
+		
+		.huiyuan_txt {
+			width: 93%;
+		}
+		textarea::-webkit-input-placeholder,
+		input::-webkit-input-placeholder {
+			color: #222 !important;
+			font-size: 0.75rem;
+		}
+		.gouxuan img{
+			width: 0.7rem;
+			height: 0.7rem;
+		}
+		.aui-radio:checked, .aui-radio.aui-checked, .aui-checkbox:checked, .aui-checkbox.aui-checked{
+			background-color: #58CAB9;
+			border: 1px solid #58CAB9;
+			}
+	</style>
+
+	<body class="">
+		<div class="aui-content">
+			<div class=" list">
+				<div class="aui-padded-15 ">
+				
+					<ul class="aui-list aui-margin-t-15">
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">头像</div>
+								<div class="aui-list-item-right">
+									<div class="head-pic">
+									<img src="../../image/banner.jpg" />
+								</div>
+								</div>
+							</div>
+						</li>
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner  aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">昵称</div>
+								<div class="aui-list-item-right">
+									<input type="text" name="" id="" value="" style="text-align: right;" placeholder="西塔-6666" />
+								</div>
+							</div>
+						</li>
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">学员性别</div>
+								<div class="aui-list-item-right">
+									<span class="aui-font-size-15 aui-text-black aui-ellipsis-1">男</span>
+								</div>
+							</div>
+						</li>
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">在读院校</div>
+								<div class="aui-list-item-right">
+									<span class="aui-font-size-15 aui-text-black aui-ellipsis-1">西安建筑科技大学</span>
+								</div>
+							</div>
+						</li>
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">在读年级</div>
+								<div class="aui-list-item-right">
+									<span class="aui-font-size-15 aui-text-black aui-ellipsis-1">大四</span>
+								</div>
+							</div>
+						</li>
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">意向院校</div>
+								<div class="aui-list-item-right">
+									<span class="aui-font-size-15 aui-text-black aui-ellipsis-1">西安建筑科技大学</span>
+								</div>
+							</div>
+						</li>
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">意向专业</div>
+								<div class="aui-list-item-right">
+									<span class="aui-font-size-15 aui-text-black aui-ellipsis-1">城乡规划</span>
+								</div>
+							</div>
+						</li>
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner  aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">是否跨专业考研</div>
+								<div class="aui-list-item-right">
+									<div class="gouxuan aui-text-gray">
+										<label>
+											<span class="aui-padded-r-10">
+												<input type="radio" name="is_pay" class="aui-radio" checked=""/>
+											</span>是
+											<span class="aui-padded-r-10 aui-padded-l-10">
+												<input type="radio" name="is_pay" class="aui-radio"/>
+											</span>否
+										</label>>
+										
+									</div>
+										
+											
+										
+									
+								</div>
+							</div>
+						</li>
+						<li class="aui-list-item aui-padded-l-0 aui-border-b">
+							<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+								<div class="aui-font-size-14 fweight-5 aui-text-grayer">所在区域</div>
+								<div class="aui-list-item-right">
+									<span class="aui-font-size-15 aui-text-black aui-ellipsis-1">西安</span>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>

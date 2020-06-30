@@ -1,0 +1,87 @@
+<view class="aui-content" id="app" v-cloak>
+			<view class="aui-list">
+				<view class="aui-list-item aui-bg-grayer">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title" style="display: flex;align-items: center;">
+							<image class="aui-img-round" src="{{head}}"></image>
+							<text class="aui-font-size-16 aui-margin-l-15">{{name}}  {{cnumber}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="star aui-padded-15">
+				<text class="aui-font-size-16 aui-margin-r-10">综合评分</text>
+        <view class="mydiv star" id="mydiv2" currentIndex="0">
+            <view class="star_ul" style="display:flex;">
+                <block wx:if="{{level==0}}">
+                  <image src="../../image/star-off.png" data-level='1' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='2' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='3' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='4' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='5' bindtap="getlevel" class="xing_hui"></image>
+                </block>
+                <block wx:if="{{level==1}}">
+                  <image src="../../image/star-on.png" data-level='1' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='2' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='3' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='4' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='5' bindtap="getlevel" class="xing_hui"></image>
+                </block>
+                <block wx:if="{{level==2}}">
+                  <image src="../../image/star-on.png" data-level='1' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='2' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='3' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='4' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='5' bindtap="getlevel" class="xing_hui"></image>
+                </block>
+                <block wx:if="{{level==3}}">
+                  <image src="../../image/star-on.png" data-level='1' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='2' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='3' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='4' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='5' bindtap="getlevel" class="xing_hui"></image>
+                </block>
+                <block wx:if="{{level==4}}">
+                  <image src="../../image/star-on.png" data-level='1' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='2' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='3' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='4' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-off.png" data-level='5' bindtap="getlevel" class="xing_hui"></image>
+                </block>
+                <block wx:if="{{level==5}}">
+                  <image src="../../image/star-on.png" data-level='1' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='2' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='3' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='4' bindtap="getlevel" class="xing_hui"></image>
+                  <image src="../../image/star-on.png" data-level='5' bindtap="getlevel" class="xing_hui"></image>
+                </block>
+            </view>
+        </view>
+				<text style="color: #ffa31f;" class="aui-font-size-16">{{level}}分</text>
+			</view>
+			<view class="aui-text-danger aui-text-center aui-margin-t-15">
+				“请选择原因我们会对司机进行管束”
+			</view>
+			<view class="tag aui-margin-t-10">
+        <block wx:for="{{list}}" wx:key="index">
+				<text class="actives {{item.is_del==1? 'active':''}}" data-index="{{index}}" bindtap="tab">{{item.name}}</text>
+        </block>
+			</view>
+			<view class="aui-padded-15">
+				<textarea placeholder="请描述具体细节，我们会不断改进..." v-model="content" id="content" tapmode bindinput="getphone"></textarea>
+			</view>
+			<view class="aui-row aui-padded-l-15 aui-padded-r-15">
+        <block wx:for="{{pic}}" wx:key="index">
+        <view class="aui-col-xs-4">
+          <image src="{{item}}"></image>
+          <image class="close" src="../../image/closePage.png" bindtap="del" data-index="{{index}}"></image>
+        </view>
+        </block>
+				<view class="aui-col-xs-4">
+					<image  src="../../image/upload.jpg" bindtap="changeAvatar" ></image>
+				</view>
+			</view>
+		</view>
+    <view class="aui-padded-15">
+      <view class="submit" bindtap="sub">提交</view>
+    </view>

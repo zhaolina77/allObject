@@ -1,0 +1,35 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+scroll-view{
+    white-space:normal;
+}
+.order-item {
+  position: relative;
+}
+.remove{  
+  width: 160rpx;  
+  height: 100%;  
+  background-color: #FF4805; 
+  color: white; 
+  position: absolute;  
+  top: 0;  
+  right: -160rpx;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+} 
+.aui-list-item-title{
+    display: flex;
+    display: -webkit-flex;
+}
+.dizhi{
+    line-height: 22px;
+}
+.aui-label-outlined:after { 
+    border-radius: 8px;
+    left: 0 !important;
+}
+.head_pic{width: 138rpx !important;height: 138rpx !important;border-radius: 10rpx !important;}
+.mine_guanzhu .order-item .aui-border-b:last-child{border-bottom: none !important;}

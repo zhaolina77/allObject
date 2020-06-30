@@ -1,0 +1,23 @@
+<view class="aui-content aui-padded-15" id="app">
+
+  <view class="aui-bg-white bg-radius aui-text-center pingfen">
+    <view class="aui-font-size-12 aui-text-grayer">使用体验如何？给钓场打个分吧</view>
+  </view>
+
+  <view class="aui-margin-t-15 bg-radius aui-bg-white aui-padded-15 feel">
+    <textarea class="text" placeholder="说说您对该钓场的感受" bindinput="content" show-confirm-bar="{{false}}"></textarea>
+    <view class="aui-row box">
+      <view class="pic_box pic" wx:for="{{img}}" wx:if="{{img.length>0}}" wx:key="ff">
+        <!-- <view class="pic"> -->
+          <image class="tu" src="{{item}}" mode="aspectFill"></image>
+          <image class="close" src="/image/close1.png" bindtap="del" data-index="{{index}}" mode="widthFix"></image>
+        <!-- </view> -->
+      </view>
+      <!-- <view class="add aui-pull-left aui-margin-t-15" bindtap="select_pic"> -->
+      <view class="pic_box" bindtap="select_pic">
+        <image class="tu" src="/image/add-pic.png" bindtap='changeAvatar' mode="widthFix" wx:if="{{img.length<3}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<button class="btn" bindtap="submit">提交</button>

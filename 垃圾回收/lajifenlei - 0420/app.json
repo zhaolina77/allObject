@@ -1,0 +1,87 @@
+{
+  "pages": [
+
+
+  
+    "pages/shouye/index/index",
+    
+    
+    "pages/shouye/jingangqu/jingangqu",
+    "pages/shouye/zixun/zixun",
+    "pages/shouye/zixunDetail/zixunDetail",
+    "pages/shouye/huishouDetail/huishouDetail",
+    "pages/citys/citys", 
+
+
+    "pages/mine/index/index",
+    "pages/mine/address/address",
+    "pages/mine/yijian/yijian",
+    "pages/mine/aboutUs/aboutUs",
+    "pages/mine/center/center",
+    "pages/mine/addressAdd/addressAdd",
+    "pages/mine/addressDel/addressDel",
+    "pages/mine/userinfo/userinfo",
+    "pages/mine/login/login",
+    "pages/mine/xieyi/xieyi",
+
+
+
+    "pages/order/order/order",
+    "pages/order/pingjia/pingjia",
+    "pages/order/pingjiaCg/pingjiaCg",
+    "pages/order/orderDetail/orderDetail",
+    "pages/order/finish/finish",
+    
+
+
+
+
+    "pages/fabu/index/index",
+    "pages/fabu/fabuCg/fabuCg",
+    "pages/fabu/fabuDetail/fabuDetail",
+
+
+
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序获取就近的城市数据展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#4AE3E0",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+        {
+            "pagePath": "pages/shouye/index/index",
+            "text": "垃圾回收",
+            "iconPath": "/image/index.png",
+            "selectedIconPath": "/image/index-on.png"
+        },
+        {
+          "pagePath": "pages/fabu/index/index",
+          "text": "下单",
+          "iconPath": "/image/fb.png",
+          "selectedIconPath": "/image/fb.png"
+        },
+        {
+          "pagePath": "pages/mine/index/index",
+          "text": "我的",
+          "iconPath": "/image/mine.png",
+          "selectedIconPath": "/image/mine-on.png"
+      }
+    ]
+},
+  "sitemapLocation": "sitemap.json"
+}

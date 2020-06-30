@@ -1,0 +1,41 @@
+<view class="aui-list">
+  <form bindsubmit="formSubmit" >
+    <view class="aui-list-item">
+        <view class="aui-list-item-inner aui-border-b aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-label">联系人</view>
+            <view class="aui-list-item-input">
+                <input type="text" placeholder="联系人" id="name"  value="{{name}}" name="name" />
+            </view>
+        </view>
+    </view>
+    <view class="aui-list-item">
+        <view class="aui-list-item-inner aui-border-b aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-label">手机号</view>
+            <view class="aui-list-item-input">
+                <input type="number" pattern="[0-9]*" placeholder="联系人手机号" value="{{mobile}}" id="mobile" name="mobile"/>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list-item"  bindtap="change_city">
+        <view class="aui-list-item-inner aui-border-b aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-label">搬家地址</view>
+            <view class="aui-list-item-input">
+                <input type="text" placeholder="请选择搬家地址" readonly="readonly" value="{{fullAddress}}" disabled="readonly"/>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list-item">
+        <view class="aui-list-item-inner aui-border-b aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-label">详细地址</view>
+            <view class="aui-list-item-input">
+                <input type="text" placeholder="如6号楼1单元1702室" id="addressInfo" value="{{addressInfo}}" name="addressInfo"/>
+            </view>
+        </view>
+    </view>
+    <view class="aui-padded-15 aui-margin-t-15">
+        <!-- <view class="aui-btn aui-btn-danger aui-btn-block">完成并保存</view> -->
+        <button class="aui-btn aui-btn-danger aui-btn-block" formType="submit">完成并保存</button>
+    </view>
+  </form>
+</view>
+

@@ -1,0 +1,4 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+.aui-list-item-right{display: flex;align-items: center;}

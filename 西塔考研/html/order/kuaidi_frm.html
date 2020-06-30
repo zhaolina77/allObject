@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <title>快递信息</title>
+	   	<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css"/>
+	</head>
+	<style type="text/css">
+		.aui-bg-gr{background-color: #f8f9fb;}
+		.aui-iconfont{font-size: 12px;}
+		.inner{margin-left: 1.5rem;}
+		.aui-border-b{border-color: #eee !important;}
+		
+		li{position: relative;}
+		li:after{content: '';position: absolute;height: 100%;width: 1px;background-color: #ccc;top:50%;left: 0.5rem; }
+		li:last-child:after{display: none;}
+		/*.jd1{position: absolute;left: 0rem;top:50%;margin-top: -0.2rem;width: 1rem;height: 1rem;line-height: 0.4rem; border-radius: 0.4rem;background-color: #ccc;z-index: 9;}*/
+		
+		.jd1{position: absolute;left: 0rem;top: 50%;margin-top: -0.3rem; z-index: 1;width: 1rem;height: 1rem;line-height:1rem; border-radius: 0.5rem;background-color: #CCC; }
+		.active .jd1{position: absolute;left: 0rem;top: 50%;margin-top: -0.3rem; z-index: 1;width: 1rem;height: 1rem;line-height: 1rem; border-radius: 0.5rem;background-color: #58CAB9; }
+		.dui_pic img{width: 1rem;height: 1rem;}
+		.touxiang{width: 2.5rem;height: 2.5rem;overflow: hidden;border-radius: 50%;}
+		.touxiang img{width: 100%;height: 100%;object-fit: cover;}
+		.pf{width: 7rem;}
+		.pf img{width: 1rem; height: 1rem;}
+		.ph_box{width: 4rem;height: 1.4rem;}
+		.ph{width: 1rem;height: 1rem;margin-right: 1rem;margin-top: 0.2rem;}
+		.ph img{width: 100%;height: 100%;}
+	</style>
+	<body >
+		<div class="aui-content">
+			
+			<div class="aui-padded-15 aui-bg-gr aui-font-size-15 xinxi">
+				<div class="flex" >
+					<div class="flex" style="justify-content: flex-start;">
+						<div class="touxiang">
+						<img src="../../image/banner.jpg"/>
+					</div>
+					<div class="aui-padded-l-15">
+						<div class="">
+							<span class="aui-text-grayer aui-font-size-13">快递小哥:</span>
+							<span class="aui-text-black aui-font-size-15">黄友生</span>
+						</div>
+						<div class="flex pf aui-margin-t-5">
+							<img  src="../../image/pingfen-on.png"/>
+							<img src="../../image/pingfen-on.png"/>
+							<img src="../../image/pingfen.png"/>
+							<img src="../../image/pingfen.png"/>
+							<img src="../../image/pingfen.png"/>
+						</div>
+					</div>
+					</div>
+					
+					<div class="aui-border-l ph_box aui-border-l">
+						<div class="ph aui-pull-right">
+							<img src="../../image/phone.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="aui-font-size-15 aui-margin-t-15">
+					<span>圆通快递包裹：</span><span>387123245887123</span>
+				</div>
+				<!--<div class="aui-padded-b-10">订单编号：3871232887123</div>
+				<div class="aui-padded-b-10">退款状态：<span class="aui-text-theme">审核中</span></div>
+				<div>退款金额：￥1750</div>-->
+			</div>	
+			
+			<div class="aui-padded-l-15 aui-padded-r-15">
+				<div class="aui-padded-t-15 aui-padded-b-15 aui-border-b fweight-5">包裹信息</div>
+				<ul class="">
+					<!--active 当前的位置-->
+					<li class="active">
+						<div class="aui-pull-left jd1 aui-text-white aui-font-size-13 aui-text-center ">收</div>
+						
+						<div class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+							<div class="aui-font-size-13 aui-padded-b-5" style="line-height: 1rem;">【收货地址】陕西省西安市雁塔区 小寨路街道春林二路曲江美好时光 12号楼1单元403</div>
+							<div class="aui-text-grayer aui-font-size-10 aui-padded-b-5">2018-02-14  08:14:12</div>
+						</div>
+					</li>
+					<li class="">
+						<div class="aui-pull-left jd1 aui-text-white aui-font-size-13 aui-text-center dui_pic aui-bg-white">
+							<img src="../../image/datidui.png"/>
+						</div>
+						<div class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+							<div class="aui-text-black aui-font-size-13 aui-padded-b-5">已签收</div>
+							<div class="aui-text-black aui-font-size-13 aui-padded-b-5">本人签收</div>
+							<div class="aui-text-grayer aui-font-size-10 aui-padded-t-5">2018-02-14  08:14:12</div>
+						</div>
+					</li>
+					<li class="">
+						<div class="aui-pull-left jd1"></div>
+						<div class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+							<div class="aui-text-black aui-font-size-13 aui-padded-b-5">派送中</div>
+							<div class="aui-text-black aui-font-size-13 aui-padded-b-5">【西安曲江投揽部】安排投递，投递员：王凯生 电话：13572454765</div>
+							<div class="aui-text-grayer aui-font-size-10 aui-padded-t-5">2018-02-14  08:14:12</div>
+						</div>
+					</li>
+					<li class="">
+						<div class="aui-pull-left jd1"></div>
+						<div class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+							<div class="aui-text-black aui-font-size-14 aui-padded-b-5"> 到达【上海投递办公处】</div>
+							<div class="aui-text-grayer aui-font-size-10 aui-padded-t-5">2018-02-14  08:14:12</div>
+						</div>
+					</li>
+					<li class="">
+						<div class="aui-pull-left jd1"></div>
+						<div class="inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+							<div class="aui-text-black aui-font-size-14 aui-padded-b-5">已揽件</div>
+							<div class="aui-text-black aui-font-size-14 aui-padded-b-5"> 【济南圆通快递】已揽收 揽收元：王凯生 </div>
+							<div class="aui-text-grayer aui-font-size-10 aui-padded-t-5">2018-02-14  08:14:12</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>

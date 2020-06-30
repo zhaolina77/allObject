@@ -1,0 +1,29 @@
+	<view class="aui-content" id="app">
+			<view>
+				<image src="/image/inv_1.jpg" ></image>
+			</view>
+			<view class="code">
+				<image src="/image/inv_2.png" style="width: 90%;margin: 0 auto;display: block !important;"></image>
+				<view class="title">邀请好友 各得 <text>20</text> 元</view>
+				<view class="ewm">
+					<view class="aui-text-center">
+						<image src="{{data.accountUrl}}"  mode="widthFix"></image>
+						<view>叫车拉用户端</view>
+					</view>
+					<view class="aui-text-center">
+						<image src="{{data.driverUrl}}" mode="widthFix"></image>
+						<view>叫车拉司机端</view>
+					</view>
+				</view>
+			</view>
+			<view class=" aui-padded-l-15 aui-padded-r-15 aui-margin-t-15" tapmode >
+				<view class="btn aui-text-center">
+					<!-- <text class="aui-font-size-20 aui-text-white">分享邀请</text> -->
+          <button open-type="share" class="aui-font-size-20 aui-text-white" plain="true" style="border:none !important;margin-top: 7px;">分享邀请</button>
+					<image src="/image/btn.jpg" mode="widthFix"></image>
+				</view>
+			</view>
+			<view style="margin-top: 1.25rem;">
+				<image src="/image/inv_3.jpg"  mode="widthFix"></image>
+			</view>
+		</view>

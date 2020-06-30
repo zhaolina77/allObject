@@ -1,0 +1,14 @@
+/* pages/message/message.wxss */
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+page {
+  background: #f6f6f6;
+}
+.img {
+  height: 320rpx;
+  width: 100%;
+  margin: 30rpx 0;
+}
+.aui-font-weight {
+  font-weight: bold;
+}

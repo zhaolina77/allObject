@@ -1,0 +1,8 @@
+/* pages/my/gonglue/index.wxss */
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+@import "../../../wxParse/wxParse.wxss";
+page {
+  font-size: 30rpx;
+  line-height: 2
+}

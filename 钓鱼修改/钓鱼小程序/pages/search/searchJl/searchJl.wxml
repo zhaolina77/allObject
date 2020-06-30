@@ -1,0 +1,26 @@
+<view class="aui-bar aui-bar-nav aui-bar-light aui-bg-white mine-bar">
+    <view class="aui-title">
+        <view class="aui-padded-l-15 aui-padded-r-15 aui-bg-grayer serch aui-text-left">
+            <image  mode="widthFix"  src="/image/sousuo.png" style=" float: left;width:24rpx;margin-top:24rpx;margin-right: 6px;"></image>
+            <input placeholder="搜索商品/商家/热帖/钓场/协会/比赛"  confirm-type="search" bindconfirm='serch' bindinput='verification' value="{{val}}"  auto-focus focus="true"></input>
+        </view>
+    </view>
+</view>
+<view class="aui-content mine-content" style="height:100%">
+    <view class="aui-content aui-padded-l-15 aui-padded-r-15">
+        <view class="aui-list aui-margin-t-15">
+            <view class="aui-list-item aui-list-item-middle aui-padded-l-0" >
+                <view class="aui-list-item-inner aui-border-b aui-padded-r-0">
+                    <text class="aui-font-size-13 fweight-5 aui-text-gray">最近搜索记录</text>
+                    <image src="/image/close.png" mode="widthFix" bindtap="close"></image>
+                </view>
+            </view>
+            <view class="aui-list-item aui-list-item-middle aui-padded-l-0"  wx:for="{{history}}" wx:key="lis" bindtap="tiaozhuan" data-content="{{item.name}}">
+                <view class="aui-list-item-inner aui-border-b aui-padded-r-0" >
+                    <text class="aui-font-size-14">{{item.name}}</text>
+                    <image src="/image/jt-right2.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

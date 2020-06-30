@@ -1,0 +1,63 @@
+/* pages/club/index/index.wxss */
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+.banner {
+  width: 100%;
+}
+.banner image {
+  width: 100%;
+}
+.fiexed {
+  position: fixed;
+  bottom: 0;
+  background: #f5f5f5;
+  width: 100%;
+  padding: 30rpx;
+}
+.btn {
+  width: 90%;
+  left:5%;
+  text-align: center;
+  background: linear-gradient(to right,#ff7237,#ff512e);
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 45rpx;
+  
+}
+.server {
+  
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  position: relative;
+}
+.server .flex {
+  margin-top: 40rpx;
+}
+.server image {
+
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.ok {
+  line-height: 80rpx;
+  background: linear-gradient(to right,#ff7237,#ff512e);
+  text-align: center;
+  color: #fff;
+  margin-top: 60rpx;
+}
+.close {
+  position: absolute;
+  right: 15rpx;
+  top:30rpx;
+}
+input {
+  flex: 1;
+  text-align: right;
+}
+.aui-line {
+  border-bottom: 2rpx solid #f5f5f5;
+}
+input {
+  height: 30rpx;
+}

@@ -1,0 +1,18 @@
+<view class="mine-content-footer">
+	<view class="aui-padded-15 aui-bg-grayer aui-text-gray aui-font-size-14">请选择举报原因</view>
+	<view class="aui-list">
+		<view class="aui-list-item" wx:for="{{list}}" wx:key="lis">
+			<view class="aui-list-item-inner aui-border-b">
+				<view class="aui-list-item-title aui-font-size-14">{{item.name}}</view>
+				<view class="aui-list-item-right">
+					<radio color="#0051FE" checked="{{item.is_check}}" name="name" bindtap="check" data-index="{{index}}"></radio>
+				</view>
+			</view>
+		</view>
+		
+	</view>
+</view>
+
+<view class="aui-bar aui-bar-tab  footer" id="footer" bindtap="qr">
+	<view class="aui-btn aui-btn-block aui-btn-theme">确定</view>
+</view>

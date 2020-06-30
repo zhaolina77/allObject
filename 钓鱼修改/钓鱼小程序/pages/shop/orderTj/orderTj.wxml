@@ -1,0 +1,115 @@
+
+<view class="aui-padded-15 mine-content-footer">
+    <!--地址-->
+    <view class="aui-list aui-media-list address bg-radius">
+       
+       
+
+         <!--无地址-->
+        <view class="aui-list-item" wx:if="{{!address}}" bindtap="add_address">
+            <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15 aui-padded-b-15 aui-padded-b-0">
+                    <view class="aui-list-item-text aui-font-size-15 aui-text-blacker aui-padded-t-12 aui-padded-b-12">添加上门地址</view>
+                </view>
+            </view>
+        </view>
+
+
+         <!--有地址-->
+        <view class="aui-list-item" wx:else bindtap="change_add">
+            <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15 aui-padded-b-15 aui-padded-b-0">
+                    <view class="aui-list-item-text aui-font-size-15 aui-text-blacker aui-padded-t-12 aui-padded-b-12">{{address.name}}  {{address.mobile}}</view>
+                    <view class="aui-list-item-text aui-text-grayer aui-font-size-13">{{address.full_address}} {{address.address_info}}</view>
+                </view>
+            </view>
+        </view>
+
+
+        <image src="/image/line.png" class="line" mode="widthFix"></image>
+    </view>
+
+    <view class="aui-margin-t-10 bg-radius aui-bg-white bg-radius">
+        <view class="aui-padded-15 aui-padded-b-5 aui-font-size-13">支付方式</view>
+        <view class="aui-list aui-padded-15 aui-padded-t-0 aui-padded-b-0" >
+            <view class="aui-list-item aui-padded-l-0 aui-padded-t-5 aui-padded-b-5 aui-border-b">
+                <view class="aui-list-item-inner aui-padded-r-0">
+                    <view class="aui-list-item-title aui-font-size-14">
+                        <image src="/image/wxzf.png" class="pay" mode="widthFix"></image>
+                        <text style="vertical-align: middle">微信支付</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="aui-margin-t-10  bg-radius shop" wx:if="{{is_sub==1}}">
+        <view class="aui-list aui-media-list aui-padded-l-15 aui-padded-r-15">
+            <view class="aui-list-header aui-bg-white aui-font-size-14 aui-border-b aui-padded-t-15 aui-padded-b-15 aui-padded-l-0 ">{{goods.shop_name}}</view>
+            <view class="aui-list-item  aui-padded-l-0 aui-padded-t-5 aui-padded-b-5 aui-border-b" >
+                <view class="aui-media-list-item-inner">
+                    <view class="aui-list-item-media">
+                        <image src="{{goods.thumb}}" mode="aspectFill"></image>
+                    </view>
+                    <view class="aui-list-item-inner aui-padded-r-0">
+                        <view class="aui-list-item-text">
+                            <view class="aui-text-black aui-font-size-14 aui-ellipsis-1" wx:if="{{goods.name}}">{{goods.name}}</view>
+                        </view>
+                        <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-10" wx:if="{{goods.model_name}}">规格：{{goods.model_name}}</view>
+                        <view class="aui-list-item-text aui-padded-t-10">
+                            <view class="aui-list-item-title aui-font-size-10 aui-text-danger">
+                                ￥<text class="aui-text-orange aui-padded-r-5 aui-font-size-18">{{goods.market_price}} </text>
+                            </view>
+                            <view class="aui-list-item-right aui-font-size-12 aui-text-gray">共{{goods.total_num}}件</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="aui-padded-t-15 aui-padded-b-15 aui-bg-white aui-text-right aui-font-size-14">
+                小计:￥ <text>{{goods.total_price}}</text>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="aui-margin-t-10  bg-radius shop" wx:else>
+      <block wx:for="{{shopList}}" wx:key="idx">
+        <view class="aui-list aui-media-list aui-padded-l-15 aui-padded-r-15">
+            <view class="aui-list-header aui-bg-white aui-font-size-14 aui-border-b aui-padded-t-15 aui-padded-b-15 aui-padded-l-0 ">{{item.shop_name}}</view>
+            <view class="aui-list-item  aui-padded-l-0 aui-padded-t-5 aui-padded-b-5 aui-border-b" wx:for="{{item.goodlist}}" wx:key="idx">
+                <view class="aui-media-list-item-inner">
+                    <view class="aui-list-item-media">
+                        <image src="{{item.thumb}}" mode="aspectFill"></image>
+                    </view>
+                    <view class="aui-list-item-inner aui-padded-r-0">
+                        <view class="aui-list-item-text">
+                            <view class="aui-text-black aui-font-size-14 aui-ellipsis-1" wx:if="{{item.name}}">{{item.name}}</view>
+                        </view>
+                        <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-10" wx:if="{{item.model_name}}">规格：{{item.model_name}}</view>
+                        <view class="aui-list-item-text aui-padded-t-10">
+                            <view class="aui-list-item-title aui-font-size-10 aui-text-danger">
+                                ￥<text class="aui-text-orange aui-padded-r-5 aui-font-size-18">{{item.market_price}} </text>
+                            </view>
+                            <view class="aui-list-item-right aui-font-size-12 aui-text-gray">共{{item.goods_num}}件</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="aui-padded-t-15 aui-padded-b-15 aui-bg-white aui-text-right aui-font-size-14">
+                小计:￥ <text>{{item.totalprice}}</text>
+            </view>
+        </view>
+        </block>
+    </view>
+
+
+
+</view>
+
+
+<!-- view -->
+<view class="aui-bar aui-bar-tab aui-padded-15 clearfix view-bar mine-view" id="view">
+    <view class="aui-btn aui-btn-theme aui-pull-right " bindtap="wxPay">订单提交</view>
+    <view class="aui-pull-right aui-margin-r-10 aui-font-size-15 aui-padded-t-5">
+        合计: <text class="aui-text-orange aui-font-size-11">￥ <text class="aui-font-size-15">{{paidPay}}</text></text>
+    </view>
+</view>

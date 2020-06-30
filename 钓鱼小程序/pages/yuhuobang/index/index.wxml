@@ -1,0 +1,134 @@
+<view class="aui-bar aui-bar-nav aui-bar-light dyl mine-bar">
+  <view class="aui-tab" id="tab">
+    <view class="aui-tab-item aui-font-size-17   {{first == 1?'aui-active':''}}" data-index="1" bindtap="changeOne">池钓</view>
+    <view class="aui-tab-item aui-font-size-17  {{first == 2?'aui-active':''}}" data-index="2" bindtap="changeOne">自然水域</view>
+    <view class="aui-tab-item aui-font-size-17 {{first == 3?'aui-active':''}}" data-index="3" bindtap="changeOne">关注</view>
+  </view>
+</view>
+<!--池钓 自然垂钓-->
+<view class="mine-content" wx:if="{{first!=3}}">
+  <view class="aui-bg-white aui-padded-t-10 aui-padded-b-10 aui-padded-r-10 mine-bar" style="top:90rpx">
+    <scroll-view scroll-x enable-flex="true" style="height:150rpx">
+      <view class="slide" wx:for="{{huojiangList}}" wx:key="huojiangList" bindtap="huojiang" data-id="{{item.id}}">
+        <image src="{{item.thumb}}" mode="aspectFill"></image>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="aui-row retie-list aui-margin-10" style="margin-top:300rpx !important;">
+    <view class="aui-col-5 aui-bg-white bg-radius aui-margin-b-10" wx:for="{{list}}" wx:key="list" bindtap="tiaozhuan" data-id="{{item.id}}">
+      <view class="pic">
+        <image src="{{item.vedio_thumb}}" mode="aspectFill"></image>
+        <image class="bofang" src="/image/bofang.png" mode="widthFix" wx:if="{{item.type==2}}"></image>
+      </view>
+      <view class="aui-padded-10 aui-padded-b-0">
+        <view class="aui-ellipsis-2 aui-font-size-13">{{item.content}}</view>
+
+        <view class="aui-list aui-media-list">
+          <view class="aui-list-item aui-padded-l-0">
+            <view class="aui-media-list-item-inner aui-padded-r-0">
+              <view class="aui-list-item-media aui-padded-r-5">
+                <view class="haed-pic">
+                  <image src="{{item.head_portrait}}" mode="aspectFill"></image>
+                </view>
+              </view>
+              <view class="inner">
+                <view class="aui-font-size-11 aui-text-gray name aui-ellipsis-1">{{item.nick_name}}</view>
+                <view class="aui-font-size-11 aui-text-gray">
+                  <image class="zan" src="/image/zan-on.png" mode="widthFix"  wx:if="{{item.is_like==1}}"></image>
+                  <image class="zan" src="/image/zan.png" mode="widthFix" wx:else></image>
+                  <text style="vertical-align: middle;margin-left:10rpx">{{item.like_num}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!-- 关注 -->
+<view class="mine-content guanzhu-list" wx:else>
+  <view class="aui-list aui-border-bgB" bindtap="guanzhu">
+    <view class="aui-list-item ">
+      <view class="aui-list-item-inner aui-list-item-arrow">
+        <view class="aui-list-item-title aui-font-size-14">我的关注</view>
+        <view class="aui-list-item-right">
+          <image class="mygz" wx:for="{{friends}}" wx:key="friends" src="{{item.head_portrait}}" style="position: relative;right:-5px;z-index: 2;"></image>
+
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="aui-list aui-media-list">
+    <view class="aui-list-item aui-padded-15 aui-border-bgB" wx:for="{{list}}" wx:key="lists" bindtap="dongtai" data-id="{{item.id}}">
+      <view class="aui-media-list-item-inner ">
+        <view class=" aui-padded-r-15">
+          <view class="aui-media-list">
+            <view class="pic aui-border">
+              <image src="{{item.head_portrait}}" mode=""></image>
+            </view>
+          </view>
+        </view>
+        <view class="aui-list-item-inner aui-padded-t-0 aui-padded-b-0 aui-padded-r-0">
+          <view class="aui-list-item-text aui-text-black aui-font-size-15 aui-padded-t-5">{{item.nick_name}}</view>
+        </view>
+      </view>
+      <view class="aui-font-size-15 aui-text-black aui-margin-t-10 aui-margin-b-10">{{item.content}}</view>
+      <!-- <view class="show aui-font-size-14">全文</view> -->
+      <!--发布图片-->
+      <view class="aui-row" wx:if="{{item.type==1}}">
+        <block wx:for="{{item.url_array}}" wx:key="index" wx:for-item="vs">
+          <view class="aui-col-xs-4">
+            <image src="{{vs}}" mode="aspectFill"></image>
+          </view>
+        </block>
+      </view>
+      <!--发布视频-->
+      <view class="shipin" style="width:100%;height:180rpx;" wx:else>
+        <view class="sp" style="width:24%;height:180rpx;">
+          <image style="width:100%;height:180rpx;" src="{{item.vedio_thumb}}"></image>
+          <!-- <view class="bofang">
+            <image src="/image/bofang.png" mode=""></image>
+          </view> -->
+        </view>
+
+      </view>
+      <!--点赞收藏评论-->
+      <view class="clearfix">
+        <view class="aui-pull-left plq">
+          <image src="/image/zan-on.png" mode="widthFix" wx:if="{{item.is_like==1}}"></image>
+          <image src="/image/zan1.png" mode="widthFix" wx:else></image>
+          <span class="aui-font-size-12 aui-text-blacker sl">{{item.like_num}}</span>
+        </view>
+        <view class="aui-pull-left plq">
+          <image src="/image/sc-on.png" mode="widthFix" wx:if="{{item.is_coll==1}}"></image>
+          <image src="/image/sc1.png" mode="widthFix" wx:else></image>
+          <span class="aui-font-size-12 aui-text-blacker sl">{{item.coll_num}}</span>
+        </view>
+        <view class="aui-pull-left plq">
+          <image src="/image/xiaoxi.png" mode="widthFix"></image>
+          <span class="aui-font-size-12 aui-text-blacker sl">{{item.commentnum_num}}</span>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<!--悬浮-->
+<view class="xuanfu aui-row aui-text-center" wx:if="{{is_open==1}}">
+<!-- <view class="xuanfu aui-row aui-text-center"> -->
+  <view class="aui-col-xs-6 aui-border-r" bindtap="fabu" data-index="1">
+    <view class="pic">
+      <image src="/image/fatupian.png" mode="widthFix"></image>
+    </view>
+    <view class="aui-font-size-11 aui-text-gray" style="transform:scale(0.8,0.8);">发图文</view>
+  </view>
+  <view class="aui-col-xs-6 aui-border-r" bindtap="fabu" data-index="2">
+    <view class="pic">
+      <image src="/image/faship.png" mode="widthFix"></image>
+    </view>
+    <view class="aui-font-size-13 aui-text-gray" style="transform:scale(0.8,0.8);">发视频</view>
+  </view>
+</view>

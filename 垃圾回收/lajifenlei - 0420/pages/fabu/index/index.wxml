@@ -1,0 +1,41 @@
+<view class="aui-content">
+	<view class="aui-text-center fw-bold aui-padded-15 ">请选择您要回收的物品类别</view>
+
+	<view class="flex aui-padded-15" style="flex-wrap:wrap;">
+		<view class="item_box" wx:for="{{fl_list}}" wx:key="lis" bindtap="choose" data-name="{{item.name}}" data-id="{{item.id}}" data-index="{{index}}">
+			<view class="item aui-text-center {{id==item.id?'active':''}} ">{{item.name}}</view>
+		</view>
+	</view>
+
+	<!-- 修改 -->
+	<!-- <view class="content aui-padded-15" style="flex-wrap:wrap;">
+		<view class="item_box ">
+			<view class="it">
+				<view class="pic">
+					<image src="/image/fl1.png"></image>
+				</view>
+				<view class="aui-text-center">旧衣物</view>
+			</view>
+		</view>
+		</view>
+	 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+<view class="btn_box aui-bg-white aui-padded-15">
+	<view class="btn" bindtap="qd">确定</view>
+</view>

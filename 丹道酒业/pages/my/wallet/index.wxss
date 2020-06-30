@@ -1,0 +1,66 @@
+/* pages/my/wallet/index.wxss */
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+page {
+ background: #fff;
+}
+.imgwrap {
+  width: 100%;
+  height: 380rpx;
+}
+.imgwrap image{
+
+  width: 100%;
+  height: 100%;
+}
+.cover {
+  position: absolute;
+  width: 100%;
+  top: 60rpx;
+  color: #fff;
+}
+.tobottom {
+  width: 22rpx;
+  height: 12rpx;
+  position: relative;
+  bottom: 2rpx;
+  margin-left: 10rpx;
+}
+.title text {
+  width: 50%;
+  position: relative;
+}
+.title text.active{
+  color: #ff6433;
+}
+.title text.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #ff6433;
+  left: 4rpx;
+  bottom: -30rpx;
+}
+.tixian {
+
+  font-size: 32rpx;
+  padding: 10rpx 60rpx;
+  border: 2rpx solid #fff;
+  border-radius: 20rpx;
+
+}
+.list {
+  margin-bottom: 30rpx;
+  align-items: flex-start
+}
+.list .line {
+  width: 100%;height: 2rpx;
+  background: #eee;
+  margin-top: 20rpx;
+}
+.list image {
+  width: 76rpx;
+  height: 76rpx;
+  border-radius: 100%;
+}

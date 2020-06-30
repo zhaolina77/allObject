@@ -1,0 +1,4 @@
+<view class="content aui-padded-10">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<import src="../../../wxParse/wxParse.wxml"/>

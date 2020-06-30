@@ -1,0 +1,5 @@
+/* pages/mine/yinsi/yinsi.wxss */
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';

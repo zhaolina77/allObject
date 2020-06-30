@@ -1,0 +1,45 @@
+<!--pages/my/addbank/index.wxml-->
+<view class="aui-bg-white aui-margin-t-15 aui-padded-15">
+  <view class="flex" bindtap="onopenptype">
+  <text class="aui-font-size-15 aui-text-blacker flex1">账户类型</text>
+  <text class="aui-font-size-16 aui-text-blacker">{{typename}}</text>
+  <image src="/images/toright.png"></image>
+  </view>
+  <view class="line"></view>
+  <view class="flex aui-margin-t-15">
+    <text class="aui-font-size-15 aui-text-blacker" wx:if="{{type==1}}">银行卡账号</text>
+    <text class="aui-font-size-15 aui-text-blacker" wx:if="{{type==2}}">支付宝账号</text>
+    <text class="aui-font-size-15 aui-text-blacker" wx:if="{{type==3}}">微信账号</text>
+    <input type="number" placeholder="请输入银行卡账号" bindinput ="getcarnumber" value="{{cardNumber}}" class="flex1 aui-text-right"></input>
+    
+    <image src="/images/edit.png"></image>
+  </view>
+   <view class="line"></view>
+    <block wx:if="{{type==1}}">
+      <view class="flex aui-margin-t-15" bindtap="onopencardtype">
+  <text class="aui-font-size-15 aui-text-blacker flex1">开户行</text>
+  <text class="aui-font-size-16 aui-text-blacker">{{openBankName}}</text>
+  <image src="/images/toright.png"></image>
+  </view>
+   <view class="line"></view>
+    </block>
+    <view class="flex aui-margin-t-15">
+    <text class="aui-font-size-15 aui-text-blacker">真实姓名</text>
+    <input type="text" class="flex1 aui-text-right" bindinput ="getname" value="{{realName}}" placeholder="请输入真实姓名"></input>
+    <image src="/images/edit.png"></image>
+  </view>
+
+</view>
+<view class="aui-content-padded" bindtap="tosuccess"><view class="btn">确认并提交</view></view>
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+/>
+<van-action-sheet
+  show="{{ pshow }}"
+  actions="{{ pactions }}"
+  bind:close="onpClose"
+  bind:select="onpSelect"
+/>

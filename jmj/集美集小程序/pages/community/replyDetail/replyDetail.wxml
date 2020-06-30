@@ -1,0 +1,71 @@
+<view class="aui-content mine-content-footer" style="padding-bottom:120rpx !important">
+	<view class="aui-border-bgB">
+		<view class="pingjia-list">
+			<view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 ">
+				<view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+					<view class="aui-list-item-inner aui-padded-r-0">
+						<view class="aui-list-item-title">
+							<view class="head-pic">
+								<image src="{{comment.head_portrait}}" class="aui-img-round"></image>
+							</view>
+							<view class="aui-padded-l-10">
+								<view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{comment.nick_name}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="inner">
+					<!--发布内容-->
+					<view class="aui-padded-b-15">
+						<view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+							{{comment.content}}
+							​​​</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="pl">
+		<view class="pingjia-list" >
+			<view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 " wx:for="{{replyList}}" wx:key="replyList">
+				<view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+					<view class="aui-list-item-inner aui-padded-r-0">
+						<view class="aui-list-item-title">
+							<view class="head-pic">
+								<image src="{{item.head_portrait}}" class="aui-img-round"></image>
+							</view>
+							<view class="aui-padded-l-10">
+								<view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{item.nick_name}}</view>
+								<view class="aui-list-item-text aui-text-gray aui-font-size-12 aui-padded-t-5">
+								{{item.create_time}}
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="inner">
+					<!--发布内容-->
+					<view class="aui-padded-b-15 nr aui-border-b">
+						<view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+							{{item.content}}
+							​​​</view>
+					</view>
+				</view>
+			</view>
+			
+		</view>
+	</view>
+</view>
+  
+
+<view class="pinglun_foot aui-padded-15 aui-bg-white flex">
+	<view class="foot_left flex aui-padded-l-15 ">
+		<view class="foot_ico">
+			<image src="/image/bi.png"></image>
+		</view>
+		<input type="text" placeholder="写下你的评论吧" placeholder-class="phcolor" placeholder-style="font-size:26rpx;text-indent:20rpx" bindinput="content" value="{{content}}"></input>
+	</view>
+  <view class="fabu aui-text-theme aui-padded-l-15" bindtap="fabu">发布</view>
+
+</view>

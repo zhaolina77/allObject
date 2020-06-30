@@ -1,0 +1,3 @@
+/* pages/new/new.wxss */
+@import '/css/aui.wxss';
+@import '/css/common.wxss';

@@ -1,0 +1,36 @@
+<view class="aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-list aui-padded-b-15">
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0" bindtap="personal">
+            <view class="aui-list-item-inner aui-text-grayer aui-padded-r-0">
+                <view class="aui-list-item-title aui-font-size-15">个人资料</view>
+                <view class="aui-list-item-right">
+                    <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0" bindtap="question">
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-title aui-font-size-15">常见问题</view>
+                <view class="aui-list-item-right">
+                    <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0" bindtap="safe">
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-title aui-font-size-15">账号安全</view>
+                <view class="aui-list-item-right">
+                    <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5 aui-padded-l-0" bindtap="heimingdan">
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-title aui-font-size-15">黑名单</view>
+                <view class="aui-list-item-right">
+                    <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

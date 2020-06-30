@@ -1,0 +1,24 @@
+<!--pages/my/tixian/index.wxml-->
+<view class="aui-margin-t-15 aui-padded-15 flex aui-bg-white" bindtap="tobanklist" wx:if="{{id!=0}}">
+  <image class="payment" src="{{img}}"></image>
+  <text class="methods">{{pname}}</text>
+  <text class="line"></text>
+  <text class="aui-font-size-15 aui-text-gray flex1">{{carnumber}}</text>
+  <image class="toright" src="/images/toright.png"></image>
+</view>
+<view class="aui-margin-t-15 aui-padded-15 flex aui-bg-white" bindtap="tobanklist" wx:else>
+  <text class="methods flex1">选择账号</text>
+  <image class="toright" src="/images/toright.png"></image>
+</view>
+<view class="aui-bg-white aui-padded-15 aui-margin-t-15">
+  <view class="aui-font-size-16 aui-text-blacker">提现金额（元）
+   <text class="all aui-font-size-12">10的整数倍</text>
+  </view>
+  <view class="flex aui-margin-t-15" style="align-items:flex-end;">
+   <text style="font-size:72rpx;color:#000;">￥</text>
+   <input class="flex1 money" type="number" value="{{money}}" bindinput ="getmoney" style="font-size:100rpx;height:100rpx;"></input>
+   <text class="aui-font-size-15 aui-text-grayer">（可提现：￥{{wallet}})</text>
+  </view>
+  <view class="aui-text-right aui-font-size-15 all aui-margin-t-10" bindtap="getall">全部提现</view>
+</view>
+<view class="aui-content-padded" bindtap="tosuccess"><view class="btn">确认并提交</view></view>

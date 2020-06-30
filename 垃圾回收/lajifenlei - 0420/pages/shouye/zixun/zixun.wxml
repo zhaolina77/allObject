@@ -1,0 +1,37 @@
+<view class="aui-content">
+	<!-- <view class="aui-padded-15 banner_box">
+		<view class="banner">
+			<swiper interval="2000" indicator-dots duration="500" autoplay indicator-color="#ffffff" indicator-active-color="#4AE3E0" circular>
+				<swiper-item>
+					<image src="/image/banner.png" mode="aspectFill"></image>
+				</swiper-item>
+				<swiper-item>
+					<image src="/image/banner.png" mode="aspectFill"></image>
+				</swiper-item>
+				<swiper-item>
+					<image src="/image/banner.png" mode="aspectFill"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+	</view> -->
+	<!-- 有数据 -->
+	<view class="aui-padded-l-15 aui-padded-r-15" wx:if="{{list.length>0}}">
+		<view class="flex  aui-padded-t-15 aui-padded-b-15 item" style="justify-content: space-between;" wx:for="{{list}}" wx:key="lis" data-id="{{item.id}}" bindtap="detail">
+			<view class="left aui-padded-r-10">
+				<view class="aui-ellipsis-2 aui-font-size-14">{{item.title}}</view>
+				<view class="aui-font-size-11 aui-text-grayer aui-padded-t-10">{{item.create_time}}</view>
+			</view>
+			<view class="right bg-radius">
+				<image src="{{item.thumb}}"></image>
+			</view>
+		</view>
+	</view>
+	<!-- 无数据 -->
+	<view class="aui-padded-l-15 aui-padded-r-15" wx:else>
+			<view class="nodata">
+					<image src="/image/no_data.png"></image>
+			</view>
+		
+	</view>
+
+</view>

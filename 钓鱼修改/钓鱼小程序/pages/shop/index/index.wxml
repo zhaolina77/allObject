@@ -1,0 +1,98 @@
+<view class="aui-bar aui-bar-nav aui-bar-light mine-bar">
+	<!-- <navigator class="aui-pull-left aui-btn" onclick="closeWin()">
+        <image src="/image/jt-left.png" mode="widthFix"></image>
+    </navigator> -->
+	<!-- <view class=" aui-pull-left aui-title aui-text-white"> -->
+	<view class=" aui-pull-left  aui-text-white " style="width:670rpx;" bindtap="sousuo">
+		<view class="aui-padded-l-15 aui-padded-r-15 aui-bg-grayer serch aui-text-left">
+			<image class="" src="/image/sousuo.png" style="width:0.70rem;vertical-align: middle;margin-right: 3px;" mode="widthFix"></image>
+			<text class="aui-text-gray aui-font-size-13" style="vertical-align: baseline;">搜索商品</text>
+		</view>
+	</view>
+	<view class="aui-pull-right aui-btn" bindtap="cart">
+		<view class="line top-li" wx:if="{{cartCount}}">{{cartCount}}</view>
+		<image class="sc" src="/image/care.png" mode="widthFix" style="vertical-align: middle;"></image>
+	</view>
+</view>
+<view class="mine-content">
+	<view class="aui-padded-15 aui-padded-t-5">
+		<view class="banner">
+			<swiper interval="2000" circular="true" indicator-dots duration="500" autoplay indicator-color="rgba(204, 204, 204,1)" indicator-active-color="#1765FF">
+				<swiper-item wx:for="{{banner}}" wx:key="ban">
+					<image src="{{item.pic}}" mode="aspectFill"></image>
+				</swiper-item>
+
+			</swiper>
+		</view>
+	</view>
+
+	<view class="aui-row classify aui-margin-l-10 aui-margin-r-10">
+		<view class="aui-col-5 aui-text-center aui-padded-b-15" wx:for="{{classifyOneList}}" wx:key="cla" bindtap="classify" data-id="{{item.id}}" data-index="{{index}}">
+			<view class="pic">
+				<image src="{{item.thumb}}" mode="aspectFill"></image>
+			</view>
+			<view class="aui-text-gray aui-font-size-12 aui-padded-t-5 aui-text-center">{{item.name}}</view>
+		</view>
+		<view class="aui-col-5 aui-text-center aui-padded-b-15" bindtap="more">
+			<view class="pic">
+				<image src="/image/lizi.png" mode="aspectFill"></image>
+			</view>
+			<view class="aui-text-gray aui-font-size-12 aui-padded-t-5 aui-text-center">更多</view>
+		</view>
+	</view>
+
+	<view class="aui-border table aui-margin-t-10 aui-margin-15">
+		<view class="aui-row">
+			<view class="aui-col-xs-6 aui-padded-15 aui-padded-r-10 aui-border-b aui-border-r" wx:for="{{special_area_list}}" wx:key="spe" bindtap="special" data-id="{{item.id}}" data-pic="{{item.pic}}">
+				<view class="fweight-5 aui-font-size-13">{{item.name}}</view>
+				<view class="aui-row aui-padded-t-10">
+					<view class="aui-col-xs-6" wx:for="{{item.good_list}}" wx:key="goo">
+						<view class="pic">
+							<image src="{{item.thumb}}" mode="aspectFill"></image>
+						</view>
+						<view class="aui-font-size-12 aui-text-grayer aui-padded-t-10 aui-ellipsis">{{item.name}}</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+
+	<view class="aui-padded-15 aui-font-size-19">
+		<text class="fweight-5">精选商家</text>
+	</view>
+
+	<view class="aui-padded-15 aui-padded-t-0 tjsj">
+		<view class="aui-row">
+			<view class="aui-col-xs-3" wx:for="{{shopList}}" wx:key="sho" bindtap="shop" data-id="{{item.id}}">
+				<view class="pic">
+					<image src="{{item.thumb}}" mode="aspectFill"></image>
+				</view>
+			</view>
+
+		</view>
+	</view>
+
+	<view class="aui-padded-15 aui-font-size-19">
+		<text class="fweight-5">为你推荐</text>
+	</view>
+
+	<view class="aui-row aui-padded-l-15 aui-padded-r-15 shop-list">
+		<view class="aui-col-xs-6 aui-margin-b-15" wx:for="{{rlist}}" wx:key="rli" bindtap="tuijian" data-id="{{item.id}}">
+			<view class="pic">
+				<image src="{{item.thumb}}" mode="aspectFill"></image>
+			</view>
+			<view class="aui-padded-l-5 aui-padded-r-5">
+				<view class="text aui-ellipsis-2 aui-font-size-13 aui-margin-t-10">
+					{{item.name}}
+				</view>
+				<view class="aui-font-size-11 aui-padded-t-10 aui-padded-b-10 aui-text-grayer">
+					<text class="aui-text-orange">￥<text class="aui-font-size-16 fweight-5">{{item.market_price}}</text></text>
+					<text class="aui-padded-l-5 delline">{{item.original_price}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-text-grayer aui-font-size-11" style="text-align:center;margin-bottom:20rpx" wx:if="{{totalRow==rlist.length}}">我是有底线的</view>
+
+</view>

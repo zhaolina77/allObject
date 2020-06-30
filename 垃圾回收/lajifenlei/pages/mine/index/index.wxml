@@ -1,0 +1,120 @@
+<view class="aui-content">
+
+	<!-- 未登录 -->
+	<view class="aui-bg-white top aui-margin-t-15 flex aui-padded-15" wx:if="{{token==''}}" bindtap="login">
+		<view class="touxiang">
+			<image src="/image/head.png"></image>
+		</view>
+		<view class=" aui-margin-l-15 aui-font-size-14">请登录</view>
+	</view>
+	<!-- 已登录 -->
+	<view class="aui-bg-white top aui-margin-t-15 flex aui-padded-15" wx:if="{{token!=''}}">
+		<view class="touxiang">
+			<image src="{{account.head_portrait}}" mode="aspectFill"></image>
+		</view>
+		<view class=" aui-margin-l-15 aui-font-size-14">{{account.nick_name}}</view>
+	</view>
+
+	
+
+	<view class="aui-margin-t-15 aui-padded-15  aui-bg-white">
+		<view class="fw-bold">我的订单</view>
+		<view class="flex order_box aui-padded-l-15 aui-padded-r-15">
+			<view class="aui-text-center" data-index="-1" bindtap="allOrder">
+				<view class="fl_pic">
+					<image src="/image/allorder.png" mode="aspectFill"></image>
+				</view>
+				<view class="aui-font-size-12 aui-margin-t-5">全部</view>
+			</view>
+			<view class="aui-text-center" data-index="1" bindtap="allOrder">
+				<view class="fl_pic">
+					<image src="/image/huishou.png" mode="aspectFill"></image>
+				</view>
+				<view class="aui-font-size-12 aui-margin-t-5">待回收</view>
+			</view>
+			<view class="aui-text-center" data-index="2" bindtap="allOrder">
+				<view class="fl_pic">
+					<image src="/image/jinxing1.png" mode="aspectFill"></image>
+				</view>
+				<view class="aui-font-size-12 aui-margin-t-5">进行中</view>
+			</view>
+			<view class="aui-text-center" data-index="3" bindtap="allOrder">
+				<view class="fl_pic">
+					<image src="/image/wanch.png" mode="aspectFill"></image>
+				</view>
+				<view class="aui-font-size-12 aui-margin-t-5">已完成</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-margin-t-15 aui-padded-l-15 aui-padded-r-15  aui-bg-white">
+		<view class="aui-border-b    flex guanli" style="justify-content: space-between;" bindtap="address">
+			<view class="flex">
+				<view class="kefu">
+					<image src="/image/address.jpg"></image>
+				</view>
+				<view class="aui-font-size-14 aui-margin-l-10">地址管理 </view>
+			</view>
+			<view class="jt_right">
+				<image src="/image/jt_right.png"></image>
+			</view>
+
+		</view>
+		<view class="aui-border-b aui-padded-t-15   aui-padded-b-15 flex guanli" style="justify-content: space-between;" bindtap="yijian">
+			<view class="flex">
+				<view class="kefu">
+				<image src="/image/yijian.jpg"></image>
+				</view>
+				<view class="aui-font-size-14 aui-margin-l-10">意见反馈 </view>
+			</view>
+			<view class="jt_right">
+				<image src="/image/jt_right.png"></image>
+			</view>
+
+		</view>
+		<view class="aui-border-b aui-padded-t-15   aui-padded-b-15 flex guanli" style="justify-content: space-between;" bindtap="center">
+			<view class="flex">
+				<view class="kefu">
+				<image src="/image/center.jpg"></image>
+				</view>
+				<view class="aui-font-size-14 aui-margin-l-10">帮助中心 </view>
+			</view>
+			<view class="jt_right">
+				<image src="/image/jt_right.png"></image>
+			</view>
+
+		</view>
+		<!-- <view class="aui-border-b aui-padded-t-15   aui-padded-b-15 flex guanli" style="justify-content: space-between;"> -->
+
+		<button open-type="contact" bindcontact="handleContact" class="kf flex aui-border-b aui-padded-t-15   aui-padded-b-15 flex guanli" style="justify-content: space-between;">
+			<view class="flex">
+				<view class="kefu">
+					<image src="/image/kefu.jpg"></image>
+				</view>
+				<view class="aui-font-size-14 aui-margin-l-10">联系客服 </view>
+			</view>
+			<view class="jt_right">
+				<image src="/image/jt_right.png"></image>
+			</view>
+		
+		</button>
+		
+
+		<!-- </view> -->
+		<view class="   flex guanli" style="justify-content: space-between;" bindtap="aboutus">
+			<view class="flex">
+				<view class="kefu">
+					<image src="/image/about.jpg"></image>
+				</view>
+				<view class="aui-font-size-14 aui-margin-l-10">关于我们 </view>
+			</view>
+			<view class="jt_right">
+				<image src="/image/jt_right.png"></image>
+			</view>
+
+		</view>
+	</view>
+
+
+
+
+</view>

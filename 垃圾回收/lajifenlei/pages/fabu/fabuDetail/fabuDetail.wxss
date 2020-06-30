@@ -1,0 +1,43 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+@import '../../../wxParse/wxParse.wxss';
+
+.ms_box{width:100%; align-items: flex-start;justify-content: space-between;}
+.jt_right{width:32rpx;height: 36rpx;}
+.jt_right image{width: 100%;height: 100%;}
+/* .pic{width:32%;height: 240rpx;}
+.pic image{width:100%;height: 100%;} */
+
+.pic {
+  width: 32%;
+  height: 240rpx;
+  margin-left: 1%;
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.pic image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pic .close {
+  position: absolute;
+  top: 6rpx;
+  right: 6rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.add {
+  width: 32%;
+  height: 240rpx;
+}
+
+.add image {
+  width: 100%;
+  height: 100%;
+}

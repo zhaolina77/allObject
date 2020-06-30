@@ -1,0 +1,73 @@
+
+		<view class="aui-content">
+			<view class="aui-list">
+				<view class="aui-list-item aui-border-b aui-padded-t-15 aui-padded-b-15">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title">
+							<image src="/image/header.png" class="head"/>
+							<text class="aui-margin-l-10">13022919281</text>
+						</view>
+					</view>
+				</view>
+				<view class="aui-list-item aui-padded-t-5 aui-padded-b-5" style="margin-top: 1rem;" bindtap="toorder" >
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title">
+							<image src="/image/icon-order.png" class="icon aui-margin-r-5" />
+							<text class="aui-font-size-16 aui-margin-r-5">我的订单</text>
+							<text class="aui-font-size-11 tag" style="background-color: #829bf6;">1个进行中</text>
+						</view>
+					</view>
+				</view>
+				<view class="aui-list-item aui-padded-t-5 aui-padded-b-5">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title">
+							<image src="/image/icon-invit.png" class="icon aui-margin-r-5" />
+							<text class="aui-font-size-16 aui-margin-r-5">邀请有奖</text>
+							<text class="aui-font-size-11 tag" style="background-color: #fb7d65;">得优惠券</text>
+						</view>
+					</view>
+				</view>
+				<view class="aui-list-item aui-padded-t-5 aui-padded-b-5" bindtap="tocoupon">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title">
+							<image src="/image/icon-coupon.png" class="icon aui-margin-r-5" />
+							<text class="aui-font-size-16 aui-margin-r-5">我的优惠券</text>
+							<text class="aui-font-size-11 tag" style="background-color: #fb7d65;">1个即将过期</text>
+						</view>
+					</view>
+				</view>
+				<view class="aui-list-item aui-padded-t-5 aui-padded-b-5">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title">
+							<image src="/image/icon-sevice.png" class="icon aui-margin-r-5" />
+							<text class="aui-font-size-16 aui-margin-r-5" style="position:relative;top:5px;">客服中心</text>
+						</view>
+					</view>
+				</view>
+				<view class="aui-list-item aui-padded-t-5 aui-padded-b-5" bindtap="toabout">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title">
+							<image src="/image/icon-us.png" class="icon aui-margin-r-5" />
+							<text class="aui-font-size-16 aui-margin-r-5">关于我们</text>
+						</view>
+					</view>
+				</view>
+				<view class="aui-list-item aui-padded-t-5 aui-padded-b-5">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title">
+							<image src="/image/icon-fx.png" class="icon aui-margin-r-5" />
+              <button open-type="share" class="aui-font-size-16 aui-margin-r-5" plain="true">分享APP</button>
+						</view>
+					</view>
+				</view>
+        
+				<view class="aui-list-item aui-padded-t-5 aui-padded-b-5">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-title">
+							<image src="/image/icon-set.png" class="icon aui-margin-r-5" />
+							<text class="aui-font-size-16 aui-margin-r-5">设置</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>

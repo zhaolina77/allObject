@@ -1,0 +1,27 @@
+<!--pages/club/index/index.wxml-->
+<van-action-sheet show="{{ show }}">
+  <view class="server aui-padded-15">
+    <view class="aui-font-size-16 aui-text-black">填写申请信息</view>
+    <image class="close" src="/images/close.png" bindtap="onClose"></image>
+     <view class="aui-font-size-13 aui-text-gray aui-margin-t-5">为了更好的为您服务，请注意填写准确信息</view>
+     <view class="flex aui-line">
+      <text class="aui-font-size-18 aui-text-black">申请人姓名</text>
+      <input type="text" placeholder="请填写您的真实姓名" bindinput="getname"></input>
+     </view>
+     <view class="flex aui-line">
+      <text class="aui-font-size-18 aui-text-black">联系方式</text>
+      <input type="tel" placeholder="请填写您的联系方式" bindinput ="getphone"></input>
+     </view>
+     <view class="flex aui-line">
+      <text class="aui-font-size-18 aui-text-black">店铺地址</text>
+      <input type="text" placeholder="请填写您的店铺地址" bindinput ="getaddress"></input>
+     </view>
+     <view class="ok" bindtap="submit">确认并提交</view>
+  </view>
+</van-action-sheet>
+<view class="banner">
+   <image mode="widthFix" src="{{pics}}"></image>
+</view>
+<view class="fiexed"><view class="btn" bindtap="opensheect">我要成为俱乐部</view></view>
+
+

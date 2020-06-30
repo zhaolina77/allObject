@@ -1,0 +1,210 @@
+<view class="aui-bar aui-bar-nav aui-bg-theme mine-bar" id="aui-header">
+    <view class="aui-btn aui-pull-left aui-padded-l-15">
+        <image src="{{ac.head_portrait?ac.head_portrait:'/image/header.png'}}" class="head" mode="" catchtap="showPopup"></image>
+        <view class="aui-padded-l-15 aui-font-size-17 aui-margin-l-5" catchtap="city_list">{{cityName}}</view>
+        <image src="/image/down.png" class="down" mode="widthFix"></image>
+    </view>
+    
+    <!-- <view class="aui-title aui-text-white">000</view> -->
+    <view class="aui-pull-right aui-btn" bindtap="news">
+        <image src="/image/liwu.png" style="width:80rpx;height:80rpx;" mode="widthFix"></image>
+    </view>
+</view>
+
+
+
+<view class="aui-tab aui-padded-r-15 aui-bg-theme  mine-bar" id="tab" style="top:90rpx">
+    <scroll-view scroll-x enable-flex="true" scroll-with-animation="true" scroll-into-view="{{left}}">
+        <block wx:for="{{list}}" wx:key="{{idx}}">
+          <view class='swiper-slide {{state==index?"on":""}}' id="sw{{item.id}}" catchtap="tap" data-index="{{index}}">
+              <text class="aui-font-size-15">{{item.type_name}}</text>
+          </view>
+        </block>
+    </scroll-view>
+</view>
+
+
+<view style="margin:180rpx 0 150rpx;padding-bottom:250rpx"> 
+    <view class="banner" >
+        <swiper display-multiple-items='1' current='{{state}}' bindchange='changeFun' previous-margin='50' next-margin='50' >
+            <block wx:for="{{list}}" wx:key="{{index}}">
+                <swiper-item>
+                    <view class='optionBox' style='text-align:center'>
+                        <view class='mask' wx:if='{{ index != state }}'></view>
+                        <image src="{{item.images}}" mode='aspectFit' />
+                        <view class='swiperText ' style='font-size:32rpx;'>{{ item.intro }}</view>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="aui-list">
+        <view class="aui-list-header aui-bg-white aui-padded-t-15 aui-padded-b-15 aui-border-bgB" bindtap="use_car">
+            <view class="aui-font-size-15">用车情况</view>
+            <view class="aui-font-size-13 aui-text-grayer">{{detail}}
+              <image src="../../image/right.png" class="right"></image>
+            </view>
+        </view>
+        <view class="aui-list-item aui-padded-t-10 aui-padded-b-10 aui-border-b">
+            <view class="aui-list-item-inner">
+               <view class="aui-list-item-title aui-font-size-20">搬运信息</view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-padded-r-15">
+            <view class="aui-list-item-inner aui-border-b aui-padded-r-0 aui-padded-t-15 aui-padded-b-15">
+                <view class="aui-list-item-title" style="flex:1;justify-content: flex-start !important;display:flex;">
+                    <image src="/image/time.png"></image>
+                    <!-- <text class="aui-margin-l-5">{{time}}</text> -->
+                    <picker mode="multiSelector" style="float: right;" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}" style="flex:1">
+                        <view class="tui-picker-detail">
+                           {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+                        </view>
+                    </picker>
+                </view>
+                <view class="aui-list-item-right">
+                    <image src="/image/right.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-padded-r-15" bindtap="change_address" data-index="1">
+            <view class="aui-list-item-inner aui-border-b aui-padded-r-0 aui-padded-t-15 aui-padded-b-15">
+                <view class="aui-list-item-title">
+                    <image src="/image/address.png"></image>
+                    <text class="aui-margin-l-5">{{outAddress}}</text>
+                    <view class="line">
+                        <image src="/image/line.jpg"></image>
+                    </view>
+                </view>
+                <view class="aui-list-item-right">
+                    <image src="/image/right.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-padded-r-15" bindtap="change_address" data-index="2">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-padded-t-15 aui-padded-b-15">
+                <view class="aui-list-item-title">
+                    <image src="/image/toAdd.png"></image>
+                    <text class="aui-margin-l-5">{{backAddress}}</text>
+                </view>
+                <view class="aui-list-item-right">
+                    <image src="/image/right.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-padded-t-10 aui-padded-b-10 aui-border-b aui-border-bgT">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-title aui-font-size-20">收费标准</view>
+            </view>
+        </view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+                <view class="aui-list-item-title">
+                    <view class="aui-font-size-16">基础费用</view>
+                    <view class="aui-font-size-12 aui-text-grayer aui-margin-t-5">
+                        {{basic_cost_details}}
+                    </view>
+                </view>
+                <view class="aui-list-item-right aui-font-size-16 aui-text-danger">￥{{price}}</view>
+            </view>
+        </view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+                <view class="aui-list-item-title">
+                    <view class="aui-font-size-16">额外收费项</view>
+                    <view class="aui-font-size-12 aui-text-grayer aui-margin-t-5">如有大型家具家电、增加师傅等情况需要另需收费</view>
+                </view>
+                <view class="aui-list-item-right aui-font-size-12 aui-text-black"  bindtap="use_price">查看明细<image src="/image/right.png"></image></view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="aui-btn aui-btn-block aui-btn-danger" bindtap="sub">确认提交</view>
+
+
+
+<van-popup show="{{ show }}" position="left" bind:close="onClose" custom-style="height: 100%;">
+<view class="aui-content">
+    <view class="aui-list">
+      <view class="aui-list-item aui-border-b aui-padded-t-15 aui-padded-b-15" bindtap="personal">
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title">
+            <image src="{{ac.head_portrait?ac.head_portrait:'/image/header.png'}}" class="head"/>
+            <text class="aui-margin-l-10">{{ac.phone}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-padded-t-5 aui-padded-b-5" style="margin-top: 1rem;" bindtap="toorder" >
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title">
+            <image src="/image/icon-order.png" class="icon aui-margin-r-5" />
+            <text class="aui-font-size-16 aui-margin-r-5">我的订单</text>
+            <text class="aui-font-size-11 tag" style="background-color: #829bf6;" wx:if="{{num.orderCount}}">{{num.orderCount}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-padded-t-5 aui-padded-b-5"  bindtap="inv">
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title">
+            <image src="/image/icon-invit.png" class="icon aui-margin-r-5" />
+            <text class="aui-font-size-16 aui-margin-r-5">邀请有奖</text>
+            <text class="aui-font-size-11 tag" style="background-color: #fb7d65;">得优惠券</text>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-padded-t-5 aui-padded-b-5" bindtap="tocoupon">
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title">
+            <image src="/image/icon-coupon.png" class="icon aui-margin-r-5" />
+            <text class="aui-font-size-16 aui-margin-r-5">我的优惠券</text>
+            <text class="aui-font-size-11 tag" style="background-color: #fb7d65;"  wx:if="{{num.couponList}}">{{num.couponList}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-padded-t-5 aui-padded-b-5">
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title" style="display: flex;align-items: center;justify-content: flex-start;">
+            <image src="/image/icon-sevice.png" class="icon aui-margin-r-5" style="vertical-align: middle;"></image>
+            <!-- <text class="aui-font-size-16 aui-margin-r-5">客服中心</text> -->
+            <button  open-type='contact' class=" aui-font-size-16 aui-padded-0" plain="true" style="background-color:#fff;height:auto;line-height:1;border-color:#fff;vertical-align: middle;"> <text style="position:relative;top:10rpx;">客服中心</text></button>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-padded-t-5 aui-padded-b-5" catchtap='freeTell' >
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title">
+            <image src="/image/time.png" class="icon aui-margin-r-5" />
+            <text class="aui-font-size-16 aui-margin-r-5">联系我们</text>
+            <text class="aui-font-size-14  aui-text-right " style="color:#fb7d65" wx:if="{{score}}">（{{score}}）</text>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-padded-t-5 aui-padded-b-5" bindtap="toabout">
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title">
+            <image src="/image/icon-us.png" class="icon aui-margin-r-5" />
+            <text class="aui-font-size-16 aui-margin-r-5">关于我们</text>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-padded-t-5 aui-padded-b-5">
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title">
+            <image src="/image/icon-fx.png" class="icon aui-margin-r-5" />
+            <button open-type="share" class="aui-font-size-16 aui-margin-r-5" plain="true">分享小程序</button>
+          </view>
+        </view>
+      </view>
+      
+      <!-- <view class="aui-list-item aui-padded-t-5 aui-padded-b-5" >
+        <view class="aui-list-item-inner">
+          <view class="aui-list-item-title">
+            <image src="/image/icon-set.png" class="icon aui-margin-r-5" />
+            <text class="aui-font-size-16 aui-margin-r-5">设置</text>
+          </view>
+        </view>
+      </view> -->
+    </view>
+  </view>
+  </van-popup>

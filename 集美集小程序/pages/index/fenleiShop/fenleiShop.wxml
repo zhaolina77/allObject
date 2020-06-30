@@ -1,0 +1,55 @@
+<view class="aui-tab  mine-bar" id="tab">
+	<scroll-view scroll-x enable-flex="true">
+		<view class="swiper-slide {{prefectureId==item.id?'on':''}}" wx:for="{{prList}}" wx:key="prList" bindtap="changOne" data-id="{{item.id}}">
+			<view class="aui-font-size-15 txt ">{{item.name}}</view>
+			<view class="line"></view>
+		</view>
+
+	</scroll-view>
+</view>
+<view class="aui-padded-15 aui-padded-t-5 aui-bg-white ">
+	<view class=" flex classfy">
+		<view class="flex  {{status==0?'cl_active':''}}" bindtap="changTwo" data-idx="0">
+			<view class="moren aui-padded-r-5">综合</view>
+		</view>
+		<view class="flex aui-padded-l-15 aui-padded-r-15 {{status==1?'cl_active':''}}" bindtap="changTwo" data-idx="1">
+			<view class="moren aui-padded-r-5">销量</view>
+		</view>
+		<view class="flex {{status==2||status==3?'cl_active':''}}" bindtap="changTwo" data-idx="2">
+			<view class="moren aui-padded-r-5">价格</view>
+			<view class="jt" wx:if="{{status==2}}">
+				<image src="/image/up.png"></image>
+			</view>
+			<view class="jt" wx:elif="{{status==3}}">
+				<image src="/image/down.png"></image>
+			</view>
+			<view class="jt" wx:else>
+				<image src="/image/ud.png"></image>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="aui-content shop_list" wx:if="{{list.length>0}}">
+	<view class="aui-row aui-padded-15 aui-padded-t-10">
+		<view class="aui-col-xs-6 bg-radius box-shadow aui-margin-b-15 aui-bg-white" bindtap="detail" data-id="{{item.id}}" wx:for="{{list}}" wx:key="list">
+			<view class="pic">
+				<image src="{{item.thumb}}" mode="aspectFill"></image>
+				<view class="up aui-font-size-11 aui-text-center aui-ellipsis-1" wx:if="{{item.remark!=''&&item.remark!=null}}">{{item.remark}}</view>
+			</view>
+			<view class="aui-padded-5 aui-padded-b-10 aui-padded-t-10">
+				<view class="aui-font-size-14 aui-ellipsis-1">{{item.name}}</view>
+				<view class="aui-padded-t-5 flex">
+					<view class="aui-text-theme aui-font-size-15 aui-padded-r-10">￥{{item.market_price}}</view>
+					<view class="vip_box aui-text-bro aui-font-size-10" wx:if="{{item.member_price>0}}">会员价:￥{{item.member_price}}</view>
+					<view class="aui-del aui-text-grayc aui-font-size-10" wx:if="{{item.original_price>0&&item.member_price<=0}}">￥{{item.original_price}}</view>
+						<!-- <view class="vip_box aui-text-bro aui-font-size-10" >会员价:￥20000</view> -->
+					<!-- <view class="aui-del aui-text-grayc aui-font-size-10" >￥3000</view> -->
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="nodata" wx:else>
+	<image src="/image/nodata.png"></image>
+</view>

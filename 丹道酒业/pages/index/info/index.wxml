@@ -1,0 +1,3 @@
+<!--pages/my/invit/index.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="aui-padded-15"><template is="wxParse" data="{{wxParseData:content.nodes}}" /></view>

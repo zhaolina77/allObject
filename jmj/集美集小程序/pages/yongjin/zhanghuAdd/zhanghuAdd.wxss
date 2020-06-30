@@ -1,0 +1,7 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.jt_right image{width: 22rpx;height: 22rpx;}
+input{text-align: right;}
+.pen image{width: 26rpx;height: 26rpx;}

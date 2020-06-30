@@ -1,0 +1,82 @@
+<!--pages/cart/buy/index.wxml-->
+<view class="aui-bg-white aui-padded-15 aui-margin-t-15 flex" wx:if="{{!address}}"  bindtap="changeaddress">
+  <text class="aui-font-size-14 aui-text-blacker flex1">未添加收货地址，新建地址以确保商品正常派送</text>
+  <image src="/images/toright.png" class="toright"></image>
+</view>
+<view class="aui-bg-white aui-padded-15 aui-margin-t-15 flex" wx:else  bindtap="changeaddress">
+
+  <image src="/images/oaddress.png" class="address aui-margin-r-15"></image>
+  <view class="flex1">
+    <view class="flex1">
+      <text class="aui-font-size-15 aui-text-blacker">{{address.name}}</text>
+      <text class="aui-font-size-15 aui-text-grayer">   {{address.mobile}}</text>
+    </view>
+    <view class="aui-font-size-15 aui-text-black">{{address.province}}{{address.city}}{{address.district}}{{address.address_info}}</view>
+  </view>
+  <image src="/images/toright.png" class="toright"></image>
+</view>
+<view class="aui-bg-white">
+  <image src="/images/addressbottom.png" class="aborder"></image>
+</view>
+<view class="aui-bg-white aui-padded-15 aui-margin-t-15 flex" bindtap="getcaddress">
+  <text class="aui-font-size-14 aui-text-blacker flex1" wx:if="{{caddress==''}}">请选择俱乐部发货地址</text>
+  <text class="aui-font-size-14 aui-text-blacker flex1" wx:else>{{caddress}}</text>
+  <image src="/images/toright.png" class="toright"></image>
+</view>
+<view class="aui-bg-white aui-padded-15 aui-margin-t-15">
+  <view class="flex aui-margin-b-15" wx:for="{{cartList}}">
+    <image class="img" src="{{item.thumb}}"></image>
+    <view class="flex1">
+      <view class="aui-font-size-15 aui-text-blacker">{{item.goods_name}}</view>
+      <view class="aui-font-size-11 aui-text-grayer">{{item.spec_name}}</view>
+      <view class="aui-font-size-16 aui-text-grayer">￥{{item.market_price}}</view>
+    </view>
+    <text class="aui-font-size-11 aui-text-grayer">X{{item.goods_num}}</text>
+  </view>
+  <view class="aui-line"></view>
+  <view class="flex">
+    <text class="aui-font-size-12 aui-text-grayer flex1">运费</text>
+    <text class="aui-font-size-12 aui-text-blacker">￥0.00</text>
+  </view>
+  <view class="flex aui-margin-t-15">
+    <text class="aui-font-size-12 aui-text-grayer flex1">优惠</text>
+    <text class="aui-font-size-12" style="color:#ff6433;" wx:if="{{have==1 && !coupon_id}}" bindtap="choose">有可用优惠券</text>
+     <text class="aui-font-size-12" style="color:#ff6433;" wx:if="{{have==1 && coupon_id}}" bindtap="choose">已优惠{{coupon_money}}</text>
+    <text class="aui-font-size-12" style="color:#ff6433;" wx:if="{{have==0}}">没有可用优惠券</text>
+  </view>
+  <view class="flex aui-margin-t-15">
+    <text class="aui-font-size-12 aui-text-grayer flex1">商品数量</text>
+    <text class="aui-font-size-12 aui-text-blacker">{{totalNum}}</text>
+  </view>
+  <view class="flex aui-margin-t-15">
+    <text class="aui-font-size-12 aui-text-grayer flex1">商品合计</text>
+    <text class="aui-font-size-12 aui-text-blacker">￥{{totalPrice}}</text>
+  </view>
+</view>
+<view class="fiexheight">5555555</view>
+<view class="flex fixed">
+  <text class="aui-font-size-16 aui-text-blacker aui-margin-l-15">立即支付</text>
+  <text class="price aui-font-size-18 aui-margin-l-15 flex1" style="color:#ff2c2c;">￥{{totalPrice-coupon_money}}</text>
+
+
+
+  <text class="aui-font-size-16 aui-text-white flex1 tobuy  aui-text-center" bindtap="buynow">立即支付</text>
+</view>
+<van-action-sheet show="{{ show }}">
+  <view class="server aui-padded-15">
+    <view class="aui-text-center aui-font-size-16 aui-text-black">选择优惠券</view>
+    <image class="close" src="/images/close.png" bindtap="onClose"></image>
+    <view class="list aui-padded-15" wx:for="{{list}}" data-id="{{item.coupon_id}}" data-money="{{item.money}}" bindtap="gotconpun">
+      <view class="left">
+        <view class="tag aui-font-size-12">
+          <text>￥</text>
+          <text class="price aui-margin-r-5">{{item.money}}</text>
+          <text class="text aui-font-size-12">优惠券</text>
+        </view>
+        <view class="aui-font-size-12">单笔订单满{{item.full}}元使用</view>
+        <view class="aui-font-size-12">有效期{{item.start_date}}-{{item.end_date}}</view>
+      </view>
+    </view>
+  </view>
+
+</van-action-sheet>

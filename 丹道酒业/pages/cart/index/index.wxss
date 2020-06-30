@@ -1,0 +1,107 @@
+@import'/pages/aui.wxss';
+@import'/pages/common.wxss';
+@import'/pages/global.wxss';
+page{
+    background-color: #F8F9FB;
+    
+}
+.out {
+    padding:20rpx;
+}
+.aui-media-list-item-inner{
+    align-items: center;
+}
+.aui-list .aui-list-item-media{width: auto !important;}
+.shop-pic{
+    width:150rpx;
+    height:150rpx;
+    overflow:hidden
+}
+.shop-pic image{
+    width: 100%;
+    height: 100%;
+}
+.old{
+    text-decoration: line-through;
+}
+.aui-list:first-child .mui-table-view:last-child .mui-slider-handle {
+    border-bottom: none !important;
+}
+.aui-media-list .aui-list-item-inner{
+    min-width: 0;
+}
+.shuliang{
+    display: flex;
+}
+.num{
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+}
+.num input{ 
+    width:70rpx !important;
+    height: 1rem !important;
+    line-height: 60rpx;
+    margin-bottom: 0;
+}
+.order-item {
+  position: relative;
+}
+.remove{  
+  width: 160rpx;  
+  height: 100%;  
+  background-color: #F36666; 
+  color: white; 
+  position: absolute;  
+  top: 0;  
+  right: -160rpx;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+} 
+
+.footer{
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .aui-btn-theme{
+    width:240rpx !important;
+    height: 80rpx !important;
+    line-height:80rpx !important;
+}
+page{ background-color: #f6f6f6;margin-bottom: 300rpx;}
+.aui-content{ background-color: #fff;}
+.height{ height: 50rpx;}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  
+   background: #FF4444;
+       border: 1px solid #FF4444 !important;
+}
+checkbox .wx-checkbox-input{
+
+    border-radius:50%;
+
+    width:20px;height:20px;
+
+
+}
+.tobuy {
+  background: linear-gradient(to right,#ffa243,#ff502e);
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  padding: 0 15rpx;
+  width: 220rpx;
+}
+.aui-list-item-inner{ display: block !important}
+.item-cb{ padding: 0 0.75rem}
+.aui-col-xs-6{ width: 46%}
+.show{ display: block}
+.hide{ display: none}
+.visiH{ visibility: hidden}
+.aui-bar-tab{ border-top: 1px solid #eee}
+.aui-bar-btn-item{  width: 0.8%;}

@@ -1,0 +1,5 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.dot{width: 14rpx;height: 14rpx;background-color:white ;border-radius: 50%;}
+.active{background-color: #009B4D;}

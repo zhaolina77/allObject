@@ -1,0 +1,145 @@
+<view class="aui-content">
+	<view class="top_bg ">
+			<view class="tuoyuan">
+						<image src="/image/tuoyuan.png" mode="aspectFill"></image>
+			</view>
+		<view class="aui-padded-l-15 flex weizhi" catchtap="city_list">
+			<view class="dingwei">
+				<image src="/image/dingwei.png" ></image>
+			</view>
+			<view class="aui-text-white aui-font-size-15 aui-padded-l-5 aui-padded-r-5">{{cityName}}</view>
+			<view class="sanjiao">
+				<image src="/image/sanjiao.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-15 banner_box">
+		<view class="banner">
+			<swiper interval="2000" indicator-dots duration="500" autoplay indicator-color="#999999" indicator-active-color="#4AE3E0" circular>
+				<swiper-item bindtap="bannerJump" data-id="{{item.id}}" wx:for="{{bannerList}}" wx:key='bli'>
+					<image src="{{item.thumb}}" mode="aspectFill"></image>
+				</swiper-item>
+			</swiper>
+
+		</view>
+	</view>
+
+	<view class="aui-padded-l-15 aui-padded-r-15">
+		<view class="bg-radius aui-padded-15 flex aui-bg-white fl_box">
+			<view class="flex" style="width:80%;justify-content: space-between;">
+				<view class="aui-text-center" wx:for="{{fl_list}}" wx:key="list" data-id="{{item.id}}" bindtap="flDetail">
+					<view class="fl_pic">
+						<image src="{{item.cover_image}}"></image>
+					</view>
+					<view class="aui-font-size-13 aui-margin-t-5">{{item.name}}</view>
+				</view>
+			</view>
+
+
+			<view class="aui-text-center " bindtap="morefl" style="width:20%">
+				<view class="aui-pull-right">
+					<view class="fl_pic">
+						<image src="/image/more.png"></image>
+					</view>
+					<view class="aui-font-size-13 aui-margin-t-5">更多</view>
+				</view>
+
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-15" bindtap="zixun">
+		<view class="bg-radius aui-padded-15 flex aui-bg-white">
+			<view class="aui-font-size-14 fw_bold">资讯</view>
+			<view class="aui-font-size-13 aui-ellipsis-1 zx_txt aui-margin-l-10">
+				<swiper class="zixun_banner" interval="2000" autoplay="true" circular duration="500" vertical='true'>
+					<!-- <swiper-item wx:for="{{activityList}}" wx:key="act" data-id="{{item.id}}" bindtap="zx_detail"> -->
+					<swiper-item wx:for="{{activityList}}" wx:key="act">
+						<view>{{item.title}}</view>
+					</swiper-item>
+				</swiper>
+			</view>
+		</view>
+	</view>
+	<view class="aui-padded-l-15 aui-padded-r-15">
+		<view class="bg-radius aui-padded-15  aui-bg-white">
+			<view class="title flex">
+				<view class="title_line"></view>
+				<view class="title_txt fw_bold aui-padded-l-10">预约上门回收流程</view>
+			</view>
+			<view class="flex aui-padded-t-15 liucheng" style="justify-content: space-between;align-items:initial;">
+				<view class="aui-text-center">
+					<view class="yy_pic">
+						<image src="/image/yy.png"></image>
+					</view>
+					<view class="aui-font-size-12 aui-margin-t-10">一键发布</view>
+				</view>
+				<view class="jt_right ">
+				<image src="/image/jt_right.png"></image>
+					
+				</view>
+				<view class="aui-text-center">
+					<view class="yy_pic">
+						<image src="/image/shangmen.png"></image>
+					</view>
+					<view class="aui-font-size-12 aui-margin-t-10">免费上门</view>
+				</view>
+				<view class="jt_right ">
+					<image src="/image/jt_right.png"></image>
+				</view>
+				<view class="aui-text-center">
+					<view class="yy_pic">
+						<image src="/image/jiaoyi.png"></image>
+					</view>
+					<view class="aui-font-size-12 aui-margin-t-10">线下交易</view>
+				</view>
+				<view class="jt_right ">
+					<image src="/image/jt_right.png"></image>
+				</view>
+				<view class="aui-text-center">
+					<view class="yy_pic">
+						<image src="/image/wancheng.png"></image>
+					</view>
+					<view class="aui-font-size-12 aui-margin-t-10">完成回收</view>
+				</view>
+
+
+
+			</view>
+
+		</view>
+	</view>
+	<view class="aui-padded-15">
+		<view class="bg-radius aui-padded-15  aui-bg-white">
+			<view class="flex" style="justify-content: space-between;">
+				<view class="title flex">
+					<view class="title_line"></view>
+					<view class="title_txt fw_bold aui-padded-l-10">最新订单</view>
+				</view>
+				<view class="" bindtap="change">
+					<view class="aui-font-size-12 aui-text-theme" wx:if="{{status==0}}">最新订单</view>
+					<view class="aui-font-size-12 aui-text-theme" wx:else>距离排序</view>
+				</view>
+
+
+
+			</view>
+
+			<view class=" aui-padded-t-15" style="justify-content: space-between;flex-wrap:wrap">
+			
+				<view class="item bg-radius" wx:for="{{proList}}" wx:key="pro" data-id="{{item.id}}" bindtap="proDetail">
+					<view class="item_pic bg-radius">
+						<image src="{{item.cover_image}}" mode="aspectFill" ></image>
+					</view>
+					<view class="aui-font-size-14 aui-margin-t-10 aui-padded-l-5 aui-padded-l-5 aui-ellipsis-1 aui-text-center">{{item.name}}</view>
+				</view>
+
+
+
+
+
+			</view>
+
+		</view>
+	</view>
+
+</view>

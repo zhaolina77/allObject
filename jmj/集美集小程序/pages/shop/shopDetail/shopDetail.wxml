@@ -1,0 +1,385 @@
+
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="mine-content-footer" style="margin-bottom:120rpx">
+	<view class="shop-pic">
+		<swiper interval="2000" indicator-dots duration="500" autoplay circular indicator-color="#ccc" indicator-active-color="#ff4805" style="height: 720rpx;">
+			<swiper-item wx:for="{{good.pictures}}">
+				<image src="{{item}}" mode="aspectFill"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="huiyuan flex aui-padded-l-15 aui-padded-r-15 aui-padded-t-10 aui-padded-b-10" style="justify-content: flex-start;" wx:if="{{good.remark!=''&&good.remark}}">
+		<image class="money_ico" src="/image/money.png"></image>
+		<view class="aui-font-size-11 aui-text-or aui-padded-l-5">
+			{{good.remark}}
+		</view>
+	</view>
+	<view class="aui-list aui-media-list">
+		<view class="aui-list-item aui-padded-l-0">
+			<view class="aui-media-list-item-inner aui-border-bgB aui-padded-l-15">
+				<view class="aui-list-item-inner">
+					<view class="aui-list-item-text aui-font-size-15 aui-text-blacker aui-padded-t-5 aui-font-weight">
+						{{good.name}}
+					</view>
+					<view class="aui-list-item-text aui-padded-t-15 aui-padded-b-15 flex" style="justify-content: flex-start;">
+						<view class="flex">
+							<view class="aui-text-orange aui-margin-r-5 fweight-5" style="vertical-align: middle;">￥<text class="aui-font-size-20">{{good.market_price}}</text>
+							</view>
+							<view class="vip_box aui-margin-l-10 aui-text-bro aui-font-size-10" wx:if="{{good.member_price>0}}">会员价:￥{{good.member_price}}</view>
+							<view class="aui-del aui-text-grayc aui-font-size-14 aui-padded-l-15">￥{{good.original_price}}</view>
+						</view>
+						<!-- <view class="vip_box aui-font-size-10 aui-margin-l-10">会员价:￥555</view> -->
+					</view>
+					<view class="aui-list-item-text aui-font-size-13 aui-text-gray">
+						<text>库存：{{good.stocknum}}</text>
+						<text>销量：{{good.sales}}</text>
+						<text>配送:{{good.express_fee}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="aui-border-bgB aui-padded-l-15 gui_box">
+				<view class="aui-media-list-item-inner  aui-padded-t-5 aui-padded-b-5 aui-border-b" wx:if="{{couponList.length>0}}">
+					<view class="aui-list-item-inner" bindtap="youhui">
+						<view class="aui-list-item-text">
+							<view class="aui-ellipsis-1" style="max-width:95%">
+								<text class="aui-margin-r-10 aui-text-grayer">优惠</text>
+								<text class="aui-text-blacker aui-padded-r-10" wx:if="{{coupon==''}}">请选择优惠券</text>
+								<text class="aui-text-blacker aui-padded-r-10" wx:else>满{{coupon.meet_price}}减{{coupon.price}}</text>
+							</view>
+							<view class="aui-font-size-13">
+								<image src="/image/jt_right.png" mode="widthFix" style="width:25rpx;"></image>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="aui-media-list-item-inner  aui-padded-t-5 aui-padded-b-5 aui-border-b" bindtap="guige" wx:if="{{tag!=0}}">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-text">
+							<view>
+								<text class="aui-margin-r-10 aui-text-grayer">规格</text>
+								<text class="aui-text-blacker" >{{info.name}}</text>
+							</view>
+							<view class="aui-font-size-13">
+								<image src="/image/jt_right.png" mode="widthFix" style="width:25rpx;"></image>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="aui-media-list-item-inner aui-padded-t-5 aui-padded-b-5" bindtap="fuwu" wx:if="{{serviceList.length>0}}">
+					<view class="aui-list-item-inner">
+						<view class="aui-list-item-text">
+							<view class="flex">
+								<text class="aui-margin-r-10 aui-text-grayer">服务</text>
+								<view class="flex" wx:if="{{serviceList.length>0}}">
+									<view class="flex" wx:for="{{serviceList}}" wx:key="ser">
+										<image class="dui" src="/image/dui.png"></image>
+										<text class="aui-text-blacker aui-padded-l-5 aui-padded-r-10">{{item.title}}</text>
+									</view>
+								</view>
+								<view class="aui-text-blacker aui-padded-l-5 aui-padded-r-10" wx:else>暂无相关服务</view>
+							</view>
+							<view class="aui-font-size-13">
+								<image src="/image/jt_right.png" mode="widthFix" style="width:25rpx;"></image>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<!-- 评价 -->
+	<view class="" wx:if="{{evaluate.evaluate.length>0}}">
+		<view class="aui-padded-t-15 aui-padded-l-15 aui-padded-b-5 aui-font-size-16">评价<text class="aui-text-grayer aui-font-size-12">({{evaluate.total_size}}条)</text></view>
+		<view class="pingjia-list" wx:for="{{evaluate.evaluate}}" wx:key="ev">
+			<view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 ">
+				<!--个人信息-->
+				<view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+					<view class="aui-list-item-inner aui-padded-r-0">
+						<view class="aui-list-item-title">
+							<view class="head-pic">
+								<image src="{{item.head_portrait}}" mode="aspectFill" class="aui-img-round"></image>
+							</view>
+							<view class="aui-padded-l-10">
+								<view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{item.nick_name}}</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level<1}}">
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:elif="{{item.level>=1&&item.level<2}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=2&&item.level<3}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=3&&item.level<4}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level>=4&&item.level<5}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+								<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5" wx:if="{{item.level==5}}">
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<image class="star1" src="/image/star-on.png" mode="widthFix"></image>
+									<text class="aui-font-size-10 aui-text-orange">{{item.level}}</text>
+								</view>
+							</view>
+						</view>
+						<view class="aui-list-item-right aui-font-size-12 aui-text-gray">{{item.create_time}}</view>
+					</view>
+				</view>
+
+				<view class="inner">
+					<!--发布内容-->
+					<view class="aui-padded-b-15">
+						<view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+							{{item.content}}
+							​​​</view>
+						<!-- <view class="show aui-font-size-14">全文</view> -->
+						<!--图片滑动-->
+						<view class="slide">
+							<scroll-view scroll-x enable-flex="true" style="height:150rpx">
+								<view class="slide-pic" wx:for="{{item.pic}}" wx:key="li" wx:for-item="voo">
+									<image src="{{voo}}"  data-list="{{item.pic}}" data-src="{{voo}}"  bindtap="imgYu" mode="aspectFill"></image>
+								</view>
+							</scroll-view>
+						</view>
+
+
+
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="aui-text-center aui-font-size-13 aui-padded-b-15" bindtap="pinglun">查看全部评价<image src="/image/jt_right.png" mode="widthFix" style="width:25rpx;"></image>
+		</view>
+	</view>
+
+
+
+	<!--详情-->
+	<view class="aui-padded-15 aui-font-weight aui-font-size-16 aui-border-bgT">商品详情</view>
+
+	<view class="">
+		<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+	</view>
+
+</view>
+
+<view class="aui-bar aui-bar-tab aui-border-t clearfix footer-bar " id="footer" style="display: flex;align-items: center;">
+	<view class="aui-col-xs-5">
+		<view class="aui-row">
+			<!-- <view class="aui-col-xs-4"> -->
+			<button open-type="contact" bindcontact="handleContact" class="btn aui-col-xs-4 ">
+				<image class="sc" src="/image/kf.png" mode="widthFix" style="vertical-align: middle;"></image>
+				<view class="aui-font-size-10 aui-text-grayer" style="margin-top:4rpx">客服</view>
+			</button>
+			<!-- </view> -->
+			<view class="aui-col-xs-4" bindtap="shoucang">
+				<image class="sc" src="/image/sc1.png" mode="widthFix" style="vertical-align: middle;" wx:if="{{data_sp.is_coll==0}}"></image>
+				<image class="sc" src="/image/sc-on.png" mode="widthFix" style="vertical-align: middle;" wx:if="{{data_sp.is_coll==1}}"></image>
+				<view class="aui-font-size-10 aui-text-grayer">收藏</view>
+			</view>
+			<view class="aui-col-xs-4" bindtap="cart">
+				<view class="line top-li aui-font-size-9" wx:if="{{cart_count>0}}">{{cart_count}}</view>
+				<image class="sc" src="/image/cart2.png" mode="widthFix" style="vertical-align: middle;"></image>
+				<view class="aui-font-size-10 aui-text-grayer">购物车</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-col-xs-7 aui-padded-r-10">
+		<view class="btn flex">
+			<view class="aui-col-xs-6" bindtap="addcar">
+				<view class="aui-font-size-13 aui-btn aui-btn-theme car" style="background-color: #FEBC48 !important;">加入购物车</view>
+			</view>
+			<view class="aui-col-xs-6">
+				<view class="aui-font-size-13 aui-btn aui-btn-theme gm" bindtap="addcar">立即购买</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 规格弹窗 -->
+<view class="guige " wx:if="{{guige==1}}">
+	<view class='aui-content'>
+		<view class="close" bindtap="closeGg">
+			<image class="icon" src="/image/close.png" mode="widthFix"></image>
+		</view>
+
+		<view class="aui-list aui-media-list">
+			<view class="aui-padded-l-15" style="padding-bottom: 120rpx;">
+				<view class=" aui-padded-t-5 aui-padded-b-5">
+					<view class="aui-media-list-item-inner">
+						<view class="aui-list-item-media" style='width:auto !important;'>
+							<view class="shop-pic">
+								<image src="{{info.thumb}}" mode="aspectFill"></image>
+							</view>
+						</view>
+						<view class="aui-list-item-inner aui-font-size-15">
+							<view class="aui-list-item-text aui-text-orange">￥ <text class="aui-font-weight aui-font-size-16" >{{price}}</text></view>
+							<view class="aui-list-item-text aui-text-gray aui-margin-t-10">已选择：{{info.name}}</view>
+							<view class="aui-list-item-text aui-text-gray aui-margin-t-10">库存：<text class="aui-text-black">{{info.stocknum}}</text></view>
+						</view>
+					</view>
+				</view>
+				<view class="sel" wx:if="{{guige_list.tag!=0}}">
+					<view class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t' wx:if="{{data.one}}">
+						<view class='aui-list-item-inner aui-padded-r-0'>
+							<view class='aui-list-item-text aui-text-black aui-padded-b-5 aui-font-size-15'>{{data.spec_name}}</view>
+							<view class='aui-list-item-text aui-margin-t-10 '>
+								<block wx:for="{{data.one}}" wx:key="index" wx:for-index="index">
+									<text class="aui-font-size-12 spec {{o_idx==index?'aui-active':''}}" catchtap="one_spec" data-id="{{index}}">{{item.item_name}}</text>
+								</block>
+							</view>
+						</view>
+					</view>
+					<view class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t' wx:if="{{t_list!=''}}">
+						<view class='aui-list-item-inner aui-padded-r-0'>
+							<view class='aui-list-item-text aui-text-black aui-padded-b-5 aui-font-size-15'>{{t_list.spec_name}}</view>
+							<view class='aui-list-item-text aui-margin-t-10'>
+								<block wx:for="{{t_list.list}}" wx:key="inde" wx:for-index="inde">
+									<text class="aui-font-size-12 spec {{t_idx==inde?'aui-active':''}}" catchtap="t_spec" data-id="{{inde}}">{{item.item_name}}</text>
+								</block>
+							</view>
+						</view>
+					</view>
+					<view class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t' wx:if="{{th_list!=''}}">
+						<view class='aui-list-item-inner aui-padded-r-0'>
+							<view class='aui-list-item-text aui-text-black aui-padded-b-5 aui-font-size-15'>{{th_list.spec_name}}</view>
+							<view class='aui-list-item-text aui-margin-t-10'>
+								<block wx:for="{{th_list.list}}" wx:key="indee" wx:for-index="inde">
+									<text class="aui-font-size-12 spec {{th_idx==inde?'aui-active':''}}" catchtap="th_spec" data-id="{{inde}}">{{item.item_name}}</text>
+								</block>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class='aui-list-item aui-padded-t-5 aui-padded-b-5 aui-padded-l-0 aui-border-t aui-border-b'>
+					<view class='aui-list-item-inner aui-padded-r-0'>
+						<view class='aui-list-item-text aui-text-black aui-font-size-15 aui-padded-b-5'>
+							数量
+						</view>
+						<view class='aui-list-item-text aui-margin-t-5' style="border-radius: 1rem;">
+							<view class="aui-margin-r-5" bindtap="goods_minus">
+								<image src='/image/mius.png' style='width:1.2rem;height:1.2rem;vertical-align:middle;'></image>
+							</view>
+							<view class='aui-margin-r-5 aui-margin-l-5'>{{goods_num}}</view>
+							<view class="aui-margin-l-5" bindtap="goods_add">
+								<image src='/image/add.png' style='width:1.2rem;height:1.2rem;vertical-align:middle;'></image>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="aui-bar aui-bar-tab aui-padded-15" id="footer">
+			<view class="aui-row">
+				<view class="aui-col-xs-6 aui-padded-r-5" bindtap="addCart">
+					<view class="aui-btn-block aui-btn aui-btn-theme aui-font-size-14" style="background-color:#FEBC48 !important;">
+						加入购物车
+					</view>
+				</view>
+				<view class="aui-col-xs-6 aui-padded-l-5" bindtap="buy">
+					<view class="aui-btn-block aui-btn aui-btn-theme aui-font-size-14">
+						立即购买
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 服务 -->
+<view class="fuwu " wx:if="{{fuwu==1}}">
+	<view class="aui-content aui-bg-white">
+		<header class="aui-bar aui-bar-nav aui-bar-light aui-padded-t-5">
+			<view class="aui-title aui-font-size-16 aui-font-weight">全部服务</view>
+			<view class="aui-pull-right aui-btn" bindtap="closeFw">
+				<image class="icon" src="/image/close.png" mode="widthFix"></image>
+			</view>
+		</header>
+
+		<view>
+			<view class="aui-list aui-media-list aui-padded-t-15">
+				<view class="aui-list-item aui-margin-b-10" wx:for="{{serviceList}}" wx:key="serviceList">
+					<view class="aui-media-list-item-inner">
+						<view class="aui-list-item-media">
+							<image src="/image/dui.png" mode="widthFix"></image>
+						</view>
+						<view class="aui-list-item-inner">
+							<view class="aui-list-item-text aui-text-black aui-font-weight aui-font-size-130 aui-margin-b-10">{{item.title}}</view>
+							<view class="aui-list-item-text aui-font-size-12 aui-text-gray">
+								<view class="aui-ellipsis-2">
+									{{item.content}}
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 优惠 -->
+<view class="fuwu youhui " wx:if="{{youhui==1}}">
+	<view class="aui-content aui-bg-white">
+		<header class="aui-bar aui-bar-nav aui-bar-light aui-padded-t-5">
+			<view class="aui-title aui-font-size-16 aui-font-weight">优惠</view>
+			<view class="aui-pull-right aui-btn" bindtap="closeYh">
+				<image class="icon" src="/image/close.png" mode="widthFix"></image>
+			</view>
+		</header>
+		<view>
+			<view class="aui-list aui-media-list aui-padded-t-15">
+				<view class="aui-text-grayer aui-font-size-13 aui-padded-l-15 aui-padded-r-15">可用优惠券</view>
+				<view class="aui-padded-15 sel">
+					<radio-group bindchange="radioChange">
+						<view class="flex aui-margin-b-15" wx:for="{{couponList}}" wx:key="couponList">
+							<view class="aui-text-theme aui-font-size-15">满{{item.meet_price}}减{{item.price}}</view>
+							<!-- <radio class="" color="#ff4805" value="{{item.id}}"></radio> -->
+						</view>
+						<!-- <view class="flex aui-margin-b-15">
+							<view class="aui-text-grayer aui-font-size-15">不使用优惠券</view>
+							<radio class="" color="#ff4805" value="0"></radio>
+						</view> -->
+
+					</radio-group>
+				</view>
+			</view>
+		</view>
+		<view class="aui-padded-15">
+			<view class="aui-btn aui-btn-block aui-btn-theme" bindtap="yh">确定</view>
+		</view>
+	</view>
+</view>

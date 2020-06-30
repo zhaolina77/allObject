@@ -1,0 +1,28 @@
+/* 背景颜色 */
+page{background-color: #F6F6F6 !important;color: #333333;}
+/*背景圆角*/
+.bg-radius{border-radius: 10rpx;overflow: hidden;}
+
+/* 字体加粗 */
+.fw-bold{font-weight: bold;}
+/* banner */
+.banner{
+    height:280rpx;
+    position: relative;
+    background-color: #F5F6FA;
+    border-radius: 15rpx;
+    overflow: hidden;
+}
+.banner swiper{
+    height:280rpx;
+    position: relative;
+    
+}
+.banner swiper-item image{
+    width: 100%;
+    height: 100%;
+}
+.flex{display: flex;justify-content: flex-start;align-items: center;}
+.aui-margin-b-4{margin-bottom: 4rpx;}
+.btn_box{width: 100%; position: fixed;bottom: 0;left: 0;}
+.btn_box .btn{width: 100%;height: 86rpx;background-color: #4AE3E0;border-radius: 43rpx;line-height: 86rpx;text-align: center;color: #ffffff;font-size: 30rpx;font-weight: 500;}

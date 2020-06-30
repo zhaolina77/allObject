@@ -1,0 +1,65 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+page{
+    background-color: #F5F6FA;
+}
+.dyl{
+    padding: 0 20%;
+}
+.dyl .aui-tab-item.aui-active{
+    color:#121D36;
+    border-bottom: none !important;
+    position: relative;
+    font-weight: 500;
+}
+.dyl .aui-tab-item.aui-active:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    margin-left: -12rpx; 
+    background-color:#0051FE;
+    width:24rpx;
+    height:6rpx;
+    border-radius:10rpx;
+}
+
+scroll-view .slide{
+    width:220rpx;
+    height: 150rpx;
+    margin-left: 20rpx;
+}
+scroll-view image{
+    width: 220rpx;
+    height: 150rpx;
+    border-radius: 10rpx;
+}
+
+
+/* 我的关注 */
+
+/* 悬浮 */
+.xuanfu{
+    position: fixed;
+    left: 50%;
+    bottom:70rpx;
+    margin-left: -120rpx;
+    width:240rpx;
+    padding: 10rpx 0; 
+    border-radius:120rpx;
+    background-color: #fff;
+    box-shadow: 0 0px 20px 0 rgba(0,0,0,0.4);
+}
+.xuanfu .pic image{
+    width:30rpx;
+}
+.shipin{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.aui-active{
+  color:#333;
+}

@@ -1,0 +1,73 @@
+<view class="aui-content">
+	<view class="box">
+		<view class="aui-list aui-media-list info aui-padded-t-5">
+			<view class="aui-list-item aui-list-item-middle">
+				<view class="aui-media-list-item-inner aui-margin-t-15 flex">
+					<view class="aui-list-item-inner aui-margin-t-5">
+						<view class="aui-text-white aui-font-size-15">总资产</view>
+						<view class="aui-text-white aui-font-size-32 aui-padded-t-10">
+							<text >￥</text><text >{{data.commission}}</text>
+						</view>
+						<view class="aui-text-white aui-font-size-12 aui-padded-t-10 flex yq" bindtap="yaoqing">
+							<view class="jinggao">
+								<image src="/image/jinggao.png"></image>
+							</view>
+							<view class="aui-padded-l-5">邀请好友可赚佣金哦！快去邀请></view>
+						</view>
+					</view>
+					<view class=" aui-padded-r-15">
+						<view class="tixian flex aui-padded-l-10 aui-padded-r-10 aui-margin-t-15" bindtap="tixian">
+							<view class="tixian_pic " style="margin-top: 0.1rem;">
+								<image src="/image/tixian.png"></image>
+							</view>
+							<view class="aui-text-theme aui-font-size-14">
+								提现
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="aui-padded-15 ">
+			<view class="flex  aui-padded-b-15 ">
+				<view class="huiyuan_pic aui-padded-b-15">
+					<image src="/image/yongjin.png"></image>
+				</view>
+				<view class="flex aui-border-b aui-padded-b-15 huiyuan_txt aui-margin-l-10" bindtap="yongjinMx">
+					<view class="">
+						<text class="aui-font-size-15 fweight-5">佣金明细</text>
+					</view>
+					<view class="flex">
+						<text class="aui-font-size-12 aui-text-danger aui-padded-r-5">本月共得佣金{{totalMoney}}</text>
+						<!-- <text class="aui-font-size-12 aui-text-danger aui-padded-r-5"></text> -->
+						<image class="jt" src="/image/jt_right.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="flex  aui-padded-b-15 ">
+
+				<view class="aui-padded-b-15">
+					<image class="bd" src="/image/bangding.png"></image>
+				</view>
+				<view class="flex aui-border-b aui-padded-b-15 huiyuan_txt aui-margin-l-10" bindtap="bangdingZh">
+					<view class="">
+						<text class="aui-font-size-15 fweight-5">绑定账户</text>
+					</view>
+					<view class="flex">
+
+						<image class="jt" src="/image/jt_right.png"></image>
+					</view>
+				</view>
+			</view>
+
+
+		</view>
+
+
+
+
+	</view>
+
+</view>

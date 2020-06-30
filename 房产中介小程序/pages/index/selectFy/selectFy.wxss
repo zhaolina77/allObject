@@ -1,0 +1,84 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+page{background-color: #f5f5f5 !important;}
+
+
+
+
+/* .top{width: 100%;position: fixed;top: 50;} */
+.txt{color: #999;position: relative;}
+.active{color: #ffd12d !important;}
+.active::before{content:'';position: absolute;bottom: -10rpx; height:4rpx;width: 30rpx;background-color:#ffd12d;left: 50%;margin-left: -15rpx;}
+
+
+.aui-bar image{
+  width: 32rpx;
+  vertical-align:middle;
+}
+.aui-title{
+  right:30rpx !important;
+  display: flex;
+  align-items: center;
+  left:30rpx !important;
+}
+.aui-bar{
+  height:100rpx;
+background-color: #f5f5f5 !important;
+  
+}
+.serch{
+  border-radius: 10rpx;
+  width: 100%;
+  background-color: #fff !important;
+  
+}
+.serch input{
+  float: left;
+  line-height:70rpx !important;
+  height: 70rpx;
+  width: 80%;
+  color: #222;
+  font-size: 14px;
+  
+}
+
+
+.shouye_list .item_box {align-items: center !important;}
+.shouye_list .item_box1 {width: 96%;}
+
+/* .shouye_list .item_box .item{width: 30% !important;height: 160rpx;}*/
+.shouye_list .item_box .right{width: 70% !important;} 
+.label{padding: 3rpx 5rpx;}
+.label_box{justify-content: flex-start;}
+
+
+.radio_box{width: 50rpx;height: 50rpx;}
+.aui-radio{border: none !important;}
+radio .wx-radio-input {
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #ddd;
+  background: transparent;
+}
+
+radio .wx-radio-input .wx-radio-input-checked {
+  border-radius: 10rpx !important; 
+  border-color: transparent !important;
+  background: #ffd12d;
+}
+radio .wx-radio-input .wx-radio-input-checked::before {
+  border-radius:10rpx !important; 
+  width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 40rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: #ffd12d;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  border-color: transparent !important;
+}
+.aui-radio, .aui-checkbox{background-color: transparent !important;}

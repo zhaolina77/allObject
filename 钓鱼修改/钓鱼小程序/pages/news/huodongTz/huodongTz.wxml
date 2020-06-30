@@ -1,0 +1,29 @@
+<view class="aui-padded-l-15 aui-padded-r-15">
+
+  <view wx:for="{{list}}" wx:key="lis">
+
+
+    <view class="aui-padded-t-15 aui-padded-b-15 aui-text-center">
+      <text class="time aui-font-size-11 aui-text-white">2018-11-16</text>
+    </view>
+    <view class="aui-bg-white aui-margin-b-10" bindtap="tiaozhuan" data-inid="{{item.inid}}" data-meid="{{item.meid}}">
+      <view class="pic aui-bg-grayer">
+        <image src="{{item.thumb}}"></image>
+      </view>
+      <view class="aui-padded-12 aui-padded-b-0">
+        <view class="fweight-5 aui-font-size-15 aui-padded-b-12">{{item.title}}</view>
+        <view class="aui-padded-t-15 aui-padded-b-15 aui-font-size-11 aui-border-t">
+          查看详情
+          <text class="aui-pull-right"><i class="aui-iconfont aui-icon-right"></i></text>
+        </view>
+      </view>
+      <!-- <view class="line"></view> -->
+    </view>
+  </view>
+
+
+</view>
+
+<view  style="margin-top: 150px;" wx:if="{{list.length==0}}"> 
+  <image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>

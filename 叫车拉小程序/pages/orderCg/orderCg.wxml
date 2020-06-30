@@ -1,0 +1,10 @@
+<view class="aui-text-center">
+    <view style="margin-top:120rpx;">
+        <image src="/image/success.png" style="width: 390rpx;height: 390rpx;"></image>
+    </view>
+    <view class="aui-font-size-20 aui-font-weight">下单成功</view>
+    <view class="aui-font-size-16 aui-margin-t-5">司机接单中！请耐心等待...</view>
+    <view class="aui-font-size-12 aui-text-grayer aui-margin-t-5">提示：司机成功接单并开始订单后将不可取消订单，</view>
+    <view class="aui-font-size-12 aui-text-grayer"> 如有疑问请<span>联系客服</span>或拨打<span>{{moble}}</span></view>
+    <view class="aui-btn aui-btn-danger aui-margin-t-15" tapmode bindtap="jump_index">好的</view>
+</view>

@@ -1,0 +1,58 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="">
+	<view class="top aui-padded-15 aui-bg-white">
+		<view>
+			<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+		</view>
+
+		<view class=" aui-text-center">
+			<button class="aui-btn " open-type="share">立即邀请</button>
+		</view>
+
+	</view>
+
+
+	<view class="">
+		<view class="aui-font-size-15 fw5 aui-text-center aui-padded-15">我的邀请战绩</view>
+		<view class="aui-padded-l-15 aui-padded-r-15 aui-row flex aui-text-center aui-margin-b-15">
+			<view class="aui-col-xs-6 aui-padded-b-15  aui-text-center {{idx==1?'active':''}} " bindtap="change" data-idx="1">一级邀请</view>
+			<view class="aui-col-xs-6 aui-padded-b-15 aui-text-center {{idx==2?'active':''}}" bindtap="change" data-idx="2">二级邀请</view>
+		</view>
+	</view>
+
+	<view class=" aui-padded-15 flex aui-bg-white">
+		<view class="flex">
+			<view class="section">
+				<picker mode="date" fields='month' value="{{date}}" start="2000-09-01" end="{{end_time}}" bindchange="bindDateChange">
+					<view class="picker">
+						{{time}}
+					</view>
+				</picker>
+			</view>
+			<view class="jt aui-margin-l-5">
+				<image src="/image/jt-bottom2.png"></image>
+			</view>
+		</view>
+		<view class="aui-font-size-15">邀请：{{totalRow}}</view>
+	</view>
+
+	<!-- 收入 -->
+	<view class="list aui-padded-l-15 aui-padded-r-15 " wx:if="{{list.length>0}}">
+		<view class="flex aui-padded-t-15 lis_box" wx:for="{{list}}" wx:key="lis">
+			<view class="aui-padded-b-15">
+				<view class="head_pic">
+					<image src="{{item.head_portrait}}" mode="aspectFill"></image>
+				</view>
+			</view>
+			<view class="flex right aui-border-b aui-padded-b-15">
+				<view class="">
+					<view class="aui-font-size-14">{{item.nick_name}}</view>
+					<view class="aui-font-size-11 aui-text-grayer aui-padded-t-5">{{item.invitation_time}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="nodata" wx:else>
+		<image src="/image/nodata.png"></image>
+	</view>
+</view>

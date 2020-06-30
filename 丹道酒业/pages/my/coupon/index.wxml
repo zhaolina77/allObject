@@ -1,0 +1,22 @@
+<!--pages/index/coupon/index.wxml-->
+<view class="tab flex">
+  <view class="{{type==0?'active':''}}"  data-idx="0" bindtap="tab">未使用</view>
+  <view class="{{type==1?'active':''}}"  data-idx="1" bindtap="tab">已使用</view>
+  <view class="{{type==2?'active':''}}"  data-idx="2" bindtap="tab">已过期</view>
+</view>
+<view class="list aui-padded-15" wx:for="{{list}}">
+  <view class="left">
+    <view class="tag aui-font-size-12"><text>￥</text>
+  <text class="price aui-margin-r-5">{{item.money}}</text>
+  <text class="text aui-font-size-12">优惠券</text></view>
+  <view class="aui-font-size-12">单笔订单满{{item.full}}元使用</view>
+  <view class="aui-font-size-12 aui-margin-b-10">有效期{{item.start_date}}-{{item.end_date}}</view>
+  </view>
+  <view class="right aui-font-size-15" wx:if="{{type==0}}">去使用</view>
+  <view class="right aui-font-size-15" wx:if="{{type==1}}">已使用</view>
+  <view class="right aui-font-size-15" wx:if="{{type==2}}">已过期</view>
+</view>
+<view class="aui-text-center"  wx:if="{{list.length==0}}">
+<image src="/images/nodata.png" mode="aspectFill"></image>
+</view>
+

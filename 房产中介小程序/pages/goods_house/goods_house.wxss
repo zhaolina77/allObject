@@ -1,0 +1,45 @@
+@import '../../css/aui.wxss';
+@import '../../css/common.wxss';
+@import '../../css/global.wxss';
+.aui-bar image{
+  width: 32rpx;
+  vertical-align:middle;
+}
+.aui-title{
+  right:30rpx !important;
+  display: flex;
+  align-items: center;
+  left:30rpx !important;
+}
+.aui-bar{
+  height:100rpx;
+}
+.serch{
+  border-radius: 10rpx;
+  width: 100%;
+}
+.serch input{
+  float: left;
+  line-height:70rpx !important;
+  height: 70rpx;
+  width: 80%;
+  color: #222;
+  font-size: 14px;
+}
+.box-shadow{box-shadow: 0 5rpx 8rpx 0 rgba(0, 0, 0, 0.2);}/*阴影*/
+.down image{width: 22rpx;height: 12rpx; }
+.inp{height: unset !important;font-size: 28rpx !important;}
+.fl_box{width: 26%;}
+.fl_pic{width: 110rpx;height: 110rpx;margin: 0 auto;}
+.fl_pic image{width: 100%;height: 100%;}
+
+.aui-col-xs-4{width: 32% !important;margin-right: 2% !important;}
+.aui-col-xs-4:nth-of-type(3n){margin-right: 0 !important;}
+.zq{width: 100%;height: 160rpx;}
+.zq image{width: 100%;height:100%}
+
+/* .right{width: 70% !important;} */
+
+.shouye_list .item{width: 35% !important;height: 180rpx !important;}
+.shouye_list .right{width: 65% !important;}
+.address{width: 32rpx;height: 32rpx;}

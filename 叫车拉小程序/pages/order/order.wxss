@@ -1,0 +1,15 @@
+/* pages/useragent/useragent.wxss */
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+.btn{ justify-content: flex-end !important;}
+.btn view,.concat{margin:0 !important; height: 66rpx;min-width: 160rpx;line-height: 66rpx;margin-right: 20rpx !important;padding: 0;width:auto !important;
+min-height: 66rpx !important;
+}
+.btn view:last-child{ margin-right: 0;}
+.aui-btn-danger .aui-btn-outlined{border-color: #fe4501 !important;color: #fe4501 !important;}
+.aui-active{ color: #fe4501 !important;border-color:  #fe4501 !important}
+.concact {
+  background: #fff !important;
+  color: #fe4501 !important;
+  border:1px solid #fe4501 !important;
+}

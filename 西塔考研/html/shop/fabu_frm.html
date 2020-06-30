@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>发布二手信息</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+	</head>
+	<style>
+		textarea {
+			height: 7rem;
+		}
+		
+		
+		
+		.jt {
+			width: 0.75rem;
+		}
+		
+		.aui-list .aui-list-item-right {
+			max-width: 70%;
+		}
+		
+		textarea::-webkit-input-placeholder,
+		input::-webkit-input-placeholder {
+			font-size: 0.7rem;
+			color: #999999 !important;
+		}
+		input[type=checkbox].aui-switch {
+				width: 1.3rem !important;
+				height: 0.77rem !important;
+			}
+			
+			.aui-switch:before {
+				width: 0.7rem;
+				height: 0.7rem;
+			}
+			
+			.aui-switch:checked:before {
+				left: .5rem;
+			}
+			.pic {
+				width: 5.5rem;
+				height: 5.5rem;
+				border-radius: 0.3rem;
+				overflow: hidden;
+				position: relative;
+				padding: 0 !important;
+			}
+		.pic img {
+			width: 100%;
+			height:100%;
+			object-fit: cover;
+		}
+		
+		/*.close {
+			width: 1rem !important;
+			height: 1rem !important;
+			position: absolute;
+			top: 0.2rem;
+			right: 0.2rem
+		}*/
+	</style>
+
+	<body>
+		<div class="aui-content aui-padded-15 aui-bg-white">
+			<div class="aui-font-size-18 fweight-5">请填写商品基本信息</div>
+			<ul class="aui-list aui-margin-t-15">
+				<li class="aui-list-item aui-padded-l-0 aui-border-b">
+					<div class="aui-list-item-inner  aui-padded-t-15  aui-padded-b-15">
+						<div class="aui-list-item-title aui-font-size-15 fweight-5 aui-text-black">二手商品标题</div>
+						<div class="aui-list-item-right">
+							<input type="text" name="" id="" value="" style="text-align: right;" placeholder="请输入标题" />
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-padded-l-0 aui-border-b">
+					<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+						<div class="aui-list-item-title aui-font-size-15 fweight-5">商品分类</div>
+						<div class="aui-list-item-right">
+							<span class="aui-font-size-14 aui-text-grayer aui-ellipsis-1">请选择</span>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-padded-l-0 aui-border-b">
+					<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+						<div class="aui-list-item-title aui-font-size-15 fweight-5">成色</div>
+						<div class="aui-list-item-right">
+							<span class="aui-font-size-14 aui-text-grayer aui-ellipsis-1">请选择</span>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-padded-l-0 aui-border-b">
+					<div class="aui-list-item-inner   aui-padded-t-15  aui-padded-b-15">
+						<div class="aui-list-item-title aui-font-size-15 fweight-5">商品商议价</div>
+						<div class="aui-list-item-right">
+							<input type="text" name="" id="" value="" style="text-align: right;" placeholder="请输入商品卖出商议价" />
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-padded-l-0 aui-border-b">
+					<div class="aui-list-item-inner aui-list-item-arrow aui-padded-t-15  aui-padded-b-15">
+						<div class="aui-list-item-title aui-font-size-15 fweight-5">所在地区</div>
+						<div class="aui-list-item-right">
+							<span class="aui-font-size-14 aui-text-grayer aui-ellipsis-1">请选择</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<textarea class="aui-font-size-15 aui-margin-t-15" placeholder="请简单描述一下您要卖出的商品…"></textarea>
+			<div class="aui-font-size-13 " style="text-align: right;">
+				<span class="aui-text-grayer">0</span><span>/</span><span >1000</span>
+			</div>
+			
+			<div class="">
+				 <ul class="aui-list aui-media-list" >
+			        <li class="aui-list-item aui-padded-0" >
+			            <div class="aui-list-item-inner" style="padding-right: 0 !important;">
+			                <div class="aui-row aui-row-padded flex" style="flex-wrap: wrap;">
+			                    <div class="aui-col-xs-4 pic aui-margin-t-10">
+			                        <img src="../../image/banner.jpg"/>
+			                    </div>
+			                    <div class="aui-col-xs-4 pic aui-margin-t-10">
+			                        <img src="../../image/banner.jpg"/>
+			                    </div>
+			                    <div class="aui-col-xs-4 pic aui-margin-t-10">
+			                        <img src="../../image/banner.jpg"/>
+			                    </div>
+			                    <div class="aui-col-xs-4 pic aui-margin-t-10">
+			                        <img src="../../image/banner.jpg"/>
+			                    </div>
+			                     <div class="aui-col-xs-4 pic aui-margin-t-10">
+			                        <img src="../../image/add-pic.png"/>
+			                    </div>
+			                    <div class="aui-col-xs-4 pic aui-margin-t-10">
+			                        
+			                    </div>
+			                </div>
+			            </div>
+			        </li>
+    </ul>
+			</div>
+			<!--<div class=" clearfix aui-margin-b-15 flex aui-border-b aui-padded-b-15" style="flex-wrap: wrap;justify-content: flex-start;">
+				<div class="pic  aui-margin-t-15">
+					<div class="fabu_pic">
+						<img src="../../image/close2.png" / class="close">
+						<img class="img" src="../../image/banner.jpg" />
+					</div>
+					
+				</div>
+				<div class="pic fabu_pic aui-margin-t-15">
+					<img src="../../image/close2.png" / class="close">
+					<img class="img" src="../../image/banner.jpg" />
+				</div>
+				<div class="pic fabu_pic aui-margin-t-15">
+					<img src="../../image/close2.png" / class="close">
+					<img class="img" src="../../image/banner.jpg" />
+				</div>
+				<div class="pic fabu_pic aui-margin-t-15">
+					<img src="../../image/close2.png" / class="close">
+					<img class="img" src="../../image/banner.jpg" />
+				</div>
+				<div class="pic fabu_pic aui-margin-t-15">
+					<img src="../../image/close2.png"/ class="close">
+					<img class="img" src="../../image/add-pic.png" />
+				</div>
+			</div>-->
+			<div class="aui-font-size-18 aui-margin-t-15 aui-padded-t-15 fweight-5">联系人信息</div>
+			<ul class="aui-list aui-margin-t-5 ">
+				<li class="aui-list-item aui-padded-l-0 aui-border-b">
+					<div class="aui-list-item-inner  aui-padded-t-15  aui-padded-b-15">
+						<div class="aui-list-item-title aui-font-size-15 fweight-5 aui-text-black">联系人</div>
+						<div class="aui-list-item-right">
+							<input type="text" name="" id="" value="" style="text-align: right;" placeholder="请输入联系人姓名" />
+
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item aui-padded-l-0 aui-border-b">
+					<div class="aui-list-item-inner  aui-padded-t-15  aui-padded-b-15">
+						<div class="aui-list-item-title aui-font-size-15 fweight-5 aui-text-black">联系电话</div>
+						<div class="aui-list-item-right">
+							<input type="text" name="" id="" value="" style="text-align: right;" placeholder="1512364748" />
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="aui-list aui-list-in">
+				<div class="aui-list-item aui-padded-l-0">
+					<div class="aui-list-item-inner aui-padded-r-0">
+						<div class="aui-font-size-13 aui-text-grayer flex">
+							<input type="checkbox" class="aui-switch" checked>
+							<span class="aui-padded-l-10" style="vertical-align:-webkit-baseline-middle;">
+			                   		我已阅读并同意接受<span class="aui-text-black" >《二手信息发布协议》</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>

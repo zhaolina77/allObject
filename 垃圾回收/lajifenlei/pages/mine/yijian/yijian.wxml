@@ -1,0 +1,19 @@
+<view class="aui-padded-15 mine-content-footer">
+    <textarea class="aui-font-size-15"  placeholder="请输入您反馈的内容，我们将不断改进" bindinput="content"></textarea>
+    <view class="aui-row">
+        <view class="pic aui-pull-left  aui-margin-t-15" wx:for="{{img}}" wx:key="img">
+            <image src="/image/close2.png"class="close" mode="widthFix" data-index="{{index}}" bindtap="del"></image>
+            <image src="{{item}}" ></image> 
+        </view>
+
+        <view class="pic add  aui-pull-left aui-margin-t-15" bindtap="changeAvatar" wx:if="{{img.length<3}}">
+             <image src="/image/add-pic.png"></image> 
+        </view>
+       
+    </view>
+</view>
+
+
+<view class="btn_box aui-bg-white aui-padded-15">
+	<view class="btn" bindtap="tijiao">提交</view>
+</view>

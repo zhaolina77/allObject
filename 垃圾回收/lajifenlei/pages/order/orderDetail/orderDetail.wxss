@@ -1,0 +1,28 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.top{height: 184rpx;background-color: #4AE4DA;position: relative;}
+.or_detail{height: 184rpx;width: 100%;overflow: hidden; position: absolute;z-index: 1;}
+.or_detail image{width: 100%;height: 100%;object-fit: cover;}
+.or_txt{position: relative;z-index: 88;line-height: 184rpx;}
+
+
+.icon{width: 36rpx;height: 36rpx;}
+.icon image{width: 100%;height: 100%;}
+.icon1{width:36rpx;height:36rpx;}
+.icon1 image{width: 36rpx;height: 36rpx;}
+.right{width:110rpx ;height:60rpx}
+.right image{width:60rpx ;height:60rpx;}
+.pic{width:88rpx;height:88rpx;border-radius: 10rpx;overflow: hidden;}
+.pic image{width:100%;height: 100%;object-fit: cover;}
+.title_txt2{border:1px solid #ff8245;padding: 5rpx;margin-top: 10rpx;border-radius: 5px;width: 80rpx;}
+
+
+
+.ms_box{align-items: flex-start;justify-content: space-between;}
+.ms{width: 90%;}
+.tit{border-left: 3px solid #ff8245;}
+
+.fix{width: 100%;height: 88rpx;position: fixed;bottom: 0;}
+
+.qx{width: 170rpx;height: 48rpx;line-height: 48rpx;border-radius: 24rpx;border-color: #bbb;}

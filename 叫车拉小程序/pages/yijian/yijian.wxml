@@ -1,0 +1,24 @@
+<view class="aui-padded-15 aui-bg-white">
+    <textarea class="aui-font-size-15" bindinput="verification" value="{{val}}" placeholder="请输入您反馈的内容，我们将不断改进"  placeholder-style="color:#aaa"></textarea>
+
+    <block wx:for="{{img}}" wx:if="{{img.length>0}}" wx:key="{{index}}"> 
+      <view class="pic aui-margin-t-15">      
+        <image src="{{item}}"  mode="aspectFill" style="height: 110px !important;width: 110px !important"></image>
+        <image class="close" src="/image/closePage.png" catchtap="del" data-index="{{index}}" mode="widthFix"></image> 
+      </view>       
+    </block>
+
+
+
+    <view class="pic aui-margin-t-15">
+        <!-- <block wx:for="{{img}}" wx:if="{{img.length>0}}" wx:key="{{index}}">       
+            <image src="{{item}}"  mode="widthFix"></image>
+            <image class="close" src="/images/close2.png" catchtap="del" data-index="{{index}}" mode="widthFix"></image>        
+        </block> -->
+        <image src="/image/add-pic.png" bindtap='changeAvatar' style="height: 110px !important;width: 110px !important" mode="widthFix" wx:if="{{img.length<3}}"></image>
+    </view>
+</view>
+
+<view class="aui-bar aui-bar-tab aui-padded-15 footer" id="footer" bindtap="sub">
+    <view class="aui-btn aui-btn-block aui-btn-black aui-font-size-28"  style="background-color:#fe4501 !important">提交</view>
+</view>

@@ -1,0 +1,12 @@
+<view class="aui-padded-15 fweight-5 aui-font-size-16">常见问题</view>
+<view class="aui-list aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-list-item aui-border-b aui-padded-l-0" wx:for="{{list}}" wx:key="lis" bindtap="detail" data-index="{{index}}">
+        <view class="aui-list-item-inner aui-padded-r-0">
+            <view class="aui-list-item-title aui-font-size-14">{{item.name}}</view>
+            <view class="aui-list-item-right">
+                <image class="icon" src="/image/jt-right2.png" mode="widthFix"></image>
+            </view>
+        </view>
+    </view>
+    
+</view>

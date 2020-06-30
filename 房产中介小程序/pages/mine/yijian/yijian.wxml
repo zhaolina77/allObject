@@ -1,0 +1,44 @@
+<view class="aui-padded-15">
+
+	<view class="aui-bg-white br-radius aui-padded-10">
+		<view class="flex">
+			<view>问题/意见描述：</view>
+			<!-- <view>0/200</view> -->
+		</view>
+		<view class="aui-margin-t-15">
+			<textarea class="txt" bindinput="verification" value="{{val}}" placeholder="请输入10字以上的问题描述，以便我们更好地帮您解决问题"></textarea>
+		</view>
+
+		<view class="aui-row aui-padded-b-15  aui-row">
+      <block wx:for="{{img}}" wx:if="{{img.length>0}}" wx:key="{{index}}"> 
+        <view class="pic   aui-margin-t-15 aui-col-xs-3 bg-radius">
+          <image src="{{item}}"  mode="aspectFill"></image>
+          <image src="/image/close.png" class="close" catchtap="del" data-index="{{index}}"></image>
+        </view>
+     </block> 
+			<view class="add   aui-margin-t-15 aui-col-xs-3">
+				<image src="/image/add_pic.png" bindtap='changeAvatar' mode="widthFix" wx:if="{{img.length<3}}"></image>
+			</view>
+			<view class="flex aui-text-gray aui-font-size-12" style="margin-top:120rpx">
+			{{img.length}}/3
+			</view>
+		</view>
+
+
+
+	</view>
+
+	<!-- <view class="aui-bg-white br-radius aui-padded-10 aui-margin-t-15">
+
+		<view>联系方式（选填）</view>
+		<input type="text" class="pho" bindinput="phone_data" value="{{phone}}" placeholder="填写您的手机号或邮箱，便于我们与您联系"></input>
+
+	</view> -->
+
+
+<view class="btn_box aui-padded-15"  bindtap="sub">
+	<view class="btn">提交</view>
+</view>
+
+
+</view>

@@ -1,0 +1,89 @@
+<view wx:if="{{token}}" style="margin-bottom:140rpx">
+	<view class="aui-margin-t-15 aui-bg-white ">
+		<view class=" shouye_list aui-padded-15">
+			<view class="flex">
+				<view class="aui-font-size-17 ft_5">报备房源</view>
+				<view class="flex" wx:if="{{house_id!=0}}" bindtap="change_more">
+					<view class="aui-margin-r-5 aui-font-size-12">重新选择</view>
+					<image class="jt" src="/image/jt_right.png"></image>
+				</view>
+			</view>
+			<!-- 报备房源列表 -->
+			<view class="" wx:if="{{house_id!=0}}">
+
+				<view class="flex item_box aui-padded-t-15 aui-margin-b-15">
+					<view class="item bg-radius">
+						<image src="{{house_list.houseCoverImage}}" mode="aspectFill"></image>
+					</view>
+					<view class="aui-margin-l-10  right ">
+						<view class="aui-font-size-15 aui-ellipsis-1 ">{{house_list.houseName}}</view>
+						<view class="weui-label  aui-text-gray aui-font-size-11 aui-margin-t-10" wx:if="{{house_list.info}}">{{house_list.info}}</view>
+						<view class="weui-label  aui-text-gray aui-font-size-11 aui-margin-t-10 flex " wx:if="{{house_list.address}}" style="justify-content: flex-start;">
+							<view class="address_box">
+								<image class="address" src="/image/address.png"></image>
+							</view>
+							<text class="aui-padded-l-5 aui-ellipsis-1 ">{{house_list.address}}</text>
+						</view>
+						<view class="flex aui-margin-t-10" style="justify-content: flex-start;">
+							<view class="aui-text-theme weui-label aui-font-size-15">
+								<text class="ft_5">{{house_list.price}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="add" bindtap="change_more" wx:if="{{house_id==0}}">
+				<image src="/image/add_house.png"></image>
+
+			</view>
+		</view>
+		<view class=" aui-border-bgT aui-padded-15">
+			<view class="aui-margin-t-15">
+				<view class="aui-font-size-17 ft_5">报备客户</view>
+				<view class="aui-font-size-12 aui-text-gray">该项目为全号报备项目，仅支持报备电话为全号的客户</view>
+			</view>
+			<!-- 报备客户列表 -->
+			<view class="">
+				<view class="aui-margin-t-15 aui-margin-b-15  flex aui-padded-15 aui-bg-gray " wx:for="{{list}}" wx:key="this*">
+					<view>
+						<text>{{item.name}}</text>
+						<text class="aui-margin-l-10 aui-text-gray aui-font-szie-12">{{item.phone}}</text>
+					</view>
+					<view class="close" bindtap="del" data-idx="{{index}}">
+						<image src="/image/del.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="add" bindtap="change_phone">
+				<image src="/image/add.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="btn_box aui-padded-15" wx:if="{{accountType==1}}">
+		<view class="btn" bindtap="sub">提交</view>
+	</view>
+	<view wx:else class="btn_box aui-padded-15">
+		<view class="btn aui-bg-bg">暂无权限提交</view>
+	</view>
+
+
+
+	<!-- 页面弹框 -->
+	<view class="up aui-padded-15" wx:if="{{is_show==1}}">
+		<view class="box aui-text-center">
+			<view class="flex baobei_kh_box aui-padded-15" bindtap="change_kh">
+				<image class="baobei_kh" src="/image/baobei_kh.png"></image>
+				<view class="aui-font-size-15">报备客户</view>
+			</view>
+			<view class="flex baobei_kh_box aui-padded-15" bindtap="add_phone">
+				<image class="baobei_kh" src="/image/add_kh.png"></image>
+				<view class="aui-font-size-15">添加客户</view>
+			</view>
+			<view class="aui-text-center aui-font-size-15 cancel aui-border-t aui-padded-15" bindtap="cancel">取消</view>
+		</view>
+	</view>
+</view>
+<view wx:else class="aui-text-center btns" bindtap="login">
+	请先登录
+	<!-- <button class="btn"  bindtap="default"   bindtap="login">请先登录</button> -->
+</view>

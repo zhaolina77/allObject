@@ -1,0 +1,29 @@
+<!--pages/my/address/index.wxml-->
+
+<view class="aui-bg-white aui-margin-t-15 aui-padded-15 aui-padded-t-0" wx:if="{{list.length>0}}">
+  <view class="list" wx:for="{{list}}" data-item="{{item}}" bindtap="gotaddress">
+    <view class="flex">
+      <text class="aui-font-size-15 aui-text-blacker">{{item.name}}</text>
+      <text class="aui-font-size-15 aui-text-grayer aui-margin-l-15">{{item.mobile}}</text>
+    </view>
+    <view class="flex">
+
+      <text class="aui-font-size-13 aui-text-blacker flex1">{{item.province}}{{item.city}}{{item.district}} {{item.address_info}}</text>
+      <text class="line"></text>
+      <text class="aui-font-size-13 aui-text-blacker edit" data-item="{{item}}" catchtap="toedit">编辑</text>
+      <text class="aui-font-size-13 aui-text-blacker edit" data-id="{{item.id}}" catchtap="todel">删除</text>
+
+    </view>
+  </view>
+
+
+  
+
+</view>
+<block  wx:else>
+ <view class="aui-text-center"><image src="/images/noaddress.png" mode="aspectFit"></image></view>
+</block>
+
+<view class="aui-padded-15" bindtap="toadd">
+  <view class="btn">添加收货地址</view>
+</view>

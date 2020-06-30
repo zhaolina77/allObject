@@ -1,0 +1,36 @@
+<!--pages/my/success/index.wxml-->
+<view class="aui-text-center">
+				<view class="aui-text-center" style="margin-top: 50px;">
+					<image src="/images/txsuccess.png" class="img" ></image>
+				</view>
+				<view class="aui-font-size-18 aui-text-blacker aui-margin-t-15">
+					您的提现申请已成功提交！
+				</view>
+                
+				
+				 <view class="bg">
+				 	<view class="aui-font-size-15 aui-padded-12">
+				 		<text class="" style="width: 200rpx;display:inline-block;color:#a1aaa9;">提现方式</text>
+						<text class="aui-text-blacker">支付宝提现</text>
+				 	</view>
+					<view class="aui-font-size-15 aui-padded-12">
+						<text class="" style="width: 200rpx;display:inline-block;color:#a1aaa9;">提现账号</text>
+						<text class="aui-text-blacker">15126857858</text>
+					</view>
+					<view class="aui-font-size-15 aui-padded-12">
+						<text class="" style="width: 200rpx;display:inline-block;color:#a1aaa9;">收款人姓名</text>
+						<text class="aui-text-blacker">李素原</text>
+					</view>
+					<view class="aui-font-size-15 aui-padded-12">
+						<text class="" style="width: 200rpx;display:inline-block;color:#a1aaa9;">提现金额</text>
+						<text class="aui-text-blacker">￥258.00</text>
+					</view>
+				 </view>
+				  <view class="btn aui-text-white aui-font-size-16">
+				 	完成
+				 </view>
+				  <view class="aui-font-size-15 aui-margin-t-10" style="color:#a1aaa9;">
+				 	我们会在24小时内审核完成并及时做出反馈
+				 </view>
+			
+		</view>

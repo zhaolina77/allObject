@@ -1,0 +1,59 @@
+<view class="aui-tab aui-padded-l-15 aui-padded-r-15" id="tab">
+  <view class="aui-tab-item aui-font-size-16 aui-text-gray   {{status==-1?'aui-active':''}}"    data-idx="-1" bindtap="tab">全部</view>
+  <view class="aui-tab-item aui-font-size-16 aui-text-gray   {{status==0?'aui-active':''}}"   data-idx="0" bindtap="tab">进行中</view>
+  <view class="aui-tab-item aui-font-size-16 aui-text-gray   {{status==1?'aui-active':''}}"   data-idx="1" bindtap="tab">已完成</view>
+  <view class="aui-tab-item aui-font-size-16 aui-text-gray   {{status==2?'aui-active':''}}"   data-idx="2" bindtap="tab">已取消</view>
+</view>
+
+
+<view  class="aui-text-center" wx:if="{{list.length>0}}">
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="aui-list aui-border-bgT">
+			<view class="aui-list aui-media-list">
+				<view class="aui-list-item aui-border-bgB">
+					<view class="aui-media-list-item-inner aui-padded-r-15">
+						<view class="aui-list-item-inner aui-padded-r-0 aui-padded-t-15">
+							<view class="aui-list-item-text aui-border-b aui-padded-b-15" data-id="{{item.id}}" bindtap="todetail">
+								<text class="aui-font-size-16 aui-text-black aui-font-weight">{{item.carname}}（{{item.carintro}})</text>
+								<text class="aui-font-size-13 aui-text-gray">{{item.statusname}}</text>
+							</view>
+							<view class="aui-list-item-text aui-margin-t-15 aui-font-size-13 aui-text-gray" data-id="{{item.id}}" bindtap="todetail">
+								<text>下单时间：{{item.create_time}}</text>
+							</view>
+							<view class="aui-list-item-text aui-margin-t-5 aui-font-size-13 aui-text-gray"  data-id="{{item.id}}" bindtap="todetail">
+								<text>预计价格：￥{{item.pay_price}}</text>
+							</view>
+							<view class="aui-list-item-text btn aui-margin-t-15 aui-font-size-15">
+                   <button class="aui-btn aui-btn-default aui-btn-outlined concat" style="color: #666 !important;" open-type="contact"   wx:if="{{item.status==0 || item.status==4 || item.status==5}}">联系客服</button>
+									<view class="aui-btn concact" data-phone="{{item.driverphone}}" bindtap="call"  wx:if="{{item.status==0 || item.status==4}}">联系司机</view>
+                 
+                  <view class="aui-btn aui-btn-danger aui-btn-outlined"   style="color: #fff !important;" data-id="{{item.id}}" bindtap="confirm"  wx:if="{{item.status==5}}">完成并结算</view>
+
+                  <view class="aui-btn aui-btn-default aui-btn-outlined" style="color: #666 !important;" bindtap="cancel" data-id="{{item.id}}" wx:if="{{item.status==3 || item.status==4}}">取消订单</view>
+
+                  <view class="aui-btn aui-btn-default aui-btn-outlined" style="color: #666 !important;" data-id="{{item.id}}" bindtap="rebuy" wx:if="{{item.status==2}}">再次下单</view>
+
+									<view class="aui-btn aui-btn-default aui-btn-outlined" style="color: #666 !important;" data-id="{{item.id}}" bindtap="del" wx:if="{{item.status==2 || item.status==6}}">删除订单</view>
+
+                  <view class="aui-btn aui-btn-default aui-btn-outlined" style="color: #666 !important;" wx:if="{{item.status==1 && item.is_complain==0 && item.is_evaluation==0}}" bindtap="complain" data-id="{{item.id}}" data-head="{{item.head_portrait}}" data-name="{{item.drivername}}" data-cnumber="{{item.plate_number}}">投诉司机</view>
+
+                  	<view class="aui-btn aui-btn-danger aui-btn-outlined"  style="color: #fff !important;" wx:if="{{item.status==1 && item.is_complain==0 && item.is_evaluation==0}}" bindtap="evaluat" data-id="{{item.id}}" data-head="{{item.head_portrait}}" data-name="{{item.drivername}}" data-cnumber="{{item.plate_number}}">评价</view>
+
+									<view class="aui-btn aui-btn-default aui-btn-outlined" data-id="{{item.id}}" bindtap="rebuy"  wx:if="{{item.status==1&&item.is_evaluation}}" style="color: #666 !important;" >再次下单</view>
+							
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- <view class="aui-text-center" v-if="!list.length">
+				<img src="../../image/nodata.png" style="width:12.5rem;height:12.5rem;margin:4rem auto 0"/>
+			</view> -->
+		</view>
+  </block>
+</view>
+<view class="aui-text-center" wx:else>
+  <image src="../../image/nodata.png" style="width:12.5rem;height:12.5rem;margin:4rem auto 0"></image>
+</view>
+    <!-- <navigator url="/pages/aboutUs/aboutUs"> -->
+    <!-- </navigator> -->

@@ -1,0 +1,83 @@
+<view class="aui-padded-15">
+	<view class="banner bg-radius" bindtap="lingquan">
+		<image src="/image/youhui_banner.png" mode="aspectFill"></image>
+	</view>
+</view>
+<view class="aui-row aui-bg-white aui-padded-12 flex aui-font-size-15 aui-text-gray">
+	<view class="aui-col-xs-6 aui-text-center nav {{status==0?'active':''}} " bindtap="change" data-idx="0">
+		<text>待使用</text>
+	</view>
+	<view class="aui-col-xs-6 aui-text-center nav {{status==1?'active':''}}" bindtap="change" data-idx="1">
+		<text>已过期</text>
+	</view>
+</view>
+
+<view>
+	<!-- 待使用 -->
+	<view wx:if="{{list.length>0}}">
+		<view class="aui-padded-15 " wx:if="{{status==0}}">
+			<view class="aui-bg-white bg-radius aui-padded-15 flex aui-margin-b-15" wx:for="{{list}}" wx:key="lis">
+				<view class="quan_box flex">
+					<view class="aui-text-theme aui-padded-r-5">
+						<text class="aui-font-size-16">￥</text>
+						<text class="aui-font-size-40 fw-bold">{{item.price}}</text>
+					</view>
+					<view class="aui-padded-l-15 aui-text-grayer aui-font-size-12">
+						<view class="aui-font-size-14 aui-text-black">满减券</view>
+						<view class="aui-margin-t-5">满{{item.meet_price}}可使用</view>
+						<view class="aui-margin-t-5">有效期至{{item.end_time}}</view>
+					</view>
+				</view>
+				<view class="aui-btn aui-btn-theme aui-font-size-13" bindtap="use">去使用</view>
+			</view>
+			
+		</view>
+
+		<!-- 已过期 -->
+		<view class="aui-padded-15" wx:else>
+			<view class="aui-bg-white bg-radius aui-padded-15 flex aui-margin-b-15 aui-text-grayer">
+				<view class="quan_box flex">
+					<view class=" aui-padded-r-5">
+						<text class="aui-font-size-12">￥</text>
+						<text class="aui-font-size-40 fw-bold">35</text>
+					</view>
+					<view class="aui-padded-l-15 aui-font-size-12">
+						<view class="aui-font-size-14 ">满减券</view>
+						<view class="aui-margin-t-5">满120可使用</view>
+						<view class="aui-margin-t-5">有效期至2019-08-12</view>
+					</view>
+				</view>
+				<view class=" aui-font-size-13">已过期</view>
+			</view>
+			<view class="aui-bg-white bg-radius aui-padded-15 flex aui-margin-b-15 aui-text-grayer">
+				<view class="quan_box flex">
+					<view class=" aui-padded-r-5">
+						<text class="aui-font-size-12">￥</text>
+						<text class="aui-font-size-40 fw-bold">35</text>
+					</view>
+					<view class="aui-padded-l-15 aui-font-size-12">
+						<view class="aui-font-size-14 ">满减券</view>
+						<view class="aui-margin-t-5">满120可使用</view>
+						<view class="aui-margin-t-5">有效期至2019-08-12</view>
+					</view>
+				</view>
+				<view class=" aui-font-size-13">已过期</view>
+			</view>
+			<view class="aui-bg-white bg-radius aui-padded-15 flex aui-margin-b-15 aui-text-grayer">
+				<view class="quan_box flex">
+					<view class=" aui-padded-r-5">
+						<text class="aui-font-size-12">￥</text>
+						<text class="aui-font-size-40 fw-bold">35</text>
+					</view>
+					<view class="aui-padded-l-15 aui-font-size-12">
+						<view class="aui-font-size-14 ">满减券</view>
+						<view class="aui-margin-t-5">满120可使用</view>
+						<view class="aui-margin-t-5">有效期至2019-08-12</view>
+					</view>
+				</view>
+				<view class=" aui-font-size-13">已过期</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-text-center  aui-font-size-12 aui-text-grayer" wx:else style="margin-top:300rpx">暂无优惠券~</view>
+</view>

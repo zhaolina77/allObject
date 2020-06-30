@@ -1,0 +1,3 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+.aui-col-xs-6 img{width: 6rem;height: 4rem;margin-top: 0.75rem;}

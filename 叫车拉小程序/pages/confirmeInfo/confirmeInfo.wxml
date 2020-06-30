@@ -1,0 +1,110 @@
+<view style="margin:0 0 150rpx 0; padding-bottom:150px"> 
+    <view class="aui-list">
+        <view class="aui-list-item aui-padded-t-15 aui-padded-b-15 aui-border-bgB">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-title">
+                    <view class="aui-text-black aui-font-size-15">{{carInfo.carInfo.type_name}} {{carInfo.carInfo.intro}}</view>
+                    <view class="aui-font-size-12 aui-text-grayer aui-padded-t-10">{{carInfo.carInfo.detail}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-header aui-font-size-15 aui-padded-t-15 aui-padded-b-15 aui-bg-white aui-border-b">搬运信息</view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner aui-border-b aui-padded-b-15 aui-padded-t-15">
+                <view class="aui-list-item-title">
+                    <image src="/image/time.png"></image>
+                    <text>{{time}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner aui-border-b aui-padded-b-15 aui-padded-t-15">
+                <view class="aui-list-item-title" style="display: flex;justify-content: flex-start;">
+                    <view>
+                        <image src="/image/address.png"></image>
+                        <view class="line">
+                            <image src="/image/line.jpg"></image>
+                        </view>
+                    </view>
+                    <view>
+                        <view class="aui-font-size-16">{{outAddress.full_address+outAddress.address_info}}</view>
+                        <view class="aui-font-size-12 aui-padded-t-10 aui-text-black">{{outAddress.name}}  {{outAddress.mobile}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-bgB">
+            <view class="aui-list-item-inner aui-border-b aui-padded-b-15 aui-padded-t-15">
+                <view class="aui-list-item-title" style="display: flex;justify-content: flex-start;">
+                    <view>
+                        <image src="/image/toAdd.png"></image>
+                    </view>
+                    <view>
+                        <view class="aui-font-size-16">{{backAddress.full_address+backAddress.address_info}}</view>
+                        <view class="aui-font-size-12 aui-padded-t-10 aui-text-black">{{backAddress.name}}  {{backAddress.mobile}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-header aui-font-size-15 aui-padded-t-15 aui-padded-b-15 aui-bg-white aui-border-b">费用核算</view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-title aui-text-grayer aui-font-size-13">基础费用</view>
+                <view class="aui-list-item-right aui-text-black aui-font-size-13">￥{{carInfo.carInfo.basic_cost}}</view>
+            </view>
+        </view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-title aui-text-grayer aui-font-size-13">超出公里</view>
+                <view class="aui-list-item-right aui-text-black aui-font-size-13">{{distance}}km</view>
+            </view>
+        </view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-title aui-text-grayer aui-font-size-13">超公里费用</view>
+                <view class="aui-list-item-right aui-text-black aui-font-size-13">￥{{elsePrice}}</view>
+            </view>
+        </view>
+        <view class="aui-list-item" bindtap="coupon_list">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-title aui-text-grayer aui-font-size-13">优惠券</view>
+                <view class="aui-list-item-right aui-text-danger aui-font-size-13">{{num?(coupon!=''?'已减'+coupon.price:'有'+num+'可用优惠券'):'暂无可用优惠券'}}
+                    <image src="/image/right.png" class="right"></image>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-title aui-text-grayer aui-font-size-13">额外收费项</view>
+                <view class="aui-list-item-right aui-text-black aui-font-size-13">结算时补单</view>
+            </view>
+        </view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner">
+                <view class="aui-list-item-title aui-text-grayer aui-font-size-13">平台优惠</view>
+                <view class="aui-list-item-right aui-text-black aui-font-size-13">￥{{terrace_discounts}}</view>
+            </view>
+        </view>
+        <view class="aui-list-item">
+            <view class="aui-list-item-inner aui-border-t">
+                <view class="aui-list-item-title aui-text-grayer aui-font-size-13">预计费用</view>
+                <view class="aui-list-item-right aui-text-black aui-font-size-13">￥{{carInfo.carInfo.basic_cost + elsePrice - couponPrice - terrace_discounts}}</view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-border-bgT">
+            <view class="aui-list-item-inner aui-padded-t-15" style="min-height: 7rem;align-items: flex-start;">
+                <view class="aui-list-item-title aui-text-grayer aui-font-size-15" style="min-width:100% !important;position:relative;z-index:0"><text class="aui-text-black">订单备注：</text>
+                
+                    <!-- <textarea placeholder="请填写需要备注的信息" id="remark"></textarea> -->
+                    <textarea class="aui-font-size-15" bindinput="verification" value="{{remark}}" placeholder="请填写需要备注的信息"  placeholder-style="color:#aaa" style="position:relative;z-index:0;" ></textarea>
+
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="fiexed">
+  <cover-view class="aui-btn aui-btn-block aui-btn-danger" style="z-index:9;position:fixed;bottom:0;" bindtap="sub">确认提交</cover-view>
+</view>
+

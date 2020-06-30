@@ -1,0 +1,26 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.top{height: 150rpx;}
+.touxiang{width: 96rpx;height: 96rpx;border-radius: 50%;border: 5rpx solid white;overflow: hidden;box-shadow: 0 5rpx 6rpx #4AE3E0;}
+.touxiang image{width:100%;height: 100%;object-fit: cover;}
+/* .fl_pic{width: 40rpx;height: 50rpx;} */
+.fl_pic image{width: 60rpx;height: 60rpx;}
+.order_box{justify-content: space-between;margin-top: 40rpx;}
+.kefu{width: 38rpx;height:38rpx;}
+.kefu image{width:100%;height:100%;}
+.jt_right{width:38rpx;height:38rpx;}
+.jt_right image{width: 100%;height: 100%;}
+.guanli{height: 100rpx;}
+.aui-border-b{border-bottom: 1px solid #f6f6f6;}
+.kf{width: 100% !important;background-color: white !important;}
+button{padding: 0 !important;font-weight: 400 !important;}
+
+.dl{background-color:white !important;color: #333 !important;font-size: 32rpx !important;}
+button{
+  width:60px !important;
+  margin-left:auto;
+  margin-right:auto;
+  
+  }
+  

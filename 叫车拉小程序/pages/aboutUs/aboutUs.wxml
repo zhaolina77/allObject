@@ -1,0 +1,37 @@
+<view class="aui-content">
+			<view class="aui-text-center logo aui-bg-grayer">
+				<image class="head" src="/image/logo.png"  style="width: 140rpx;height: 140rpx;border-radius: 10px;" mode="widthFix"></image>
+			</view>
+			<view class="aui-list">
+				<!-- <view class="aui-list-item">
+					<view class="aui-list-item-inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+						<view class="aui-list-item-title aui-font-size-16">版本信息</view>
+						<view class="aui-list-item-right aui-font-size-17">{{version}}</view>
+					</view>
+				</view> -->
+				<view class="aui-list-item" bindtap="touseragent">
+					<view class="aui-list-item-inner aui-border-b aui-padded-t-15 aui-padded-b-15">
+						<view class="aui-list-item-title aui-font-size-16">用户协议</view>
+						<view class="aui-list-item-right aui-font-size-17">
+							<image src="/image/right.png" />
+						</view>
+					</view>
+				</view>
+				<view class="aui-list-item" bindtap="toprivacy">
+					<view class="aui-list-item-inner aui-padded-t-15 aui-padded-b-15">
+						<view class="aui-list-item-title aui-font-size-16">隐私政策</view>
+						<view class="aui-list-item-right aui-font-size-17">
+							<image src="/image/right.png" />
+						</view>
+					</view>
+				</view>
+				<view class="aui-list-item aui-border-bgT" bindtap="toprofile">
+					<view class="aui-list-item-inner aui-padded-t-15 aui-padded-b-15">
+						<view class="aui-list-item-title aui-font-size-16">公司简介</view>
+						<view class="aui-list-item-right aui-font-size-17">
+							<image src="/image/right.png" />
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>

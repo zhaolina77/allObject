@@ -1,0 +1,53 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.aui-list .aui-list-item-right, .aui-list-item-title-row em {
+  max-width: inherit !important;
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+input {
+  text-align: right;
+  color: #121d36;
+}
+
+.pic {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add {
+  margin-right: 0.5rem;
+}
+
+.add img {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.close {
+  width: 1rem !important;
+  height: 1rem !important;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+}
+.footer{
+  width: 100%;
+   position: fixed;
+  bottom: 0;
+  background-color: white;
+  padding:30rpx;
+}
+

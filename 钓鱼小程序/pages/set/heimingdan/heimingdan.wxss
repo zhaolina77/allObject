@@ -1,0 +1,31 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+.user li:last-child {
+  border-bottom: none !important;
+}
+
+.user .aui-list-item-title {
+  display: flex;
+  display: -webkit-flex;
+  width: 80%;
+}
+
+.user .aui-list-item-title .user-pic {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user .aui-list-item-title .user-pic image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user .aui-btn {
+  padding: 0 !important;
+  width: 3rem;
+  border-radius: 1rem;
+}

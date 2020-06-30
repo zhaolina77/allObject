@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>跳搔市场</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper-4.3.3.min.css" />
+		<style type="text/css">
+			.banner {
+				height: 8.5rem;
+				/*border-radius: 0.1px;*/
+				overflow: hidden;
+			}
+			
+			.xinpin {
+				width: 50%;
+				height: 100%;
+			}
+			
+			.xinpin .pic {
+				width: 47%;
+				height: 3.15rem;
+				overflow: hidden;
+				border-radius: 0.25rem;
+			}
+			
+			.xinpin .pic img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.txt_active span {
+				color: #58CAB9 !important;
+			}
+			
+			.txt_active .line {
+				width: 0.4rem;
+				height: 0.1rem;
+				margin: 0 auto;
+				background-color: #58CAB9;
+			}
+			
+			.table {
+				border-radius: 0.25rem;
+			}
+			
+			.table li:nth-of-type(2n) {
+				border-right: none !important;
+			}
+			
+			.table li:nth-of-type(1n+3) {
+				border-bottom: none !important;
+			}
+			
+			.table .pic {
+				width: 90%;
+				height: 3.25rem;
+				border-radius: 0.25rem;
+				margin-right: 10%;
+				overflow: hidden;
+			}
+			
+			.table .pic img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.tab .swiper-slide {
+				height: auto !important;
+				padding: 0 0.75rem !important;
+			}
+			
+			.active span {
+				display: inline-block;
+				color: #121D36 !important;
+				padding: 0 3px;
+				font-weight: 500;
+			}
+			
+			.tab {
+				height: 2rem;
+			}
+			
+			.tab-icon {
+				width: 0.4rem;
+				vertical-align: middle;
+			}
+			
+			.shop-list .aui-col-xs-6 .pic {
+				height: 8rem;
+				border-radius: 0.25rem;
+				overflow: hidden;
+			}
+			
+			.shop-list .aui-col-xs-6 .pic img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.slide .swiper-container .swiper-slide {
+				line-height: 1.5rem !important;
+			}
+			
+			.text{justify-content: flex-start;align-items: center;}
+			.jcx{padding: 0.2rem;}
+			.item_title{width:70%;padding-left: 0.2rem;}
+		</style>
+	</head>
+
+	<body>
+		<div class="aui-content shichang">
+			<!--banner-->
+			<div class="aui-padded-15 banner">
+				<div id="topNav" class="swiper-container" style="border-radius:5px">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="flex aui-padded-15">
+				<div class="fabu">
+					<img src="../../image/fabu.png"/>
+				</div>
+				<div class="aui-text-center aui-padded-r-15">
+					<div class="my_fabu">
+						<img src="../../image/myfabu.png"/>
+					</div>
+					<p class="aui-text-gray aui-font-size-11">我的发布</p>
+				</div>
+				
+			</div>
+			
+
+			<div class="tab slide aui-bg-white" id="tab">
+				<div class="swiper-container" id="slide">
+					<div class="swiper-wrapper aui-font-size-16">
+						<div class="swiper-slide txt_active">
+							<span class=" aui-text-gray">推荐</span>
+							<div class="line"></div>
+						</div>
+						<div class="swiper-slide">
+							<span class="aui-text-gray">真题</span>
+						</div>
+						<div class="swiper-slide">
+							<span class="aui-text-gray">书籍</span>
+						</div>
+						<div class="swiper-slide">
+							<span class=" aui-text-gray">文创</span>
+						</div>
+						<div class="swiper-slide">
+							<span class=" aui-text-gray">礼品</span>
+						</div>
+						<div class="swiper-slide">
+							<span class=" aui-text-gray">其他</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		
+
+			<div class="aui-row aui-padded-15  shop-list ">
+				<div class="aui-col-xs-6 aui-margin-b-10">
+					<div class="pic">
+						<img src="../../image/banner.jpg" />
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text  aui-margin-t-15   flex">
+							<div class="aui-font-size-12 aui-text-blue aui-bg-blue  border-radius-2 jcx">
+								九成新
+							</div>
+							<div class=" aui-font-size-15 item_title aui-ellipsis-1">
+								设计必备书籍（电子书）
+							</div>
+						</div>
+						<div class="aui-font-size-12 aui-padded-t-5 aui-padded-b-10 aui-text-theme">
+							<span class="  aui-text-gray">商议价：</span>
+							
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5 ">228.0</span></span>
+
+						</div>
+					</div>
+				</div>
+				<div class="aui-col-xs-6 aui-margin-b-10">
+					<div class="pic">
+						<img src="../../image/banner.jpg" />
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text  aui-margin-t-15   flex">
+							<div class="aui-font-size-12 aui-text-blue aui-bg-blue  border-radius-2 jcx">
+								全新
+							</div>
+							<div class=" aui-font-size-15 item_title aui-ellipsis-1">
+							建筑学霸笔记
+							</div>
+						</div>
+						<div class="aui-font-size-12 aui-padded-t-5 aui-padded-b-10 aui-text-theme">
+							<span class="  aui-text-gray">商议价：</span>
+							
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5 ">228.0</span></span>
+
+						</div>
+					</div>
+				</div>
+				<div class="aui-col-xs-6 aui-margin-b-10">
+					<div class="pic">
+						<img src="../../image/banner.jpg" />
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text  aui-margin-t-15   flex">
+							<div class="aui-font-size-12 aui-text-blue aui-bg-blue  border-radius-2 jcx">
+								九成新
+							</div>
+							<div class=" aui-font-size-15 item_title aui-ellipsis-1">
+								设计必备书籍（电子书）
+							</div>
+						</div>
+						<div class="aui-font-size-12 aui-padded-t-5 aui-padded-b-10 aui-text-theme">
+							<span class="  aui-text-gray">商议价：</span>
+							
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5 ">228.0</span></span>
+
+						</div>
+					</div>
+				</div>
+				<div class="aui-col-xs-6 aui-margin-b-10">
+					<div class="pic">
+						<img src="../../image/banner.jpg" />
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text  aui-margin-t-15   flex">
+							<div class="aui-font-size-12 aui-text-blue aui-bg-blue  border-radius-2 jcx">
+								全新
+							</div>
+							<div class=" aui-font-size-15 item_title aui-ellipsis-1">
+							建筑学霸笔记
+							</div>
+						</div>
+						<div class="aui-font-size-12 aui-padded-t-5 aui-padded-b-10 aui-text-theme">
+							<span class="  aui-text-gray">商议价：</span>
+							
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5 ">228.0</span></span>
+
+						</div>
+					</div>
+				</div>
+			
+				
+				
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script src="../../script/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper('#topNav', {
+		freeMode: false,
+		slidesPerView: 'auto',
+		autoplay: true,
+		on: {
+			click: function(e) {
+				console.log(JSON.stringify(
+					e));
+				vm.handleClickSlide(this
+					.realIndex);
+			},
+		},
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		preventLinksPropagation: false,
+	})
+
+	var mySwiper = new Swiper('#slide', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		freeModeMomentumRatio: 1
+	})
+</script>

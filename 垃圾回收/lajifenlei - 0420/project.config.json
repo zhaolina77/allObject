@@ -1,0 +1,931 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": true,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.3",
+	"appid": "wxf1961d8d795e7fbe",
+	"projectname": "%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B60420",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/shouye/index",
+					"pathName": "pages/shouye/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/index/index",
+					"pathName": "pages/shouye/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/jingangqu/jingangqu",
+					"pathName": "pages/shouye/jingangqu/jingangqu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/zixun/zixun",
+					"pathName": "pages/shouye/zixun/zixun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/zixunDetail/zixunDetail",
+					"pathName": "pages/shouye/zixunDetail/zixunDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/huishouDetail/huishouDetail",
+					"pathName": "pages/shouye/huishouDetail/huishouDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/aboutUs/aboutUs",
+					"pathName": "pages/mine/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/center/center",
+					"pathName": "pages/mine/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/jingangqu/jingangqu",
+					"pathName": "pages/shouye/jingangqu/jingangqu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjiaCg/pingjiaCg",
+					"pathName": "pages/order/pingjiaCg/pingjiaCg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjia/pingjia",
+					"pathName": "pages/order/pingjia/pingjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuCg/fabuCg",
+					"pathName": "pages/fabu/fabuCg/fabuCg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/orderDetail/orderDetail",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/index/index",
+					"pathName": "pages/shouye/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/zixun/zixun",
+					"pathName": "pages/shouye/zixun/zixun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/huishouDetail/huishouDetail",
+					"pathName": "pages/shouye/huishouDetail/huishouDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/huishouDetail/huishouDetail",
+					"pathName": "pages/shouye/huishouDetail/huishouDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/huishouDetail/huishouDetail",
+					"pathName": "pages/shouye/huishouDetail/huishouDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/jingangqu/jingangqu",
+					"pathName": "pages/shouye/jingangqu/jingangqu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/index/index",
+					"pathName": "pages/shouye/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/zixun/zixun",
+					"pathName": "pages/shouye/zixun/zixun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/index/index",
+					"pathName": "pages/fabu/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/index/index",
+					"pathName": "pages/fabu/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/userinfo/userinfo",
+					"pathName": "pages/mine/userinfo/userinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/aboutUs/aboutUs",
+					"pathName": "pages/mine/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/center/center",
+					"pathName": "pages/mine/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/center/center",
+					"pathName": "pages/mine/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressDel/addressDel",
+					"pathName": "pages/mine/addressDel/addressDel",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressDel/addressDel",
+					"pathName": "pages/mine/addressDel/addressDel",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuCg/fabuCg",
+					"pathName": "pages/fabu/fabuCg/fabuCg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/jingangqu/jingangqu",
+					"pathName": "pages/shouye/jingangqu/jingangqu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/orderDetail/orderDetail",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/index/index",
+					"pathName": "pages/shouye/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/login/login",
+					"pathName": "pages/mine/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/userinfo/userinfo",
+					"pathName": "pages/mine/userinfo/userinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/userinfo/userinfo",
+					"pathName": "pages/mine/userinfo/userinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/login/login",
+					"pathName": "pages/mine/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/userinfo/userinfo",
+					"pathName": "pages/mine/userinfo/userinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/zixun/zixun",
+					"pathName": "pages/shouye/zixun/zixun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/zixunDetail/zixunDetail",
+					"pathName": "pages/shouye/zixunDetail/zixunDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/citys/citys",
+					"pathName": "pages/citys/citys",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/citys/citys",
+					"pathName": "pages/citys/citys",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/huishouDetail/huishouDetail",
+					"pathName": "pages/shouye/huishouDetail/huishouDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/orderDetail/orderDetail",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjia/pingjia",
+					"pathName": "pages/order/pingjia/pingjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/pingjia/pingjia",
+					"pathName": "pages/order/pingjia/pingjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/citys/citys",
+					"pathName": "pages/citys/citys",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/index/index",
+					"pathName": "pages/fabu/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/huishouDetail/huishouDetail",
+					"pathName": "pages/shouye/huishouDetail/huishouDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/jingangqu/jingangqu",
+					"pathName": "pages/shouye/jingangqu/jingangqu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/huishouDetail/huishouDetail",
+					"pathName": "pages/shouye/huishouDetail/huishouDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/center/center",
+					"pathName": "pages/mine/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/jingangqu/jingangqu",
+					"pathName": "pages/shouye/jingangqu/jingangqu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/aboutUs/aboutUs",
+					"pathName": "pages/mine/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/aboutUs/aboutUs",
+					"pathName": "pages/mine/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/jingangqu/jingangqu",
+					"pathName": "pages/shouye/jingangqu/jingangqu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/fabuDetail/fabuDetail",
+					"pathName": "pages/fabu/fabuDetail/fabuDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/citys/citys",
+					"pathName": "pages/citys/citys",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/citys/citys",
+					"pathName": "pages/citys/citys",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/index/index",
+					"pathName": "pages/shouye/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/center/center",
+					"pathName": "pages/mine/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/zixun/zixun",
+					"pathName": "pages/shouye/zixun/zixun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/index/index",
+					"pathName": "pages/shouye/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/index/index",
+					"pathName": "pages/fabu/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/index/index",
+					"pathName": "pages/fabu/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabu/index/index",
+					"pathName": "pages/fabu/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/finish/finish",
+					"pathName": "pages/order/finish/finish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order/order",
+					"pathName": "pages/order/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/finish/finish",
+					"pathName": "pages/order/finish/finish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/aboutUs/aboutUs",
+					"pathName": "pages/mine/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/index/index",
+					"pathName": "pages/shouye/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/jingangqu/jingangqu",
+					"pathName": "pages/shouye/jingangqu/jingangqu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/finish/finish",
+					"pathName": "pages/order/finish/finish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shouye/index/index",
+					"pathName": "pages/shouye/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/center/center",
+					"pathName": "pages/mine/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/aboutUs/aboutUs",
+					"pathName": "pages/mine/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/center/center",
+					"pathName": "pages/mine/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/center/center",
+					"pathName": "pages/mine/center/center",
+					"scene": null
+				}
+			]
+		}
+	}
+}

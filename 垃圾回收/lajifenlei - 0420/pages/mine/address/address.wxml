@@ -1,0 +1,50 @@
+<view class="aui-content" style="padding-bottom:140rpx">
+
+
+	<!-- 有地址 -->
+	<view class="" wx:if="{{addressList.length>0}}">
+		<scroll-view scroll-y="{{isScroll}}">
+			<view class="aui-list">
+				<block wx:key="item" wx:for="{{addressList}}">
+					<view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+						<view class="aui-list-item aui-padded-l-15 aui-padded-t-15 aui-padded-b-15 aui-border-b" bindtap="bianji" data-id="{{item.id}}" data-mobile="{{item.mobile}}" data-def="{{item.is_default}}" data-name="{{item.name}}" data-full="{{item.full_address}}" data-info="{{item.address_info}}" data-lat="{{item.latitude}}" data-lon="{{item.longitude}}">
+							<view class="aui-list-item-inner aui-padded-r-0">
+								<view class="aui-list-item-title aui-padded-r-12">
+									<view class="">
+										<view class="aui-list-item-text aui-font-size-32 fweight-5">
+											<view class="flex">
+												<text class="aui-text-blacker fweight-5 aui-font-size-15">{{item.name}} </text><text class="aui-text-grayer aui-padded-l-10 aui-font-size-13">{{item.mobile}}</text>
+												<view class="moren aui-bg-or aui-font-size-9  aui-text-orange aui-margin-l-10" wx:if="{{item.is_default==0}}">默认</view>
+											</view>
+										</view>
+										<view class="aui-list-item-text aui-text-black aui-font-size-28 aui-margin-t-10">
+											<view class="dizhi">
+												{{item.full_address}} {{item.address_info}}
+											</view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+						<view class="remove" bindtap="del" data-id="{{item.id}}">删除 </view>
+					</view>
+
+				</block>
+			</view>
+		</scroll-view>
+	</view>
+</view>
+
+<view class="btn_box aui-bg-gray aui-padded-15" wx:if="{{addressList.length>0}}">
+	<view class="btn" bindtap="add">
+		<text class="aui-font-size-20">+</text><text class="aui-padded-l-10">添加地址</text>
+	</view>
+</view>
+<!-- 无地址 -->
+<view class="no aui-text-center " wx:if="{{addressList.length<=0}}">
+	<view class="no_address ">
+		<image src="/image/no_address.png"></image>
+	</view>
+	<view class="aui-font-size-15 aui-margin-t-15" style="margin-top:50rpx">您还没有添加地址哦~</view>
+	<view class=" aui-btn-theme  aui-btn-outlined aui-text-center add" bindtap="add">添加地址</view>
+</view>

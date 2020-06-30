@@ -1,0 +1,50 @@
+<view class="aui-padded-l-15 aui-padded-r-15">
+<form bindsubmit="formSubmit" >
+    <view class="aui-padded-t-15">
+        <view class="aui-font-size-26 aui-text-gray aui-padded-b-5">姓名：</view>
+        <view class="aui-border-b">
+            <input placeholder="收货人姓名" value="{{name}}" name="name" placeholder-class="phcolor"/>
+        </view>
+    </view>
+    <view class="aui-padded-t-15">
+        <view class="aui-font-size-26 aui-text-gray aui-padded-b-5 aui-padded-t-10">电话：</view>
+        <view class="aui-border-b">
+            <input placeholder="收货人电话" value="{{mobile}}" maxlength="11" name="mobile"  placeholder-class="phcolor"/>
+        </view>
+    </view>
+    <view class="aui-padded-t-15">
+        <view class="aui-font-size-26 aui-text-gray aui-padded-b-5 aui-padded-t-10">省市区：</view>
+        <!-- <view class="aui-border-b">
+            <input placeholder="收货人姓名" type="text" placeholder-class="phcolor"/>
+        </view> -->
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker aui-border-b aui-padded-10">
+              {{region[0]}}{{region[1]}}{{region[2]}}
+            </view>
+          </picker>
+    </view>
+    <view class="aui-padded-t-15">
+        <view class="aui-font-size-26 aui-text-gray aui-padded-b-5 aui-padded-t-10">详细地址：</view>
+        <view class="aui-border-b">
+            <input placeholder="请输入收货详细地址" type="text" value="{{address_info}}" name="address_info" placeholder-class="phcolor"/>
+        </view>
+    </view>
+    <view class="aui-list aui-list-in aui-padded-t-15">
+        <view class="aui-list-item aui-padded-l-0">
+            <view class="aui-list-item-inner aui-padded-r-0">
+                <view class="aui-list-item-title fweight-5 aui-font-size-28">
+                    设为首选收货地址
+                </view>
+                <view class="aui-list-item-right">
+                    <switch checked="{{is_default==0?true:false}}" bindchange="switch1Change" color="#0051FE"/>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class=" aui-padded-15" style="margin-top:50rpx;">
+        <button class="aui-btn aui-btn-block aui-btn-theme" formType="submit" bindtap="mr_address">保存地址</button>
+    </view>
+
+   </form>
+</view>
+

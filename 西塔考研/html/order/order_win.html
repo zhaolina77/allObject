@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>我的订单</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css"/>
+		<link rel="stylesheet" href="../../css/swiper-4.3.3.min.css"/>
+	</head>
+	<style type="text/css">
+		.slide .swiper-container .swiper-slide{margin-left: 0 !important;height: auto !important;padding: 0 0.75rem !important;margin-right: 0 !important;}
+		.slide .swiper-container .swiper-slide span{padding:3px;display: inline-block;color: #666;}
+		.active span{color: #58CAB9 !important;}
+	</style>
+	<body class="">
+		<header class="aui-bar aui-bar-nav aui-bar-light">
+		    <a class="aui-pull-left aui-btn" onclick="closeWin()">
+		        <img class="icon" src="../../image/jt-left.png">
+		    </a>
+		    <div class="aui-title">我的订单 </div>
+		</header>
+		
+		<div class="slide-tab aui-bg-white  slide" id="tab">
+			<div class="swiper-container" >
+				<div class="swiper-wrapper">
+					<div class="swiper-slide active">
+						<span class="aui-font-size-15">全部</span>
+						<div class="line_bottom">
+							
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<span class=" aui-font-size-15">待支付</span>
+					</div>
+					<div class="swiper-slide">
+						<span class=" aui-font-size-15">待发货</span>
+					</div>
+					<div class="swiper-slide">
+						<span class=" aui-font-size-15">待收货</span>
+					</div>
+					<div class="swiper-slide">
+						<span class=" aui-font-size-15">已完成</span>
+					</div>
+					<div class="swiper-slide">
+						<span class=" aui-font-size-15">退款</span>
+					</div>
+				</div>
+			</div>		
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>
+<script src="../../script/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var mySwiper = new Swiper('.swiper-container',{
+		slidesPerView:'auto',
+		spaceBetween: 10,
+		freeMode: true,
+		freeModeMomentumRatio:1
+	})
+	
+	apiready = function(){
+		 $api.fixIos7Bar($api.dom("header"));//修复ios系统bar
+	        api.openFrame({
+	            name: 'myOrder_frm',
+	            url: 'widget://html/order/myOrder_frm.html',
+	            rect: {
+	                x: 0,
+	                y: $api.dom('header').offsetHeight + $api.dom('#tab').offsetHeight,
+	                w: 'auto',
+	                h: api.winHeight - $api.dom('header').offsetHeight - $api.dom('#tab').offsetHeight
+	                
+	            },
+	            bounces: true,
+	            pageParam: {
+	                id: api.pageParam.id
+	            }
+	        });     
+	};
+</script>

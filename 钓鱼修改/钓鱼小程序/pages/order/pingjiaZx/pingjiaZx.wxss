@@ -1,0 +1,36 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.aui-tab-item.active {
+  color: #121D36 !important;
+  position: relative;
+}
+
+.aui-list-item-media {
+  width: auto !important;
+}
+
+.shop-pic {
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden
+}
+
+.shop-pic image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aui-btn {
+  margin-left: .5rem;
+  height: 1.4rem !important;
+  line-height: 1.4rem !important;
+  width: 3.5rem;
+}
+
+.aui-btn-outlined {
+  border-color: #25D353 !important;
+  color: #25D353 !important;
+}

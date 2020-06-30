@@ -1,0 +1,105 @@
+<view class="aui-content" id="app">
+	<view class="pingjia-list">
+		<view class="aui-list aui-padded-15 aui-padded-b-0 aui-padded-r-0 ">
+			<!--个人信息-->
+			<view class="aui-list-item aui-padded-l-0 aui-padded-r-15">
+				<view class="aui-list-item-inner aui-padded-r-0">
+					<view class="aui-list-item-title">
+						<view class="head-pic">
+							<image class="aui-img-round" src='{{evaluate.head_portrait}}'></image>
+							<!-- <img :src="evaluate.head_portrait"  class="aui-img-round"> -->
+						</view>
+						<view class="aui-padded-l-10">
+							<view class="aui-list-item-text aui-text-blacker aui-font-size-13">{{evaluate.nick_name}}</view>
+							<view class="aui-list-item-text aui-text-grayer aui-font-size-13 aui-padded-t-5">
+
+							<view class="star_ul" wx:if="{{evaluate.level==5}}">
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+								</view>
+								 <view class="star_ul" wx:elif="{{evaluate.level==4}}">
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+								</view>
+								<view class="star_ul" wx:elif="{{evaluate.level==3}}">
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+								</view>
+								<view class="star_ul" wx:elif="{{evaluate.level==2}}">
+								<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+								</view>
+								<view class="star_ul" wx:elif="{{evaluate.level==1}}">
+									<image class="star1" src="/image/star-on.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+
+
+								</view>
+								<view class="star_ul" wx:elif="{{evaluate.level==0}}">
+										<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+									<image class="star1" src="/image/star.png"></image>
+								</view> 
+								<text class="aui-font-size-10 aui-text-orange">{{evaluate.level}}</text>
+							</view>
+						</view>
+					</view>
+					<view class="aui-list-item-right aui-font-size-12 aui-text-grayer">{{evaluate.create_date}}</view>
+				</view>
+			</view>
+
+			<view class="inner">
+				<!--发布内容-->
+				<view class="aui-padded-b-15">
+					<view class=" aui-font-size-14 aui-margin-t-5 aui-ellipsis-6 aui-padded-r-15 pj">
+						{{evaluate.content}}
+						​​​</view>
+
+					<!-- <view class="show aui-font-size-14">全文</view> -->
+
+					<!--图片滑动-->
+					<view class="slide" >
+						<view class="swiper-container " id="slide">
+							<view class=" swiper-wrapper">
+								<view class="swiper-slide" >
+									<view class="">
+										<view class="ms-pic" wx:for="{{evaluate.pictures}}" wx:key="ev">
+                    <image src="{{item}}" style="width:140rpx;height:140rpx" ></image>
+                    <!-- <image style="width:140rpx;height:140rpx" src="/image/add-pic.png"></image> -->
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+
+
+					<!--商家回复-->
+					<!-- <view class="aui-margin-r-15 aui-bg-grayer bg-radius aui-padded-10 aui-font-size-13 aui-text-gray sjhf">
+								<span class="aui-text-black fweight-5">商家回复：</span>
+								尊贵的贵宾您好：我是壹加壹美团点评的负责人，我的电话是19829625610感谢您的星级好评，我们会继续努力，为顾客提供更满意的服务及满意的技术服务
+							</view> -->
+
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>

@@ -1,0 +1,298 @@
+/*登录模块*/
+.login-bg{position: fixed;top:30px;left: 0;width: 100%;height: 96.5%; border-radius:20rpx 20rpx 0 0;padding-bottom: 60rpx;overflow: hidden;}
+.dl{margin-top:80rpx;}
+.dl .inpt{line-height:100rpx;border-bottom: solid 1px #eeeeee;display: flex;align-items: center;justify-content: space-between;}
+.dl .inpt input{height: 100rpx; line-height:100rpx;}
+.dl .inpt .yzm{width:30%;text-align: center;height:60rpx;line-height: 60rpx;border-radius:28rpx;border-color: #999999;} /*有验证码*/
+.dl .inpt .clos image{width: 40rpx;border-radius: 50%;vertical-align: middle;}
+.dl-btn{margin-top: 80rpx !important;}
+.dl .phcolor{color: #999;font-size: 32rpx;}
+
+/*定义选框大小*/
+input[type=radio],input[type=checkbox]{ width: 40rpx;height: 40rpx;}
+
+input[type=radio]:checked{ background-color: #fff !important;border: 1px solid #AAAAAA !important;}
+.aui-radio:checked, .aui-radio.aui-checked, .aui-checkbox:checked, .aui-checkbox.aui-checked{background-color: #222222;border: solid 1px #222222;}
+.aui-radio:checked:before, .aui-radio.aui-checked:before, .aui-checkbox:checked:before, .aui-checkbox.aui-checked:before, .aui-radio:checked:after, .aui-radio.aui-checked:after, .aui-checkbox:checked:after, .aui-checkbox.aui-checked:after{
+	content: '';
+    width: 0.5rem !important;
+    height: 0.5rem !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.25rem !important;
+    margin-top: -0.25rem !important;
+    border: none !important; 
+    z-index: 2;
+    background-color: #222 !important;
+    border-radius: 0.5rem;
+}
+
+
+.clearfix:after{
+	content: ' ';
+	display: block;
+	clear: both;
+	visibility:hidden;
+	line-height: 0;
+	height:0;
+}
+.clearfix:after {
+	clear: both;
+}
+
+.aui-label-outlined.aui-label-danger, .aui-label-outlined.aui-label-danger:after{
+	color: #ff3333;
+    border-color: #ff3333;
+}
+.aui-label{
+	color: #fff;
+    background-color: #222;
+    border-radius: 7rpx;
+    padding: 10rpx 15rpx !important;
+    vertical-align: text-bottom;
+}
+.nodata{text-align: center;padding:20rpx 120rpx 0;}
+
+/* 滑动样式重置 */
+scroll-view { 
+    white-space:nowrap;
+    width:100%;
+    display: flex;  
+}
+scroll-view .swiper-slide {
+    margin-left:30rpx;
+}
+scroll-view .swiper-slide:last-child{
+    margin-right: 30rpx;
+}
+
+
+/*列表上的 icon 搜索筛选 右箭头.icon*/
+.aui-list-item-right .icon{
+	width: 35rpx;
+}
+
+/*heard icon 返回和叉号*/
+header .icon{
+	width: 40rpx;
+}
+
+/*按钮点击样式*/
+/* .btn-ripple {
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+}
+
+.btn-ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle,#ccc 10%,transparent 10.10%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10,10);
+    opacity: 0;
+    transition: transform .5s,opacity 1s;
+} */
+
+.btn-ripple:active:after {
+    transform: scale(0, 0);
+    opacity: .5;
+    transition: 0s;
+}
+
+
+/*滑动的商品列 首页*/
+.shop-slide scroll-view{
+    height: 700rpx;
+}
+.shop-slide .swiper-slide:last-child{
+    line-height: 700rpx;
+}
+.shop-slide scroll-view .swiper-slide .xggd{
+    text-align: center;
+    width: 280rpx;
+}
+.shop-slide .pic{
+	position: relative;
+	width: 400rpx;
+	height: 400rpx;
+	overflow: hidden;
+}
+.shop-slide .text{
+	width: 400rpx;
+    box-sizing:border-box;
+}
+.shop-slide .pic image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.shop-slide .pic .sc{
+	width: 60rpx;
+	height:60rpx;
+	position: absolute;
+	top: 10rpx;
+	right: 10rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.shop-slide .pic .sc image{
+	width: 35rpx;
+	height: 35rpx;
+}
+.shop-slide .more{
+    width: 30rpx;
+	vertical-align:middle;
+}
+/* tab滑动 */
+.slide-tab scroll-view{
+    height:100rpx;
+    margin: 30rpx 0;
+}
+.slide-tab .swiper-slide{
+    padding: 0 24rpx;
+    border-radius: 10rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    width: auto !important;
+    border: solid 1px #ccc;
+}
+.slide-tab .swiper-slide.on{
+    background-color: #EEEEEE;
+}
+scroll-view .swiper-slide:last-child{
+    margin-right: 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+}
+.slide-tab .sel{
+    width: 40rpx;
+    vertical-align: middle;
+}
+
+
+/*商品列表 搜索结果页*/
+.public-list .aui-row{
+  padding: 0 30rpx;
+}
+.public-list .aui-col-xs-6{
+  position: relative;
+  height: 640rpx;
+  width: 48% !important;
+    margin-right: 4%;
+}
+.public-list .aui-col-xs-6:nth-child(2n){
+  margin-right: 0 !important;
+}
+.public-list .aui-col-xs-6:nth-child(2n+1):after{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 1px;
+	background-color: #eee;
+}
+
+.public-list .aui-col-xs-6 .pic{
+	position: relative;
+	width:100%;
+	height: 400rpx;
+	overflow: hidden;
+}
+.public-list .aui-col-xs-6 .text{
+	padding-left: 30rpx;
+	padding-right:30rpx;
+}
+.public-list .aui-col-xs-6 .text .old{
+	text-decoration: line-through;
+}
+.public-list .aui-col-xs-6 .text .news{
+	height:60rpx;
+	line-height:60rpx;
+}
+.public-list .aui-col-xs-6 .pic image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.public-list .aui-col-xs-6 .pic .sc{
+	width: 60rpx;
+	height:60rpx;
+	position: absolute;
+	top: 4rpx;
+	right: 4rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.public-list .aui-col-xs-6 .pic .sc image{
+	width:36rpx;
+	height:36rpx;
+}
+
+/*点击*/
+.slide-tab .swiper-slide.on{ 
+	background-color: #EEEEEE;
+}
+.slide-tab .sel{
+	width: 1rem;
+	vertical-align: middle;
+}
+
+/*pick文章列表*/
+.article-list .pic{height:205rpx;border-radius: 10rpx;overflow:hidden;width: 100%;}
+.article-list .pic image{width: 100%;height: 100%;object-fit: cover;}
+.article-list .aui-info{justify-content: flex-start !important;}
+.article-list .aui-info-item image{width:30rpx;vertical-align: middle;margin-right: 4rpx;}
+.article-list .aui-list-item-media{width: 33.3% !important;padding:20rpx 7rpx !important;}
+.article-list .void{height: 380rpx;position:relative;}
+.article-list .aui-row-padded [class*=aui-col-xs-]{padding: 0 12rpx !important;}
+.article-list .void .bofang{width:100rpx;height:100rpx;position: absolute;top: 50%;left: 50%;margin-top: -50rpx;margin-left: -50rpx;z-index: 2}
+.article-list .aui-info-item{display:inline-block}
+.article-list .aui-list-item:last-child{
+    border-bottom: none !important;
+}
+.article-list .left-text{height:92rpx;margin-bottom: 50rpx !important;line-height:46rpx;}
+
+/* 页面底footer按钮 */
+.footer .aui-btn{
+    margin-bottom: 1.25rem;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+image{
+    display: inline-block !important;
+}
+
+
+/* 悬浮定位 */
+.dingwei{
+  position: fixed;
+  top: 75%;
+  right: 5%;
+}
+
+.dingwei .icon{
+  position: relative;
+  width: 110rpx;
+  height: 110rpx;
+}
+.dingwei .icon image{
+  width: 100%;
+  height: 100%;
+}
+.dingwei .aui-badge{
+  top: 20rpx;
+
+}

@@ -1,0 +1,45 @@
+/* pages/my/address/index.wxss */
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';
+page {
+  background: #f8f9fa;
+}
+.imgwrap {
+  text-align: center
+}
+.imgwrap image {
+
+  width: 100%;
+}
+.btn {
+
+  font-size: 36rpx;
+  color: #fff;
+  line-height: 80rpx;
+  background: #ff6433;
+  border-radius: 6rpx;
+  text-align: center;
+}
+.list {
+  border-bottom: 2rpx solid #cccccc;
+  padding-top: 15rpx;
+  margin-top: 15rpx;
+  padding-bottom: 30rpx;
+}
+.line {
+  width: 2rpx;
+  height: 60rpx;
+  background: #cccccc;
+  margin: 0 30rpx;
+}
+.edit {
+  width: 80rpx;
+}
+.defalut {
+  font-size: 24rpx;
+  color: #ff6433;
+  border: 2rpx solid #ff6433;
+  border-radius: 3rpx;
+  padding: 2rpx 6rpx;
+  margin-right: 10rpx;
+}

@@ -1,0 +1,75 @@
+<view class=" mine-content-footer" style="margin-bottom:120rpx">
+    <view class="aui-bg-grayer aui-padded-15">
+        <view class="aui-font-size-18 fweight-5">已完成</view>
+		<view class="aui-font-size-13 aui-text-gray aui-padded-t-10">订单已完成</view>
+    </view>
+    <view class="aui-padded-15 aui-bg-white">
+        <view class="aui-font-size-16 fweight-5 aui-padded-b-15">收货地址</view>
+        <view class="aui-text-gray aui-font-size-14">高德华  15591480389</view>
+        <view class="aui-text-gray aui-font-size-14 aui-padded-t-5">陕西省，西安市，雁塔区，唐沣国际</view>
+    </view>
+    <view class="aui-padded-l-15 aui-padded-r-15 aui-bg-white">
+        <view class="aui-border-t aui-padded-t-15 aui-padded-b-15">
+            <view class="aui-font-size-16 fweight-5 aui-padded-b-15">
+                配送信息
+            </view>
+            <view class="" style="display: flex;align-items: center;justify-content: space-between;">
+                <view class="">
+                    <view class="aui-text-gray aui-font-size-15">物流名称： <text class="aui-text-black">圆通</text></view>
+                    <view class="aui-text-gray aui-font-size-15 aui-padded-t-5">物流单号：<text class="aui-text-black">4623283213123</text></view>
+                </view>
+                <view class="">
+                    <view class="aui-btn aui-font-size-12 aui-btn-outlined aui-btn-gray">物流详情</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="aui-list aui-media-list aui-padded-l-15 aui-padded-r-15 aui-border-bgT">
+        
+        <view class="aui-list-item  aui-padded-l-0 aui-padded-t-5 aui-padded-b-5 aui-border-b">
+            <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-media">
+                    <image src="/image/lizi.png"></image>
+                </view>
+                <view class="aui-list-item-inner aui-padded-r-0">
+                    <view class="aui-list-item-text">
+                        <view class="aui-text-black aui-font-size-14 aui-ellipsis-1">故宫 事事如意 快客杯 便携茶具 送礼礼品</view>
+                    </view>
+                    <view class="aui-list-item-text aui-font-size-12 aui-text-gray aui-padded-t-10">规格: 5斤装</view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-list-item-title aui-font-size-10 aui-text-orange">
+                            ￥<text class="aui-text-orange aui-padded-r-5 aui-font-size-18">46.00 </text>
+                        </view>
+                        <view class="aui-list-item-right aui-font-size-12 aui-text-gray">共2件</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="aui-padded-t-15">
+            <view class="aui-font-size-15 aui-text-black aui-padded-b-15">
+                实付金额
+                <text class="aui-pull-right fweight-5 aui-text-orange">￥170</text>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="aui-border-bgT aui-padded-15 aui-padded-t-5 aui-font-size-14 aui-text-gray aui-bg-white">
+        <view class="aui-padded-t-10">订单编号：472344424234</view>
+        <view class="aui-padded-t-10">下单时间：2019-06-20-18:00</view>
+        <view class="aui-padded-t-10">支付方式：微信</view>
+        <view class="aui-padded-t-10">支付时间：2019-06-20-18:00</view>
+        <view class="aui-padded-t-10">发货时间：2019-06-20-18:00</view>
+    </view>
+
+
+</view>
+
+
+<view class="aui-bar aui-bar-tab aui-border-t " id="footer" style="display: flex;align-items: center;justify-content: flex-end;">
+    <view class="aui-text-right aui-padded-r-10">
+        <view class="aui-btn aui-btn-outlined aui-font-size-12  aui-btn-gray">再次下单</view>
+		<view class="aui-btn aui-font-size-12 aui-btn-theme">评价</view>
+    </view>
+</view>
+

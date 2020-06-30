@@ -1,0 +1,339 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<view class="flex aui-padded-15">
+
+<block  wx:if="{{order.status==4}}">
+    <text class="aui-font-size-20 aui-text-blacker aui-margin-r-5">司机已接单</text>
+  <text class="aui-font-size-13 aui-text-grayer">可联系司机师傅商量具体细节...</text>
+  </block>
+  <block  wx:elif="{{order.status==3}}">
+    <text class="aui-font-size-20 aui-text-blacker aui-margin-r-5">等待司机接单</text>
+  <text class="aui-font-size-13 aui-text-grayer">请耐心等耐...</text>
+  </block>
+  <block wx:elif="{{order.status==6}}">
+    <text class="aui-font-size-20 aui-text-blacker aui-margin-r-5">订单已关闭</text>
+  <text class="aui-font-size-13 aui-text-grayer">订单已关闭，期待下次为您服务</text>
+  </block>
+  <block wx:elif="{{order.status==2}}">
+    <text class="aui-font-size-20 aui-text-blacker aui-margin-r-5">订单已取消</text>
+  <text class="aui-font-size-13 aui-text-grayer">订单已取消，期待下次为您服务</text>
+  </block>
+  <block wx:elif="{{order.status==1}}">
+    <text class="aui-font-size-20 aui-text-blacker aui-margin-r-5">订单已完成</text>
+  <text class="aui-font-size-13 aui-text-grayer">期待下次为您服务</text>
+  </block>
+
+
+</view>
+<map id="map" longitude="{{dll.longitude}}" latitude="{{dll.latitude}}" scale="14" controls="{{controls}}"  markers="{{markers}}"   polyline="{{polyline}}"  show-location style="width: 100%; height: 300px;"  wx:if="{{order.status==0}}"></map>
+<view class="aui-padded-15 aui-bg-white" style="font-weight:bold" wx:if="{{order.status==0 ||order.status==1 ||order.status==4 || order.status==5}}">距离{{distance}}km；大约{{time}}分钟到达</view>
+<view class="aui-bg-white aui-padded-15" wx:if="{{order.status==0 ||order.status==1 ||order.status==4 || order.status==5}}">
+    <view class="flex">
+        <image class="head" src="{{driver.head_portrait}}"></image>
+        <view class="flex1 aui-margin-l-10">
+            <view class="aui-font-size-15 aui-text-blacker">{{name.name}}  {{driver.plate_number}}</view>
+            <view wx:if="{{driver.grade<1}}">
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <text class="grade">{{driver.grade}}分</text>
+            </view>
+            <view wx:if="{{driver.grade>1 && driver.grade<2}}">
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <text class="grade">{{driver.grade}}分</text>
+            </view>
+            <view wx:if="{{driver.grade>=2 && driver.grade<3}}">
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <text class="grade">{{driver.grade}}分</text>
+            </view>
+            <view wx:if="{{driver.grade>=3 && driver.grade<4}}">
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <text class="grade">{{driver.grade}}分</text>
+            </view>
+            <view wx:if="{{driver.grade>=4 && driver.grade<5}}">
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <text class="grade">{{driver.grade}}分</text>
+            </view>
+            <view wx:if="{{driver.grade==5}}">
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <text class="grade">{{driver.grade}}分</text>
+            </view>
+        </view>
+        <image class="tel" data-phone="{{driver.phone}}" bindtap="call"  src="/image/tel.png"></image>
+    </view>
+</view>
+<view class="aui-bg-white"  wx:if="{{order.status==0 ||order.status==1 ||order.status==3 || order.status==4 || order.status==5}}">
+  <view class="aui-padded-15 aui-padded-">车辆信息</view>
+  <view class="aui-line"></view>
+  <view class="aui-font-size-15 aui-text-blacker aui-padded-l-15 aui-margin-t-15">{{carDetails.type_name}}({{carDetails.intro}})</view>
+  <view class="aui-font-size-12 aui-text-grayer aui-padded-l-15 aui-margin-t-5 aui-padded-b-15">{{carDetails.detail}}</view>
+
+</view>
+<view class="aui-margin-t-15 aui-bg-white">
+  <view class="aui-padded-15 aui-padded-">搬运信息</view>
+  <view class="aui-line"></view>
+  <view class="aui-padded-15">
+    <view class="flex">
+      <image class="icon aui-margin-r-5" src="/image/time.png"></image>
+      <text class="aui-font-size-16 aui-text-blacker">{{order.moving_time}}</text>
+    </view>
+    <view class="aui-line aui-margin-t-15"></view>
+
+  </view>
+  <view class="aui-padded-15">
+    <view class="flex">
+      <view class="">
+        <view>
+          <image class="icon" src="/image/address.png"></image>
+        </view>
+        <view class="aui-padded-l-10" style="margin-top:-10rpx;">
+          <image class="line" src="/image/line.jpg"></image>
+        </view>
+        <view style="margin-top:-10rpx;">
+          <image class="icon" src="/image/toAdd.png"></image>
+        </view>
+      </view>
+      <view class="aui-margin-l-15 flex1">
+        <view class="aui-font-size-16 aui-text-blacker">{{outAddress.full_address}}{{outAddress.address_info}}</view>
+        <view class="aui-font-size-12 aui-text-blacker">{{outAddress.name}} {{outAddress.mobile}}</view>
+        <view class="aui-line aui-margin-t-15"></view>
+        <view class="aui-font-size-16 aui-text-blacker aui-margin-t-15">{{putAddress.full_address}}{{putAddress.address_info}}</view>
+        <view class="aui-font-size-12 aui-text-blacker">{{putAddress.name}} {{putAddress.mobile}}</view>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>
+<view class="aui-margin-t-15 aui-bg-white">
+  <view class="aui-padded-15 aui-padded-">费用核算</view>
+  <view class="aui-line"></view>
+  <view class="flex aui-padded-15">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">基础费用</text>
+    <text class="aui-font-size-13 aui-text-blacker">￥{{carDetails.basic_cost}}</text>
+  </view>
+
+
+
+
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{more_distance>0}}">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">超出公里</text>
+    <text class="aui-font-size-13 aui-text-blacker">{{more_distance}}km</text>
+  </view>
+
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{morePrice>0}}">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">超公里费用</text>
+    <text class="aui-font-size-13 aui-text-blacker">￥{{morePrice}}</text>
+  </view>
+
+  <view class="flex aui-padded-15 aui-padded-t-0">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">平台优惠金额</text>
+    <text class="aui-font-size-13 aui-text-blacker">￥{{terrace_discounts}}</text>
+  </view>
+
+
+
+
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:if='{{couponPrice>0}}'>
+    <text class="flex1 aui-font-size-13 aui-text-grayer">优惠券</text>
+    <text class="aui-font-size-13 coupon">-{{couponPrice}}</text>
+  </view>
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:else>
+    <text class="flex1 aui-font-size-13 aui-text-grayer">优惠券</text>
+    <text class="aui-font-size-13 coupon">无优惠</text>
+  </view>
+
+
+  <!-- <view class="flex aui-padded-15 aui-padded-t-0">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">额外收费项</text>
+    <text class="aui-font-size-13 aui-text-blacker" wx:if="{{order.status==1 || order.status==5 }}">{{morePrice}}</text>
+    <text class="aui-font-size-13 aui-text-blacker" wx:else>结算时补单</text>
+  </view> -->
+
+
+    <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{order.status!=5}}">
+      <text class="flex1 aui-font-size-13 aui-text-grayer">额外收费项</text>
+      <text class="aui-font-size-13 aui-text-blacker">结算时补单</text>
+    </view>
+    <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{order.status==5}}">
+      <text class="flex1 aui-font-size-13 aui-text-grayer">额外收费项</text>
+      <text class="aui-font-size-13 aui-text-blacker">
+        <block wx:for="{{chargesList}}" wx:key="index">
+              <text wx:if="{{index>0}}" style="display:inline-block">
+                  {{'/'+item.name}}
+              </text>
+              <text wx:else style="display:inline-block">
+                  {{item.name}}
+              </text>
+        </block>
+      </text>
+    </view>
+    <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{order.status==5}}">
+      <text class="flex1 aui-font-size-13 aui-text-grayer">额外收费合计</text>
+      <text class="aui-font-size-13 aui-text-blacker">￥{{order.charges_price}}</text>
+    </view>
+
+
+
+  <view class="aui-padded-15  aui-padded-t-0">
+    <view class="aui-line"></view>
+  </view>
+  <view class="flex aui-padded-15 aui-padded-t-0">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">预计费用</text>
+    <text class="aui-font-size-13 aui-text-blacker">￥{{order.pay_price}}</text>
+  </view>
+</view>
+<view class="aui-margin-t-15 aui-bg-white">
+  <view class="aui-padded-15">订单信息</view>
+  <view class="aui-line"></view>
+  <view class="flex aui-padded-15">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">订单号</text>
+    <text class="aui-font-size-13 aui-text-blacker">{{order.order_sn}}</text>
+  </view>
+
+  <view class="flex aui-padded-15 aui-padded-t-0">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">下单时间</text>
+    <text class="aui-font-size-13 aui-text-blacker">{{order.create_time}}</text>
+  </view>
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{order.status==0 ||order.status==1 ||order.status==4 || order.status==5}}">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">接单时间</text>
+    <text class="aui-font-size-13 aui-text-blacker">{{order.jd_time}}</text>
+  </view>
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{order.status==0 ||order.status==1 || order.status==5}}">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">服务开始时间</text>
+    <text class="aui-font-size-13 aui-text-blacker">{{order.action_time}}</text>
+  </view>
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{order.status==1}}">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">结算时间</text>
+    <text class="aui-font-size-13 aui-text-blacker">{{order.pay_time}}</text>
+  </view>
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{order.status==1}}">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">服务结束时间</text>
+    <text class="aui-font-size-13 aui-text-blacker">{{order.end_time}}</text>
+  </view>
+  <view class="flex aui-padded-15 aui-padded-t-0" wx:if="{{order.status==2}}">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">取消时间</text>
+    <text class="aui-font-size-13 aui-text-blacker">{{order.cancel_time}}</text>
+  </view>
+  <view class="flex aui-padded-15 aui-padded-t-0">
+    <text class="flex1 aui-font-size-13 aui-text-grayer">订单备注</text>
+    <text class="aui-font-size-13" wx:if="{{order.remark}}">{{order.remark}}</text>
+    <text class="aui-font-size-13" wx:else>无</text>
+  </view>
+</view>
+<!-- <view class="aui-margin-t-15 aui-bg-white">
+  <view class="aui-padded-15">评价信息</view>
+  <view class="aui-line"></view>
+  <view class="flex aui-padded-15 aui-padded-b-0">
+
+    <image class="head" src="/image/header.png"></image>
+    <view class="flex1 aui-margin-l-10">
+        <view class="aui-font-size-15 aui-text-blacker">刘女士</view>
+        <view class="aui-font-size-12 aui-text-grayer">2019-05-25</view>
+    </view> 
+     <view>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <text class="grade">4.0分</text>
+            </view>
+  </view>
+  <view class="content">
+        <text class="aui-font-size-16 aui-text-blacker">
+        服务很好，很给力！全程服务态度很好，
+也很热心，很有耐心！
+        </text>
+        <view class="flex pjflex aui-margin-t-10">
+            <image class="pj"></image>
+            <image class="pj"></image>
+            <image class="pj"></image>
+        </view>
+        <view class="flex aui-padded-t-15 aui-padded-b-15">
+            <text class="label">要好评</text>
+            <text class="label">货物损坏</text>
+            <view class="flex1 aui-text-right"><text class="aui-font-size-13 aui-text-grayer">删除</text></view>
+        </view>
+  </view>
+ 
+
+</view>
+<view class="aui-margin-t-15 aui-bg-white">
+  <view class="aui-padded-15">投诉信息</view>
+  <view class="aui-line"></view>
+  <view class="flex aui-padded-15 aui-padded-b-0">
+
+    <image class="head" src="/image/header.png"></image>
+    <view class="flex1 aui-margin-l-10">
+        <view class="aui-font-size-15 aui-text-blacker">刘女士</view>
+        <view class="aui-font-size-12 aui-text-grayer">2019-05-25</view>
+    </view> 
+     <view>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-on.png"></image>
+                <image class="star" src="/image/star-off.png"></image>
+                <text class="grade">4.0分</text>
+            </view>
+  </view>
+  <view class="content">
+        <text class="aui-font-size-16 aui-text-blacker">
+        服务很好，很给力！全程服务态度很好，
+也很热心，很有耐心！
+        </text>
+        <view class="flex pjflex aui-margin-t-10">
+            <image class="pj"></image>
+            <image class="pj"></image>
+            <image class="pj"></image>
+        </view>
+        <view class="flex aui-padded-t-15 aui-padded-b-15">
+            <text class="label">要好评</text>
+            <text class="label">货物损坏</text>
+            <view class="flex1 aui-text-right"><text class="aui-font-size-13 aui-text-grayer">删除</text></view>
+        </view>
+  </view>
+ 
+
+</view> -->
+<view class="fixedheight"></view>
+<view class="fixed btn">
+ <button class="aui-btn aui-btn-default aui-btn-outlined concat" style="color: #666 !important;" open-type="contact"   wx:if="{{order.status==0 || order.status==4 || order.status==5}}">联系客服</button>
+									<view class="aui-btn concact" data-phone="{{driver.phone}}" bindtap="call"  wx:if="{{order.status==0 || order.status==4}}">联系司机</view>
+                 
+                  <view class="aui-btn aui-btn-danger aui-btn-outlined"   style="color: #fff !important;" data-id="{{order.id}}" bindtap="confirm"  wx:if="{{order.status==5}}">完成并结算</view>
+
+                  	<view class="aui-btn aui-btn-default aui-btn-outlined" bindtap="rebuy" style="color: #666 !important;" wx:if="{{order.status==1&&order.is_evaluation}}">再次下单</view>
+
+   <view class="aui-btn aui-btn-default aui-btn-outlined" style="color: #666 !important;" bindtap="cancel"  wx:if="{{order.status==3 || order.status==4}}">取消订单</view>
+
+   	<view class="aui-btn aui-btn-default aui-btn-outlined" style="color: #666 !important;" data-id="{{order.id}}" bindtap="rebuy" wx:if="{{order.status==2}}">再次下单</view>
+
+
+   <view class="aui-btn aui-btn-default aui-btn-outlined" style="color: #666 !important;" bindtap="del"  wx:if="{{order.status==6 ||order.status==2}}">删除订单</view>
+    <view class="aui-btn aui-btn-default aui-btn-outlined" style="color: #666 !important;" wx:if="{{order.status==1 && order.is_complain==0 && order.is_evaluation==0}}" bindtap="complain">投诉司机</view>
+                  	<view class="aui-btn aui-btn-danger aui-btn-outlined"  style="color: #fff !important;" wx:if="{{order.status==1 && order.is_complain==0 && order.is_evaluation==0}}" bindtap="evaluat">评价</view>
+</view>

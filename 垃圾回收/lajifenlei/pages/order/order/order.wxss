@@ -1,0 +1,54 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.flex{justify-content: space-between;}
+.aui-margin-t-30{margin-top: 120rpx;}
+.top_box{width: 100%;height: 88rpx;position: fixed;top: 0;left: 0;}
+.top{width: 100%;height: 88rpx;}
+.line{width: 36rpx;height: 4rpx;margin: 0 auto;margin-top: 15rpx;}
+.active{color: #4AE3E0 !important;}
+.active .line{background-color:#4AE3E0 ;}
+.qx{width: 170rpx;height: 48rpx;line-height: 48rpx;border-radius: 24rpx;border-color: #CECECE;}
+.finish{color: #DBB0AC;border-color: #DBB0AC;}
+.lx{justify-content: flex-start;align-items: center;margin-left: 30rpx;}
+.phone image{width: 20rpx;height: 20rpx;}
+
+
+
+/* 无订单 */
+.no_order{width: 420rpx;height: 430rpx;margin: 0 auto; margin-top: 300rpx;}
+.no_order image{width: 100%;height: 100%;}
+/* 取消订单 */
+.memgceng{width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.6);position: fixed;top: 0;left: 0;z-index: 1;}
+ .cg_box{width: 500rpx;height: 578rpx;position: fixed;top: 50%;left: 50%;z-index: 5;margin-left: -250rpx;margin-top: -289rpx;border-radius:30rpx;z-index: 99;overflow: hidden;background-color: yellow;}
+.pic{width:100%;height: 340rpx;overflow: hidden;}
+.pic image{width: 100%;height: 100%;object-fit: cover;}
+.txt_box{height: 338rpx;}
+.qr_box{justify-content: space-between;padding: 0 30rpx;margin-top: 20rpx;}
+.queren{width:200rpx;height: 60rpx;text-align: center;line-height: 60rpx;color: white;border-radius: 34rpx;} 
+
+
+/* 删除订单 */
+.sc_box{width: 500rpx;height: 224rpx;position: fixed;top: 50%;left: 50%;z-index: 5;margin-left: -250rpx;margin-top: -112rpx;border-radius:30rpx;z-index: 99;overflow: hidden;background-color: white;}
+.tit{height:130rpx ;line-height:80rpx;}
+.qx_box{width: 100%;height: 94rpx;line-height: 94rpx;padding: 0 30rpx;}
+.qx_order{width: 50%;height: 94rpx;line-height: 94rpx;}
+.qx_order1{border-left: 1px solid #eeeeee;border-radius: 0% !important;}
+
+
+/* scroll-view{
+  width: 100%;
+  height:90rpx;
+  line-height: 90rpx;
+}
+scroll-view .swiper-slide{
+  margin-left:30rpx;
+  margin-right:30rpx ;
+}
+scroll-view .swiper-slide:last-child{
+  margin-right:120rpx;
+}
+scroll-view .swiper-slide.on text{
+  color: #222;
+  font-weight: 500;
+} */

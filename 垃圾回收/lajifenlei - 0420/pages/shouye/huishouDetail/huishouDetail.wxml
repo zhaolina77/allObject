@@ -1,0 +1,75 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+
+<view class="aui-content" style="padding-bottom:140rpx">
+	<!-- <view class="shop-pic">
+		<swiper  interval="2000" duration="500" autoplay indicator-dots indicator-color="#999999" indicator-active-color="#4AE3E0" circular  style="height: 432rpx;">
+            <swiper-item wx:for="{{productDetail.detail_images}}" wx:key="pic" wx:if="{{item!=''}}">
+                <image  src="{{item}}" mode="aspectFill"></image>
+            </swiper-item>
+        </swiper>
+	</view>-->
+	<view class="title aui-bg-white flex aui-padded-l-15 aui-padded-r-15">
+		<view class="flex">
+			<view class="aui-font-size-17 aui-font-weight">{{productDetail.classname}}</view>
+			<view class="aui-bg-orange aui-text-white aui-font-size-9 target aui-text-center aui-margin-l-10">{{productDetail.classname}}</view>
+		</view>
+	</view> 
+	<view class=" aui-bg-white  aui-margin-t-15 aui-padded-l-15 aui-padded-r-15">
+		<view class="aui-border-b xinxi flex">
+			<view class="touxiang">
+				<image src="{{productDetail.headportrait}}"></image>
+			</view>
+			<view class="aui-font-size-14 aui-padded-l-10">{{productDetail.nickname}}</view>
+		</view>
+		<view class="aui-border-b">
+			<view class="flex  aui-padded-t-15 ms_box"  bindtap="address">
+				<view class=" aui-font-size-13 aui-text-grayer">地址</view>
+				<view class="ms aui-font-size-14 flex" style="justify-content: space-between;">
+					<view>{{productDetail.full_address}}{{productDetail.address_info}}</view>
+					<view class="jt_right">
+						<image src="/image/jt_right.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="flex aui-padded-t-15  ms_box">
+				<view class=" aui-font-size-13 aui-text-grayer">电话</view>
+				<view class="ms aui-font-size-14 ph_number" bindtap="call" >{{productDetail.mobile}}</view>
+			</view>
+			<view class="flex aui-padded-t-15 aui-padded-b-15 ms_box">
+				<view class=" aui-font-size-13 aui-text-grayer">备注</view>
+				<view class="ms aui-font-size-14">{{productDetail.remark}}</view>
+			</view>
+		</view>
+		<view class="xy flex aui-padded-t-15 aui-padded-b-15" style="justify-content: flex-start;align-items:center">
+			<view class="dui">
+				<image src="/image/dui.png"></image>
+			</view>
+			<view class="aui-font-size-13 aui-padded-l-5 ">
+				<text class="aui-text-grayer">同意接受</text><text class="aui-text-theme" bindtap="xieyi" data-content="{{service.content}}">《{{service.name}}》</text>
+			</view>
+		</view>
+	</view>
+	<view class="aui-bg-white aui-padded-15 aui-margin-t-15">
+		<view class="aui-font-size-16 aui-font-weight">接单须知</view>
+		<view class="aui-font-size-14  aui-padded-t-10">
+		<template  is="wxParse" data="{{wxParseData:article.nodes}}"/>
+		</view>
+	</view>
+</view>
+<!-- 立即接单 -->
+<view class="btn_box aui-bg-white aui-padded-15">
+	<view class="btn" bindtap="jiedan">立即接单</view>
+</view>
+<!-- 接单成功 -->
+<view class="memgceng " wx:if="{{cg==1}}">
+	<view class="cg_box">
+		<image src="/image/jiedanCg.png"></image>
+	</view>
+	<view class="cg_txt">
+		<view class="aui-font-size-18 aui-font-weight aui-text-center jdcg">接单成功！</view>
+		<view class="aui-font-size-14 aui-text-grayer aui-text-center aui-margin-t-15 hs">请您尽快联系下单客户进行垃圾回收</view>
+		<view class="queren aui-font-size-15 aui-btn-theme " bindtap="qd">确定</view>
+	</view>
+
+
+</view>

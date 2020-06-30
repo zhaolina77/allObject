@@ -1,0 +1,117 @@
+<!--pages/my/index/index.wxml-->
+<image src="/images/memberbg.png" style="height:300rpx;width:100%;"></image>
+<view class="flex info">
+  <image src="{{account.head}}" class="touxiang"></image>
+  <view class="item">
+      <view class="aui-font-size-18 aui-text-white">{{account.nick_name}}</view>
+      <text class="mtag" wx:if="{{account.level==0}}">消费者</text>
+  </view>
+</view>
+<view class="aui-margin-15 aui-padded-15 aui-bg-white order">
+  <view class="flex" bindtap="toorder">
+    <text class="aui-font-size-15 aui-text-black flex1">我的订单</text>
+    <image class="toright" src="/images/toright.png"></image>
+  </view>
+  <view class="aui-line"></view>
+  <view class="flex orderlist">
+    <view class="aui-text-center" bindtap="toorder">
+      <image class="ordericon" src="/images/nopay.png"></image>
+      <text class="aui-font-size-13 aui-text-black">待付款</text>
+      <text class="aud" wx:if="{{orderNum.onecount>0}}">{{orderNum.onecount}}</text>
+    </view> 
+    <view class="aui-text-center" bindtap="toorder">
+      <image class="ordericon" src="/images/noshipping.png"></image>
+      <text class="aui-font-size-13 aui-text-black">待发货</text>
+      <text class="aud" wx:if="{{orderNum.twocount>0}}">{{orderNum.twocount}}</text>
+    </view> 
+    <view class="aui-text-center" bindtap="toorder">
+      <image class="ordericon" src="/images/shipped.png"></image>
+      <text class="aui-font-size-13 aui-text-black">已发货</text>
+      <text class="aud" wx:if="{{orderNum.threecount>0}}">{{orderNum.threecount}}</text>
+    </view> 
+    <view class="aui-text-center" bindtap="topingjia">
+      <image class="ordericon" src="/images/pingjia.png"></image>
+      <text class="aui-font-size-13 aui-text-black">评价</text>
+      <text class="aud" wx:if="{{orderNum.fourcount>0}}">{{orderNum.fourcount}}</text>
+    </view> 
+    <view class="aui-text-center" bindtap="torefund">
+      <image class="ordericon" src="/images/refund.png"></image>
+      <text class="aui-font-size-13 aui-text-black">退款/售后</text>
+      <text class="aud" wx:if="{{orderNum.fivecount>0}}">{{orderNum.fivecount}}</text>
+    </view> 
+  </view>
+</view>
+<view class="wrap">
+<view class="aui-bg-white aui-margin-t-15 aui-padded-15 flex" bindtap="towallet">
+  <image class="icon" src="/images/wallet.png"></image>
+  <view class="flex flex1">
+    <text class="aui-font-size-15 aui-text-black flex1">我的钱包</text>
+    <text class=" aui-font-size-13 yellow" wx:if="{{totalMoney>0}}">本月获得{{totalMoney}}元奖励金</text>
+    <image class="toright" src="/images/toright.png"></image>
+
+  </view>
+</view>
+<view class="aui-bg-white aui-padded-15 flex" style="margin-top:2rpx;" bindtap="toinvit">
+  <image class="icon" src="/images/invite.png"></image>
+  <view class="flex flex1">
+    <text class="aui-font-size-15 aui-text-black flex1">邀请好友</text>
+   
+    <image class="toright" src="/images/toright.png"></image>
+
+  </view>
+</view>
+
+<view class="aui-bg-white aui-padded-15 flex aui-margin-t-15" style="margin-top:2rpx;" bindtap="togonglue">
+  <image class="icon" src="/images/book.png"></image>
+  <view class="flex flex1">
+    <text class="aui-font-size-15 aui-text-black flex1">使用攻略</text>
+   
+    <image class="toright" src="/images/toright.png"></image>
+
+  </view>
+</view>
+<view class="aui-bg-white aui-margin-t-15 aui-padded-15 flex" bindtap="tocoupon">
+  <image class="icon" src="/images/cpupon.png"></image>
+  <view class="flex flex1">
+    <text class="aui-font-size-15 aui-text-black flex1">我的优惠券</text>
+    <text class=" aui-font-size-13 yellow"></text>
+    <image class="toright" src="/images/toright.png"></image>
+
+  </view>
+</view>
+<view class="aui-bg-white aui-padded-15 flex" style="margin-top:2rpx;" bindtap="toaddress">
+  <image class="icon" src="/images/address.png"></image>
+  <view class="flex flex1">
+    <text class="aui-font-size-15 aui-text-black flex1">收货地址</text>
+   
+    <image class="toright" src="/images/toright.png"></image>
+
+  </view>
+</view>
+<view class="aui-bg-white aui-padded-15 flex" bindtap="tomember">
+  <image class="icon" src="/images/member.png"></image>
+  <view class="flex flex1">
+    <text class="aui-font-size-15 aui-text-black flex1">会员中心</text>
+
+    <image class="toright" src="/images/toright.png"></image>
+
+  </view>
+</view>
+<view class="aui-bg-white aui-margin-t-15 aui-padded-15 flex">
+  <image class="icon" src="/images/concat.png"></image>
+  <view class="flex flex1">
+    <text class="aui-font-size-15 aui-text-black flex1">联系我们 </text>
+     <text class=" aui-font-size-13 aui-text-blacker" style="margin-right:10rpx;">{{customerService.phone}} ({{customerService.start_time}}-{{customerService.end_time}})</text>
+    <image class="toright" src="/images/toright.png"></image>
+
+  </view>
+</view>
+<view class="aui-bg-white  aui-padded-15 flex" style="margin-top:2rpx;" bindtap="toabout">
+  <image class="icon" src="/images/about.png"></image>
+  <view class="flex flex1">
+    <text class="aui-font-size-15 aui-text-black flex1">关于我们</text>
+    <image class="toright" src="/images/toright.png"></image>
+
+  </view>
+</view>
+</view>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	    <title>提现记录</title>
+	   	<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css"/>
+	</head>
+	<style type="text/css">
+		.baocun{
+			width: 2.7rem;
+			height: 1.3rem;
+			line-height: 1.3rem;
+			border-radius: 0.65rem;
+		}
+		
+	</style>
+	<body>
+		<header class="aui-bar aui-bar-nav aui-bar-light ">
+	        <a class="aui-pull-left aui-btn" onclick="closeWin()">
+		        <img class="icon" src="../../image/jt-left.png">
+		    </a>
+	        <div class="aui-title aui-text-black">提现记录</div>
+	   </header>
+	   
+	   
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript" src="../../script/vue.js"></script>
+	<script type="text/javascript" src="../../script/common.js"></script>
+	<script type="text/javascript">
+		apiready = function(){
+			 $api.fixIos7Bar($api.dom("header"));//修复ios系统bar
+			 //$api.fixTabBar($api.dom("footer"));//修复ios系统bar
+		        api.openFrame({
+		            name: 'tixianJl_frm',
+		            url: 'widget://html/yongjin/tixianJl_frm.html',
+		            rect: {
+		                x: 0,
+		                y: $api.dom('header').offsetHeight,
+		                w: 'auto',
+		                h: api.winHeight - $api.dom('header').offsetHeight
+		            },
+		            bounces: false,
+		            pageParam: {
+		                is_edit: api.pageParam.is_edit,
+		                list:api.pageParam.list
+		            }
+		        });
+		};
+	</script>
+</html>

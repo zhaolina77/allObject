@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>商城</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper-4.3.3.min.css" />
+		<style type="text/css">
+			.banner {
+				height: 8.5rem;
+				/*border-radius: 0.1px;*/
+				overflow: hidden;
+			}
+			
+			.xinpin {
+				width: 50%;
+				height: 100%;
+			}
+			
+			.xinpin .pic {
+				width: 47%;
+				height: 3.15rem;
+				overflow: hidden;
+				border-radius: 0.25rem;
+			}
+			
+			.xinpin .pic img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.txt_active span {
+				color: #58CAB9 !important;
+			}
+			
+			.txt_active .line {
+				width: 0.4rem;
+				height: 0.15rem;
+				margin: 0 auto;
+				background-color: #58CAB9;
+				border-radius: 0.075rem;
+			}
+			
+			.table {
+				border-radius: 0.25rem;
+			}
+			
+			.table li:nth-of-type(2n) {
+				border-right: none !important;
+			}
+			
+			.table li:nth-of-type(1n+3) {
+				border-bottom: none !important;
+			}
+			
+			.table .pic {
+				width: 90%;
+				height: 3.25rem;
+				border-radius: 0.25rem;
+				margin-right: 10%;
+				overflow: hidden;
+			}
+			
+			.table .pic img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.tab .swiper-slide {
+				height: auto !important;
+				padding: 0 0.75rem !important;
+			}
+			
+			.active span {
+				display: inline-block;
+				color: #121D36 !important;
+				padding: 0 3px;
+				font-weight: 500;
+			}
+			
+			.tab {
+				height: 2rem;
+			}
+			
+			.tab-icon {
+				width: 0.4rem;
+				vertical-align: middle;
+			}
+			
+			.shop-list .aui-col-xs-6 .pic {
+				height: 8rem;
+				border-radius: 0.25rem;
+				overflow: hidden;
+			}
+			
+			.shop-list .aui-col-xs-6 .pic img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.slide .swiper-container .swiper-slide {
+				line-height: 1.5rem !important;
+			}
+			.zonghe{color: #999;}
+			.zh_active{color: #222222;}
+		</style>
+	</head>
+
+	<body>
+		<div class="aui-content ">
+			<!--banner-->
+			<div class="aui-padded-15 banner">
+				<div id="topNav" class="swiper-container" style="border-radius:5px">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+						<div class="swiper-slide">
+							<img src='../../image/banner.jpg' />
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			<div class="aui-border table aui-margin-t-10 aui-margin-15 flex">
+				<div class="content_item ">
+
+				</div>
+
+				<ul class="aui-row">
+					<li class="aui-col-xs-6 aui-padded-15 aui-padded-r-10 aui-border-b aui-border-r">
+						<div class="fweight-5 aui-font-size-13">新品推荐
+							<span class="aui-text-grayer aui-font-size-9 ">新品上市早知道</span>
+						</div>
+						<div class="aui-row aui-padded-t-10">
+							<div class="aui-col-xs-6">
+								<div class="pic">
+									<img src="../../image/banner.jpg">
+								</div>
+							</div>
+							<div class="aui-col-xs-6">
+								<div class="pic">
+									<img src="../../image/banner.jpg">
+								</div>
+
+							</div>
+						</div>
+					</li>
+					<li class="aui-col-xs-6 aui-padded-15 aui-padded-r-10 aui-border-b aui-border-r">
+						<div class="fweight-5 aui-font-size-13">限时秒杀
+							<span class="aui-text-danger aui-font-size-9 ">8:00场秒杀进行</span>
+						</div>
+						<div class="aui-row aui-padded-t-10">
+							<div class="aui-col-xs-6">
+								<div class="pic">
+									<img src="../../image/banner.jpg">
+								</div>
+
+							</div>
+							<div class="aui-col-xs-6">
+								<div class="pic">
+									<img src="../../image/banner.jpg">
+								</div>
+
+							</div>
+						</div>
+					</li>
+					<li class="aui-col-xs-6 aui-padded-15 aui-padded-r-10 aui-border-b aui-border-r">
+						<div class="fweight-5 aui-font-size-13">团购专区
+							<span class="aui-text-grayer aui-font-size-9">团购更划算</span>
+
+						</div>
+						<div class="aui-row aui-padded-t-10">
+							<div class="aui-col-xs-6">
+								<div class="pic">
+									<img src="../../image/banner.jpg">
+								</div>
+
+							</div>
+							<div class="aui-col-xs-6">
+								<div class="pic">
+									<img src="../../image/banner.jpg">
+								</div>
+
+							</div>
+						</div>
+					</li>
+					<li class="aui-col-xs-6 aui-padded-15 aui-padded-r-10 aui-border-b aui-border-r">
+						<div class="fweight-5 aui-font-size-13">跳骚市场
+							<span class="aui-text-grayer aui-font-size-9">二手交易 </span>
+
+						</div>
+						<div class="aui-row aui-padded-t-10">
+							<div class="aui-col-xs-6">
+								<div class="pic">
+									<img src="../../image/banner.jpg">
+								</div>
+							</div>
+							<div class="aui-col-xs-6">
+								<div class="pic">
+									<img src="../../image/banner.jpg">
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="tab slide aui-bg-white" id="tab">
+				<div class="swiper-container" id="slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide txt_active">
+							<span class="aui-font-size-15 aui-text-gray">推荐</span>
+							<div class="line"></div>
+						</div>
+						<div class="swiper-slide">
+							<span class="aui-font-size-15 aui-text-gray">真题</span>
+							<div class="line"></div>
+						</div>
+						<div class="swiper-slide">
+							<span class="aui-font-size-15 aui-text-gray">书籍</span>
+							<div class="line"></div>
+						</div>
+						<div class="swiper-slide">
+							<span class="aui-font-size-15 aui-text-gray">文创</span>
+							<div class="line"></div>
+						</div>
+						<div class="swiper-slide">
+							<span class="aui-font-size-15 aui-text-gray">礼品</span>
+							<div class="line"></div>
+						</div>
+						<div class="swiper-slide">
+							<span class="aui-font-size-15 aui-text-gray">其它</span>
+							<div class="line"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="aui-bg-grayer zonghe">
+				<div class="aui-padded-15 flex aui-font-size-13 ">
+					<div class="flex ">
+						<span class="aui-padded-r-5 zh_active">
+							综合
+						</span>
+						<img class=" tab-icon" src="../../image/xiala.png" />
+					</div>
+					<div class="aui-margin-l-10" class="flex ">
+						<span class="aui-padded-r-5 zh_active">
+							价格
+						</span>
+						<img class="tab-icon" src="../../image/0.png" />
+					</div>
+					<div class="aui-margin-l-10" class="flex ">
+						<span class="aui-padded-r-5 zh_active">
+							销量
+						</span>
+						<img class="tab-icon" src="../../image/0.png" />
+					</div>
+					<div class="aui-margin-l-10" class="flex">
+						<span class="aui-padded-r-5 zh_active">
+							评分
+						</span>
+						<img class="tab-icon" src="../../image/0.png" />
+					</div>
+				</div>
+			</div>
+
+			<div class="aui-row aui-padded-15  shop-list ">
+				<div class="aui-col-xs-6 aui-margin-b-15">
+					<div class="pic">
+						<img src="../../image/banner.jpg" />
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text aui-ellipsis-1 aui-font-size-15 aui-margin-t-10 aui-ellipsis-1">
+							设计必备书籍（电子书）
+						</div>
+						<div class="aui-font-size-11 aui-padded-t-10 aui-padded-b-10 aui-text-theme">
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5 ">228.0</span></span>
+							<span class="aui-padded-l-5 delline aui-text-grayer">568.0</span>
+						</div>
+					</div>
+				</div>
+				<div class="aui-col-xs-6 aui-margin-b-15">
+					<div class="pic">
+						<img src="../../image/banner.jpg" />
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text aui-ellipsis-1 aui-font-size-15 aui-margin-t-10">
+							建筑学霸笔记
+						</div>
+						<div class="aui-font-size-11 aui-padded-t-10 aui-padded-b-10 aui-text-theme">
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5">228.0</span></span>
+							<span class="aui-padded-l-5 delline aui-text-grayer">568.0</span>
+						</div>
+					</div>
+				</div>
+				<div class="aui-col-xs-6 aui-margin-b-15">
+					<div class="pic">
+						<img src="../../image/banner.jpg" />
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text aui-ellipsis-1 aui-font-size-15 aui-margin-t-10">
+							设计必备书籍（电子书）
+						</div>
+						<div class="aui-font-size-11 aui-padded-t-10 aui-padded-b-10 aui-text-theme">
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5">228.0</span></span>
+							<span class="aui-padded-l-5 delline aui-text-grayer">568.0</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="aui-col-xs-6 aui-margin-b-15">
+					<div class="pic">
+						<img src="../../image/banner.jpg" />
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text aui-ellipsis-1 aui-font-size-15 aui-margin-t-10">
+							建筑学霸笔记
+						</div>
+						<div class="aui-font-size-11 aui-padded-t-10 aui-padded-b-10 aui-text-theme">
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5">228.0</span></span>
+							<span class="aui-padded-l-5 delline aui-text-grayer">568.0</span>
+						</div>
+					</div>
+				</div>
+				<div class="aui-col-xs-6 aui-margin-b-15">
+					<div class="pic">
+						<img src="../../image/banner.jpg"/>
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text aui-ellipsis-1 aui-font-size-15 aui-margin-t-10">
+							设计必备书籍（电子书）
+						</div>
+						<div class="aui-font-size-11 aui-padded-t-10 aui-padded-b-10 aui-text-theme">
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5">228.0</span></span> 
+							<span class="aui-padded-l-5 delline aui-text-grayer">568.0</span>
+						</div>
+					</div>
+				</div>
+				<div class="aui-col-xs-6 aui-margin-b-15">
+					<div class="pic">
+						<img src="../../image/banner.jpg"/>
+					</div>
+					<div class="aui-padded-l-5 aui-padded-r-5">
+						<div class="text aui-ellipsis-1 aui-font-size-15 aui-margin-t-10">
+							建筑学霸笔记
+						</div>
+						<div class="aui-font-size-11 aui-padded-t-10 aui-padded-b-10 aui-text-theme">
+							<span class="aui-text-orange">￥<span class="aui-font-size-16 fweight-5">228.0</span></span> 
+							<span class="aui-padded-l-5 delline aui-text-grayer">568.0</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script src="../../script/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper('#topNav', {
+		freeMode: false,
+		slidesPerView: 'auto',
+		autoplay: true,
+		on: {
+			click: function(e) {
+				console.log(JSON.stringify(
+					e));
+				vm.handleClickSlide(this
+					.realIndex);
+			},
+		},
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		preventLinksPropagation: false,
+	})
+
+	var mySwiper = new Swiper('#slide', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		freeModeMomentumRatio: 1
+	})
+</script>

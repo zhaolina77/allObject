@@ -1,0 +1,4 @@
+/* pages/index/info/index.wxss */
+@import "../../../wxParse/wxParse.wxss";
+@import '/pages/aui.wxss';
+@import '/pages/common.wxss';

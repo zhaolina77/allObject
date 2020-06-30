@@ -1,0 +1,126 @@
+<view wx:if="{{loading}}">
+	<!-- <view class='' style="width:100% !important;height:100% !important">
+    <image src='/images/loading.gif'></image>   
+  </view> -->
+	<loading>
+		加载中...
+	</loading>
+</view>
+<view hidden="{{loading}}">
+	<import src="../../../wxParse/wxParse.wxml" />
+	<view class="detail" style="margin-bottom:120rpx;">
+
+		<view class="banner ">
+			<swiper interval="2000" circular indicator-dots duration="500" autoplay indicator-color="#cccccc" indicator-active-color="#ffd12d ">
+				<swiper-item wx:for="{{hoursePics}}" wx:key="{{key}}">
+					<image src="{{item}}" mode="aspectFill"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+		<view class="aui-padded-15">
+			<view class="flex" style="justify-content: flex-start;">
+				<view class="aui-font-size-15 ft_5">{{data.hourseName}}</view>
+				<view class="weui-label aui-margin-l-10 aui-text-gray aui-font-size-12">{{data.hourseArea}}</view>
+			</view>
+			<view class="weui-label aui-margin-t-5 aui-text-theme aui-font-size-18">
+				<text class="ft_5">{{data.price}}</text>
+			</view>
+			<view class="flex aui-margin-t-5" bindtap="markere">
+				<image class="address" src="/image/address.png"></image>
+				<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 " style="width:94%">{{data.address}}</view>
+			</view>
+			<view class="flex aui-margin-t-5" bindtap="phone" data-phone="{{data.phone}}" wx:if="{{data.phone!=null&&data.phone!=''}}">
+				<image class="address phone" src="/image/phone.png"></image>
+				<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 " style="width:94%">{{data.phone}}</view>
+			</view>
+		</view>
+		<view class="aui-border-bgT">
+			<view class="aui-font-size-17 ft_5 aui-padded-15">{{data.address}}</view>
+			<view class="aui-padded-l-15 aui-padded-r-15">
+				<view class="map">
+					<map id="map" longitude="{{data.longitude}}" latitude="{{data.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markere" bindtap="markere" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+				</view>
+			</view>
+		</view>
+		<view class="huxing">
+			<view class="aui-font-size-17 ft_5 aui-padded-15">户型</view>
+			<view class="aui-padded-l-15 slide">
+				<scroll-view scroll-x enable-flex="true" style="height:380rpx">
+
+					<view class="slide-pic" wx:for="{{data.typeList}}" wx:key="{{index}}">
+						<view class="slide-pic">
+							<image bindtap="imgYu" data-list="{{data.coverImage}}" data-src="{{item.coverImage}}" src="{{item.coverImage}}" mode="aspectFill"></image>
+						</view>
+						<view class="weui-label  aui-text-gray aui-font-size-14 aui-ellipsis-1">{{item.typeName}}</view>
+						<view class="aui-text-theme aui-font-size-14">{{item.totalPrice}}</view>
+					</view>
+
+				</scroll-view>
+			</view>
+		</view>
+		<view class="">
+			<view class="aui-font-size-17 ft_5 aui-padded-15">位置及周边</view>
+			<view class="aui-padded-l-15 aui-padded-r-15 aui-font-size-13">
+				<view>
+					<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+				</view>
+			</view>
+		</view>
+		<view class="shouye_list">
+			<view class="aui-font-size-17 ft_5 aui-padded-15 aui-padded-b-0">猜你喜欢</view>
+			<view class="aui-padded-l-15 aui-padded-r-15 aui-font-size-13">
+				<view class="flex item_box aui-padded-t-15 aui-margin-b-15" wx:for="{{list_data}}" wx:key="idxs" catchtap="pick_detail" data-id="{{item.houseId}}">
+					<view class="item bg-radius">
+						<image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+					</view>
+					<view class="aui-margin-l-10  right ">
+						<view class="aui-font-size-15 aui-ellipsis-1 ">{{item.houseName}}</view>
+						<view class="flex aui-margin-t-10">
+							<image class="address" src="/image/address.png"></image>
+							<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 " style="width:92%">{{item.address}}</view>
+						</view>
+						<view class="flex aui-margin-t-10" style="justify-content: flex-start;">
+							<view class="aui-text-theme weui-label aui-font-size-15">
+								<text class="ft_5">{{item.price}}</text>
+							</view>
+							<view class="aui-text-gray weui-label aui-font-size-10 aui-margin-l-10">{{item.area}}</view>
+						</view>
+					</view>
+
+				</view>
+
+
+			</view>
+		</view>
+
+	</view>
+
+
+	<view class="footer flex aui-padded-l-15 aui-padded-r-15">
+		<view class="flex" style="width:30%">
+			<view class="sc aui-text-center" wx:if="{{collectStatus==1}}" bindtap="coll">
+				<image src="/image/sc-on.png"></image>
+				<view class="aui-font-size-10">
+					<text class="">已收藏</text>
+				</view>
+			</view>
+			<view class="sc aui-text-center" wx:else bindtap="coll">
+				<image src="/image/sc.png"></image>
+				<view class="aui-font-size-10">
+					<text>收藏</text>
+				</view>
+			</view>
+			<button class="sc aui-text-center btn" tapmod open-type="share" plain="true" style="border-color:#fff">
+				<image src="/image/share.png" style="width:39rpx;height:39rpx"></image>
+				<view class="aui-font-size-10">
+					分享
+				</view>
+			</button>
+		</view>
+		<view class="flex" style="width:66%">
+			<button class="aui-btn aui-bg-lighty aui-text-yellow" open-type="contact">联系客服</button>
+			<!-- <view class="aui-btn aui-bg-lighty aui-text-yellow">联系客服</view> -->
+			<view class="aui-btn aui-bg-yellow aui-text-white" bindtap="sub">报备客户</view>
+		</view>
+	</view>
+</view>

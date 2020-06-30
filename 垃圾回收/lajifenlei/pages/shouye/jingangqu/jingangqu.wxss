@@ -1,0 +1,28 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.top{position: fixed;top: 0;left: 0;width: 100%;}
+.sear{height: 58rpx;border-radius: 29rpx;}
+.sousuo_box{width: 30rpx;height: 30rpx;}
+.sousuo_box image{width: 100%;height: 100%;}
+
+.inner{position: fixed;top:120rpx;left: 0;width: 100%;height: 100%;}
+
+input::-webkit-input-placeholder { color: #838998;font-size: 24rpx;}
+input:-moz-placeholder { color: #838998;font-size: 24rpx;}
+input::-moz-placeholder { color:#838998;font-size: 24rpx;}
+input:-ms-input-placeholder{ color:#838998;font-size: 24rpx;}
+.left{background-color: #ECECEC;width:20%;position: absolute;left:0;height: 100%;overflow-y: scroll;padding-bottom: 120rpx;}
+.left_txt{width: 100%;height: 100rpx;line-height: 100rpx;font-size: 28rpx;}
+.left_active{border-left: 6rpx solid #4AE3E0;background-color: #F6F6F6;font-weight: bold;color:#4AE3E0 ;}
+.right{justify-content: space-between;flex-wrap:wrap;width:80%;position: absolute;left: 20%;height: 100%;overflow-y: scroll;padding-bottom: 120rpx;}
+
+
+.aui-col-xs-6{width: 48%;margin-bottom: 30rpx;margin-right: 4%;}
+.aui-col-xs-6:nth-of-type(2n){margin-right:0;}
+.item_pic{width: 100%;height:160rpx;overflow: hidden;margin: 0 auto;}
+.item_pic image{width: 100%;height:100%;object-fit: cover;}
+
+.no_data{width: 370rpx;height: 366rpx;margin: 0 auto;margin-top: 50%;}
+.no_data image{width: 100%;height: 100%;}
+

@@ -1,0 +1,23 @@
+<view class="aui-content">
+    <view class="box aui-text-center">
+      <view class="pic">
+          <image src="/image/pingjia.png"></image>
+      </view>
+      <view class="aui-font-size-16 aui-margin-t-30">感谢您的评价！</view>
+      <view class="aui-font-size-14 aui-margin-t-15">有您的支持我们会做的更好！</view>
+    
+    
+    
+    
+    </view>
+
+
+
+
+
+
+
+
+
+
+</view>

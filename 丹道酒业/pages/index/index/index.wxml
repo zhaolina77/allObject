@@ -1,0 +1,143 @@
+<!--pages/index/index/index.wxml-->
+<view class="search_box aui-padded-15">
+	<view class="search">
+		<image src="/images/searchicon.png" style="width:18px;height:15px;position:relative;top:3px;"></image>
+		<input type="text" placeholder="搜索你想要找的商品" class="input" confirm-type="search" bindconfirm="tosearch"></input>
+	</view>
+</view>
+
+<view class="aui-padded-15">
+	<view class="banner bg-radius">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='{{circular}}' current="0" indicator-color="#fff" indicator-active-color="#EDA618">
+			<block wx:for="{{imgUrls}}">
+				<swiper-item>
+					<image data-id="{{item.goods_id}}" src="{{item.pic}}" class="slide-image" style="width:100%;height:180px;" bindtap="todetails" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</view>
+<view class="aui-padded-15 aui-padded-t-0">
+	<view class="youhuiquan" bindtap="tocoupon">
+		<image src="/images/youhui.png"></image>
+	</view>
+</view>
+<view class="aui-padded-15 aui-padded-t-0 flex_sta" style="">
+	<view class="act_left aui-text-center aui-padded-r-10 aui-border-r">
+		<view class="aui-font-size-20 aui-padded-b-5">益生</view>
+		<image class="gonggao" src="/images/gonggao.png"> </image>
+	</view>
+	<view class="act_right aui-padded-l-10">
+
+		<view class="flex_sta  " style="align-items: flex-start;">
+			<view>
+				<view class="act_box">
+					<view class="act_box_txt aui-font-size-13 ">通知</view>
+				</view>
+				<view class="act_box aui-margin-t-5">
+					<view class="act_box_txt aui-font-size-13 ">公告</view>
+				</view>
+			</view>
+
+			<swiper class="aui-padded-l-10" indicator-dots="{{false}}" vertical="{{true}}" autoplay="true" interval="{{interval}}" duration="{{duration}}" style="width:80%;height:90rpx;">
+				<block wx:for="{{activityList}}">
+					<swiper-item>
+						<view class="swiper-item aui-font-size-14 aui-text-grayer aui-font-size-12 aui-ellipsis-1" bindtap="toinfo" data-id="{{activityList[0].id}}">{{activityList[0].title}}</view>
+						<view class="swiper-item aui-font-size-14 aui-text-grayer aui-font-size-12 aui-ellipsis-1" bindtap="toinfo" data-id="{{activityList[1].id}}">{{activityList[1].title}}</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		
+	</view>
+</view>
+
+
+
+<view class=" ">
+	<view class="" wx:for="{{areaList}}" wx:key="areaList">
+		<!-- 两件商品 -->
+		<view wx:if="{{item.goodslist.length==2}}">
+			<view class="title_box aui-padded-15 ">
+				<image class="bg" src="/images/yunw2.png"></image>
+				<view class="title_txt fw_bold aui-text-red">{{item.name}}</view>
+				<image class="jiu" src="/images/jiu.png"></image>
+			</view>
+			<view class="pwrap" style="overflow: hidden;">
+				<view class="plist" wx:for="{{item.goodslist}}" wx:key="goodslist" wx:for-item="voo" bindtap="todetails" data-id="{{voo.id}}">
+					<view class="imgwrap">
+						<image src="{{voo.thumb}}" ></image>
+					</view>
+					<view class="aui-padded-10 aui-padded-b-0">
+						<view class="flex_sta ">
+							<view class="price aui-font-size-16 aui-text-red">￥{{voo.market_price}}</view>
+							<!-- <view class="delline aui-padded-l-10 aui-font-size-12 aui-text-grayer">￥99</view> -->
+						</view>
+						<view class="name aui-font-size-16 aui-padded-t-5 aui-ellipsis-1">{{voo.name}}</view>
+						<view class="label_box flex_sta aui-padded-t-5 aui-text-red" wx:if="{{voo.tag.length>0}}">
+							<view class="label" wx:for="{{voo.tag}}" wx:key="tag" wx:for-item="vs">{{vs}}</view>
+						</view>
+						<view class="aui-text-grayer aui-font-size-9 " wx:if="{{voo.info!=''&&voo.info!=null}}">
+							{{voo.info}}
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 一件商品 -->
+		<view class="pwrap pwrap_one" wx:elif="{{item.goodslist.length==1}}">
+			<view class="pwrap_one_title">
+				<image src="/images/title_bg.png"></image>
+				<view class="pwrap_one_txt aui-text-white">{{item.name}}</view>
+			</view>
+			<view class="plist plist1" wx:for="{{item.goodslist}}" wx:key="goodslist" wx:for-item="voo" bindtap="todetails" data-id="{{voo.id}}">
+				<view class="imgwrap">
+					<image src="{{voo.thumb}}" mode="aspectFill"></image>
+				</view>
+				<view class="aui-padded-10 aui-padded-b-0">
+					<view class="flex_sta ">
+						<view class="price aui-font-size-18 aui-text-red">￥{{voo.market_price}}</view>
+						<!-- <view class="delline aui-padded-l-10 aui-font-size-12 aui-text-grayer">￥99</view> -->
+						<view class="pwrap_one_label flex_sta aui-margin-l-15 aui-padded-l-15 aui-border-l-red aui-text-red" wx:if="{{voo.tag.length>0}}">
+							<view class="label " wx:for="{{voo.tag}}" wx:key="tag" wx:for-item="vs">{{vs}}</view>
+						</view>
+					</view>
+					<view class="flex_bet aui-padded-t-5">
+						<view class="name aui-font-size-16  aui-ellipsis-1">{{voo.name}}</view>
+						<view class="aui-text-red aui-font-size-16">立即购买</view>
+					</view>
+					<view class="flex_sta aui-font-size-13 aui-padded-t-5" wx:if="{{voo.info!=''&&voo.info!=null}}">
+						<view class="aui-text-grayer "> {{voo.info}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 三件及以上商品 -->
+		<view class="three_shop" wx:else>
+			<view class="title_box  aui-padded-15">
+				<image class="bg" src="/images/yunw2.png"></image>
+				<view class="title_txt fw_bold aui-text-red">{{item.name}}</view>
+				<image class="jiu" src="/images/jiu.png"></image>
+			</view>
+			<view class="aui-padded-15" style="overflow: hidden;">
+				<view class="plist" wx:for="{{item.goodslist}}" wx:key="goodslist" wx:for-item="voo" bindtap="todetails" data-id="{{voo.id}}">
+					<view class="imgwrap">
+						<image src="{{voo.thumb}}"></image>
+					</view>
+					<view class="name aui-font-size-16  aui-padded-5 aui-padded-b-0  aui-ellipsis-1">{{voo.name}}</view>
+					<view>
+						<view class="aui-padded-5 " wx:if="{{voo.tag.length>0}}">
+							<view class="flex_bet ">
+								<view class="aui-text-grayer aui-font-size-10 aui-padded-r-5" wx:for="{{voo.tag}}" wx:key="tags" wx:for-item="vs">{{vs}}</view>
+							</view>
+						</view>
+						<view class="aui-text-red ">￥{{voo.market_price}}</view>
+
+					</view>
+
+
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

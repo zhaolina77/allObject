@@ -1,0 +1,14 @@
+<!--pages/my/member/index.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="imgwrap"><image src="/images/membercover.png"></image></view>
+<view class="aui-text-center warp">
+<image class="tx" src="/images/membertx.png"></image>
+<view style="position: absolute;width: 100%;top: 8rpx;">
+<image class="mytx" src="{{head}}"></image>
+</view>
+<view class="tag" wx:if="{{level==0}}">消费者</view>
+<view class="tag" wx:if="{{level==1}}">黑卡</view>
+<view class="tag" wx:if="{{level==2}}">金卡</view>
+
+</view>
+<view class="aui-padded-15"><template is="wxParse" data="{{wxParseData:content.nodes}}" /></view>

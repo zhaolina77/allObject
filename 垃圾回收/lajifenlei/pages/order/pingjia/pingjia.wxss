@@ -1,0 +1,13 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+page{background-color: white !important;}
+.pic{width: 200rpx;height: 128rpx;margin: 0 auto;}
+.pic image{width: 100%;height: 100%;}
+.pingfen{width: 320rpx;height: 128rpx;margin: 0 auto;}
+
+.pf{width: 100%;justify-content: space-between;}
+.pf image{width: 46rpx;height: 40rpx;margin-top: 20rpx;}
+.pf_txt{color: #333;margin-top: 15rpx;}
+.active{color: #FF8248;}
+textarea{margin-top: 20rpx;height: 200rpx;background-color:#F5F6F8;padding: 20rpx;}

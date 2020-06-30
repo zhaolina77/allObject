@@ -1,0 +1,73 @@
+<view class="aui-tab public-tab mine-bar" id="tab">
+    <view class="aui-tab-item aui-font-size-14 aui-text-gray aui-active">
+        待使用
+    </view>
+    <view class="aui-tab-item aui-font-size-14  aui-text-gray">
+        已使用
+    </view>
+    <view class="aui-tab-item aui-font-size-14  aui-text-gray">
+        已过期
+    </view>
+</view>
+
+
+<view class="aui-content saiquan-list aui-padded-15 mine-content">
+    <view class="aui-list aui-media-list aui-padded-l-0 aui-bg-grayer" >
+        <view class="aui-list-item bg-radius aui-margin-b-15 aui-bg-white" >
+            <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-media">
+                    <view class="shop-pic">
+                        <image src="/image/lizi.png" ></image>
+                    </view>
+                </view>
+                <view class="aui-list-item-inner aui-padded-r-0 aui-padded-r-15 aui-padded-b-15">
+                    <view class="aui-list-item-text">
+                        <view class="aui-list-item-title">
+                            <view class="aui-font-size-15 fweight-5 aui-ellipsis-2">快乐垂钓黑坑争霸赛开赛，300余名钓鱼高手同场竞技</view>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-gray">
+                            <image class="icon" src="/image/rili.png" mode="widthFix"></image>
+                            2019年11月20日
+                        </view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-gray">
+                            <image class="icon" src="/image/dingwei.png" mode="widthFix"></image>
+                            北京怀柔区宽沟会议中心观景湖举行
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="aui-list-item  bg-radius aui-margin-b-15 aui-bg-white" >
+            <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-media">
+                    <view class="shop-pic">
+                        <image src="/image/lizi.png" ></image>
+                    </view>
+                </view>
+                <view class="aui-list-item-inner aui-padded-r-0 aui-padded-r-15 aui-padded-b-15">
+                    <view class="aui-list-item-text">
+                        <view class="aui-list-item-title">
+                            <view class="aui-font-size-15 fweight-5 aui-ellipsis-2">快乐垂钓黑坑争霸赛开赛，300余名钓鱼高手同场竞技</view>
+                        </view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-gray">
+                            <image class="icon" src="/image/rili.png" mode="widthFix"></image>
+                            2019年11月20日
+                        </view>
+                    </view>
+                    <view class="aui-list-item-text aui-padded-t-10">
+                        <view class="aui-list-item-title aui-font-size-12 aui-text-gray">
+                            <image class="icon" src="/image/dingwei.png" mode="widthFix"></image>
+                            北京怀柔区宽沟会议中心观景湖举行
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

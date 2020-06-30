@@ -1,0 +1,44 @@
+<view class="top">
+  <view class="aui-padded-15 ">
+    <view class="aui-bg-white sear flex aui-padded-l-15">
+      <view class="sousuo_box">
+        <image src="/image/sousuo.png"></image>
+      </view>
+      <view class="search_box aui-padded-l-15">
+        <input placeholder="旧书籍"  confirm-type="search" bindconfirm='serch' bindinput='verification' value="{{val}}"  ></input>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="inner">
+
+  <view class="left" style="">
+    <view class="left_txt aui-text-center    {{flId ==item.id ?'left_active':''}}" wx:for="{{flList}}" wx:key="fli" data-id="{{item.id}}" data-name="{{item.name}}" bindtap="left">{{item.name}}</view>
+
+  </view>
+  <view class="right aui-padded-l-15 aui-padded-r-15 aui-row" style="" wx:if="{{productList.length>0}}">
+    <view class="aui-col-xs-6" wx:for="{{productList}}" wx:key="li" data-id="{{item.id}}" bindtap="detail">
+      <view class="item bg-radius aui-bg-white aui-padded-b-10" >
+          <view class="item_pic ">
+            <image src="{{item.cover_image}}" mode="aspectFill"></image>
+          </view>
+          <view class="aui-font-size-14 aui-margin-t-10 aui-padded-l-5 aui-padded-l-5 aui-ellipsis-1 aui-text-center">{{item.name}}</view>
+          <!-- <view class="aui-font-size-14 aui-margin-t-5 flex aui-padded-l-5 aui-padded-l-5">
+            <view class="aui-text-theme aui-font-size-15">
+              <text class="aui-font-size-11">¥</text><text>50</text>
+            </view>
+              <view class="aui-font-size-9 aui-text-gray aui-padded-l-10">预估价</view>
+          </view> -->
+      </view>
+    </view>
+  </view>
+  <view class="right aui-padded-l-15 aui-padded-r-15" wx:else>
+      <view class="no_data">
+          <image src="/image/no_data.png" mode="aspectFill"></image>
+      </view>
+  
+  
+  
+  </view>
+</view>

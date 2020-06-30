@@ -1,0 +1,28 @@
+<view class="aui-flex-item-3" style="background-color: #F5F5F5 !important;width: 20% !important;position:absolute;left:0;height: 100%; ">
+	<view class="aui-list-view demo-box" style="margin-bottom: 0;">
+		<!-- <view class="aui-list-view-cell aui-text-black aui-font-size-13">推荐专区</view> -->
+		<view class="aui-list-view-cell aui-text-black aui-font-size-13 {{classify_id==item.id?'aui-active':''}}" wx:for="{{classifyOneList}}" wx:key="cla" bindtap="classify" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+	</view>
+</view>
+
+<view class="aui-padded-15" style="width:80%;position: absolute;left: 20%;height: 100%;overflow-y: scroll;">
+
+	<view class="aui-row aui-bg-white" style="border-radius: 0.25rem;">
+		<view class="aui-padded-15 aui-padded-t-0 aui-font-size-12">{{cname}}</view>
+		<view class="aui-col-xs-4 aui-text-center" wx:for="{{classifyTwoList}}" wx:key="classstwo" bindtap="classifyTwo" data-id="{{item.id}}">
+			<view class="pic">
+				<image src="{{item.thumb}}" mode="aspectFill"></image>
+			</view>
+			<view style="width:140rpx" class="aui-margin-t-10 aui-font-size-13  aui-ellipsis-1">{{item.name}}</view>
+		</view>
+
+	</view>
+
+	<view class="nodata" style="display: none;">
+		<img src="../../image/nodata.png" />
+	</view>
+    <view  style="margin-top: 150px;" wx:if="{{classifyTwoList.length==0}}"> 
+  <image src="/image/nodata.png" style="display: block !important;margin:0 auto;width:50%" mode="widthFix"></image>
+</view>
+
+</view>

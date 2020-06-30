@@ -1,0 +1,57 @@
+<view class=" aui-padded-15 top">
+	<view class="flex" style="width:80%;margin:0 auto;">
+		<view class="txt  {{state==2?' active':''}}" bindtap="change" data-index="2">二手房</view>
+		<view class="txt  {{state==1?' active':''}}" bindtap="change" data-index="1">新房</view>
+		<view class="txt  {{state==3?' active':''}}" bindtap="change" data-index="3">租房</view>
+	</view>
+</view>
+<view class="shouye_list aui-padded-15 aui-padded-r-0" style="margin-top:70rpx;" wx:if="{{data.length>0}}">
+	<scroll-view scroll-y="{{isScroll}}">
+		<view class="aui-list aui-media-list ">
+	
+				<view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx"  wx:key="da" wx:for="{{data}}" bindtap="detail" data-id="{{item.houseId}}">
+					<view class="flex item_box aui-padded-t-15 aui-margin-b-15 aui-padded-r-15"  wx:if="{{state!=1}}">
+						<view class="item bg-radius">
+							<image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+						</view>
+						<view class="aui-margin-l-10  right ">
+							<view class="aui-font-size-15 aui-ellipsis-1" style="width:100%">{{item.houseName}}</view>
+							<view class=" aui-margin-t-5">
+								<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 weui-label" style="width:92%">{{item.area?item.area:item.info}}</view>
+							</view>
+							<view class="flex label_box aui-margin-t-5 aui-font-size-12">
+								<view class="aui-bg-red aui-text-red label aui-margin-r-10" wx:for="{{item.tag}}" wx:key="ty" wx:for-item="v">{{v}}</view>
+
+							</view>
+							<view class="flex aui-margin-t-5" style="justify-content: flex-start;">
+								<view class="aui-text-theme aui-font-size-13"><text class="ft_5">{{item.price}}</text></view>
+							</view>
+						</view>
+					</view>
+          <view class="flex item_box aui-padded-t-15 aui-margin-b-15 aui-padded-r-15"  wx:else>
+						<view class="item bg-radius">
+							<image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+						</view>
+						<view class="aui-margin-l-10  right ">
+							<view class="aui-font-size-15  ">{{item.houseName}}</view>
+							<view class=" aui-margin-t-5">
+								<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1" style="width:92%">{{item.address}}</view>
+							</view>
+							<view class="flex aui-margin-t-5" style="justify-content: flex-start;">
+								<view class="aui-text-theme aui-font-size-13"><text class="ft_5">{{item.price}}</text></view>
+                <view class="aui-text-gray weui-label aui-font-size-10 aui-margin-l-10">{{item.area}}</view>
+							</view>
+						</view>
+					</view>
+					<view class="remove" bindtap="delItem" data-id="{{item.hourseId}}">删除 </view>
+				</view>
+		</view>
+	</scroll-view>
+</view>
+
+
+<!-- 无数据 -->
+<view class="nodata " wx:else>
+	<image src="/image/nocollect.png"></image>
+
+</view>

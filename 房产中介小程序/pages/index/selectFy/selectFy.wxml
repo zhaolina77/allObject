@@ -1,0 +1,80 @@
+<view class="aui-bar aui-bar-nav aui-bar-light aui-bg-white mine-bar">
+	<view class="aui-title">
+		<view class="aui-padded-l-15 aui-padded-r-15 aui-bg-grayer serch aui-text-left">
+			<image mode="widthFix" src="/image/sousuo.png" style=" float: left;width:24rpx;margin-top:24rpx;margin-right: 6px;"></image>
+			<input placeholder="请输入小区或商圈名称" type="text" value="{{name}}" bindinput="shop_search_function" confirm-type='search' bindconfirm='init'></input>
+		</view>
+	</view>
+</view>
+<view class=" aui-padded-15 top" style="background-color: #fff !important;">
+	<view class="flex" style="width:80%;margin:0 auto;">
+		<view class="txt  {{state==2?' active':''}}" bindtap="change" data-index="2">二手房</view>
+		<view class="txt  {{state==1?' active':''}}" bindtap="change" data-index="1">新房</view>
+		<view class="txt  {{state==3?' active':''}}" bindtap="change" data-index="3">租房</view>
+	</view>
+</view>
+<view style="margin-bottom:140rpx">
+	<radio-group bindchange="radioChange">
+		<view class="shouye_list" wx:if="{{state==1}}">
+		
+			<view class="aui-padded-l-15 aui-padded-r-15 aui-font-size-13" wx:for="{{list}}" wx:key="idxxx" wx:for-item="item">
+				<view class="flex item_box aui-padded-t-15 aui-margin-b-15" catchtap="detail" data-id="{{item.houseId}}" data-type="1">
+					<radio class="aui-radio" color="#ffd12d" name="change" value="{{item.houseId}}" checked="{{value==item.houseId?'true':fale}}"></radio>
+					<view class="flex item_box1 aui-margin-l-10" style="align-items: flex-start;">
+						<view class="item bg-radius ">
+							<image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+						</view>
+						<view class="aui-margin-l-10  right ">
+							<view class="aui-font-size-15  aui-ellipsis-1">{{item.houseName}}</view>
+							<view class=" aui-margin-t-5">
+								<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 weui-label" style="width:92%"><sup></sup>{{item.address}}</view>
+							</view>
+							<view class="flex label_box aui-margin-t-5 aui-font-size-12">
+								<text class="aui-bg-red aui-text-red label aui-margin-r-10" wx:for="{{item.tag}}" wx:key="{{idxs}}" wx:for-item="v">{{v}}</text>
+							</view>
+							<view class="flex aui-margin-t-5" style="justify-content: flex-start;">
+								<view class="aui-text-theme aui-font-size-13">{{item.price}}</view>
+							</view>
+							<view class=" aui-margin-t-5">
+								<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 weui-label" style="width:92%"><sup></sup>{{item.area}}</view>
+							</view>
+						</view>
+					</view>
+
+				</view>
+			</view>
+
+		</view>
+		<view class="shouye_list" wx:else>
+
+			<view class="aui-padded-l-15 aui-padded-r-15 aui-font-size-13" wx:for="{{list}}" wx:key="{{idx}}" wx:for-item="item">
+				<view class="flex item_box aui-padded-t-15 aui-margin-b-15" catchtap="detail" data-id="{{item.houseId}}" data-type="1">
+					<radio class="aui-radio" color="#ffd12d" name="change" value="{{item.houseId}}" checked="{{value==item.houseId?'true':fale}}"></radio>
+					<view class="flex item_box1 aui-margin-l-10" style="align-items: flex-start;">
+						<view class="item bg-radius ">
+							<image src="{{item.houseCoverImage}}" mode="aspectFill"></image>
+						</view>
+						<view class="aui-margin-l-10  right ">
+							<view class="aui-font-size-15  aui-ellipsis-1">{{item.houseName}}</view>
+							<view class=" aui-margin-t-5">
+								<view class="aui-font-size-12 aui-text-gray aui-ellipsis-1 weui-label" style="width:92%"><sup></sup>{{item.info}}</view>
+							</view>
+							<view class="flex label_box aui-margin-t-5 aui-font-size-12">
+								<text class="aui-bg-red aui-text-red label aui-margin-r-10" wx:for="{{item.tag}}" wx:key="{{idxs}}" wx:for-item="v">{{v}}</text>
+							</view>
+							<view class="flex aui-margin-t-5" style="justify-content: flex-start;">
+								<view class="aui-text-theme aui-font-size-13">{{item.price}}</view>
+							</view>
+						</view>
+					</view>
+
+				</view>
+			</view>
+
+		</view>
+	</radio-group>
+</view>
+
+<view class="btn_box aui-padded-15" style="background-color: #f5f5f5 !important;">
+	<view class="btn" bindtap="sub">确定</view>
+</view>

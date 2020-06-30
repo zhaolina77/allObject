@@ -1,0 +1,15 @@
+<view class="aui-content" style="padding-top:90rpx;">
+	<view class="aui-padded-15 aui-text-center">
+		<image class="pic" src="/image/txcg2.png" mode="aspectFill"></image>
+		<view class="aui-text-center aui-padded-t-15">报备提交成功</view>
+
+	</view>
+	
+
+	<view class="aui-text-center bt">
+		<view class="aui-btn aui-btn-theme tj_btn  aui-text-white " bindtap="back">我知道了</view>
+	</view>
+
+
+
+</view>

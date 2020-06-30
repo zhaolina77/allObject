@@ -1,0 +1,13 @@
+<!--pages/index/coupon/index.wxml-->
+<view class="list aui-padded-15" wx:for="{{couponList}}">
+  <view class="left">
+    <view class="tag aui-font-size-12"><text>￥</text>
+  <text class="price aui-margin-r-5">{{item.money}}</text>
+  <text class="text aui-font-size-12">优惠券</text></view>
+  <view class="aui-font-size-12">单笔订单满{{item.full}}元使用</view>
+  <view class="aui-font-size-12 aui-margin-b-10">有效期{{item.start_date}}-{{item.end_date}}</view>
+  </view>
+  <view class="right aui-font-size-15" wx:if="{{item.have==0}}" data-id="{{item.id}}" bindtap="get">立即领取</view>
+  <view class="right aui-font-size-15" wx:else>已领取</view>
+</view>
+

@@ -1,0 +1,27 @@
+<!--pages/index/products/index.wxml-->
+<view class="aui-bg-white aui-padded-15 aui-font-size-17 aui-text-black">98%好评</view>
+<view class="aui-bg-white aui-padded-15 flex" style="justify-content: space-between;">
+  <text class="text {{level==0?'active':''}}"  data-idx="0" bindtap="tab">全部({{evaluaNum.evaluate_total_size}})</text>
+  <text class="text {{level==1?'active':''}}"  data-idx="1" bindtap="tab">好评({{evaluaNum.evaluate_one_total_size}})</text>
+  <text class="text {{level==2?'active':''}}"  data-idx="2" bindtap="tab">中评({{evaluaNum.evaluate_two_total_size}})</text>
+  <text class="text {{level==3?'active':''}}"  data-idx="3" bindtap="tab">差评({{evaluaNum.evaluate_three_total_size}})</text>
+</view>
+<block wx:for="{{list}}">
+  <view class="flex aui-bg-white aui-padded-15 aui-margin-t-15" style="align-items: flex-start;">
+  <image class="touxiang aui-margin-r-5" src="{{item.head_portrait}}"></image>
+  <view class="item flex1">
+    <view class="aui-font-size-13 aui-text-black">
+      {{item.nick_name}}
+    </view>
+    <view class="aui-font-size-11 aui-text-grayer">
+      {{item.create_time}}
+    </view>
+    <view class="aui-font-size-14 aui-text-black">{{item.content}}</view>
+    <view class="flex pjimgwrap" wx:if="{{item.pic}}">
+      <image src="{{voo}}" class="pjimg" wx:for="{{item.pic}}" wx:for-item="voo"></image>
+      <text></text>
+    </view>
+  </view>
+</view>
+</block>
+

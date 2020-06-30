@@ -1,0 +1,5 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+.aui-list .aui-list-item{padding-left: 0;}
+.yzm{justify-content: flex-end;}

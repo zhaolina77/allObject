@@ -1,0 +1,59 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.aui-iconfont {
+    font-size: 12px;
+}
+
+.inner {
+    margin-left: 60rpx;
+}
+
+.aui-border-b {
+    border-color: #eee !important;
+}
+
+.li {
+    position: relative;
+}
+
+.li:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: #ccc;
+    top: 50%;
+    left: 15rpx;
+}
+
+.li:last-child:after {
+    display: none;
+}
+
+.jd1 {
+    position: absolute;
+    left: 8rpx;
+    top: 50%;
+    margin-top: -8rpx;
+    width: 12rpx;
+    height: 12rpx;
+    line-height:16rpx;
+    border-radius:16rpx;
+    background-color: #ccc;
+    z-index: 9;
+}
+
+.active .jd1 {
+    position: absolute;
+    left: 0rem;
+    top: 50%;
+    margin-top: -12rpx;
+    z-index: 1;
+    width: 24rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    border-radius: 20rpx;
+    background-color: #222;
+}

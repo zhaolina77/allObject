@@ -1,0 +1,30 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+scroll-view{
+    height:90rpx;
+    line-height: 90rpx;
+}
+scroll-view .swiper-slide{
+    margin-left:30rpx;
+    margin-right:30rpx ;
+}
+scroll-view .swiper-slide:last-child{
+    margin-right:120rpx;
+}
+scroll-view .swiper-slide.on text{
+    color: #222;
+    font-weight: 500;
+}
+.active{
+  color: #333 !important;
+}
+.void video{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+display: flex;
+justify-content: space-between;
+flex-wrap: nowrap;
+}

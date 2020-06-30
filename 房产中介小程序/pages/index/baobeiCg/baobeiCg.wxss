@@ -1,0 +1,10 @@
+
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+		.pic{width:240rpx;height:240rpx;margin-top: 130rpx;}
+	
+
+		.tj_btn{width: 40%;height: 66rpx;margin-top: 50rpx;line-height: 66rpx;}
+		.bt{margin-top: 200rpx;}

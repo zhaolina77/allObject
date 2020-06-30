@@ -1,0 +1,18 @@
+<view class="mine-content-footer">
+    <view class="aui-padded-15 aui-bg-grayer aui-text-gray aui-font-size-14">请选择退款原因</view>
+    <view class="aui-list">
+        <view class="aui-list-item" wx:for="{{causeList}}" wx:key="cau">
+            <view class="aui-list-item-inner aui-border-b">
+                <view class="aui-list-item-title aui-font-size-14">{{item.name}}</view>
+                <view class="aui-list-item-right">
+                    <radio color="#0051FE" bindtap="select" data-index="{{index}}" checked="{{item.is_del==1}}" data-id="{{item.id}}"></radio>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+<view class="aui-bar aui-bar-tab aui-padded-15" id="footer" bindtap="queding">
+    <view class="aui-btn aui-btn-block aui-btn-theme aui-font-size-15">确定</view>
+</view>

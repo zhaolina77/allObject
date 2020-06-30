@@ -1,0 +1,47 @@
+<view class="aui-content">
+	<block wx:if="{{list.length>0}}">
+		<view class="aui-padded-15 aui-bg-gray aui-font-size-14 aui-text-grayer">银行卡</view>
+		<view class="mine-content-footer">
+			<scroll-view scroll-y="{{isScroll}}">
+				<view class="aui-list">
+
+					<block wx:key="item" wx:for="{{list}}" wx:key="lis">
+						<view data-index='{{index}}' class="order-item  " bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+							<view class="flex aui-padded-15 aui-padded-b-15 bbox aui-border-b" bindtap="edit" data-id="{{item.id}}" data-ite="{{item}}">
+								<view class="flex  aui-padded-t-15  aui-padded-b-15 " style="width:100%">
+									<!-- <view class="huiyuan_pic aui-padded-b-15"> -->
+									<image class="jh" src="{{item.thumb}}" mode="aspectFill"></image>
+									<!-- </view> -->
+									<view class="flex huiyuan_txt aui-margin-l-10">
+										<view class="aui-padded-l-5 aui-font-size-17 fweight-5 flex">
+											<view class="aui-border-r aui-padded-r-10">{{item.name}}</view>
+											<view class=" fweight-5 aui-padded-l-10">{{item.card_number}}</view>
+										</view>
+										<view class="aui-text-theme aui-font-size-15" wx:if="{{item.default_status==0}}">默认</view>
+									</view>
+								</view>
+							</view>
+							<view class="remove" bindtap="delItem" data-id="{{item.id}}">删除 </view>
+						</view>
+					</block>
+				</view>
+			</scroll-view>
+		</view>
+	</block>
+	<!-- <view class="aui-padded-15 aui-bg-gray aui-font-size-14 aui-text-grayer">支付宝</view>
+	<view class="flex aui-padded-15 aui-padded-b-15 bbox aui-border-b">
+		<view class="flex   aui-padded-t-10 aui-padded-b-10 " style="width:100%">
+			<image class="jh" src="/image/zhifubao.png"></image>
+
+			<view class="flex huiyuan_txt ">
+				<view class="aui-padded-l-5 aui-font-size-17 fweight-5 flex">
+					<view class=" aui-padded-r-10">15123456789</view>
+				</view>
+			</view>
+		</view>
+	</view> -->
+</view>
+
+<view class="aui-padded-15 btn_box">
+	<view class="btn aui-btn aui-btn-theme aui-font-size-15 xinzeng" bindtap="addZh">新增账户</view>
+</view>

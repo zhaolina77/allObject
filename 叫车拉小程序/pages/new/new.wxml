@@ -1,0 +1,15 @@
+<view class="aui-content">
+  <block wx:for="{{list}}" wx:for-item="vo" wx:key="this">
+    <view class="aui-padded-15" bindtap="openDetail" data-index="{{index}}">
+      <view class="aui-padded-15 aui-bg-white">
+        <view>{{vo.title}}</view>
+        <view class="activePic aui-margin-t-15">
+          <image src="{{vo.thumb}}" mode="widthFix"></image> 
+        </view>
+        <view class="aui-margin-t-15 aui-ellipsis-1">
+          <!-- <tedt v-html="vo.content"></tedt> -->
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,57 @@
+<!--pages/my/order/index.wxml-->
+<view class="flex title">
+  <view class="item {{status==-1?'active':''}}"   data-idx="-1" bindtap="tab">
+    <text>全部</text>
+
+  </view>
+  <view class="item {{status==0?'active':''}}"   data-idx="0" bindtap="tab">
+    <text>待付款</text>
+    <text class="aui-badge" wx:if="{{orderNum.onecount>0}}">{{orderNum.onecount}}</text>
+  </view>
+  <view class="item {{status==1?'active':''}}"   data-idx="1" bindtap="tab">
+    <text>待发货</text>
+    <text class="aui-badge" wx:if="{{orderNum.twocount>0}}">{{orderNum.twocount}}</text>
+  </view>
+  <view class="item {{status==2?'active':''}}"   data-idx="2" bindtap="tab">
+    <text>待收货</text>
+    <text class="aui-badge" wx:if="{{orderNum.threecount>0}}">{{orderNum.threecount}}</text>
+  </view>
+  <view class="item {{status==3?'active':''}}"   data-idx="3" bindtap="tab">
+    <text>已完成</text>
+    <text class="aui-badge" wx:if="{{orderNum.fourcount>0}}">{{orderNum.fourcount}}</text>
+  </view>
+</view>
+<view class="aui-bg-white aui-padded-15 aui-margin-t-15" data-id="{{item.id}}" data-status="{{item.status}}"  bindtap="todetail" wx:for="{{list}}">
+  <view class="flex">
+    <text class="aui-font-size-14 aui-text-black flex1">订单号：{{item.order_sn}}</text>
+    <text class="payname">{{item.pay_name}}</text>
+  </view>
+  <view class="line"></view>
+  <view class="flex flex1 aui-margin-t-15" wx:for-item="voo" wx:for="{{item.goods_order_list}}">
+    <image class="pimg" src="{{voo.thumb}}"></image>
+    <view class="aui-margin-l-15 flex1">
+      <view class="aui-font-size-15 aui-text-blacker">{{voo.goods_name}}</view>
+      <view class="aui-font-size-11 aui-text-grayer">{{voo.spec_name}}</view>
+      <view class="aui-font-size-16 aui-text-black aui-margin-t-15">￥{{voo.goods_price}}</view>
+    </view>
+    <view class="aui-font-size-11 aui-text-grayer">X{{voo.goods_num}}</view> 
+  </view>
+
+   <view class="line"></view>
+   <view class="aui-text-right">
+    <text class="aui-font-size-12 aui-text-black">共{{item.goods_num}}件商品 合计：</text>
+    <text class="aui-font-size-15 aui-text-black">￥{{item.pay_price}}</text>
+   </view>
+   <view class="aui-text-right">
+     <text class="opt" wx:if="{{item.status==0}}" data-id="{{item.id}}" catchtap="cancel">取消订单</text>
+     <text class="opt red"  wx:if="{{item.status==0}}"  data-id="{{item.id}}" catchtap="pay">付款</text>
+     <button class="opt" open-type="contact"  wx:if="{{item.status==1 || item.status==2}}" catchtap="nothing">联系客服</button>
+     <text class="opt" wx:if="{{item.status==1}}" data-id="{{item.id}}" catchtap="refund">申请退款</text>
+     <text class="opt red"  wx:if="{{item.status==2}}"  data-id="{{item.id}}" catchtap="confirm">确认收货</text>
+     <text class="opt" wx:if="{{item.status==7}}" data-id="{{item.id}}" catchtap="delorder">删除订单</text>
+     <text class="opt" wx:if="{{item.status==3 && item.is_evaluation==1}}" data-id="{{item.id}}">再来一单</text>
+     <text class="opt red" wx:if="{{item.status==3 && item.is_evaluation==0}}" data-item="{{item}}" catchtap="addpingjia">评价</text>
+     
+   </view>
+</view>
+<view class="aui-text-center"><image src="/images/nodata.png" mode="aspectFill" wx:if="{{list.length==0}}"></image></view>

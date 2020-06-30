@@ -1,0 +1,25 @@
+<view class="aui-bg-grayer aui-padded-15 aui-text-orange aui-text-center aui-font-size-13">
+    请先验证当前手机号
+</view>
+<view class="aui-padded-l-15 aui-padded-r-15">
+    <view class="aui-list ">
+        <view class="aui-list-item aui-border-b aui-padded-t-5 aui-padded-b-5">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-text-grayer">
+                <view class="aui-list-item-label">当前手机号</view>
+                <view class="aui-list-item-input aui-text-right aui-text-gray">{{phone}}</view>
+            </view>
+        </view>
+        <view class="aui-list-item aui-padded-t-5 aui-padded-b-5 aui-border-b">
+            <view class="aui-list-item-inner aui-padded-r-0 aui-text-grayer">
+                <view class="aui-list-item-input ">
+                    <input type="text"  placeholder="请输入验证码" bindinput="code"/>
+                </view>
+                <view class="aui-list-item-label aui-text-orange aui-font-size-15  aui-padded-r-0 yzm" bindtap="yanzheng">发送验证码</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="aui-btn aui-btn-theme aui-font-size-15 aui-btn-block" style="margin-top:80rpx;" bindtap="next">确认更换</view>
+</view>
+
+

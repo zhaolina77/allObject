@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>二手商品详情</title>
+		<link rel="stylesheet" href="../../css/aui.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/global.css"/>
+	</head>
+	<style type="text/css">
+		.btn span{width: 50%;color: #fff;}
+		.btn .aui-btn{width: 90%;height: 1.8rem !important;line-height: 1.8rem !important;}
+		
+		.sc{width:1rem;}
+		.line{position: absolute;top: 7px;right: 10px;width:16px;height:16px;border-radius:50%;background-color:#f32c52;text-align:center;line-height:16px;font-size:0.5rem;color:#fff;border: 1px solid #fff;}
+		
+		.qianggou{
+			width: 90%;
+			height:2.5rem;
+			margin: 0 auto;
+			line-height: 2.5rem;
+			border-radius: 1.25rem;
+		}
+	</style>
+	<body>
+		<!--<header class="aui-bar aui-bar-nav aui-bar-light">
+		    <a class="aui-pull-left aui-btn" onclick="closeWin()">
+		        <img class="icon" src="../../image/jt-left.png"/>
+		    </a>
+		    <div class="aui-title">秒杀商品详情</div>
+		    <a class="aui-pull-right aui-btn">
+		        <img class="icon" src="../../image/fx.png"/>
+		    </a>
+		</header>-->
+		
+		
+		<footer class="aui-bar aui-bar-tab  clearfix flex" id="footer" >
+			<div class="qianggou aui-bg-theme aui-text-center aui-text-white">点击这里联系对方
+				
+			</div>
+    		
+		</footer>
+		
+	</body>
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.js"></script>
+<script type="text/javascript" src="../../script/common.js"></script>
+<script>
+	apiready = function(){
+	 	$api.fixIos7Bar($api.dom("header"));//修复ios系统bar
+		$pai.fixTabBar($api.dom("footer"));//修复ios系统bar
+        api.openFrame({
+            name: 'ershouDetail_frm',
+            url: 'widget://html/shop/ershouDetail_frm.html',
+            rect: {
+                x: 0,
+                y: $api.dom('header').offsetHeight,
+                w: 'auto',
+//              h: api.winHeight - $api.dom('header').offsetHeight - $api.dom('footer').offsetHeight
+                h: api.winHeight  - $api.dom('footer').offsetHeight
+            },
+            bounces: true,
+            pageParam: {
+                id: api.pageParam.id
+            }
+        });     
+	};
+	
+</script>

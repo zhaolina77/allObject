@@ -1,0 +1,36 @@
+<!--pages/index/coupon/index.wxml-->
+<view class="tab flex">
+  <view class="{{type==0?'active':''}}"  data-idx="0" bindtap="tab">未使用</view>
+  <view class="{{type==1?'active':''}}"  data-idx="1" bindtap="tab">已使用</view>
+  <view class="{{type==2?'active':''}}"  data-idx="2" bindtap="tab">已过期</view>
+</view>
+<view class="aui-content" wx:if="{{list.length>0}}">
+      <block wx:for="{{list}}">
+        <view class="aui-padded-15 aui-padded-b-0 coupon" bindtap="selectCoupon" data-index="{{index}}">
+          <image class="img" src="/image/coupon.png"></image>
+          <view class="content">
+            <view class="top">
+              <view class="item aui-padded-l-15">
+                <view class="price">
+                  <text class="aui-font-size-16">￥</text>
+                  <text style="font-size: 2rem;">{{item.price}}</text>
+                </view>
+                <view class="static aui-margin-l-15">
+                  <view class="aui-font-size-10" style="color: #f73636;">{{item.couponname}}</view>
+                  <text class="aui-font-size-15">在线下单抵现</text>
+                </view>
+              </view>
+              <view class="btn aui-font-size-14 aui-font-weight" wx:if="{{item.status==0&&!state}}">未使用</view>
+              <view class="btn aui-font-size-14 aui-font-weight" wx:elif="{{item.status==0&&state}}">{{idx!=index+1?'立即使用':'取消使用'}}</view>
+              <view class="btn aui-font-size-14 aui-font-weight" wx:elif="{{item.status==1}}">已使用</view>
+              <view class="btn aui-font-size-14 aui-font-weight" wx:else="{{item.status==2}}">已过期</view>
+            </view>
+            <view class="aui-font-size-12 aui-margin-t-5 aui-padded-l-15">有效时间：{{item.end_time}}</view>
+          </view>
+        </view>
+      </block>
+      
+    </view>
+<view class="aui-text-center" wx:else>
+        <image src="../../image/nodata.png" style="width:12.5rem;height:12.5rem;margin:4rem auto 0"></image>
+      </view>

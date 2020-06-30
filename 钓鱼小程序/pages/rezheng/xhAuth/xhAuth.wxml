@@ -1,0 +1,114 @@
+<view class="aui-content" style="padding-bottom:80px">
+<form bindsubmit="formSubmit" >
+    <view class="aui-list aui-padded-l-15 aui-padded-r-15">
+      <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0" >
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-font-size-14">联系姓名</view>
+          <view class="aui-list-item-right aui-font-size-15 aui-text-grayer">
+            <input type="text" placeholder="请输入联系人姓名" id="contacts_name" name="contacts_name" value="{{contacts_name}}"/>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0" >
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-font-size-14">协会职务</view>
+          <view class="aui-list-item-right aui-font-size-15 aui-text-grayer">
+            <input type="text" placeholder="请输入协会职务" id="job" name="job" value="{{job}}"/>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-font-size-14">身份证号码</view>
+          <view class="aui-list-item-right aui-font-size-15 aui-text-grayer">
+            <input type="text" placeholder="请输入身份证号码" id="card" value="{{card}}" name="card"/>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-font-size-14">协会名称</view>
+          <view class="aui-list-item-right aui-font-size-15 aui-text-grayer">
+            <input type="text" placeholder="请输入协会名称" id="name" value="{{name}}" name="name"/>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-font-size-14">联系方式</view>
+          <view class="aui-list-item-right aui-font-size-15 aui-text-grayer">
+            <input type="tel" pattern="[0-9]*" placeholder="联系人手机号" value="{{mobile}}" id="mobile" name="mobile"/>
+          </view>
+        </view>
+      </view>
+      <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-font-size-14">协会所在地区</view>
+          <!-- <view class="aui-list-item-right aui-font-size-15 aui-text-grayer">
+            <input type="text" readOnly placeholder="请选择居住地址" id="address" v-model="address" value="" onclick="focus()"/>
+          </view> -->
+          <picker mode="region" bindchange="bindRegionChange" style="width: 75%;height:88rpx" value="{{full_address}}" custom-item="{{customItem}}">
+            <view class="picker  aui-font-size-14  aui-text-right" style="height:88rpx;line-height:88rpx;color:#666;">
+              {{full_address[0]}}{{full_address[1]}}{{full_address[2]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      
+      
+      
+      <view class="aui-list-item aui-border-b aui-padded-b-5 aui-padded-t-5 aui-padded-l-0">
+        <view class="aui-list-item-inner aui-padded-r-0">
+          <view class="aui-list-item-title aui-font-size-14">详细地址</view>
+          <view class="aui-list-item-right aui-font-size-15 aui-text-grayer">
+            <input type="text" placeholder="请输入详细地址" id="address" name="address" value="{{address}}"/>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="aui-padded-15">请上传营业执照图片</view>
+    <view class="aui-row aui-padded-15 aui-padded-t-0" >
+      <view class="add aui-pull-left aui-margin-t-5"  wx:if="{{pics_url.length!=6}}">
+        <image src="/image/add-pic.png" bindtap="changeAvatars"  mode="widthFix"></image>
+      </view>
+      <view class="" id='bd'>
+        <block wx:for="{{pics_url}}" wx:key="oines">
+          <view class="aui-pull-left aui-margin-t-10">
+            <view class="pics">
+              <image class="tu" src="{{item}}"></image>
+              <image class="guanbi" src="/image/close1.png" bindtap="dels"  mode="widthFix"  data-index="{{index}}"></image>
+            </view>
+           
+          </view>
+        </block>
+      </view>
+    </view>
+
+
+    <view class="aui-padded-15">请上传身份证照片</view>
+    <view class="aui-row aui-padded-15 aui-padded-t-0" >
+      <view class="add aui-pull-left aui-margin-t-15"  wx:if="{{pic_url.length!=2}}">
+        <image src="/image/add-pic.png" bindtap="changeAvatar"  mode="widthFix"></image>
+      </view>
+      <view class="" id='bd'>
+        <block wx:for="{{pic_url}}" wx:key="oine">
+          <view class="aui-pull-left aui-margin-t-10">
+            <view class="pics">
+              <image class="tu" src="{{item}}"></image>
+              <image class="guanbi" src="/image/close1.png" bindtap="del"  mode="widthFix"  data-index="{{index}}"></image>
+            </view>
+           
+          </view>
+        </block>
+      </view>
+    </view>
+
+
+
+      <view class="aui-bar aui-bar-tab aui-padded-15 aui-bg-white " id="footer">
+          <button class="aui-btn aui-btn-block aui-btn-theme aui-font-size-15" style="width:100% !important" formType="submit">立即提交</button>
+      </view>
+  </form>
+</view>

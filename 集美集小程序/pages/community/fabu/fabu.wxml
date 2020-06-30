@@ -1,0 +1,49 @@
+<view class="aui-content " style="margin-bottom:140rpx">
+
+
+	<view class="aui-margin-t-10s bg-radius aui-bg-white aui-padded-15 tupian">
+		<textarea class="aui-font-size-15" bindinput="content" placeholder="向大家分享你的心得吧"></textarea>
+		<!-- 发布图片 -->
+		<view class="aui-row aui-padded-b-15   aui-row" wx:if="{{type==1}}">
+			<view class="pic   aui-margin-t-15 aui-col-xs-4 bg-radius" wx:for="{{img}}" wx:key="img">
+				<image src="{{item}}" mode="aspectFill"></image>
+				<image src="/image/close1.png" class="close" bindtap="del" data-index="{{index}}"></image>
+			</view>
+			<view class="add   aui-margin-t-15 aui-col-xs-4" bindtap="changeAvatar" wx:if="{{img.length<9}}">
+				<image src="/image/add-pic1.png"></image>
+			</view>
+		</view>
+		<!-- 发布视频 -->
+		<view class="aui-row aui-padded-b-15   sp" wx:if="{{type==2}}">
+			<view>缩略图上传</view>
+			<view>
+				<view class="pic   aui-margin-t-15 aui-col-xs-4 bg-radius" wx:for="{{img}}" wx:key="img">
+					<image src="{{item}}" mode="aspectFill"></image>
+					<image src="/image/close1.png" class="close" bindtap="del" data-index="{{index}}"></image>
+				</view>
+				<view class="add   aui-margin-t-15 aui-col-xs-4" bindtap="changeAvatar" wx:if="{{img.length<1}}">
+					<image src="/image/add-pic1.png"></image>
+				</view>
+			</view>
+			<view class="aui-margin-t-15">视频上传</view>
+			<view>
+				<view class="pic   aui-margin-t-15 aui-col-xs-4 bg-radius" wx:if="{{videoUrl!=''}}">
+					<video src="{{videoUrl}}" class="sp" mode="aspectFill"></video>
+					<image src="/image/close1.png" class="close" bindtap="del_video"></image>
+				</view>
+				<view class="add   aui-margin-t-15 aui-col-xs-4" bindtap="changeAvatar_video" wx:if="{{videoUrl==''}}">
+					<image src="/image/add-pic1.png"></image>
+				</view>
+			</view>
+
+		</view>
+
+	</view>
+
+
+</view>
+
+
+<view class="btn_box aui-bg-white aui-padded-15" bindtap="fabu">
+	<view class="btn">发布</view>
+</view>

@@ -1,0 +1,64 @@
+<view class="aui-content aui-bg-white aui-margin-b-15 aui-border-bgT">
+    <view class="aui-list aui-padded-l-15 aui-padded-r-15">
+        <view class="aui-list-item aui-border-b aui-padded-l-0 aui-padded-t-10 aui-padded-b-10">
+            <view class="aui-list-item-inner  aui-padded-r-0">
+                <view class="aui-list-item-title aui-text-blacker aui-font-size-15">头像</view>
+                <view class="aui-list-item-right" style="display: flex;justify-content: space-between;align-items: center;">
+                    <view class="head-pic" >
+                        <image src="{{head_portrait}}" bindtap="changeAvatar" mode="aspectFill" ></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="list aui-padded-l-15 aui-padded-r-15">
+        <view class="inpt aui-border-b">
+            <view class="info">昵称</view>
+            <view class="sel aui-ellipsis-1">
+                <input class="aui-ellipsis-1" placeholder="请输入昵称" placeholder-style="COLOR:#999 !IMPORTANT;" placeholder-class="phcolor" value="{{nick_name}}"  type="text"  bindinput="nick_name"></input>
+            </view>
+        </view>
+        <view class="inpt aui-border-b">
+            <view class="info">手机号</view>
+            <view class="sel aui-ellipsis-1">
+                <input class="aui-ellipsis-1" placeholder="请输入手机号" placeholder-class="phcolor"  type="tel" value="{{phone}}" disabled></input>
+            </view>
+        </view>
+        <view class="inpt aui-border-b">
+            <view class="info">性别</view>
+            <view class="sel aui-ellipsis-1">
+                <!-- <view class="aui-font-size-15 aui-ellipsis-1 inner">{{sex==1?'男':'女'}}</view> -->
+                <picker  value="{{index}}" range="{{array}}" bindchange="bindPickerChange">
+					<view class="picker">{{sex==1?'男':'女'}}</view>
+				</picker>
+                <view class="aui-pull-right aui-font-size-13 aui-text-danger">
+                    <image class="jt" src="/image/right2.png"  mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+        <view class="inpt aui-border-b">
+            <view class="info">出生日期</view>
+            <view class="sel aui-ellipsis-1">
+                <!-- <view class="aui-font-size-15 aui-ellipsis-1 inner">
+                    <input class="aui-ellipsis-1" placeholder="请选择"  disabled placeholder-class="phcolor"  type="number" ></input>
+                </view> -->
+                <picker mode="date"  value="{{date}}" start="1940-09-01" end="2020-09-01" bindchange="bindDateChange">
+					<view class="picker">{{birthday==''?'请选择出生日期':birthday}}</view>
+				</picker>
+                <view class="aui-pull-right aui-font-size-13 aui-text-danger">
+                    <image class="jt" src="/image/right2.png"  mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+        <view class="inpt aui-border-b">
+            <view class="info aui-font-size-15">个性签名</view>
+             <view class="sel aui-ellipsis-1">
+                <input class="aui-ellipsis-1" placeholder="请输入" placeholder-class="phcolor"  type="tel" value="{{remark}}" bindinput="remark" maxlength="18"></input>
+            </view>
+        </view>
+    </view> 
+</view>
+
+<view class="btn_box aui-bg-white aui-padded-15" bindtap="save">
+	<view class="btn">保存信息</view>
+</view>

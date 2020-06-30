@@ -1,0 +1,134 @@
+<view class='aui-content aui-margin-t-15' wx:if="{{token!=''&&expired_list!=[]}}">
+  
+  <view class='aui-list {{expired_len==0?"hide":"show"}}'>
+    <block wx:for="{{expired_list}}" wx:for-item="vo" wx:key="expired_list">
+
+      <view class="aui-list-item aui-padded-l-0 aui-padded-t-10">
+        <view class="aui-list-item-text">
+          <label class="item-cb">
+            <checkbox color='#fff' checked='{{vo.is_select==1}}' data-index="{{index}}" bindtap='one_select' wx:if="{{is_edit==true}}"></checkbox>
+            <image src='/images/icon-del.png' style='width:27px;height:26px;' data-id="{{vo.id}}" bindtap='del_goods' wx:else></image>
+          </label>
+          <view class="aui-media-list-item-inner">
+            <navigator url="/pages/classify/goodsDetail/goodsDetail?id={{vo.goods_id}}">
+              <view class="aui-list-item-media aui-padded-r-10 aui-padded-t-0" style="width: auto;">
+                <image src="{{vo.thumb}}" style="width:83px; height: 83px;"></image>
+              </view>
+            </navigator>
+            <view class="aui-list-item-inner">
+              <view class="aui-list-item-text">
+                <view class="aui-list-item-title aui-font-size-13 aui-ellipsis-2 ">{{vo.name}}</view>
+              </view>
+              <view class="aui-list-item-text" wx:if="{{vo.goods_spec!=undefined}}">
+                <view class="aui-list-item-title aui-font-size-12 aui-color-gray">{{vo.goods_spec.name}}</view>
+              </view>
+              <view class="aui-list-item-text ">
+                <view class="aui-text-danger aui-font-size-12">￥
+                  <text class="aui-font-size-15">{{vo.market_price}}</text>
+                </view>
+                <view class="aui-list-item-right">
+                  <view class="aui-bar-btn aui-bar-btn-sm" type="count" id="demo" style=" width:80%;float:right">
+                    <view class="aui-bar-btn-item" style='border-radius:50%;border-color:#eee;' data-index="{{index}}" bindtap='miuscart'>
+                      <text class="aui-font-size-18">-</text>
+                    </view>
+                    <view class="aui-bar-btn-item" style='border-style:none;'>
+                      <input type="number" disabled class="aui-input aui-text-center aui-font-size-16" value="{{vo.goods_num}}" />
+                    </view>
+                    <view class="aui-bar-btn-item" style='border-radius:50%;border-color:#eee;' data-index="{{index}}" bindtap='addcart'>
+                      <text class="aui-font-size-18">+</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </block>
+  </view>
+  <view class='aui-card-list aui-margin-t-15 {{unexpired_len==0?"hide":"show"}}' style='border-top:10px solid #f6f6f6'>
+    <view class="aui-card-list-header aui-card-list-user aui-border-b">
+      <view class="aui-card-list-user-name" style='margin-top:0.1rem;position:relative;'>
+        <view class='aui-font-size-14' style='margin-left:88rpx;'>
+          失效商品
+        </view>
+        <text class='aui-font-size-14 aui-color-danger' style='position:absolute;right:0;' bindtap='empty_unexpired'>清空</text>
+      </view>
+    </view>
+  </view>
+  <view class='aui-list aui-padded-b-15  {{unexpired_len==0?"hide":"show"}}'>
+    <block wx:for="{{unexpired_list}}" wx:for-item="vo" wx:key="unexpired_list">
+      <view class="aui-list-item aui-padded-t-10" style='margin-left:88rpx;'>
+        <view class="aui-list-item-text">
+          <view class="aui-media-list-item-inner">
+            <view class="aui-list-item-media aui-padded-r-10 aui-padded-t-0" style="width: auto;">
+              <image src="{{vo.goods.thumb}}" style="width:83px; height: 83px;"></image>
+            </view>
+            <view class="aui-list-item-inner">
+              <view class="aui-list-item-text aui-margin-b-15">
+                <view class="aui-list-item-title aui-font-size-13 aui-ellipsis-2">{{vo.name}}</view>
+              </view>
+              <view class="aui-list-item-text ">
+                <view class="aui-text-danger aui-font-size-12">￥
+                  <text class="aui-font-size-15">{{vo.market_price}}</text>
+                </view>
+
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view wx:if="{{token==''||len==0}}" bindtap='sub'>
+  <image src='/images/empty_cart.png' style='width:400rpx;height:400rpx;margin:0 auto;display:block'></image>
+</view>
+<view style='margin-bottom:150rpx;'>
+  <view class='aui-text-center aui-padded-15 aui-font-size-13 aui-color-grayer'>
+    ———— 你可能还喜欢 ————
+  </view>
+  <view class='aui-row' style='padded-bottom:250rpx;'>
+    <block wx:for="{{rec_list}}" wx:for-item="vo" wx:key="rec_list">
+      <navigator url="/pages/classify/goodsDetail/goodsDetail?id={{vo.id}}">
+        <view class='aui-card-list aui-col-xs-6 aui-padded-t-10 aui-margin-l-10'>
+          <view class='aui-card-list-content'>
+            <view class='aui-text-center'>
+              <image src='{{vo.thumb}}' style='width:306rpx;height:306rpx;'></image>
+            </view>
+            <view class='aui-font-size-13 aui-color-gray aui-padded-15 aui-padded-t-10 aui-padded-b-0 height aui-ellipsis-2' style='height:72rpx;'>
+              {{vo.name}}
+            </view>
+          </view>
+          <view class='aui-card-list-footer' style='justify-content:flex-start'>
+            <view class='aui-font-size-15 aui-color-danger aui-margin-r-10'>
+              <text class='aui-font-size-12'>￥</text>{{vo.market_price}}</view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
+<view class="aui-bar aui-bar-tab " wx:if="{{token!=''&&expired_len!=0}}">
+  <view class="aui-row aui-padded-l-15 aui-padded-r-10 aui-padded-b-10">
+    <view class="aui-col-xs-3 aui-padded-t-10 aui-font-size-15 aui-text-left">
+      <label></label>
+    </view>
+    <view class="aui-col-xs-5 aui-text-right aui-padded-t-10 aui-padded-r-10 aui-margin-l-15  {{is_edit==true?'':'visiH'}}">
+      <view class="aui-text-black aui-font-size-15">合计：
+        <text class="aui-text-danger">￥{{total}}</text>
+      </view>
+    </view>
+    <view class="aui-col-xs-3 aui-padded-t-5" bindtap='subOrder' wx:if="{{is_edit==true}}">
+      <view class="aui-btn aui-btn-danger aui-font-size-15 aui-text-white" style="border-radius:2rem;width:100%;line-height: 35px; height:auto;">
+        去结算
+      </view>
+    </view>
+    <view class="aui-col-xs-3 aui-padded-t-5" bindtap='empty_cart' wx:else>
+      <view class="aui-btn aui-btn-danger aui-btn-outlined aui-font-size-15 aui-text-white" style="border-radius:2rem;width:100%;line-height: 35px; height:auto;">
+        清空
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+<!--pages/my/wallet/index.wxml-->
+<view class="imgwrap"><image src="/images/walletcover.png"></image></view>
+<view class="cover">
+<view class=" aui-padded-15"><view class="aui-font-size-15 aui-text-white">总资产(元)</view>
+  <view class="flex aui-margin-t-15">
+    <text class="aui-text-white flex1" style="font-size:88rpx">{{totalMoney}}</text>
+    <text class="tixian" bindtap="totixian">提现</text>
+  </view></view>
+</view>
+<view class="flex aui-padded-15 aui-font-size-15 aui-text-black title aui-text-center" style="justify-content:space-around;">
+  <text class="{{type==0?'active':''}}" bindtap="getcommissionList">推广收益</text>
+  <text  class="{{type==1?'active':''}}" bindtap="tixian">提现记录</text>
+</view>
+<view class="aui-padded-15 flex" style="background:#f5f5f5;">
+  <picker mode="date" fields="month" value="{{date}}" start="2015-09-01" end="" bindchange="bindDateChange">
+    <view class="picker aui-font-size-15 aui-text-blacker">
+    {{date}}<image src="/images/tobottom.png" class="tobottom"></image>
+    </view>
+  </picker>
+  
+  <text class="flex1 aui-text-right aui-font-size-15 aui-text-grayer" wx:if="{{type==0}}">奖励金{{count}}元</text>
+  <text class="flex1 aui-text-right aui-font-size-15 aui-text-grayer" wx:else>提现{{count}}元</text>
+</view>
+<view class="aui-padded-15">
+  <block wx:for="{{list}}" wx:if="{{type==0}}">
+    <view class="list flex">
+    <image src="/images/touxiang.png" class="aui-margin-r-10"></image>
+    <view class="item flex1">
+      <view class="flex flex1">
+        <view class="flex1">
+          <view class="aui-font-size-15 aui-text-blacker">{{item.nick_name}}</view>
+          <view class="aui-font-size-11 aui-text-grayer">{{item.create_time}}</view>
+        </view>
+        <view class="aui-font-size-15 aui-text-blacker">+{{item.money}}</view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>
+  </block>
+
+
+   <block wx:for="{{list}}" wx:if="{{type==1}}">
+   <view class="list flex">
+    <view class="item flex1">
+      <view class="flex flex1">
+        <view class="flex1">
+          <view class="aui-font-size-15 aui-text-blacker" wx:if="{{item.type==2}}">提现到支付宝</view>
+          <view class="aui-font-size-15 aui-text-blacker" wx:if="{{item.type==1}}">提现银行卡</view>
+          <view class="aui-font-size-15 aui-text-blacker" wx:if="{{item.type==3}}">提现到微信</view>
+          <view class="aui-font-size-11 aui-text-grayer">{{item.create_time}}</view>
+        </view>
+        <view class="aui-font-size-15 aui-text-blacker">-{{item.money}}</view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>
+   </block>
+  
+</view>
+<view class="aui-text-center" wx:if="{{list.length==0}}"><image src="/images/nodata.png" mode="aspectFill" ></image></view>
+

@@ -1,0 +1,95 @@
+<view class="aui-content">
+    <view class="aui-text-center">
+        <view class="pic">
+            <image src="/image/pj.png"></image>
+        </view> 
+        <view class="aui-padded-t-15 aui-margin-t-15 ">请对本次服务做出您的评价</view>
+        <view class="pingfen ">
+        <!-- <view class="flex pf aui-margin-t-15" >
+          <image src="/image/star.png"></image>
+          <image src="/image/star.png"></image>
+          <image src="/image/star.png"></image>
+          <image src="/image/star.png"></image>
+          <image src="/image/star2.png"></image>
+        </view> -->
+
+        <view class="flex pf aui-margin-t-15" wx:if="{{level==1}}">
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="0"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="5"></image>
+			</view>
+			<view class="flex pf aui-margin-t-15" wx:if="{{level==2}}">
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="5"></image>
+			</view>
+			<view class="flex pf aui-margin-t-15" wx:if="{{level==3}}">
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="5"></image>
+			</view>
+			<view class="flex pf aui-margin-t-15" wx:if="{{level==4}}">
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="5"></image>
+			</view>
+			<view class="flex pf aui-margin-t-15" wx:if="{{level==5}}">
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star.png" bindtap="star" data-num="4"></image>
+			</view>
+			<view class="flex pf aui-margin-t-15" wx:if="{{level==0}}">
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="1"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="2"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="3"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="4"></image>
+				<image class="star1" src="/image/star2.png" bindtap="star" data-num="5"></image>
+			</view>
+        <view class="pf_txt aui-font-size-12 aui-margin-t-15 aui-paddded-15">
+        <text class="aui-padded-r-10 {{item.del_status==1?'active':''}}" wx:for="{{labelList}}" wx:key="lis"  bindtap="choose" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</text>
+        
+        </view>
+        
+        </view>
+    </view>
+    <view class="aui-padded-15 aui-margin-t-15">
+        <view class="aui-font-size-18">您的建议</view>
+        <textarea class="" placeholder="请提出你宝贵的意见和建议.." bindinput="content" placeholder-style="font-size:24rpx;" ></textarea>
+    </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+<view class="btn_box aui-bg-white aui-padded-15">
+  <view class="btn" bindtap="tijiao">提交</view>
+</view>

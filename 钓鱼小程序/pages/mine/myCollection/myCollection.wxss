@@ -1,0 +1,44 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+.shangjia-list .aui-list-item-media {
+    width: auto !important;
+}
+
+.shangjia-list .pic {
+    height: 100rpx;
+    width:100rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.shangjia-list  .pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guanzhu-list .aui-list-item-inner {
+    display: flex !important;
+}
+
+
+scroll-view{
+    white-space:normal;
+}
+.order-item {
+  position: relative;
+}
+.remove{  
+  width: 160rpx;  
+  height: 100%;  
+  background-color: #FF3333 ; 
+  color: white; 
+  position: absolute;  
+  top: 0;  
+  right: -160rpx;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+} 

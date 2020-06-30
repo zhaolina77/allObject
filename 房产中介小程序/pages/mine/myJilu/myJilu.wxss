@@ -1,0 +1,75 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+
+.top_box{width: 100%;position: fixed;top: 0 ;left:0;z-index: 999;overflow: hidden;}
+.aui-bar image{
+  width: 32rpx;
+  vertical-align:middle;
+}
+.aui-title{
+  right:30rpx !important;
+  display: flex;
+  align-items: center;
+  left:30rpx !important;
+}
+.aui-bar{
+  height:100rpx;
+}
+.serch{
+  border-radius: 10rpx;
+  width: 100%;
+}
+.serch input{
+  float: left;
+  line-height:70rpx !important;
+  height: 70rpx;
+  width: 80%;
+  color: #222;
+  font-size: 14px;
+}
+scroll-view{
+  white-space:nowrap;
+  width:100%;
+  display: flex;  
+  height:90rpx;
+  line-height: 60rpx;
+}
+scroll-view .swiper-slide{
+  margin-left:30rpx;
+  margin-right:20rpx ;
+}
+scroll-view .swiper-slide:last-child{
+  margin-right:120rpx;
+}
+scroll-view .swiper-slide .txt{color: #999;position: relative;}
+scroll-view .active .txt{color: #ffd12d !important;}
+scroll-view .active .txt::before{content:'';position: absolute;bottom: -4rpx; height:4rpx;width: 30rpx;background-color:#ffd12d;left: 50%;margin-left: -15rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
+.box{
+  background-color: #fff !important;
+  padding: 10px 0;
+  white-space: nowrap;/*文本不会换行，文本会在在同一行上继续*/
+  overflow-y:auto;/*可滑动*/
+  /* position: fixed;
+  top: 0; */
+  z-index: 9999;
+  margin: 0 3%;
+}
+/*自定义滚动条的伪对象选择器, CSS 可以隐藏滚动条*/
+.box::-webkit-scrollbar{display: none;}
+.box1{color: #999 ;margin:0 3% 30rpx 2%;display: inline-block; position: relative;}
+.box .active{color: #ffd12d !important;}
+.box .active::before{content:'';position: absolute;bottom: -15rpx; height:4rpx;width: 30rpx;background-color:#ffd12d;left: 50%;margin-left: -15rpx;}

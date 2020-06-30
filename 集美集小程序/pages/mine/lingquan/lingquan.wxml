@@ -1,0 +1,21 @@
+<!-- 待使用 -->
+<view class="aui-padded-15 ">
+	<view class="aui-bg-white bg-radius aui-padded-15 flex aui-margin-b-15" wx:for="{{list}}" wx:key="lis">
+		<view class="quan_box flex">
+			<view class="aui-text-theme aui-padded-r-5">
+				<text class="aui-font-size-16">￥</text>
+				<text class="aui-font-size-40 fw-bold">{{item.price}}</text>
+			</view>
+			<view class="aui-padded-l-15 aui-text-grayer aui-font-size-12">
+				<view class="aui-font-size-14 aui-text-black">满减券</view>
+				<view class="aui-margin-t-5">满{{item.meet_price}}可使用</view>
+				<view class="aui-margin-t-5">有效期至{{item.end_time}}</view>
+			</view>
+		</view>
+		<view class="aui-btn aui-btn-theme aui-font-size-13" bindtap="lingquan" data-id="{{item.id}}" wx:if="{{item.tag==0}}">立即领取</view>
+		<view class="ylq" wx:else>
+			<image src="/image/ylq.png"></image>
+		</view>
+	</view>
+
+</view>
