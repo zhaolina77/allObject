@@ -16,7 +16,7 @@
     "jsdom": "^15.2.1",
     "location": "0.0.1",
     "navigator": "^1.0.1",
-    "swiper": "^5.2.0",
+    "swiper": "^6.5.1",
     "vue": "^2.5.2",
     "vue-amap": "^0.5.10",
     "vue-pagination-2": "^2.0.3",
